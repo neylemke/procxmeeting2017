@@ -1,0 +1,72 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Understanding Immunosenescence through a Systems Biology Approach}} % Article title
+
+\author{Fernando Marcon Passos$^1$, Helder Takashi Imoto Nakaya$^2$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The remodeling of the immune system that comes with age, known as immunosenescence, contributes to an increased susceptibility in elderly to infectious diseases, cancer, autoimmunity and decreased vaccines response. This remodeling is a complex and multifactorial process and, until now, there is little understanding of the molecular mechanisms involved. Several studies tried to understand and identify which genes and signaling pathways are involved in the ageing of our immune system. However, none has yet done a comprehensive analysis of a large amount of transcriptomic data of healthy subjects in a wide age spectrum.
+In this project we aim to create a predictive model for the biological age of the immune system using machine learning methods. For that we will perform a meta-analyses of microarray transcriptomic data available in the GEO public repository. We selected 29 studies containing 435 blood samples that had subject's age information.
+First, we will identify genes that are differently expressed between age groups, through the statistical method LIMMA. With such genes we can discover the gene signatures that are related with immunosenescence throughout a pathway enrichment analysis. In this step, we will also perform a coexpression analysis to build gene networks related to immunosenescence. This will be done using the CEMiTool, a tool developed in our laboratory that allow us to identify gene modules and sub-modules associated with a particular phenotype.
+The next step is to create a predictive model of the biological age of the immune system. We will use dimensionality reduction and feature selection algorithms, like PCA and the FSelector package, to select genes that optimize the predictive power of the model. Then, we will use various algorithms of machine learning, such as Support Vector Machine and Neural Networks, to create age group classification and age regression models. These models will then be validated with blood samples from children and elderly, which will be provided by the Liverpool School of Tropical Medicine.
+Once the model has been validated, genes used in machine learning algorithm as well as the regulation profile and co-expression of gene networks discovered in the meta-analysis will be used to understand the mechanisms of activation and deactivation of the genes they are related to immunosenescence.
+
+Funding: FipFarma
+\end{abstract}
+\end{document}

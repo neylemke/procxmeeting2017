@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{CHARACTERIZATION AND INDENTIFICATION OF MATURE miRNAs AND THEIR PRECURSORS IN THE GENOME OF CULTIVATED PEPPER}} % Article title
+
+\author{Fernando Augusto Corr\^ea Queiroz Can\c{c}ado$^1$, Monize Angela de Andrade$^1$, Laurence Rodrigues do Amaral$^1$, Matheus de Souza Gomes$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The cultivated pepper Capsicum annuum L. (Zunla-1) is a plant of Solanaceae's family, one of the crops with the largest cultivated area of Brazil according to CEAGESP, and one of the most consumed by humans. Its high nutritional, sensorial and aesthetic value for different foods worldwide are directly proportional to its economic and cultural importance. Despite the significance of this species, the knowledge about the gene regulation is still very scarce. A class of microRNAs (miRNAs) is considered the main class of small non-coding RNAs with approximately 19 to 25 nucleotides. They regulate the expression of messenger RNA (mRNAs) into cells, inhibiting their translation process. In cells, the miRNAs play several roles, including development regulation, defense, response to stress and control of cell proliferation. Therefore, this work objective was identifying and characterizing mature microRNAs and their precursors in the genome of C. annuum L.(Zunla-1). The precursors and mature miRNAs were identified using an optimized algorithm based on the conserved characteristics of miRNAs. The ClustalX 2.0 and RNAalifold programs were used to generate alignment while the RNAfold program was used to predict the secondary structure of the precursor. The Phylogenetic analysis was performed in the Mega5.2 software by the Kimura 2 parameters. About 91 families of miRNAs scattered in the genome, among them miR160, miR162, miR164, miR393 and miR828 were identified and characterized. Of these 5 families investigated we've found 12 real precursors with conservation at primary and secondary level. It was observed in C. annuum L.(Zunla-1) that families such as miR160 and miR828, showed miRNAs that were evolutionarily distant from other organisms in the Solanaceae family, leading to speculation that there is in fact evolutionary distant or missing information in the database. While in the other families it can be observed that there is evolutionary conservation among them. The miR160 family has already been described as regulating the response factors to auxin, a hormone involved in the regulation of plant cell growth, demonstrating the importance of these small RNAs in the organism. This study will open new challenges and new perspectives to understand better the biology and the genome of pepper.
+
+Funding: FAPEMIG, UFU, CNPq and CAPES
+\end{abstract}
+\end{document}

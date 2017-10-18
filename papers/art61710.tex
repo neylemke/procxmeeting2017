@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Lower proportion than expected for transversions and higher for transitions in synonymous SNPs evaluated in dbSNP}} % Article title
+
+\author{Fernanda Stussi$^1$, Tetsu Sakamoto$^2$, Jos\'e Miguel Ortega$^2$}
+
+\affil{1 UFMG\\ 2 UFMG, LABORAT\'ORIO DE BIODADOS\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+We have previously investigated the proportions of SNPs involving transversions (A/C, A/T, G/C, G/T) and transitions (A/G and C/T) for human entries in dbSNP. Here we reanalyzed human SNPs together with mouse, rat, pig and cow deposits. For these organisms, SNPs were classified after the region where the SNP is located: Intron, 5'-UTR, 3'-UTR, CDS-missense and CDS-synonymous. We noticed that the deposit for cow SNPs suffered somehow a bias that changed the relative proportions between these categories, suggesting that sampling is not random in the cow project. Therefore we set up to investigate the proportions of transitions and transversions for the other four organisms. The frequency of transitions varied around 33\% for all categories but CDS-synonymous, where it was over 40\%, and this measurement was attained for man, mouse, rat and pig. Accordingly, all four transversions were lower for CDS-synonymous. C/G Transversions were also lower for Intron and 3'-UTR and especially higher in CDS-missense and 5'-UTR. Thus, these studies support the occurrence of equal amounts in non-coding regions of genome for transitions and all transversions but C/G. And furthermore suggest that using SNP frequency in non-coding transcript regions in man, rat, mouse and pig would be safe for building mutation models based on SNP frequencies.
+
+Funding: CAPES/Biocomp
+\end{abstract}
+\end{document}

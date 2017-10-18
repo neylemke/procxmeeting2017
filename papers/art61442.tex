@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Decision-making model for the monitoring and identification of risk groups for Type 2 Diabetes Mellitus comorbidities using Fuzzy NN algorithm}} % Article title
+
+\author{Melissa Mello de Carvalho$^1$, Waldemar Volanski$^1$, Geraldo Picheth$^1$}
+
+\affil{1 UFPR\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Type 2 diabetes mellitus (DM2), its comorbidities and complications represent avoidable expenses for patients and public health. Complication prevention can be proposed with a decision model to identify risk groups. The present study aims to study the complications of DM2 from a database with 209 female patients (40 to 87 years) with DM2 at a mean of 12.2 years (1 to 40 years of the diagnosis). The study is approved under the CAAE: 1038112.0.0000.0102. We analyzed 29 attributes arranged in biochemical, anthropometric and monitoring attributes of DM2, such as time of diagnosis in years, presence or absence of comorbidities. The data do not contain missing data, the attributes have multivariate numerical and nominal variability (Y/N). The comorbidities are: coronary artery disease (CAD), retinopathy, neuropathy, nephropathy. They are classified with the Fuzzy NN algorithm from biomarkers. HbA1c = 7\% classifies optimal glycemic control in patients with DM2 according to SBD 2015-2016. The choice for fuzzy systems is due to the classification diffusion of attributes with high variability and multicriteria decision. The data were classified with the Fuzzy NN algorithm in the WEKA software, trained and cross validated with the following specifications: using 10 nearest neighbors for classification, Similarity measure 4; Implicator G\"odel; T-Norm Algebraic; Relation composition Lukasiewicz. The classes were modified to classify the objects of study: Control, Retinopathy, Neuropathy, Nephropathy and CAD, omitting in each analysis glycemic variables. Fuzzy NN was able to identify all cases of neuropathy and nephropathy as presented in the data with about 93.3\% and 94.5\% accuracy respectively. With the retinopathy class, it was possible to identify all previously known cases (53 cases) and predict another 5 cases of risk with 72.2\% accuracy, 74\% specificity. With the Control class, the accuracy was 76\% with a precision of 81\% and a specificity of 70\%. By including the variable insulin use the accuracy increases to 87.5\%, precision: 88\% and specificity 90\%. In all cross validations values the classification coverage of the Fuzzy NN remained above 98\%. The classification Control with and without insulin indicates the importance of the medical monitoring in DM2, approximately 32\% of the patients besides presenting poor glycemic control do not use insulin nor hypoglycemic agents, which represents a deficit in the follow-up of this portion of patients.
+
+Funding: None
+\end{abstract}
+\end{document}

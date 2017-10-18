@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Ancestral reconstruction of transthyretin / 5-hydroxy isourate hydrolase sequences}} % Article title
+
+\author{Lucas Carrijo de Oliveira$^1$, Laila Alves Nahum$^2$, Lucas Bleicher$^1$}
+
+\affil{1 UFMG\\ 2 CPQRR/FIOCRUZ MINAS\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Transthyretin (TTR) is a tetrameric protein - each of the four identical chains having about 130 amino acids (~14 kDa) -  that transport thyroid hormones in blood and brain. It also participates indirectly in transport of retinoic acid by coupling to retinol binding proteins. It was firstly described in eutherian mamals as a carrier of thyroxine (T4), however in most vertebrates it has more afinity to the active form of this hormone, triiodothyronine (T3). Mutations in this protein can lead to several diseases, like high concentrations of thyroid hormones in blood, or even formation of amiloid fibrils, associated to neurodegenerative diseases. Some evidence suggest that the gene for TTR has arised during the emergence of vertebrates, from a putative gene duplication of an enzime found since bacterias to vertebrates, involved in uric acid metabolism: the 5-hydroxy isourate hydrolase (HIUase). Since they are present in all kingdoms of life, have a stable and conserved structure, don't suffer post-translational modifications and are able to have their activity modified from enzime to hormone carrier by changing just a few amino acids in the active site, they are considered an excelent model for studies of molecular evolution, specificaly function divergence, in homologous protein families. One common way to assess protein evolution is to look at a multiple sequence alignment. More specificaly, some methods are capable of predicting putative ancestral sequences starting from nowadays sequences. In the present work, a bayesian phylogenetic analysis of sequences belonging to TTR/HIUase family was proceeded and, for some key nodes of the phylogenetic tree, ancestral sequences were reconstructed by maximum likelihood methods. Their 3D structure were predicted by similarity and their corresponding genes were submitted to synthesis for further experimental characterization. Some conservational patterns in active sites could be verified according to information available in literature, corroborating some hypothesis concerning specifity determinig positions.
+
+Funding: CAPES, CNPq
+\end{abstract}
+\end{document}

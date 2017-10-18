@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification of Staphylococcus aureus secretome protein signature using logistic regression to distinguish its role in interaction with the host}} % Article title
+
+\author{Ana Carolina Barbosa Caetano$^1$, Sandeep Tiwari$^2$, N\'ubia Seiffert$^3$, Vasco A de C Azevedo$^4$, Thiago Luiz de Paula Castro$^3$}
+
+\affil{1 UFMG\\ 2 INSTITUTE OF BIOLOGICAL SCIENCE, UFMG, BELO HORIZONTE\\ 3 UFBA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Staphylococcus aureus is a Gram-positive pathogen and the major causing agent of mastitis in ruminants worldwide. Mastitis is often difficult to cure, leading to important losses in farm productivity. Animal isolates of S. aureus are commonly categorized into specific clonal complexes, supported by strong genetic evidences of host-dependent specialization. The extracellular proteins produced by the pathogen are known to play a role in communication with the host and comprise the arsenal used to establish infection. In this context, variant extracellular proteins are expected to be found among different groups of S. aureus. These variants are likely to be correlated with host specificity. The variety and specificity of protein structure and function depends on sequence diversity. When combined, the twenty naturally occurring amino acid residues can form 8,000 triplets and 160,000 quadruplets. A single triplet change may affect protein folding, catalytic domains, protein-ligand interactions, and protein-protein interactions. In this study, we aimed to identify amino acid triplets found in the exoproteomes of S. aureus isolated from ewe (strain O11) and bovine (RF122). Firstly, protein sequences of both strains were downloaded from National Center for Biotechnological Information (NCBI). Then, the SurfG program was used to predict the cellular localization of proteins. 91 and 96 secreted proteins were selected for strains O11 and RF122, respectively. To analyze amino acid triplets occurrence in the two strains, the logistic regression method was applied using the MATLAB software, version R2017a. As result, we found the triplets 'DQA', 'TRI', 'PVS', 'IDV' and 'DVN' in strain RR122, whereas the triplets 'MMK', 'KMK', 'MKM', 'VQA' and 'TRV' were found in O11. Furthermore, the proteins containing most of these triplets were identified. The truncated methicillin resistance-related surface protein (CAI81729.1) and the hypothetical protein tagged as EGA96785.1 were found in the RF122 and O11, respectively. The outcome of this work could facilitate in-silico functional characterization and the study of the differential interaction of the two strains with their respective hosts. We plan to include more strains from different S. aureus groups and further characterize the interaction with different hosts.
+
+Funding: CAPES, TWAS, CNPQ, FAPEMIG
+\end{abstract}
+\end{document}

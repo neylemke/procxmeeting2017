@@ -1,0 +1,74 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{MCSM-PPI v2: predicting the effects of mutations in protein-protein binding affinity from sequence and structural features}} % Article title
+
+\author{Willy Garabini Cornelissen$^1$, David B. Ascher$^2$, Douglas E.v. Pires$^1$}
+
+\affil{1 INSTITUTO REN\'E RACHOU, FUNDA\c{C}\~AO OSWALDO CRUZ\\ 2 DEPARTMENT OF BIOCHEMISTRY AND MOLECULAR BIOLOGY, UNIVERSITY OF MELBOURNE, MELBOURNE\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Recent studies have been showing that a large proportion of disease mutations, including inherited genetic diseases as well as cancer-related mutations, occur at protein-protein interfaces (PPIs). In fact, edgatic mutations (those affecting interactions) seem to be overrepresented in diseases. Considering their importance in biology and for public health, the ability of predicting the effects of missense mutations on PPIs from protein sequence and structural evidences has become an important step towards understanding their role in diseases as well as an important tool for protein engineering. Different computational approaches have been proposed in recent years for this purpose, although much less attention has been devoted to mutations in protein-protein interactions and how they interfere with the binding affinity of the complex.
+
+Here we present mCSM-PPI v2, an optimised machine learning-based method that relies on sequence and structural information to quantitatively predict the impact of single-point missense mutations in the affinity of protein-protein complexes. The improved method encodes distance patterns between atoms in a feature vector aiming to capture both the geometry and physicochemical properties of protein residue environments as well as distance patterns between residues on a sequence level. These signatures are then used as evidence for algorithms to learn from mutations with available experimental thermodynamic data.
+
+mCSM-PPI v2 has been retrained,  tested and optimised on low redundancy data sets derived from the SKEMPI database. Our method obtained a Pearson's correlation coefficient of up to 0.80, considerably more accurate than alternative approaches (BeAtMuSiC = 0.47; Li et al. = 0.58; Moal et al. = 0.73;), showing that using sequence and structural information in combination was advantageous. mCSM-PPI v2 was also able to identify hot-spots on PPIs via computational alanine scanning as well as optimising peptide affinity via in silico saturation mutagenesis.
+
+We believe mCSM-PPI v2 will be scalable, robust, quantitative approach for analysing large data sets of mutations in PPIs that may aid in optimizing protein-protein binding and modulation as well as  understanding deleterious mutations and their relation with diseases.
+
+Funding: Instituto Ren\'e Rachou, Funda\c{c}\~ao Oswaldo Cruz, Belo Horizonte
+\end{abstract}
+\end{document}

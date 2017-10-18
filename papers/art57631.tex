@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{StatGraph: a statistical tool to analyze biological networks}} % Article title
+
+\author{Suzana de Siqueira Santos$^1$, Daniel Yasumasa Takahashi$^2$, Andre Fujita$^1$}
+
+\affil{1 IME - USP\\ 2 DEPARTMENT OF PSYCHOLOGY AND NEUROSCIENCE INSTITUTE, PRINCETON UNIVERSITY, PRINCETON, UNITED STATES OF AMERICA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Several biological systems can be modeled by graphs (networks), which represent the interactions/relationships among the elements of the system. Examples of systems represented by graphs include gene regulatory networks, protein-protein interaction networks, and brain functional networks. Understanding how components interact with each other and the changes that occur in the system under certain conditions is a major concern in several fields of biology. One challenge of biological system studies is dealing with their variability. For example, the coactivation between regions of the brain changes across time, and gene regulatory networks are not identical even among individuals that share the same phenotype. Therefore statistical methods that model the randomness/variability of the graph structure are essential to analyze biological networks. However the available computational tools to analyze graphs lack statistical methods (frequently they do not include any statistical test or include tests for only few specific features of the graph). Here we present an R package, namely statGraph, that includes several statistical methods to analyze graphs, such as a test to compare the structure among two or more sets of graphs, a test to verify whether two sequences of graphs are correlated, a model selection approach and a procedure for parameter estimation. All methods included in statGraph are based on the spectrum of the graph (set of eigenvalues of the adjacency matrix), which is associated with several properties of the graph, such as number of walks, cliques and diameter. The methods were validated through simulation experiments, which show that they behave as expected for graphs with sufficient number of vertices.
+
+Funding: S.S.S. was partially supported by CAPES and FAPESP (2015/21162-4). A.F. was partially supported by FAPESP (2013/03447-6, 2015/01587-0, 2016/13422-9), CNPq (304876/2016-0), NAP eScience-PRP-USP.
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Metalloproteinases diversity in the venom gland of Peruvian spider Loxosceles laeta revealed by transcriptome analysis}} % Article title
+
+\author{Raissa Medina Santos$^1$, Clara Guerra Duarte$^2$, Priscilla Alves de Aquino$^1$, Anderson Oliveira do Carmo$^1$, C\'esar Bonilla$^3$, Evanguedes Kalapothakis$^1$, Carlos Chavez-olortegui$^1$}
+
+\affil{1 UFMG\\ 2 FUNDA\c{C}\~AO EZEQUIEL DIAS\\ 3 INSTITUTO NACIONAL DE SALUD\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Envenomation caused by spiders from Loxosceles genus (brown spiders) is a worldwide public health problem. Loxosceles their venom is composed of several toxins responsible for dermonecrotic, hemorrhagic and edema effects. In Peru, L. laeta is considered  the most medical relevant species. A family of metalloproteases, also named astacin-like proteins, was described in Loxosceles venom with great importance for hemostatic disorders in natural or experimental envenomations. A new generation sequencing library of venom extracted from the Peruvian spider, L. laeta, was constructed for the first time using the TruSeq (TM) RNA Sample Prep Kit v3 Set A (Illumina) kit and the sequencing was performed on the MiSeq by the paired-end technique for identification of molecular diversity of metalloproteases toxins. In this work, we describe some of the identified metalloproteases enzymes with a high degree of identity (over 50\%) with molecules from other Loxosceles spp spiders. Results obtained in this work represent the first landscape of components of a Peruvian spider venom gland, revealing the complexity of molecules expressed in this tissue, with great potential for future uses in medical and evolutionary studies.
+
+Funding: FAPEMIG, CNPq, CAPES
+\end{abstract}
+\end{document}

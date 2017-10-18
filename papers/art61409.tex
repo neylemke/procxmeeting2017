@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comprehensive profiling and characterization of  Arachis stenosperma (peanut) and Meloidogyne arenaria (plant-root nematode) small-RNAs identified during the course of the infection}} % Article title
+
+\author{Priscila Grynberg$^1$, Larrisa A. Guimar\~aes$^1$, Marcos Mota do Carmo Costa$^1$, Roberto Coiti Togawa$^1$, Ana Cristina M. Brasileiro$^1$, Patricia Messenberg Guimar\~aes$^1$}
+
+\affil{1 EMBRAPA RECURSOS GEN\'ETICOS E BIOTECNOLOGIA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Plant-parasitic nematodes have a worldwide distribution. They are virtually able to infest any human-cultivated plant. Annual losses caused by nematodes on life-sustaining crops are estimated to exceed 14\% of the production (approximately 65 billion \euro  of loss worldwide). Previously studies were responsible for major advances in the identification of genes and mechanisms responsible for plants response to the Meloidogyne, the root-knot nematode. Meloidogyne spp. are obligate endoparasites that maintain a biotrophic relationship with their hosts. During the infection root cells are differentiated into specialized giant feeding cells through the releasing of effector proteins. However, despite the continuing efforts to identify new effectors and plant resistance mechanisms, studies have shown that the repertoire of both systems is limited. Recently, researchers published strong evidence that small RNAs from a phytopathogenic fungus act as effectors. These small RNAs hijack the host RNA interference (RNAi) machinery by binding to Arabidopsis Argonaute 1 (AGO1) and selectively silencing host immunity genes. These findings gave new insights on nematode-plant interaction as well as for the development of new control strategies through biotechnological methods. The goal of this work is to verify the possible role of Meloidogyne arenaria small RNAs (sRNA) as effectors by identifying, in Arachis stenosperma (peanut), downregulated target genes during the infection. A. stenosperma plants were infected with approximately 5,000 M. arenaria larvae in triplicate. Control and infected A. stenosperma roots were collected 3, 6 and 9 days post-infection. The infected samples were pooled. Six samples (3 controls, 3 infected) and two M. arenaria J2 small-RNA libraries were sequenced with technical replicates using Illumina HiSeq 2500 system. After adaptor and contaminats removal, reads were mapped against miRbase V21.0.  One hundred and 151 different conserved miRNAs were counted for M. arenaria and A. stenosperma respectively. The unmapped reads were used as input for miRDeep-P,  a plant microRNA prediction tool. The predicted miRNAs were confirmed by using miRDup softare . A total of 625 and 1271 new candidates were predicted for  M. arenaria and A. stenosperma respectively. Next steps include the target prediction and validation by qRT-PCR.
+
+Funding: FAP-DF, CNPq
+\end{abstract}
+\end{document}

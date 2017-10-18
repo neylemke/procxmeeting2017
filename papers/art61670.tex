@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification and analysis of thermophilic protein sequences in compost sequencing data}} % Article title
+
+\author{Amanda Rodrigues$^1$, Aline Maria da Silva$^1$, Jo\~ao Carlos Setubal$^1$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Typical aerobic composting is a self-heating process in which microbial metabolism drives the temperature above 50?$^o$C, followed by sustained high temperatures between 60-80?$^o$C, and then followed by gradual cooling of the compost pile. Composting is widely considered as a promising source of novel thermostable enzymes, particularly those related to biomass degradation. Protein thermostability is an important aspect of protein biochemical and biotechnological research. Commonly, for chemical reactions, high temperature could increase reaction activity and decrease reaction time. Various mechanisms of thermostability were discussed in the literature, and many authors pointed to changes in amino acid composition as one of clearest manifestations of thermal adaptation. Indeed, it is well-known that enhanced thermostability is reflected in specific trends in amino acid composition. In this sense, it is important to develop a validated method that can predict the stability of a given protein from its primary sequence. In this work, machine learning techniques combined with amino acid composition and dipeptide composition were used to discriminate between thermophilic and non-thermophilic proteins from compost sequencing data. In order to obtain a reliable dataset, three different techniques (artificial neural network, random forest and SVM) were combined to discriminate the proteins sequences. The combination of these methodologies has achieved a specificity of 97\% for the test dataset composed of thermophilic and non-thermophilic sequences with experimental evidence extracted from Uniprot. From the sequences classified as thermophilic, sequences related to the degradation of biomass will be selected for phylogenetic and completeness analyzes. Interesting sequences will be synthesized and heterologously cloned.
+
+Funding: CAPES, Fapesp
+\end{abstract}
+\end{document}

@@ -1,0 +1,73 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{All purpose word pairing tool: Easy interaction networks for clinical data.}} % Article title
+
+\author{Thayn\~a Nhaara Oliveira Damasceno$^1$, Euz\'ebio Guimaraes Barbosa$^1$}
+
+\affil{1 UFRN\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Considering that the hospital environment daily generates a large volume of data, and as well as the volume of published biomedical research, and therefore the underlying biomedical knowledge base, it's necessary to use specialized tools are able to transform data into information that influence in a positive way to decision-making in relation to clinical practice.
+	The increasing of data available in the databases of organizational data, as well as the need of techniques that are most appropriate for its analysis has facilitated the emergence of new techniques for Data Mining, aiming at a better analysis of these. The DM can be defined as the process of discovery of patterns and relationships considered relevant within large data sets. As an extension of the Data Mining area, Text mining as being an application of computer systems involving both hardware and software in the textual analysis of documents. 
+An algorithm called Integrate Paired Tool (IPT) was developed using the languages JavaScript, HTML, CSS, R, Perl and Shell Scripting. This tool enable quick tools to create interactive Gephi input files to plot Interaction Network from data described is lists. The algorithm is designed for a large variety of data, but it has a large impact to simplify data retrieved from clinical databases.  
+	The IPT uses techniques of Data Mining and Text Mining for analysis of Clinical Data, and these data can be aggregated by any professional in the multiprofessional team in health, not restricted to only one subarea. The tool has performed the analysis taking into consideration their own data supplied by the user. 
+After pairing, the tool generates two files that can be displayed in the tool Gephi, one with the nodes and another with the edges of the network. Gephi is an open-source software for network visualization and analysis. Gephi allows the end user to operate, analysis, use of filters, the manipulation of data, as well as cluster and export of data from any type of networks.
+	We hope that our tool could be further extended and used to analyze data from Pubmed queries in the future due to its powerful way to extract meaningful data from complex data files.
+
+Funding: UFRN/CAPES/PROPESQ
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A shiny app for the integration and enrichment analysis of genomic region sets by NGS data}} % Article title
+
+\author{Davi Toshio$^1$, Henrique Cursino Vieira$^2$, Christiane Bezerra de Araujo$^3$, Maria C. Elias$^3$, Bruno Ferreira de Souza$^4$, Hugo A. Armelin$^1$, Milton Yutaka Nishiyama Junior$^5$}
+
+\affil{1 INSTITUTO BUTANTAN\\ 2 LECC-CETICS, INSTITUTO BUTANTAN\\ 3 LECC-CETICS, BUTANTAN INSTITUTE\\ 4 ECC-CETICS, INSTITUTO BUTANTAN\\ 5 LETA-CETICS, INSTITUTO BUTANTAN\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The new biotechnology advances has allowed studies of the systems involved in the DNA integrity, stability, replication, demethylation; recent discoveries have related them to genomic and transcription stability, besides relations between inflammation and DNA damage, which are essential aspects of molecular biology that underlies developmental processes and disease etiology. This work is part of The Center of Toxins, Immune-response and Cell Signaling (CeTICS), which aims to understand the behavior of biological systems based on analysis of -omics data and signaling networks. Several genomic techniques including MFA-seq, MNase-seq, ChIP-seq, DNase-seq and ATAC-seq have been developed to experimentally identify genome-wide profiles of regulatory regions and experiments have been profiled by the CeTICS project and thousands of samples can be found in the ENCODE and Roadmap Epigenomics consortia. The genomic datasets has grown rapidly and has been used as reference databases; they are essential to retrieve information on gene name, protein product, transposable elements, motifs, molecular markers and others and are important in the approaches to identify enriched regions. To allow the identification and characterization of enriched regions from high-throughput sequencing data, which can be increased with visual inspection of the data, we present a Shiny application for an interactive representation and analysis tools based on Fold Change and MACS2 software peak predictions. The app has been developed in R language, using the Shiny framework, integrating multiple Bioconductor packages. The first step is the alignment and coverage estimation, followed by the upload to the results and annotation file to the app for the downstream statistical and graphical analysis. The input files are composed by: i) the fold change and coverage estimation; ii) the MACS2 peak detection and coverage estimation; ii) Genome size and annotation. As a study case, was used the investigation of the DNA replication features of T. cruzi in order to verify possible links between genetic instability and DNA replication, using the high throughput analysis approach MFA-seq (Multiple Frequency Analysis). To do that, epimastigotes of T. cruzi were sorted in early S and G2/M phases and the DNA was extracted from each group and analyzed by MFAseq. The aim of this integrative approach is to allow the identification of enriched genomic regions distinct to each pair of conditions, integrating multiple annotations, coverage, predicted peaks, SNP's, genes, transcripts and others and the integration of Machine Learning methods to improve the data integration analysis.
+
+Funding: \#2013/07467-1, S\~ao Paulo Research Foundation (FAPESP)
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Using CORAZON to investigate functionally and evolutionarily related coding and non-coding transcripts}} % Article title
+
+\author{Tha\'{\i}s de Almeida Ratis Ramos$^1$, Tha\'{\i}s Gaudencio$^2$, Vinicius Maracaja Coutinho$^3$, Jos\'e Miguel Ortega$^4$}
+
+\affil{1 UFRN\\ 2 UFPB\\ 3 UNIVERSIDAD MAYOR\\ 4 UFMG. LABORAT\'ORIO DE BIODADOS.\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Machine learning is a subfield of computer science that developed from the study of pattern recognition and computational learning theories in artificial intelligence. These methods operate through the construction of a model based on the set of inputs, in order to make data predictions. Due to the large quantity of biological data generated in large-scale genomics and transcriptomics projects, an intense demand to use techniques provided by artificial intelligence, the usage of tools based on machine learning methods became widely used in bioinformatics. Unsupervised learning is the machine learning task of inferring a function to describe the hidden structure from unlabeled data. The inductor analyzes the examples provided and tries to determine if some of them can be grouped in any way, forming clusters. Here we developed an online tool calling CORAZON (Correlation Analyses Zipper Online) that include 3 unsupervised machine learning algorithms: Mean shift,  K-means and Hierarchical with the bioinformatics purpose. Furthermore, we implemented 4 normalization methodologies: Transcripts Per Kilobase Million (TPM), base-2 log, instance normalization and normalization by the highest attribute value for each instance. Moreover, the user has a option to cluster the data removing each attribute to see the results, to observe the attributes influence.  Here, we used our tool to study the coding and non-coding genes from Uhlen, Fantom and Encode databases. We found clusters well defined with genes of each of the two classes and analyzed biological processes determined by GO Enrichment Analysis and gene ages defined by Life Cycle Assessment (LCA). Normally, clusters with more codings are associated with cellular, metabolics, transports and systems development processes. Clusters with more non-codings are involved with detection of stimulus, sensory perception, immunological system, and digestion. We also observed that clusters with more than 80\% of non-codings, more than 40\% of their coding genes are recents appearing in mammalian class and the minority are from eukaryota class. Otherwise, clusters with more than 90\% of coding genes, have more than 40\% of them appeared in eukaryota and the minority from mammalian. Clusters without these criterias, have the majority of their coding genes arise from Eumetazoa. Therefore, the CORAZON tool can help in the large quantities analysis of genomic data, facilitating to comprehend the relations between these instances. In addition, as future work, it will be possible to understand the evolutionary history of these sequences and the associated transcription factors.
+
+Funding: UFRN
+\end{abstract}
+\end{document}

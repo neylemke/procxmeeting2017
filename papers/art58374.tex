@@ -1,0 +1,98 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Analysis of genomic islands of virulence and pathogenicity in Xanthomonas campestris}} % Article title
+
+\author{Juan Carlos Ariute$^1$, Jo\~ao Pacifico Bezerra Neto$^1$, Ana Maria Benko-iseppon$^1$, Flavia Figueira Aburjaile$^1$}
+
+\affil{1 UFPE, CENTER OF BIOLOGICAL SCIENCES, GENETICS DEPT.\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Brazilian viticulture activity has remarkably increased in the northeastern region of the
+country over the last years. However, significant losses have occurred due to the local
+climate rough conditions that raise susceptibility of grape vine species such as Vitis
+vinifera to bacterial infections. In this context, Xanthomonas campestris pv. viticola, a
+Gram negative aerobic pathogenic bacteria, is associated with bacterial canker and
+many other phytopathologies, due to factors such as xanthomonadin and xantham gum
+production. Since it was first isolated from an Indian viticulture in the 70's, extensive
+studies have tried to elucidate how to control X. campestris pv. viticola infections in
+grape vine. Nevertheless, there is still a shortage of information regarding the molecular
+mechanisms and the acquisition of virulence genes in this organism. Therefore, we
+believe that identifying and exploring genomic content from Xanthomonas campestris
+strains would improve knowledge concerning its pathogenicity and help develop future
+approaches to control the disease. Pathogenicity islands (PAI) are described as a set of
+virulent genes which have been horizontally transferred among Eubacteria, providing
+the organism with the ability to cause pathologies. In this sense, we aimed to identify
+genes that are present in PAIs from X. campestris pv. viticola. For automatic annotation
+process, seven complete genome of X. campestris pv. campestris strains obtained from
+National Center for Biotechnology Information (NCBI) genome database were submitted
+on Rapid Annotation using Subsystem Technology (RAST). Afterwards, the annotated
+genomes were analyzed on Seed viewer and Artemis. Finally, Genomic Island
+Prediction Software (GIPSy) and Islandviewer4 were used to provide a better prediction
+view and analysis of PAIs. We show that almost 45\% of genome can be annotated
+using subsystems and that 77 genes are directly related to virulence, defense
+mechanisms and disease activity. The proteins encoded by these 77 genes were
+divided in two basic subcategories: antibacterial peptides and resistance to toxic
+compounds and antibiotics related to copper homeostasis. In summary, we reveal that
+the genomes of all seven Xanthomonas strains are very similar to each other but do
+possess relevant differences in terms of genes encoding pathogenicity factors.
+Moreover, there are high expectations for finding a resembling pattern on X. campestris
+pv. viticola, making possible the development of genetic improvements of plants,
+without the use of chemical agents.
+
+Funding: CAPES, FACEPE, CNPq
+\end{abstract}
+\end{document}

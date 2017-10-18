@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Data integration of Pseudomonas aeruginosa CCBH4851 genome sequence to support a whole cell modelling}} % Article title
+
+\author{Ribamar Santos Ferreira Matias$^1$, Francimary Procopio Garcia$^1$, Kele Teixeira Belloze$^1$}
+
+\affil{1 CEFET/RJ\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Pseudomonas aeruginosa is a bacterium species that arouses great interest, both in scientific and public health agencies, due to its strong association with pathogens related to hospital infections. A strain of this species, Pseudomonas aeruginosa CCBH4851, was found in Brazil in 2008, and when tested, was resistant to several antibiotics, of which only one, polymyxin B, was able to combat it effectively. Studies on this bacterium, aiming the construction of its whole-cell model, are being conducted by researchers of the Oswaldo Cruz Foundation. Such studies are intended to better understand the behavior of bacteria and thus make suggestions for new drug targets. The objective of this work is to integrate genomic sequencing data of the bacterium Pseudomonas aeruginosa CCBH4851 with data from Pseudomonas aeruginosa PAO1, a reference bacterium in the study of Pseudomonas sp and Escherichia coli, a bacterium that is a model organism. Based on the data integrated, it will be developed a knowledge base to support the identification of regulatory and metabolic pathways of the complete cell model of this bacterium.The proposed integration will be based on Gene Ontology Consortium's Database informations, known as GO Database, which is a public data repository, composed of ontologies and gene annotations in terms of these ontologies. The proposed methodology for constructing the integrated knowledge base will be divided into the following actions: i) extract, transform and cleaning data sequences and annotations of P. aeruginosa CCBH4851; ii) compare the sequences with the E. coli and P. aeruginosa PAO1 models; iii) annotate the compared sequences using Gene Ontology Database; iv) associate the results with the discovered data of the regulatory and metabolic pathways. v) associate and validate data in the literature. Based on the result acquired, a knowledge base will be developed in order to facilitate the research results, presenting the creation of an uniform information set, with terms widely accepted and known by the scientific community. In addition to the availability of this knowledge base, it is expected that the integrated information of the study and reference bacterium will support decision making in the assemblages of the regulatory and metabolic pathways of P. aeruginosa. This work is in its initial development stage in which the first methodology step is being carried out as well as the literature review.
+
+Funding: CEFET/RJ
+\end{abstract}
+\end{document}

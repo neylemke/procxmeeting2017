@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{PFstats: An Open Tool for Evolutionary Protein Analysis}} % Article title
+
+\author{N\'eli Jos\'e da Fonseca J\'unior$^1$, Marcelo Querino Lima Afonso$^2$, Lucas Bleicher$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+PFstats is a software developed for the extraction of useful information from protein multiple sequence alignments. By analyzing positional conservation and residue coevolution networks, the software allows the identification of structurally and functionally important amino acid groups and the discovery of probable functional subclasses. Furthermore, it contain tools for the identification of the possible biological significance of these findings. The goal of this project is to provide a computational tool with interactive graphical user interface and data visualization tools to predict global and specific functional amino acid residues and also find functional subclasses in protein families. The software was developed under a client-server architecture. The client was developed in C++/QT and in the server side a java webservice is made to enable the communication between the client and repositories databases of UniprotKb, PFAM and PDB. PFstats includes methods for alignment filtering, residue conservation and coevolution analysis, automatic UniprotKb queries for residue-position annotation, amino acid alphabets reduction and many possible data visualizations. We have studied four protein family domains: lysozyme C/Alpha-lactoalbumin, phospholipases A2, nitrogen regulatory protein PII, and the DNA binding domain of the nuclear receptors IV. In all of them communities of residues related to catalytic and binding sites were found, and also communities related to structural importance, as hydrophobic putative channel and secondary structures, and communties reated to taxonomic specificity. PFstats is free and open source, being distributed in the terms of the GPLV3 licence. The software is available in GUI and terminal versions at http://www.biocomp.icb.ufmg.br/biocomp/software-and-databases/pfstats/. We provide binaries for Windows and Linux (debian), but also compilation instructions for other systems, in addition to the source code and a manual.
+
+Funding: CAPES and FAPEMIG
+\end{abstract}
+\end{document}

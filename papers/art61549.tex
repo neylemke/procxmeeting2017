@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Microbial diversity of inocula and mature compost from thermophilic composting operation at the S\~ao Paulo Zoo}} % Article title
+
+\author{Suzana Eiko Sato Guima$^1$, La\'{\i}s Uch\^oa Rabelo Mendes$^1$, Roberta Verciano Pereira$^1$, Layla Martins$^2$, Aline Maria da Silva$^3$, Jo\~ao Carlos Setubal$^3$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Waste composting harbors a high diversity of microorganisms that participate in organic matter degradation. Some of these microorganisms can be promising thermophilic candidates able to degrade plant biomass and produce biorefinery matter. Motivated by high microbial diversity in plant waste composting, our goal is to analyze microbial diversity in inocula and mature compost of the composting process operated by the S\~ao Paulo Zoo. These inocula were collected from compost pile in later phases, usually just prior to a turning procedure. These samples are collected because practice has shown that, when added to the waste material at the start of composting, they speed up organic matter degradation. Mature compost refers to the 100-day composting material ready to be used as biofertilizer. This final matter is likely to comprise microorganisms selected by low availability of nutrients and composting thermophilic conditions. In order to investigate the microbial composition and abundance in inocula and mature compost, we collected six inoculum samples from different compost piles and three mature compost samples. Amplified 16S rRNA genes were sequenced on Illumina MiSeq platform. We used USEARCH for OTU clustering, RDP classifier for taxonomy assignment and QIIME (Quantitative Insights in Microbial Ecology) for diversity analysis. After analyzing microbial abundance, we compared our samples with S\~ao Paulo Zoo composting time-series samples from a previous study. Taxonomic profile for initial inoculum exhibited reasonable similarity with composting final stage. The most abundant phyla for inoculum and mature composts were Firmicutes, Proteobacteria, and Actinobacteria. For inoculum, Actinomycetales, Clostridiales and Bacillales were the most abundant orders. Actinomycetales and Clostridiales were also the most abundant for mature composts, but Bacillales was present in less abundance. Shared OTUs between inoculum and time-series samples (ZC4) were higher on day 30 and on day 99 compared to other days. The five most abundant OTUs in mature composts were present in inoculum samples. Comparison between inoculum and time-series samples exhibited a trend in microbial dynamic and structure of the composting process with succession of some bacteria over others.
+
+Funding: FAPESP, CAPES, CNPq
+\end{abstract}
+\end{document}

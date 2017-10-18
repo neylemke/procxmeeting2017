@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A predictive alignment-free model based on a new logistic regression-based method for feature selection in complete and partial sequences of Senecavirus A}} % Article title
+
+\author{Tatiana Fl\'avia Pinheiro de Oliveira$^1$, Marcos Augusto Dos Santos$^2$, Marcelo Fernandes Camargos$^3$, Ant\^onio Augusto Fonseca J\'unior$^3$, Arist\'oteles G\'oes-neto$^4$, Edel Figueiredo Barbosa Stancioli$^4$}
+
+\affil{1 DEPARTAMENTO DE MICROBIOLOGIA, INSTITUTO DE CI\^ENCIAS BIOL\'OGICAS, UFMG, MINIST\'ERIO DA AGRICULTURA, PECU\'ARIA E ABASTECIMENTO\\ 2 DEPARTAMENTO DA CI\^ENCIA DA COMPUTA\c{C}\~AO, INSTITUTO DE CI\^ENCIAS EXATAS, UFMG\\ 3 MINIST\'ERIO DA AGRICULTURA, PECU\'ARIA E ABASTECIMENTO\\ 4 DEPARTAMENTO DE MICROBIOLOGIA, INSTITUTO DE CI\^ENCIAS BIOL\'OGICAS, UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+In 2015, there was an outbreak involving pig farms in six Brazilian states, whose single agent found and described for the first time in the country was the Senecavirus A (SVA), a virus belonging to the genus Senecavirus (Picornavirales, Picornaviridae). This viral family also houses the genus Aphtovirus, whose species type is the Foot-and-mouth disease virus (FMDV), agent of Foot-and-mouth disease, a highly infectious disease notifiable under the strict control of the Ministry of Agriculture, Livestock and Supply (MAPA) and the World Organisation for Animal Health (OIE). In the past few years, there has been a growing interest in the application of methods of linear algebra and statistics in data mining, social networks, machine learning, bioinformatics and information retrieval. Among these methods, logistic regression approach draws some special interest as it is a standard method for data classification using genome data and is the most frequently used method for disease prediction. We introduce a model that represents sequences as 6-nucletotide frequency vectors in R4096 and 3- amino acids frequency vectors in R800 and uses information of SVA and FMDV from the complete genome or amino acid sequences of the polyprotein of theses viruses. In addition, partial sequences of nucleotides / amino acids of structural proteins (VP1, VP2, VP3 and VP4) of these viruses were used to build a new logistic regression-based method for classification. This new model allowed the assignment of values to parameters ai* that are associated with the frequency of a certain hexanucleotide or triplets codons of amino acids. Scrutinizing these parameters ai* unveiled that the most positive value may be related to important target sites of key virus proteins. Thus, this methodology was able to predict key regions in Senecavirus A, which can be important in studies of viral replication mechanism or in the development of diagnostic kits.
+
+Funding: LANAGRO-MG ; FAPEMIG; CNPq
+\end{abstract}
+\end{document}

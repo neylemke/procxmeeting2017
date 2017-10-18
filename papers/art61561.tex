@@ -1,0 +1,72 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Transcriptome profiles of Resistance Gene Analogs in Saccharum hybrid cultivar RB925345 in response to Sporisorium scitamineum infection}} % Article title
+
+\author{Sintia Almeida$^1$, Patricia Dayane Carvalho Schaker$^1$, Claudia Barros Monteiro-vitorello$^1$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Sporisorium scitamineum is a biotrophic fungus responsible for the sugarcane smut, a worldwide spread disease. The disease is one of most harmful to the crop and occurs in all producing countries. The development of sugarcane smut symptoms depends on the interaction among environment, the sugarcane genotypes and the pathogen itself. RGAs (Resistance Gene Analogs) play a central role in recognising PAMPs, MAMPs, DAMPs or effectors from pathogens, triggering downstream signalling during plant disease resistance. RGAs comprise both cell surface pattern-recognition receptor (PRRs) and R-genes and can be grouped into several superfamilies based on the presence of a few structural motifs and conserved domains. For instance, both receptor like kinases (RLK) and membrane associated receptor-like proteins (RLP) are PRRs, while R-proteins are intracellular immune receptors mostly belonging to nucleotide-binding site-LRR (NBS-LRR). In general, the most prevalent R genes in plants are NBS-LRR, which are divided into two subclasses based on the presence of an N-terminal CC or TIR domain. 
+To investigate expression profile and functional characterization of RGAs in sugarcane in response to smut fungus, a set of 16,219 transcripts from RB925345 susceptible variety was analyzed. RGAs were identified and categorized using PRGDB database. Differentially expressed (DE) RGAs were identified using a set of RNAseq data from smut-infected plants in two time points: 5 days after inoculation (DAI) and 200 DAI (after whip emission) using CLC Workbench V.8 (p-value < 0.05). To assess the functions of DEs, was performed a functional categorization was performed based on the KEGG database and Blast2go annotation.
+We identified 320 RGAs classified in four superfamilies: NBS (110) and TM-CC (29) containing proteins and membrane associated RLPs (39) and RLKs (142). Of them, 15 were differentially expressed (DE) at 5 DAI and 46 at 200 DAI. Lectin receptor-like kinases (LecRLKs) were abundant among the DEs, in which the extracellular lectin domain   is known to bind to pathogen cell wall components. Genes related to effectors recognition belonging to the NBS family were also identified, such as the RPM1 disease resistance (R) protein homolog. 
+These results show that comparative genomic analysis can help to identify host proteins related to pathogen recognition. Along with the analysis of differential expression we were able to determine those most responsive to the stimuli. 
+Furthermore, the DE transcripts encoding RGAs may be used as molecular markers for resistance or susceptibility to smut disease.
+
+Funding: CNPq and FAPESP
+\end{abstract}
+\end{document}

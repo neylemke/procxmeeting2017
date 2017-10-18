@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Evaluation of the molecular impact of an exclusive aminoacid substitution of Saccharomyces cerevisae more tolerant to ethanol strains:  a molecular dynamics approach.}} % Article title
+
+\author{Guilherme Ferreira Luz$^1$, Guilherme Targino Valente$^1$, Rafael P. Sim\~oes$^1$}
+
+\affil{1 UNESP - STATE USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The society claim for a new way of acquiring energy. Since the world demands an independence of fossil fuels, ethanol is raising as a great alternative to the global issue. The yeast Saccharomyces cerevisae is the microorganism most used for ethanol production because of its great fermenting capacity and also a great resilience in this process. Although, the ethanol concentration on the production is one of the most limiting factors of the industry, once the product is toxic for living cells. Saccharomyces cerevisae has a plenty of different strains, which could explain why some strains are more tolerant to ethanol than others. The study of mutations in different strains could give us a path to understand the ethanol tolerance phenotype. In this context, the current project aims to understand the phenomenon of ethanol tolerance selecting a particular protein applying bioinformatic tools and analyzing it by molecular modeling approach. The candidate was chosen using alignment analysis of the whole proteome of five different strains (S288C, BY4741, BY4742, SEY6210 and X2180-1A) being the X2180-1A, BY4741 and BY4742 the most tolerant ones. Thus, the ADH1 (alcohol dehydrogenase) protein is a protein with an activity of alcohol catalysis, breaking the alcohol and turning it to acetone or aldehyde groups. The ADH1 was chosen since it has a single mutation exclusive of the most tolerant strains. That mutation changes a Glutamine for a Glutamate, adding an extra electron to the chain. The ADH1 protein is a dimeric protein with 2 zinc ions attached to the chain (1 catalytic zinc and 1 structural) and 1 NAD+ (a coenzyme factor). The molecular analysis showed the observed mutation changed the electronic structure of the molecule catalytic site, which could improving the catalytic zinc activity by increasing its oxidation potential. The molecular dynamics simulations using the Charmm force field showed that the mutated structures have similar conformation energy as the non-mutated ones, and it can be considered stable molecular structures. The electronic distribution has been performed using the Gaussian09 package and the oxidation potential of the catalytic site has been calculated as well. If the hypothesis of faster oxidation to be confirmed, we could be able to prove that the single mutation in ADH1 protein might be responsible for ethanol tolerance increasing. The results could provide knowledge for new target genes for genetic engineering of Saccharomyces cerevisae to increase the ethanol tolerance.
+
+Funding: UNESP - State University of Sao Paulo (Botucatu)
+\end{abstract}
+\end{document}

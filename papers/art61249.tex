@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Detection and prediction of premature stop codon using mass spectrometry data at the protein level}} % Article title
+
+\author{Karla Cristina Tabosa Machado$^1$, Andre Fonseca$^1$, Sandro Jose de Souza$^1$, Gustavo Ant\^onio de Souza$^1$}
+
+\affil{1 UFRN\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The volume of public data regarding proteomics has increased significantly in the last few years, allowing to use its potential to improve the annotation of genomics data. The key stage in proteomics is to identify peptides and proteins, initially through a  comparison of collected mass spectrometry (MS) data and theoretical sequences in a database. However, protein sequence databases report mostly a no-redundant number of known isoforms, while individual polymorphic variations are not represented. Nonsense mutations are characterized by the premature appearance of the stop codon in a gene, which could produce defective proteins. The objective of this paper was to define a computational approach which could allow the prediction, of such mutations in proteomic datasets, without previous knowledge of the genome of the sample and consequently, only using a reference protein sequence database for protein identification. It was proposed that when nonsense mutations are present, one could track the quantitative profile of each peptide of a given protein,  in order to detect a drop of sequence coverage at the protein c-terminal, that could be explained by the presence of a premature stop codon. This method was developed with the use of Perl language programming scripts which divide the identified proteins with sequence coverage above 30\% into bins, in which each bin is 5\% of the size of the subject protein. The script verifies peptides structures to ensure that they are totally or partially included inside of each bin and then adds all spectral counts associated to each peptide. Public MS data from three publications investigating the proteomes of cell lines, ovary cancer and colon cancer were re-analyzed using the approach developed here. Among the findings, genes such as BUB3, CALR and PRMT5 appeared mutated in certain samples of patients with cancer. This data will be validated at a later date to confirm the presence of the stop codon in the gene.
+
+Funding: UFRN
+\end{abstract}
+\end{document}

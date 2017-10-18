@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Spatial representation of amino acid composition divergence in homologous protein families}} % Article title
+
+\author{Lucas Carrijo de Oliveira$^1$, N\'eli Jos\'e da Fonseca J\'unior$^1$, Lucas Bleicher$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Homologous protein families can be assessed by multiple sequence alignments (MSA), wherein each column represents an evolutionarily corresponding position among homologous proteins. Conserved positions, meaning invariable sites, indicate evolutionary constraints in amino acid substitutions, generaly due to structural and/or functional importance of such positions. Besides the fully conserved ones, there are some positions that are specificaly conserved in functional subclasses eventualy present in a family. In the same way, as one moves toward a phylogenetic tree, from root to leaves, some residues appears as being specificaly conserved in each clade, while others remain variable or unspecificaly conserved. By representing each residue (here calling residue a given amino acid in a specific position, like ``His37'') by the set of all sequences in a MSA having such a residue, and calculating the conditional probabilities of finding all other ones given the presence of that residue (e.g., probability of finding Asp71 in sequences having His37), it is possible to compare all possible sets of sequences on the basis of their amino acids composition. The present work introduces a distance based method to represent, in the N-dimensional space, the evolutionary divergence of amino acid composition in homologous protein families. For each residue, the method takes a specific sub-alignment (e.g, the subset of sequences in a MSA having that residue) and considers each column as a 20-dimensional vector, being each dimension the conditional probability of finding, at that position, each of the 20 amino acids. This way, each sub-alignment is represented as a set of 20-dimensional points in space. Two sub-alignments can than be compared by calculating the root mean square deviation (RMSD) between these two sets of points. An all against all distance matrix is generated and, by singular value decomposition (SVD), it is possible to define N-dimensional spatial coordinates from this distance matrix. By ploting these coordinates in a tridimensional Cartesian plane, one can visualize the pattern of amino acid composition divergence in homologous protein families, from more conserved  to more specific residues, passing toward variable or unspecificaly conserved ones. Colouring points by frequency in MSA of their respective residues helps visualization of such an effect.
+
+Funding: CAPES, CNPq
+\end{abstract}
+\end{document}

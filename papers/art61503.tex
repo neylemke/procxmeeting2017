@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{GBKFinisher: A tool for GenBank files refinement}} % Article title
+
+\author{Gustavo Santos de Oliveira$^1$, Doglas Parise$^1$, Mariana Teixeira Dornelles Parise$^1$, Anne Cybelle Pinto Gomide$^2$, Vasco Ariston de Carvalho Azevedo$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+After genome assembly and annotation, usually a lot of effort is taken to check for potential pseudogenes as well as to set annotation features ready to submission. Those processes are usually manually performed in Artemis and are time consuming. Different filters set in Artemis help in the identification of potential issues, as absence of stop codons in CDSs, incorrect start codons, duplication and overlap of features, etc. For potential pseudogenes, however, a manual inspection must be performed. The user must check for frameshifts corrections by observing for possible indels, the presence of premature stop codons or even gene fragments. The user, then frequently uses BLASTp as a guide for possible correction of those different issues. Based on the need for a more automatic process we introduce GBKFinisher. This tool was developed as an effort to help users to save time and more accurately fix annotation issues. GBKFinisher is based on three major packages: GBKChecker, GBKParser and GBKSolver. GBKChecker attempts to give the basic stats, like qualifiers count and nucleotide composition, as well as a diagnosis of possible issues, like the number of possible frameshifts, fragments and split ORFs that could be safely joined, without a stop codon in between. GBKParser was created to rewrite gbk files with qualifiers as specified by the user. GBKSolver attempts to automatically solve for detected issues by GBKChecker.  GBKFinisher allows a very convenient way for users to filter out unwanted qualifiers, as well as to annotate locus\_tag differently for CDSs, tRNAs, and rRNAs. It is also possible for users to manually correct potential issues detected in GBKChecker. A log file with all possible issues encountered by GBKChecker is maintained and can be accessed for detailed troubleshooting. Likewise, a gbk file is created with a color scheme that assists users in the curation process. The primary output of GBKFinisher is a user defined Genbank file, that can ultimately be used for guiding the curation process or even for sequin and GenBank submission.
+
+Funding: Fapemig
+\end{abstract}
+\end{document}

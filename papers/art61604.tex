@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Proteome scale comparative modeling for conserved drug and vaccine targets identification in Salmonella serovers}} % Article title
+
+\author{Syed Babar Jamal Bacha$^1$, Jyoti Yadav$^2$, Neha Jain$^3$, Sandeep Tiwari$^1$, Arun Kumar Jaiswal$^4$, Thiago Luiz de Paula Castro$^5$, N\'ubia Seiffert$^5$, Siomar de Castro Soares$^6$, Artur Silva$^7$, Vasco A de C Azevedo$^8$}
+
+\affil{1 INSTITUTE OF BIOLOGICAL SCIENCE, UFMG\\ 2 SCHOOL OF BIOTECHNOLOGY, DEVI AHILYA UNIVERSITY, INDIA\\ 3 DEVI AHILYA UNIVERSITY\\ 4 INSTITUTE OF BIOLOGICAL SCIENCE, UFMG, DEPARTMENT OF IMMUNOLOGY, MICROBIOLOGY AND PARASITOLOGY, INSTITUTE OF BIOLOGICAL SCIENCES AND NATURAL SCIENCES, UFTM\\ 5 UFBA\\ 6 DEPARTMENT OF IMMUNOLOGY, MICROBIOLOGY AND PARASITOLOGY, INSTITUTE OF BIOLOGICAL SCIENCES AND NATURAL SCIENCES, UFTM\\ 7 UFPA\\ 8 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Despite extensive surveillance, foodborne Salmonella enterica infections continue to cause a significant burden on public health systems worldwide. Salmonella is a food-borne pathogen that leads to substantial illness worldwide. The clinical syndromes associated with Salmonella infection are enteric (typhoid) fever and gastroenteritis, in healthy humans. Typhoid fever is caused by host-adapted S. Typhi and S. Paratyphi. Gastroenteritis is caused by serovars usually referred to as non-typhoidal Salmonellae (NTS). In this work, we used a Modelome approach for the proteome of Salmonella Typhi species. This served to bridge the gap between raw genomic information and the identification of good therapeutic targets based on the three-dimensional structures. The novelty of this strategy relies in using the structural information from high-throughput comparative modeling for large-scale proteomics data for inhibitor identification, potentially leading to the discovery of compounds able to prevent bacterial growth. The proteomes of 3 Salmonella typhimurium strains were modeled (pan-modelome) using the MHOLline workflow. Intra-species conserved proteome (core-modelome) with adequate 3D models was further filtered for their essential nature for the bacteria, using the database of essential genes (DEG). This led to the identification of essential bacterial proteins without homologs in the host proteomes. Furthermore, we investigated a set of essential host homologs proteins. We observed residues of the predicted bacterial protein cavities that are completely different from the ones found in the homologous domains, and therefore could be specifically targeted. By applying this computational strategy, we provide a final list of predicted putative targets in Salmonella typhimurium which were common to all the three serovars. They could provide an insight into designing of peptide vaccines, and identification of lead, natural and drug-like compounds that bind to these proteins. We propose that some of these proteins can be selectively targeted using structure-based drug design approaches (SBDD). Our results facilitate the selection of Salmoenlla tyhpimurium putative proteins for developing broad-spectrum novel drugs and vaccines. A few of the targets identified here have been validated in other microorganisms, suggesting that our modelome strategy is effective and can also be applicable to other pathogens.
+
+Funding: TWAS-CNPq, CAPES
+\end{abstract}
+\end{document}

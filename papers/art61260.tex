@@ -1,0 +1,95 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{CNV calling and its characterization in the Brazilian population}} % Article title
+
+\author{Ana Claudia Martins Ciconelle$^1$, J\'ulia Maria Pavan Soler$^1$}
+
+\affil{1 INSTITUTO DE MATEM\'ATICA E ESTAT\'ISTICA - IME/USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+A copy number variation (CNV) occurs when the number of copies of a particular
+region of the DNA differs from two in autosomes or one/two in allosomes and has an
+important role in the genetic variability in humans. The effects of CNVs to human
+diseases are not yet known, although several diseases have been associated to this kind
+of polymorphism, such as uric acid and nervous system disorders. 
+Motivated by the unknown influence of CNVs on anthropometric measurements and
+cardiovascular phenotypes and in collaboration with the Laboratory of Genetics and
+Molecular Cardiology at the Heart Institute/InCor-FMUSP, the primary aim in this
+project is to estimate the CNV from SNP array platforms and understand its
+transmission rate in family data and its association with complex phenotypes.  This
+project also aims to understand the CNV distribution in Brazilian population and
+between family members.
+A pipeline was proposed for CNV calling from SNP Array data by reviewing softwares
+and packages that are available in the literature. Using the database from the Baependi
+Heart project, we analyzed the genotype and phenotype data from 80 families to identify
+the CNVs and to understand their association with height. From the genetic data, the
+CNVs were estimated from a combination of statistical techniques and algorithms
+including quantile normalization, classification methods for genotyping of SNPs and
+hidden Markov chains. After an exploratory data analysis, polygenic linear mixed
+models were used to estimate the association of CNVs with the chosen phenotypes. 
+Our results suggest that the Brazilian population have a similar number of CNV per
+person (around 55 CNVs) in comparison with other populations. However, from the
+total of 64.107 CNVs identified, 147 CNVs are common among our samples, but rare in
+worldwide populations, one example being a CNV in the NEGR1 gene, which is present
+in 89\% of our sample. Based on family data, the intraclass correlation coefficient for
+CNVs was estimated between 30\% to 60\% showing a high similarity on values from the
+same family. Association analysis between CNVs and different phenotypes are being
+performed.
+
+Funding: CNPq, CAPES
+\end{abstract}
+\end{document}

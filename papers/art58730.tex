@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{THE ORIGIN OF THE GENES OF HUMAN DIGESTIVE SYSTEM SECRETION}} % Article title
+
+\author{Fen\'{\i}cia Brito$^1$, Tetsu Sakamoto$^2$, Jos\'e Miguel Ortega$^3$}
+
+\affil{1 UFMG\\ 2 UFMG. LABORAT\'ORIO DE BIODADOS.\\ 3 UFMG, LABORAT\'ORIO DE BIODADOS.\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The processes that ensure the maintenance of life require energy and for all heterotrophic organisms the source of energy are the nutrients available in the environment. Since the origin of the first forms of life the processes and systems involved in obtaining and metabolizing food have been determinant in the evolutionary success of the species. In humans the main stages of digestion depends on salivary, gastric, pancreatic and biliary secretions. Although studies of comparative anatomy in metazoa are well documented and the systemic knowledge of several processes is reported in many databases, studies addressing the comparative genomics and the evolution of the components of this system are scarce. Here our goal was to study the sequential origin of the genes involved in heterotrophy using the human digestive system as model. For this, software-recognizable diagrams for the digestive system secretion pathways were created based on models available in KEGG Pathway database. The origin of each component was estimated using tools for homologous clustering and for lowest common ancestor inference. This allowed us to infer the origin of the system based on the origin of its genes. Our results show that the most ancestral genes found in the pathways act on cell signaling processes and arose before the systems have been originated. The most recent components, such as receptors and some transporters, which are essential for secretion function, appeared from Metazoa. In addition, some components with auxiliary function, such as bicarbonate secretion in the pancreas and bile, have a more recent origin, indicating that this process appears as a refinement in these secretory pathways. Salivary secretion has the highest number of recent components and many of the proteins secreted are exclusive in mammals. In addition, we performed an analysis using the ELDOgraph program to identify which organisms or OTUs have more proteins close to human. The results show that the species that has more ELDO with human belong to the genus Pan (chimpanzees and bonobos). Analyzing at the order level the species with more ELDO with human belong to the orders Dermoptera and Rodentia. Our results show that the secretion pathways of the digestive system in mammals share many similarities, although some proteins are more distant. The data presented here allowed us to draw a scenario about the evolution of the digestive process, contributing to the evolutionary history of this system.
+
+Funding: Programa de P\'os-Gradua\c{c}\~ao em Bioinform\'atica
+\end{abstract}
+\end{document}

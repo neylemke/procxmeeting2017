@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Improving your BLAST+ experience with CrocoBLAST}} % Article title
+
+\author{Ravi Jose Tristao Ramos$^1$}
+
+\affil{1 CEITEC - CENTRAL EUROPEAN INSTITUTE OF TECHNOLOGY\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+CrocoBLAST is a tool designed for improving BLAST+ speed and user experience, bringing it closer to the end users. CrocoBLAST was benchmarked on 4 different computers (including a low-end desktop and a modern server), with 11 different datasets (including a proteome, a metagenome and diverse NGS read sets) comprising the 5 main BLAST+ applications (blastn, blastp, blastx, tblastn, tblastx). The benchmark shows that large alignments that would require a dedicated computer for several weeks with NCBI BLAST+, as is commonly the case for NGS data, can be run overnight with CrocoBLAST. Additionally, CrocoBLAST provides enhanced user experience features such as: real-time information regarding calculation progress and remaining run time; access to partial alignment results; queuing, pausing, and resuming BLAST+ calculations without information loss. CrocoBLAST was implemented as a friendly software layer between the end user and BLAST+, and is compatible with any BLAST+ version, providing identical results to those of BLAST+. Furthermore, CrocoBLAST allows for using files in FASTQ format as query for the alignment; easily downloading pre-formatted BLAST+ databases from NCBI; adding existing pre-formatted BLAST+ databases; or easily creating new databases directly from FASTA or FASTQ files. All functionality is available both by command line and by a graphical user interface developed in Java. CrocoBLAST is freely available for download, and comes with a user manual exemplifying the usage of all its commands, including image examples of the graphical user interface (webchem.ncbr.muni.cz/Platform/App/CrocoBLAST). No installation or user registration is required. CrocoBLAST is available for Linux and Windows; Mac OS X users can run CrocoBLAST with good performance within a Linux virtual machine.
+
+Funding: CEITEC - Central European Institute of Technology
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{EXPLORATION OF REPRESENTATION OF POLYPEPTIDE CHAINS IN VECTORIAL MODELS FOR GENOMIC AND PROTEOMIC ANALYSIS}} % Article title
+
+\author{Ricardo Voyceik$^1$, Jos\'e Miguel Ortega$^2$, Camilla Reginatto de Pierri$^3$, Let\'{\i}cia Graziela Costa Santos$^3$, Roberto Tadeu Raittz$^3$}
+
+\affil{1 UFMG\\ 2 UFMG, LABORAT\'ORIO DE BIODADOS\\ 3 UFPR\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The volume of information in genes and proteins databases continues to increase exponentially, so vast amounts of biological information are available on public databases. Whilst some extent and requires increasing computational capacities to analysis performance, the ability to analyze this information has not been developed in the same way. Even with the today data mining techniques, useful for the treatment of large amounts of information, are limited in the exploration of biological data based on sequences, because they are unstructured and redundant data. Therefore, in this context, alignment free analysis of sequences was shown as a promising technique for analysis of proteomes and genes. With the aim of producing a mathematical model of representation of knowledge bases of genes or proteins, which can be manipulated by mathematical properties, in what it is possible to calculate the similarity between the amino acid sequences quickly, allowing the clustering by the biological characteristics given by the amino acids contained in the sequences, we propose an approach for gene and proteomic representation in a structured and reversible vector model, which has the potential to improve the capacity of analysis and data mining of biological data derived from protein sequences. Farther, we make available a graphic model to visualize this form of representation. The proposed model consists on the decomposition of sequences in sliding-windows analysis, in order to generate vectors that represent each amino acid at the sequences. As results, in the analyzes of the tests performed with the comparative among the techniques available in sequence analysis, in the aspects of clustering and similarity measures, the proposed method showed to have equivalent sensitivity, with the advantage of providing a substantially superior computational performance. We also show that the linearization of the matrices is a vector model that allows algebraic operations between the represented units, giving feasibility to operations such as geometric averages, cosine distance, centroid definitions, principal component analysis and the reduction by projection of the complete vector model for orthonormal basis. The reduction by projections to orthonormal basis down to 211 attributes, maintained the sensitivity of the model above 99\%. As the vector model is storage in floating-point numbers, the data can be manipulated by GPUs with fast and precise parallel processing and possibility of clustering as well as machine learning techniques can be approached directly in the proposed model, without having to extract his characteristics or conversions, which opens new horizons in the data mining in Bioinformatics using math analysis tools.
+
+Funding: CAPES
+\end{abstract}
+\end{document}

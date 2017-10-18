@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Genome assembly completeness and its effect on phylogenetic estimation}} % Article title
+
+\author{Rafael Cabus Gantois$^1$, Raquel Enma Hurtado Castillo$^1$, Rodrigo Profeta Silveira Santos$^1$, Thiago de Jesus Sousa$^1$, Marcus Vinicius Can\'ario Viana$^1$, Anne Cybelle Pinto Gomide$^1$, Artur Silva$^2$, Rafael Azevedo Bara\'una$^2$, Vasco A de C Azevedo$^1$}
+
+\affil{1 UFMG\\ 2 UFPA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Corynebacterium pseudotuberculosis is a Gram-positive bacteria that causes diseases in humans and animals around the world. It's divided in two biovars: Ovis Biovar infects goats, cattle and sheep and Equi Biovar infects equines and cattle. Currently, there are 73 genomes of this species available in NCBI database, 14 of these as drafts, and this number is still growing. Previously, the NCBI phylogenetic tree of this genomes had two clusters representing the two biovars. However, eleven draft genomes of Equi biovar were recently deposited and formed a third cluster, external to the previous ones, instead of being clustered within the other Equi. In this work, we are reassembly these draft genomes in order to investigate the effect of the genome assembly completeness on phylogenetic estimation. The genomes were sequenced at National Reference Laboratory for Aquatic Animal Diseases of Ministry of Fisheries and Aquaculture (AQUACEN) using Ion Torrent PGMTM platform and a 400 pb fragment library. The new assemblies are being performed using Newbler 2.9 by a de novo strategy, following drafting using CONTIGuator 2.7, and gap filling by reference assembly using CLC Genomics Workbench 7. The genome annotation is done automatically using RASTtk and manual curated. We will use PEPR to reconstruct two different phylogenomic trees with the C. pseudotuberculosis genomes available in NCBI: one using the drafts and other using the complete assembled genomes. As a preliminary result, the completely assembled genome of strain MB302 was clustered with the other complete genomes. As expected result, we hope that every single re-assembled genome will move to inside the tree too.
+
+Funding: CNPQ, CAPES, FAPEMIG
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Group-Directed Biasing Effects on Topological Properties of PPI Networks}} % Article title
+
+\author{Paulo Burke$^1$, Luciano da Fontoura Costa$^1$}
+
+\affil{1 IFSC - USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Complex networks have increasingly been used for representing and analyzing biological systems such as protein-protein interaction, metabolism, and gene regulation.  However, most these networks are substantially incompletely sampled as a consequence of experimental difficulties.  So, it becomes important to investigate to which extent such incompleteness can bias the network representations, especially regarding the estimation of several topological properties.  Though some related studies have been reported in the literature, they mostly focus on uniform sampling biases, therefore not including situations in which one or more groups of nodes or edges are, by their biological nature, differently affected by sampling.  This case is henceforth called group-directed biasing.  Indeed, this situation is commonly found in biology, such as in the case of proteins with high content of exposed apolar amino acids bias effect on yeast two-hybrid (Y2H) assays.  The present work aims at investigating such situations, by using simulations.  More specifically, we build diverse model networks which are biologically more plausible (e.g. Barab\'asi-Albert) in Protein-Protein Interaction (PPI) networks, select subgroups of nodes and/or edges which may or may not share topological characteristics, and derive respective sampled versions of these networks with sampling biasing specific to groups of nodes.  Then, several topological measurements are obtained for these networks and compared to the original models.  In this way, we provide insights about the effect of different types of group-directed biasing on the accuracy of the estimation of topological features of complex networks.
+
+Funding: FAPESP, CNPq, CAPES
+\end{abstract}
+\end{document}

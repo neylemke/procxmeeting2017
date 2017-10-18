@@ -1,0 +1,70 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification and Visualization of Expression Patterns by the Integration of Pathways, Transcriptome and Proteome profiles}} % Article title
+
+\author{Henrique Cursino Vieira$^1$, Bruno Ferreira de Souza$^2$, Hugo A. Armelin$^3$, Milton Yutaka Nishiyama Junior$^4$}
+
+\affil{1 LECC-CETICS, INSTITUTO BUTANTAN\\ 2 ECC-CETICS, INSTITUTO BUTANTAN\\ 3 INSTITUTO BUTANTAN\\ 4 LETA-CETICS, INSTITUTO BUTANTAN\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The integration of multi-omics data is a great challenge and is necessary for the understanding of the complexity of biological systems and signaling network interactions. Discovering the gene or protein expression signature associated with a specific treatment or condition is the basic question. However, the studies based in only on molecular level (e.g. genome, transcriptome, or proteome) may be incomplete and fail to reveal the multi-layer interactions in the different molecular levels. The computational approaches for good predictions and efficient data integration are not well established yet and can be dependent on the specific experimental design. Many scientists are looking for integrated and graphical tools for visualization of networks, pathways and generate pictures and tables presenting their findings. This work is part of The Center of Toxins, Immune-response and Cell Signaling (CeTICS), which aims to understand the behavior of biological systems based on analysis of -omics data and signaling networks; The studies and research in CeTICS are intrinsically interdisciplinary, which is coupled to the -omics data from genomics, transcriptomics and proteomics, heterogeneous knowledge. 
+The necessities to the integrative analysis of such multiple layers, is especially focused on the most preferred methods for understanding global gene regulation: high-throughput RNA sequencing and mass spectrometry (MS) expression profiles, coupled to the integration with the relative abundance of metabolic and signaling pathways, which can be increased with the application of machine learning methods and viewers for the inspection and analysis on-the-fly. Data visualization tools can be categorized into two types, although they can overlap: tools focused on automated methods for the interpretation and exploitation of large biological networks; and tools for assembly and validation of tracks. Thus, we present a Shiny application for an interactive viewer with automated analysis tools, which will enable novel conclusions to be drawn from transcriptomic and proteomic integrative analysis. The researcher will can interact with the application, so it can view the content in a clean and fluid way, making possible aggregate data from different biological sources. The goal is beyond visualization, and will allow performing multivariate analysis for systems-level, understanding from multi-dimensional data and be optimized to show the results through the graphs. 
+Finally, our mid-term objective is to develop an integrative approach, which will be aggregated to the CeTICSdb platform, which will be available to the scientific community.
+
+Funding: \#2013/07467-1, S\~ao Paulo Research Foundation (FAPESP)
+\end{abstract}
+\end{document}

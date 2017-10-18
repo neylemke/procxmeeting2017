@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{In silico improvement of the cyanobacterial lectin microvirin and Mana(1-2)Man interaction}} % Article title
+
+\author{Adonis Lima$^1$, Andrei Santos Siqueira$^1$, Luiza M\"oller$^2$, Rafael Souza$^3$, Alex Ranieri Jer\^onimo Lima$^1$, Ronaldo Correia da Silva$^1$, D\'elia Cristina Figueira Aguiar$^1$, Jo\~ao L\'{\i}dio da Silva Gon\c{c}alves Vianez Junior$^3$, Evonnildo Costa Gon\c{c}alves$^1$}
+
+\affil{1 UNIVERSIDADE FEDERAL DO PAR\'A\\ 2 FACULDADE INTEGRADA BRASIL AMAZ\^ONIA\\ 3 INSTITUTO EVANDRO CHAGAS\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Given the impact of human immunodeficiency virus (HIV) infection, a portion of the scientific community has been dedicated to the development of drugs capable of preventing the virus from entering the host cell, thus preventing the infection of new individuals. This study aims to perform in vitro microvillin analysis (MVN), a lectin produced by the Microcystis aeruginosa cyanobacterium, aiming at optimizing its binding affinity for the viral gp120 protein, the protein that mediates virus entry into CD4 + T cells. The nucleotide sequence of this work was obtained from a genomic analysis of the Microcystis aeruginosa CACIAM 03, isolated from a surface water sample of the reservoir of the Tucuru\'{\i} plant. The model was constructed by comparative modeling through the Modeller 9.16 program, having as template the Microcystis aeruginosa MVN of 2YHH PDB code (108 aa). Molecular docking of the MVN with its ligand was performed through Molegro Virtual Docker (version 5.5). The validation of the modeled target was done by analyzing the stereochemical quality, the free energy of the system and the mapping of the molecular electrostatic potential. In addition, three molecular dynamics (DM) of 210 ns were prepared using Amber16 for the refinement of the target. The alanine scanning webserver tool was used to study the importance of protein residues with its ligand. Several information acquired through these computational simulations were used to obtain a mutant. As results, the constructed target of MVN\_CACIAM 03 showed 95\% sequential identity as compared to the 2YHH template. In the generated MVN\_CACIAM 03, 97\% of the residues were found in favorable regions, according to the Ramachandran graph. Molecular mooring decreased the energetic state of the complex, which also confirmed the interactions described in the literature. The RMSD values ??of the mannose and the interaction site were very stable during the three trajectories of 210 ns. Calculations of the occupation time of the hydrogen bonds were made for the residues that showed interaction in the MVN\_CACIAM03 complex and mannose. And the generated mutant (Thr82Arg), after computational studies, showed to be more efficient during the process of receptor-ligand interaction.
+
+Funding: CAPES
+\end{abstract}
+\end{document}

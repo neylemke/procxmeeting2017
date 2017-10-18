@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Aspergillus fumigatus : computational characterization of  UBP14 deubiquitinase}} % Article title
+
+\author{Carlos Bruno de Araujo$^1$, Juliana da Silva Viana$^1$, Nat\'alia Silva da Trindade$^1$, Polyane Vieira Mac\^edo$^1$, Matheus de Souza Gomes$^1$, Enyara Rezende Morais$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Invasive Pulmonary Aspergillosis (IPA) is a disease that has a high mortality rate ranging from 30 to 90\%, caused by the opportunistic fungus Aspergillus fumigatus. This pathogen is highly virulent due to the fact that it has some mechanisms of resistance to adverse situations. Eukaryotes have an important non-functional protein degradation system, which is known as Ubiquitin-Protoeasome System (UPS). This system is composed of several enzymes, the deubiquitinases (DUBs) play a fundamental role during the process because they act in the breakdown of the bonds between ubiquitin molecules. UBP14 participates by releasing ubiquitin from polyubiquitin chains which are not anchored to the substrate, such action re-establishing free Ub levels in the cell medium and preventing inhibition of the proteasome by binding of such chains. The UPS is very important for the survival of several organisms besides it has not yet been characterized in A.fumigatus, so the objective of this work was to characterize the UBP14 deubiquitinase in this pathogen. Initially the Saccharomyces cerevisiae UBP14 protein sequence was used to identify the corresponding ortholog in A. fumigatus from ASPGD (aspergillusgenome) database, then using BLAST it was possible to identify the best orthologs for the prediction of the conserved domain in the Pfam, the amino acid residues from the catalytic site in CDD, for multiple alignment in CLUSTALX and phylogenetic analysis in MEGA5.2. Afu2g06330 was identified as UBP14 in A. fumigatus, which has 783 amino acid residues, the UCH domain and the Peptidase C19 catalytic site. The results obtained in this study demonstrated the presence of the studied protein in A. fumigatus. These characterizations enable the use of this protein as a potential molecular target.
+
+Funding: FAPEMIG, CNPq, UFU and CAPES
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{An integrated omics using Petri Net approach to the characterization of genetically modified yeast for second generation ethanol production}} % Article title
+
+\author{Lucas Miguel de Carvalho$^1$, Renan Pirolla$^2$, Gabriela Vaz de Meirelles$^3$, Leandro Vieira Dos Santos$^2$, Fabio Cesar Gozzo$^4$, Gon\c{c}alo Amarante Guimar\~aes Pereira$^5$, Marcelo Falsarella Carazzolle$^6$}
+
+\affil{1 UNICAMP\\ 2 CNPEM - CTBE\\ 3 LGE - UNICAMP\\ 4 UNICAMP - IQ\\ 5 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY CTBE, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS CNPEM, BIOLOGY INSTITUTE - UNICAMP\\ 6 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING CENAPAD-SP/UNICAMP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Brazil is one of the biggest producers of ethanol in the world, a pioneer in the ethanol industry. However, the country is already facing a major limitation imposed by the first-generation ethanol production technology, in which the sugarcane juice is converted by ethanol using industrial yeast Saccharomyces cerevisiae. Therefore, a new alternative approach has been proposed, called second generation, which is based on lignocellulosic residues of sugarcane (bagasse and straw) for ethanol production using recent methodologies for biomass deconstruction that generates soluble sugars, majority represented by glucose and xylose. One of the biggest challenges of this technology is the development of genetically modified industrial yeast that can not only produce ethanol from glucose as usual, but also from xylose that represents 15\% to 45\% of the lignocellulosic material. Several works have developed xylose-fermenting yeast using different exogenous genes and genetic engineering approaches, but always resulting in very low yield and productivity mainly caused by unbalanced redox potential and metabolic bottleneck. Nowadays two metabolic pathways for the consumption of pentoses are known: oxido-reductase (OXR) pathway, identified in fungi, and xylose isomerase (XI) pathway frequently found in bacteria. Using genetic engineering tools is possible to insert these two metabolic pathways into the industrial yeast in order to enable it to consume pentoses with different fermentative performances. The combination of omics data (transcriptomic, proteomic and metabolomic) and bioinformatics analysis is an essential step for a better understanding of this system. Moreover, biological models based on experimental datasets can recreate several biological aspects in different conditions using a combination of integrated omics and computational simulations. Quantitative stochastic models of molecular interaction networks can be expressed as Stochastic Petri Nets (SPNs), a mathematical formalism developed in computer science. In this work we studied four genetically modified strains for OXR and XI pathways with different fermentative performance in xylose consumption and propose a new method for integration of transcriptomic, proteomic and/or metabolomic data applied to Stochastic Petri Net simulation to solve the metabolic fluxes. Moreover, the FBA (Flux Balance Analysis) simulations were carried out of the OXR and XI strains. Both simulations were used to understand how these genetic modifications affected the ethanol production and metabolite concentrations profile. These results gave us new insights about the flux optimization on pentose phosphate pathway and unbalanced redox correction.
+
+Funding: FAPESP
+\end{abstract}
+\end{document}

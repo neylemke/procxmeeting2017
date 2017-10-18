@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification and characterization of miRNAs and their targets in cucumber genome}} % Article title
+
+\author{J\'ulia Silveira Queiroz$^1$, N\'ubia Carolina Pereira Silva$^1$, Laurence Rodrigues do Amaral$^1$, Matheus de Souza Gomes$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Cucumber (Cucumis sativus L.) is one of the mainly vegetables of the world belonging to Curcubitaceae family, its production and quality are, normally, influenced by different biological and environmental factors. The culture shows problems related to biotic and abiotic stresses and a way to change the organism to present positive characteristics is through small RNAs, as microRNAs (miRNAs). miRNAs direct messenger RNAs (mRNAs) to transcriptional repression in different conditions and development stages. And despite the vast knowledge of cucumber biology, little is known about the regulation of miRNA expression. Thus, through optimized bioinformatics tools and robust algorithms, the identification and characterization of miRNA molecules, precursors and targets were performed. Precursors of miRNAs (pre-miRNAs) were predicted using an algorithm based on a series of structural and thermodynamic characteristic filters of conserved precursors. Through Phytozome database, sequences of the genome of C. sativus with hairpin structures or similarity with pre-miRNAs structures were accessed. After filtration of these sequences, additional analysis were performed to compare the putative miRNAs with their respective orthologs. The sequences were subjected to sequence alignments using the ClustalX 2.0 and RNAalifold and then undergo phylogenetic analysis conducted by Mega5.2. Finally, target prediction was performed through the psRNAtarget. We identified in our study, 130 pre-miRNAs and 197 mature sequences from 42 miRNAs families and 87 targets from 98 different sequences. All our findings showed great MFE, AMFE and MFEI values, indicating that the results found are possibly real. Furthermore, alignments and phylogenetic analysis showed miRNAs highly conserved, corroborating our results with literature. One of the most conserved families found was csa-miR160, which regulates the expression of Auxin Response Factor (ARF) genes, they may be responsible for regulating two other targets, such as ``b3 DNA-binding domain'' and ``Ammonium Transporter Family''. Thus, the results allow us to expand the study of miRNAs in cucumber, providing new challenges for understanding the biology of this organism.
+
+Funding: FAPEMIG, CNPq, UFU and CAPES
+\end{abstract}
+\end{document}

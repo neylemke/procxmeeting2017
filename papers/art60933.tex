@@ -1,0 +1,70 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A new method based on structural signatures to propose mutations for enzymes $\beta$-glucosidase used in biofuel production}} % Article title
+
+\author{Diego Mariano$^1$, Raquel Melo Minardi$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+$\beta$-glucosidases (E.C. 3.2.1.21) are key enzymes in the second-generation biofuel production process. They act synergically with endoglucanases and exoglucanases to convert cellulose of biomass in fermentable glucose used in biofuel production.
+However, it has been reported in the literature that the majority of known $\beta$-glucosidases is inhibited by high concentrations of glucose. Hence, it has increased the search for mutations that improve the activity and glucose tolerance. In this study, we present a method to propose mutations for enzymes $\beta$-glucosidase that may improve the activity and tolerance to glucose inhibition. Our method is
+based on structural signatures: numerical representations of proteins extracted from the number of pairwise residues. We hypothesized that proteins with similar structural signatures of catalytic pockets present similar characteristics. Hence, mutations that approximate non-tolerant $\beta$-glucosidase structural signatures of other enzymes classified in the literature as glucose-tolerant may improve the activity of these enzymes. We used Euclidian distance to calculate signature variations. If the signature variation was negative, the distance between signatures reduced, so we consider as a beneficial mutation. If the signature variation was positive, the distance between signatures increased, so we consider as a not beneficial mutation. We collected 27 mutations in $\beta$-glucosidases from literature and classified them in beneficial or not beneficial based on the experimental effects reported. Then, we calculated the signature variation for every mutation and compared the predicted result with the real result. We obtained a precision value of 0.89. In addition, we proposed 15 mutations for Bgl1B, a non-tolerant $\beta$-glucosidase extracted from marine metagenome. We detected experimental data in the literature for three of these mutations: H228C, H228T e H228V. The experimental data demonstrate that these mutations improve the activity even in high glucose concentrations. These results show that our method is efficient to detect mutations that increase the activity of $\beta$-glucosidases and it can help to produce new mutant enzymes that may improve the second-generation biofuel production.
+
+Funding: CAPES
+\end{abstract}
+\end{document}

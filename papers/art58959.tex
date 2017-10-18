@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Biovar equi versus ovis: What genetically differentiate them?}} % Article title
+
+\author{Doglas Parise$^1$, Mariana Teixeira Dornelles Parise$^1$, Marcus Vinicius Can\'ario Viana$^2$, Elma Lima Leite$^3$, Anne Cybelle Pinto Gomide$^2$, Vasco Ariston de Carvalho Azevedo$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Corynebacterium pseudotuberculosis is a pathogenic bacteria that causes significant economic loses in global livestock. This organism is classified into biovars ovis and equi. Strains from biovar ovis are more clonal and infect small ruminants, such as goats and sheep, and eventually humans. Strains from biovar equi infect bigger animals such as bovines, buffaloes and horses causing different diseases. This study aims to extend a previous work in which genes that could differentiate the biovars equi and ovis were identified in six C. pseudotuberculosis genomes isolated in Mexico. All the 53 complete and non-redundant genomes available from NCBI were used. The Bacterial Pan Genome Analysis (BPGA) pipeline was used to estimate the pangenome and find specific genes of genome subgroups. Groups of orthologs were defined with a similarity cutoff of 70\%, using USERACH tool. The results show a pangenome of 2,290 and a core genome of 1,277 genes. The core genome can be used to identify new targets for vaccine and diagnosis methods. The total number of biovars exclusive genes is 265, 65 of them from biovar ovis (15 with known function) and 200 from biovar equi (54 with known function). As expected, we identified genes known to differentiate the biovars, such as the nitrate reductase operon narGHIJ. In addition, the results corroborate the previous study with Mexican strains that pointed CRISP-Cas genes and a restriction endonuclease type III (Restriction Modification System) as exclusive from biovars equi and ovis, respectively. The remaining genes will be further studied.
+
+Funding: Capes, CNPq e Fapemig.
+\end{abstract}
+\end{document}

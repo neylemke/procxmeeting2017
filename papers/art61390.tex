@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Evolution of Bitopic Signal Transduction Proteins}} % Article title
+
+\author{Aureliano Coelho Proen\c{c}a Guedes$^1$, Raphael D. Teixeira$^1$, Chuck S. Farah$^1$, Robson Francisco de Souza$^1$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Sensing environmental changes and relaying this information to inside the cell is very important for bacteria and other organisms. Bitopic signal transduction proteins are a diverse array of proteins that possess both exposed extracellular sensor domains and cytoplasmic domains connected by transmembrane regions. Changes in environmental conditions or the presence of external chemical stimuli are detected by the extracellular domains of these proteins leading to structural changes at their cytoplasmic portions. Structural rearrangements of the cytoplasmic domains result in intracellular activities that affect cellular behavior, such as protein post-translational modifications or synthesis of small molecules that act as secondary messengers. Recent studies have shown that XAC2383, a class I of periplasmic-binding protein (PBP) protein of Xanthomonas citri, physically interacts with the periplasmic Cache domain of the bitopic GGDEF protein XAC2382, which is encoded by an adjacent downstream gene.  Similar PBP domains were found to be encoded by genes located just upstream to other bitopic proteins, most of which are composed by distinct combinations of a periplasmic Cache and various cytoplasmic output domains, such as histidine kinases, methyltransferases, cyclic nucleotide synthases and Sigma54 activators. Using homology searches for PBPs and the analysis of domain architectures and genomic context, we demonstrate that distinct classes of PBP domains are often fused to output domains in proteins with varying levels of domain architectural complexity. Phylogenetic analysis of PBP's and Cache domains of bitopic proteins encoded by adjacent genes suggest that the more complex bitopic proteins originated from events of gene fusion and possibly gave origin to new, simpler architectures through loss of internal domains. Importantly, the same pattern was also observed for periplasmic-binding proteins of class II, thus suggesting that a common mode of evolution for new architectures, involving the fusion of adjacent genes and subsequent loss of internal protein domains, could be a general feature of the evolution of bitopic signal transduction proteins and also a recurrent event, that occurs independently in different lineages of sensor and output domains. In order to evaluate this hypothesis, we will now consolidate our search strategies into a pipeline for comparative genomics and protein evolution and extend our analysis to other combinations of bitopic proteins and a broader range of extracellular sensory domains. Our results will help us understand the relative impact of recombination and gene fusion on the evolution and shuffling of multidomain proteins.
+
+Funding: CAPES, FAPESP
+\end{abstract}
+\end{document}

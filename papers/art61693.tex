@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Using machine learning to cluster genes and tissues according to their functions through gene co-expression}} % Article title
+
+\author{Tha\'{\i}s de Almeida Ratis Ramos$^1$, Jos\'e Miguel Ortega$^2$, Vinicius Maracaja Coutinho$^3$, Tha\'{\i}s Gaudencio$^4$}
+
+\affil{1 UFRN\\ 2 UFMG, LABORAT\'ORIO DE BIODADOS.\\ 3 UNIVERSIDAD MAYOR\\ 4 UFPB\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The creation of gene expression encyclopedias possibilities the understanding of genes groups that are co-expressed in differents tissues and comprehend gene clusters according to their functions. The advent of machine learning, with unsupervised methods without needing to define the number of clusters a priori on the clustering process, is possible to map large data sets. This would be the first step to understanding the performance of transcription factors in the regulation processes of gene expression. The purpose of this work is to evaluate genes coexpression by tissue and function through gene expression data. For that, were tested 3 databases: Uhlen, Fantom and Encode. As pre-processing data, four normalization types were tested and adopted the combination of two of them: Transcripts Per Kilobase Million (TPM) and base-2 log. In the clustering process we use 2 machine learning algorithms: K-means and Hierarchical implemented in an online tool calling CORAZON (Correlation Analyses Zipper Online). To select the best number of clusters were used: Bayesian information criterion (BIC) followed by the derivative of the discrete function and Silhouette. Furthermore, in the Hierarchical we test eight linkage criterions and adopted the Ward's method. The first database with 32 tissues had an optimal number of clusters equal to 9, the second with 56 tissues, 11 clusters and the last with 13 tissues, 7 clusters. We observed that hierarchical method and K-means generated exactly the same clusters, only a few had some slight variation among their components. However, we can observe groups related to glands, cardiac tissues, muscular tissues, tissues related to the reproductive system and in all three groups are observed with a single tissue, such as testis, brain and bone-narrow. The same uniformity behavior was found in the functional analysis of the gene groups after clustering. In the first database were analyzed 44594 genes in 9 clusters; 21080 genes in the second database grouped into 11 clusters and the third database grouped 42355 genes into 10 clusters. In relation to the genes clusters, we obtained several clusters that have specificities in their functions: detection of stimulus involved in sensory perception, reproduction, synaptic signaling, nervous system, immunological system, system development, and metabolics. These results are preliminary but show the methods potential and the possibilities of analyzing transcription factors in the regulation process of these genes, making possible the evolutionary history study of genes and the biological system regulatory map.
+
+Funding: UFRN
+\end{abstract}
+\end{document}

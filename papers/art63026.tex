@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{An Approach to Study Taxonomic Distribution of Genes: Biofilm Production as a Model}} % Article title
+
+\author{Antonio Gilson Gomes Mesquita$^1$, Sabrina Sondre de Oliveira Reis Margarido$^1$, Jos\'e Miguel Ortega$^2$, Tetsu Sakamoto$^3$}
+
+\affil{1 UNIVERSIDADE FEDERAL DO ACRE, LABGENMOL\\ 2 UFMG, LABORAT\'ORIO DE BIODADOS\\ 3 UFMG. LABORAT\'ORIO DE BIODADOS\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Taxonomic distribution of the orthologous of a gene of interest is not a trivial task to accomplish. Manual inspection of phylogenetic trees consist in the most analytical procedure to investigate the lowest common ancestor (LCA) and the descendant clades that have or not the gene, since deletions and lateral gene transfers may occur. Here we present the analysis of the taxonomic distribution of genes involved in production of bacterial biofilm. The query genes have been selected from the protein database UniProt and the taxonomic distribution was analyzed with software TaxOnTree. Originally, the software run a BLAST search limited by e-value (1e-5), similarity threshold (e.g. 30\%) and builds phylogenetic trees using MUSCLE to obtain a multiple alignment, TrimAL to edit the alignment, FastTree to build the phylogenetic tree and colorizes the branches according to any taxonomic rank of choice, e.g. phylum, class, order, etc. turning the user into a taxonomy expert. However, since our interest was on bacterial genes, the limit of 200 proteins to generate the trees often did not surpass the analysis of a genus, due to the presence of great number of taxonomically closely related orthologues. Thus we further developed TaxOnTree to be able to present a restrict number of hits from a chosen clade, e.g. phylum. Development of the tool to provide biologically meaning outputs was developed in parallel to the study of biofilm genes. We could map the clade of origin of a specific gene (LCA) and the relationship of it to more distant ones. The genes of interest were: (i) phaZ, almost all clusters contained bacteria from the order Burkholderiales, two clusters containing Chromobacterium violaceum, one with sequences from phylum Ascomycota, one with Actinobacteria, along with a cluster of animal and protozoa sequences; (ii) phaE, restricted do Cyanobacteria of distinct classes; (iii) phaB restricted to Proteobacteria from the class Betaproteobateria; (iv) phaZ1, showing a cluster with Chromobacterium violaceum and Cyanobacteria associated with Proteobacteria from order Neisseriales and other clusters from Actinobacteria and Ascomycota, and one with animal and protozoa sequences; (v) phaZ2, with the same distribution of phaZ1; and (vi) phaC from Chromobacterium violaceum and present in Actinobacteria, Cyanobacteria and also Porifera and Mollusca.
+
+Funding: Universidade Federal de Minas Gerais. Laborat\'orio de Biodados.
+\end{abstract}
+\end{document}

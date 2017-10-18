@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Use of data mining for Onco-targets to analyze Breast Cancer through the construction of Ontology Networks}} % Article title
+
+\author{Edgar Lacerda de Aguiar$^1$, Lissur Azevedo Orsine$^2$, Jos\'e Miguel Ortega$^3$}
+
+\affil{1 CEFET-MG\\ 2 UFMG\\ 3 UFMG, LABORAT\'ORIO DE BIODADOS\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Studies indicate that by the end of 2017 more than 23 million patients will develop some type of cancer. Among the various types of cancer, breast cancer has the most impact among women and one of the highest mortality rate. Breast cancer has high biological heterogeneity, which implies a high diversity of molecular forms which are associated with distinct subtypes and distinct drug targets. This high range of variations in the biological entities involved in disease pathology impacts directly on diagnosis and treatment. Because of these facts this work aims to mine the possible genes related to breast cancer, from different databases (DBs), Cancer Genome Atlas (TCGA), COSMIC, KEGG and to relate the genes to database Gene Ontology (GO) with its molecular functions, biological processes, cellular components, thus inferring the main ontologies associated with breast cancer. Initially there was an interpolation of genes between BDs CGA and COSMIC after cured genes were mined and crossed with the top mutated genes of breast cancer. The genes were cured with the BDs UniProt, NCBI and KEGG, focusing on DB KEGG Pathway, which was used to search for the genes of the various types of cancer. With the UniProt valors Id of cured Genes there was a search for Ontologies in the GO database. The initial results weren't very satisfactory due to high specificity and high granularity of ontological terms. Better treatment of the data and a new methodological approach to the Ontological terms was necessary. The ontological terms of GoSlim, which are terms and healed with a median specificity were used. Several enrichment analyzes were performed comparing breast cancer genes with genes responsible for breast development. Through these analyzes it was possible to note that approximately 10\% of the breast cancer genes were found in the group of genes responsible for breast development. In the analysis of biological processes of the gens were associated 42\% in metabolic process, 39\% in response to stimulus and 33\% in developmental process. In the Molecular function 33\% in binding, catalytic activity 34\% and 10\% receptor activity. The analyzes show a significant correlation between many biological processes and molecular functions encountered. This work is important for a better understanding of breast cancer and the genes responsible for breast development, through better analysis of biological processes, molecular functions using data mining and ontology network, to aid in the search for Onco-targets.
+
+Funding: Cefet-Mg, Ufmg
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{How the Ebola infection happens and since when?}} % Article title
+
+\author{Elisson Nogueira Lopes$^1$, Lissur Azevedo Orsine$^2$, Iara Dantas de Souza$^3$, Tetsu Sakamoto$^4$, Rodrigo Juliani Siqueira Dalmolin$^3$, Jos\'e Miguel Ortega$^4$}
+
+\affil{1 UFMG\\ 2 UFRN\\ 3 UFMG. LABORAT\'ORIO DE BIODADOS.\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The Ebola virus (EBOV) is an enveloped, filamentous virus, and contains a negative-sense RNA genome. EBOV belongs to Filoviridae family and is the causative of a devastating disease, with a mortality rate of about 50-90\%. The first symptoms developed by infected patient are fever, malaise and muscle pain, and could be followed by bleeding and organ failure. While Ebola initially targets macrophages and dendritic cells it is able to infect almost all cells types with exception of lymphocytes. The Ebola has been proposed to attach multiple plasma membranes and after that the viral glycoprotein induces uptake via macropinocytosis. The process is dependent on the action of cell surface proteins. After uptake into macropinosomes, particles travel to compartments where the viral glycoprotein is cleaved and fused to membranes, what results on the release of the viral compartments in host cytoplasm. We looked at the infection mechanism of EBOV and collected the host proteins known by now to participated direct or indirect on infection. This mining approach comprised 52 host proteins. With them, we built a pathway to represent the Ebola's cycle and interaction with host proteins. We also analyzed the homologous of each collected human protein along the taxonomic tree to infer their clade/epoch of origin. The results of the evolutionary origin analysis allowed to infer that the virus could infect even vertebrates, suggesting that animals such as fish and amphibians could be infected and retransmit the virus to other hosts such as man. Moreover we analyzed four GEO datasets for gene expression after Ebola infection, characterizing the enrichment of GO processes along the time-course of infection. Initially processes involving cellular checkpoint and DNA metabolism were enriched, followed by several other processes. In conclusion, Ebola infection happens with interaction with recent proteins in the membrane, interacts with more ancient proteins along its intracellular path and later on with more recent ones as the virus connects with proteins implicated in the immune response, and the pathway construction helps to add context to the time-course modulation of gene expression.
+
+Funding: CAPES, FAPEMIG.
+\end{abstract}
+\end{document}

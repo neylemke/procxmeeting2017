@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Occurrence of differential alternative splicing in the transcriptome of mice hearts infected with two strains of Trypanosoma cruzi}} % Article title
+
+\author{Nayara Toledo$^1$, Raphael Tavares da Silva$^1$, Tiago Bruno Rezende de Castro$^1$, Gl\'oria Regina Franco$^1$, Andrea Mara Macedo$^1$, Carlos Renato$^1$, \'Egler Chiari$^1$, Neuza Antunes Rodrigues$^1$}
+
+\affil{1 UFMG\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Chagas disease is a parasitic infection caused by the protozoan Trypanosoma cruzi. Even after 100 years of its description, the causes of the different clinical manifestations are not completely understood, although they certainly involve both parasite and host features. Our group has previously shown that different strains of T. cruzi (JG- T.cruzi II and Col1.7G2-T. cruzi I) had a differential tissue tropism in BALB/c mice upon infection. Evidences that the genetic background of different mice lineages contributes for changes in the differential tissue distribution of T. cruzi during infection were also found. RNA-Seq of mRNA extracted from BALB/c infected hearts (groups: JG, Col1.7G2 and an equivalent mixture of both strains) showed that Col1.7G2 was a strong activator of immune response genes, while JG effectively modulated the oxidative stress response and protein synthesis in the host. Curiously, the mixture-infected group showed both features simultaneously. Alternative splicing is a regulatory mechanism of gene expression in which different exons and introns of the same pre-mRNA may be skipped or retained to produce distinct mature mRNAs. In recent years, this mechanism has been shown to be a major source of cell-specific proteomic variation in mammalians. Thus, the aim of the present study is to integrate mass spectrometry-derived proteomics from BALB/c infected hearts with the same T. cruzi strains and the above mentioned RNA-Seq data. We will investigate if the parasite can remodel the splicing pattern of the host and if this remodeling can influence on the disease development. For initial analyses, reads were mapped against mouse reference genome using the splice-aware aligner, STAR. Subsequently, full-length transcripts were reconstructed with Trinity and their quality was assessed by the Transrate software. Up to now, we performed only a de novo transcriptome assembly for the control group to adjust and to define the best parameters that provide an optimal assembly. Results reported by Transrate indicated that the k-mer length of 25 and a minimum k-mer coverage of six were the parameters which best performed the de novo transcriptome assembly. Our future steps include genome-guided transcriptome assembly, analysis of alternative splicing expression and correlation with proteins identified in mass spectrometry data.
+
+Funding: CAPES e FAPEMIG
+\end{abstract}
+\end{document}

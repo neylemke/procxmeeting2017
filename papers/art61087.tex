@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comparative genomics of Xanthomonas spp. focusing on CAZymes associated with host-pathogen specificity}} % Article title
+
+\author{Gabriela Persinoti$^1$, Mario Tyago Murakami$^1$}
+
+\affil{1 CTBE/CNPEM\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Xanthomonas is a genus of Gram-negative Gammaproteobacteria that cause infections in leaves and fruits of plant hosts. Around 400 plants may be infected by Xanthomonas species, among them, many are economically important ones, such as citrus, rice, tomato and banana. A high degree of host specificity is observed among Xanthomonas pathogenic species and pathovars. For instance, X. citri pv. citri exclusively infects citrus while, other pathovas such as X. citri pv. mangiferaeindicae infects mango and X. vesicatoria may infect tomato and pepper. The goal here was to perform a large scale comparative genomics analysis of Xanthomonads focusing on the relationship of CAZyme-genome content and host-bacterium specificity. For the comparative genome analysis, 51 complete genomes of Xanthomonads species and panthovars were used. To investigate the phylogenetic relationship of Xanthomonads, 699 single copy genes with members in 51 species were identified. Single-gene alignments longer than 100 residues after excluding low-scoring alignment sites were concatenated into a supermatrix. The resulting supermatrix is composed of 111,390 distinct alignment patterns. Maximum likelihood trees were estimated using either FastTree using WAG+CAT model and RAxML using a distinc model for each of the 582 partitions. Both trees presented strong support values (Bootstrap > 95\%) and the same topology, which was assessed by Robinson-Foulds distance implemented in phangorn R package. Two distinct groups were clearly formed among Xanthomonas species. One group is composed by X. sacchari, X. albilineans, X. translucens, and X. hyacinthi, while another larger group is composed by X.  campestris, X.  arboricola, X.  gardneri, X.  hortorum, X.  fragariae, X.  cassavae, X. bromi, X.  oryzae, X.  vasicola, X.  fuscans, X.  citri, X.  axonopodis, X.  euvesicatoria and, X.  perforans including several pathovars. Regarding the CAZyme-genome content, X. fuscans and X. hyacinthi present, respectively, the fewer and greater number of CAZymes identified. For instance, X. citri pv. citri, a mesophyllic pathogen, which infects the intercellular spaces of the mesophyll tissue causing citrus canker, presents 239 cazymes, being many organized as PUL (Polysaccharide Utilization Loci). In the other hand, Xylella fastidiosa, also a citrus plant pathogen, but a vascular pathogen, which infects the xylem elements of the vascular system, presents only 82 CAZymes, and none of them are organized as PULs. This suggest that the CAZyome may play a role in host-pathogen interactions in Xanthomonads.
+
+Funding: FAPESP and CNPq.
+\end{abstract}
+\end{document}

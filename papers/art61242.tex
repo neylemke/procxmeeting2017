@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{MARVEL: A pipeline for recovery and analysis of viral genomes from metagenomic shotgun sequencing data}} % Article title
+
+\author{Deyvid Amgarten$^1$, Aline Maria da Silva$^2$, Jo\~ao Carlos Setubal$^2$}
+
+\affil{1 USP - DEPARTAMENTO DE QUIMICA\\ 2 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The study of the viral diversity in environmental samples has become increasingly important due to the recognition of key roles played by these organisms in diverse ecosystems. Recent works provide evidence that viruses of bacteria (bacteriophages) are key players in biogeochemical cycles of large ecosystems, such as oceans and forests. Viruses may also be determinant in the flux of genes among microbial populations and in the plasticity of microbial communities, helping these communities to deal with environmental stresses. Knowing the genomes of viruses that are present in diverse environments can thus help the understanding of the microbial ecology and evolution of these environments. Here we describe the MARVEL pipeline for recovery and analysis of viral genomes from metagenome shotgun sequencing data. The main steps in this pipeline are: sequence quality control, metagenome assembly, similarity searches against wide and hallmark-protein databases of viruses, removal of false positives, and multisample contig binning. At the end, MARVEL generates an automatically curated set of contigs that correspond to draft and complete genomes of environmental viruses present in the analyzed sample. We have applied MARVEL to metagenomic datasets obtained in two environments (composting and a reservoir) of the Sao Paulo Zoo. We obtained 37 viral genomes from reservoir samples and 36 viral genomes from composting. Most of these genomes have low or no similarity with viral genomes in public databases. Therefore these results are a contribution for shedding light on the gigantic viral dark matter that exists in our planet. MARVEL can be applied to any shotgun metagenomic dataset for which Illumina reads are available.
+
+Funding: Funding for this research is provided by FAPESP (2014/16450-8) and CAPES
+\end{abstract}
+\end{document}

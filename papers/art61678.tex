@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{In silico study of a new Brazilian semi arid compound with possible IKK-$\beta$ inhibitory action}} % Article title
+
+\author{Wagner Rodrigues de Assis Soares$^1$, Tha\'{\i}s Almeida de Menezes$^2$, Bruno Silva Andrade$^1$}
+
+\affil{1 UNIVERSIDADE ESTADUAL DO SUDOESTE DA BAHIA\\ 2 UNIVERSIDADE ESTADUAL DE FEIRA DE SANTANA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The family of Nuclear Transcription Factors (NF-kB) is among one of inflammatory central regulators, in innate and adaptive immunity. The enzyme IKK-$\beta$ is responsible for the phosphorylation of NF-?B by modulating the transcription response of genes encoding proteins that participate in the immune and inflammatory response, cell adhesion, growth control and protection against apoptosis. In this study we tested several ligands isolated from Brazilian semi arid plants, in order to evaluated which best complexes with IKK-$\beta$ structure. The enzyme structure was downloaded from PDB database, 4KIK, considering best resolution (2.83 $\AA$) and R-value (0.236). Ligand structures of were drawn in Marvin Sketch (Chemaxon), and deposited in the semi arid Molecules Database (SAM Database), hosted in the Bioinformatics and Computational Chemistry Lab (LBQC-UESB). After, we verified valences, structural errors, and saved all structures in MOL2 format. Additionally, all ligands were prepared for docking calculations, using AutoDock Tools and saved in PDBQT format. Furthermore, the active site of IKK-$\beta$ was defined (gridbox) and all coordinates were recorded. Molecular docking calculations were performed by AutoDock Vina, searching nine different docking positions and following the manual recomendations. In order to select the best IKK-$\beta$-ligand complex, we consider the best energy value, as well as the ligand position inside the active site. PyMOL 1.7 was used to evaluate complexes and save them in PDB format. 2D interaction maps for each best complex were generated using Discovery Studio 4.0. The structures of the two compounds were designed in OSIRIS Property explorer software to calculate theoretical values of solubility (cLogP), hydrogen bonding donors (HBD), hydrogen bond acceptors (HBA), molecular weight (PM), Polar Surface Area (PSA), Drug-likeness and Drug-Score properties. These compounds were evaluated according to Lipinski Rule 5 for oral bioavailability. From the molecules deposited in the SAM database, the ligand SAM0530 showed a similar interaction with IKK-$\beta$, when compared to the classical inhibitor Staurosporine, both with an affinity energy of -11.0 Kcal/mol. The 2D interaction map shows the most molecular interactions as Van der Walls forces. In addition, the compound SAM0530 presented physical-chemical parameters that indicate a good oral bioavailability, not demonstrating toxicity in silico prediction. This work demonstrates that the Brazilian semi arid region can provide new chemical structures with potential for inhibition of IKK-$\beta$ as an important molecular target of medical interest, since the dysregulation of NFk-$\beta$ contributes to numerous inflammatory pathologies, as asthma, arthritis , cancer, diabetes, AIDS and inflammatory bowel disease.
+
+Funding: Universidade Estadual do Sudoeste da Bahia
+\end{abstract}
+\end{document}

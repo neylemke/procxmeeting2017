@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{IN SILICO MODELING OF THE C2H2 ZINC-FINGER DOMAIN OF THE GLI3 TRANSCRIPTION FACTOR}} % Article title
+
+\author{Cinthia Caroline Alves$^1$, Eduardo Ant\^onio Donadi$^1$, Silvana Giuliatti$^1$}
+
+\affil{1 RIBEIR\~AO PRETO MEDICAL SCHOOL, USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The intracytoplasmic glioma-associated oncogene-3, GLI-3, is a protein that belongs to the zinc-finger protein family and has dual function as a transcriptional activator and a repressor of the Sonic Hedgehog pathway. The full-length GLI3 form (GLI3-190kDa) after phosphorylation and nuclear translocation, acts as an activator (GLI3A), while GLI3R (GLI3-82kDa), its C-terminally truncated form, acts as a repressor. Since both protein forms present an important C2H2 type zinc-finger domain that allow protein binding at the DNA sequence, it is necessary to generate the complete 3D structure of DNA-binding-domain of the GLI3 to better understand its role as a transcription factor. The C2H2 domain of the GLI3 protein compasses the residues 480-632 (UniProt code: P10071 - http://uniprot.org/) and this sequence was used to further analysis. Its secondary structure was predicted using the PSIPRED webserver (http://bioinf.cs.ucl.ac.uk/psipred). The tertiary structure was modeled by homology using the Modeller 9.19 software, and the 2.6$\AA$ crystal structure (PDB code: 2GLI) available on PDB (http://rcsb.org/pdb) was the chosen template to generate 5 models. Quality assessment of these models was performed by torsion angles analysis (using PROCHECK and PDBSUM), visual analysis and distance evaluating (using CHIMERA software). Energy minimization and equilibrium steps (5 ns) of the chosen best model was performed using the GROMACS 4.6.5 software, which was also used to perform the molecular dynamic simulation. Homology modeling allowed satisfactory GLI3 C2H2 domain prediction models which presented good quality torsion angle assessment. The chosen best model presented 89.9\% of the residues in the core region of phi-psi torsion angles, while 8.4\% of the residues are in allowed regions, and it showed the lowest root-mean-square deviation (RMSD) of 0.729$\AA$ after model-template alignment. After energy minimization and equilibrium of the chosen model, the molecular dynamic simulation was done. In conclusion, the initial quality assessment showed a satisfactory 3D structure generated of the GLI3 C2H2 domain by homology modeling, which can be used as a template for modeling DNA binding domains and to perform protein-DNA interaction studies in the future.
+
+Funding: CAPES, CNPq
+\end{abstract}
+\end{document}

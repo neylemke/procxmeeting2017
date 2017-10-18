@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{High throughput sequencing of small RNAs in Biomphalaria glabrata}} % Article title
+
+\author{Laysa Gomes Portilho$^1$, F\'abio Ribeiro Queiroz$^1$, Wander Jesus Jeremias$^1$, Elio Hideo Bab\'a$^1$, Roberta Lima Caldeira$^1$, Laurence Rodrigues do Amaral$^1$, Matheus de Souza Gomes$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Biomphalaria glabrata is a mollusc intermediate host of Schistosoma mansoni, one of the causative agents of schistosomiasis, which currently affects about 240 million people worldwide. The interaction between the parasite and the snail is controlled by some genes related to the susceptibility/resistance of the host and the infectivity of the worms. Small RNAs, <200 nt length, have been reported to perform fine and specific gene regulation in various organisms. MicroRNAs and piRNAs are two important classes, have the function of regulating the expression of messenger RNAs by complementarity of bases. These molecules can be identified by computational analysis and experimental approaches. A widely used experiment to identify miRNAs is the next-generation sequencing. Thus, the aim of this work was to identify and characterize mature miRNAs and piRNAs from smallRNA-seq (Adult snails) and identify respective miRNA precursors in the genome of B. glabrata using in silico analysis. Data from the Vectorbase database were used for mirDeep analysis and the algorithm developed by our research group. Using the RNAalifold and RNAfold programs, the structural and thermodynamic characteristics of the identified pre-miRNA sequences were analyzed. In addition, the multiple sequence alignment was performed using ClustalX2 and the phylogenetic analysis was accomplished using the MEGA5.2 software and neighbor-joining program. 94 conserved mature microRNAs were found in the smallRNA sequencing and 71 precursors related to these mature miRNAs were found in the snail genome. From these precursors, 22 were considered Protostome-specific and five were assessed as Mollusca-specific. Furthermore, the primary and secondary structures of bgl-miR-71, bgl-miR-137, bgl-miR-184, bgl-miR-281 and bgl-let-7 were characterized and showed high conservation when compared to their orthologs including the cluster miR-71/2. The study of B. glabrata miRNAs may help to clarify many of biological processes which are related to their respective gene target. In addition, these results will add new information to what is known about this class of small RNAs in animals. The identification and characterization of miRNAs and their precursors in the intermediate host of schistosomiasis will expand and facilitate searching for new information and strategies to enhance the approaches used currently in order to prevent this disease.
+
+Funding: UFU, FAPEMIG, CNPq and CAPES
+\end{abstract}
+\end{document}

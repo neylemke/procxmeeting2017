@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Acylsugar pathway in Solanum lycopersicum and Solanum pennellii}} % Article title
+
+\author{Tha\'{\i}s Cunha de Sousa Cardoso$^1$, Carolina Milagres Caneschi$^1$, Fernandes-brum C. N.$^1$, Matheus Martins Daude$^1$, Gabriel Lasmar Dos Reis$^1$, Lima A. A$^1$, Luiz Ant\^onio Augusto Gomes$^1$, Laurence Rodrigues do Amaral$^1$, Chalfun-junior A.$^1$, Wilson Roberto Maluf$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+The cultivated tomato, Solanum lycopersicum, is one of the most important vegetable crops in global food and, together with the wild tomato Solanum pennellii are species widely used in developing cultivars. Although much is known about the S. lycopersicum and S. pennellii biology, little is known about the genes expression regulation involved in plant development and tolerance to biotic and abiotic stresses. Different allelochemicals present in wild tomato species were associated with resistance to pests, such the acylsugar. Acylsugars are fatty acids esters with 4-12 carbon atoms, containing glucose or sucrose and may act to reduce larval development, impairing feeding and oviposition of many tomato pests. The diversity of acylsugar produced in the tomato probably involves many genes and metabolic pathways involved in the acylsugar pathway. Thus, the study aimed to identify using in silico analysis and analyze the expression of the genes involved in the acylsugar metabolism of S. lycopersicum and S. pennellii. For the identification of the genes involved in the acylsugar pathway we used an optimized algorithm, BLAST tools and reference genes available in the NCBI, Phytozome v11.0 and SolGenomics. For expression analysis, we used three different tomato accessions: LA-716, TOM-684 and TOM-687 and leaves collected in three time stages (30, 60 and 90 days). It was extracted the total RNA and quantified in Nanodrop\textsuperscript{\textcopyright} ND-1000 to A260. For the expression analysis, we used the ABI PRISM 7500 Real-Time PCR, using SYBR Green and the cDNA obtained from the extracted RNA. The data was stored in 7500 Fast Software program. The reference genes used were eEF-1 and GAPDH. We identified 81 putative proteins in S. lycopersicum and 78 in S. pennellii involved in the acylsugar pathway, such as BCKD E2, IPMSA and TD, being key proteins in the pathway. There was a differential expression of BCKD E2 among the strains at all times. IPMSA showed a high expression in LA-716 access in the three times and TOM-684 and TOM-687 expressed an IPMSA level very low. TD showed different expressions between the ages of the plants in TOM-684 and TOM-687. Given the important role of the allelochemicals produced in Solanaceae, the results showed contribution to a better understanding of acylsugars, their processing pathway and their relationship with biotic resistance in S. lycopersicum and S. pennellii.
+
+Funding: FAPEMIG, CNPq, UFU and CAPES
+\end{abstract}
+\end{document}

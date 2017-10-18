@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification of genes under positive selection in Corynebacterium pseudotuberculosis}} % Article title
+
+\author{Marcus Vinicius Can\'ario Viana$^1$, Henrique Figueiredo$^2$, Felipe Luiz Pereira$^2$, Fernanda Alves Dorella$^2$, Anne Cybelle Pinto Gomide$^1$, Alice Rebecca Wattam$^3$, Vasco A de C Azevedo$^1$}
+
+\affil{1 UFMG\\ 2 NATIONAL REFERENCE LABORATORY FOR AQUATIC ANIMAL DISEASES OF MINISTRY OF FISHERIES AND AQUACULTURE, UFMG\\ 3 BIOCOMPLEXITY INSTITUTE OF VIRGINIA TECH, VIRGINIA TECH, BLACKSBURG, VIRGINIA, UNITED STATES OF AMERICA\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Corynebacterium pseudotuberculosis is a Gram-positive, intracellular pathogen, close related to the diphtheria etiological agents C. diphteria and C. ulcerans. The biovar Ovis infects mainly small ruminants causing Caseous Lymphadenitis, while biovar Equi infects larger animals, causing different diseases. The species virulence mechanisms and biovar differentiation are not fully understood, and drugs and vaccines are not effective for all hosts. The goal of this work is to identify genes under positive selection in C. pseudotuberculosis to better understand its evolution and collaborate with the development of control measures. Due to computational costs, 29 strains (16 Ovis and 13 Equi) from different hosts and countries were selected for a genome scale analysis using the POTION pipeline. We used FastOrtho for ortholog assignment, a cutoff of 50\% for sequence identity within ortholog groups, PRANK for sequence alignment, and dnaml for phylogeny reconstruction. For the positive selection analysis, the pairs of null/positive selection site models M1a/M2a and M7/M8 were compared. Eight genes were identified: uncharacterized sigma 70, adhesin, manganese ABC transporter, fatty acid synthase, lambda repressor-like, tyrosine-tRNA ligase, and two uncharacterized transmembrane and secreted proteins. In addition, 14 other genes had evidence of recombination, including sialidase, ferrochelatase, adhesin and sortase. These proteins are related to metabolism and host colonization processes as adhesion, metal uptake, protein synthesis and gene regulation. The adaptations provided by the identified mutations will be investigated and a preliminary analysis of protein sequences shows correlation between biovar and specific amino acids.
+
+Funding: CAPES, CNPq, FAPEMIG, UFMG
+\end{abstract}
+\end{document}

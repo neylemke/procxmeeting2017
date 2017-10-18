@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A novel noninvasive prenatal paternity test using microhaplotypes}} % Article title
+
+\author{Jaqueline Yu Ting Wang$^1$, Anatoly Yambartsev$^2$, Renato Puga$^3$, Martin R. Whittle$^4$, Andr\'e Fujita$^2$, Helder Takashi Imoto Nakaya$^1$}
+
+\affil{1 USP\\ 2 INSTITUTE OF MATHEMATICS AND STATISTICS - USP\\ 3 HOSPITAL ISRAELITA ALBERT EINSTEIN\\ 4 GENOMIC ENGENHARIA MOLECULAR\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Paternity tests are usually done by analyzing DNA samples from the alleged father, the mother, and the child. To perform this exam before the birth, invasive methods such as amniocentesis and chorionic villus sampling are usually used. Fortunately, the discovery of fetal DNA (fetal cell-free DNA, fcfDNA) in maternal plasma and serum, and the development of techniques to analyze this fcfDNA have allowed researchers to reduce this risk for both fetus and mother. Although paternity tests that analyze Short Tandem Repeats (STRs) from fcfDNA are possible, they are not reliable because DNA degradation often occurs. SNPs (Single Nucleotide Polymorphisms) have been demonstrated to be good candidates for human identification and they can be obtained from small DNA fragments (even from degraded DNA). To increase the number of possible genotypes and decrease the amount of analyzed SNPs, our analyzes focus on microhaplotypes. Microhaplotypes are chromosomal segments smaller than 200 base pairs (bp) containing two or more SNPs that form at least three distinct haplotypes. Since fcfDNA has approximately 145 bp, this is sufficient to contain microhaplotypes that can be sequenced using Next Generation Sequencing (NGS) technology. The aim of this project is to determine the probability of paternity using SNPs within microhaplotypes. Microhaplotypes were chosen based on previous literature review. The haplotypes frequencies were calculated based on the ethnic groups from 1000 Genomes database. To accomplish this objective, raw DNA sequence data from three DNA samples were analyzed: the alleged father, the mother, and the maternal plasma (mixture of mother and fetus cell-free DNA). Then, using a script developed based on SAMtools and Perl programming language, we obtained the genotypes of the alleged father and mother, for each microhaplotype. By combining genotypic information, population frequencies, and fetal fractions (plasma), we developed a method to calculate the probability of paternity in cases of non-exclusion.
+
+Funding: Genomic Engenharia Molecular
+\end{abstract}
+\end{document}

@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Virtual Screening of potential inhibitors for the Alpha-Amylase and Alpha-Glycosidase by shape based model and docking}} % Article title
+
+\author{Heitor Cappato$^1$, Nilson Nicolau Junior$^1$, Foued Salmen Espindola$^1$}
+
+\affil{1 UFU\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Natural antioxidants compounds have been associated with reduction of postprandial hyperglycemia by blocking enzymes involved in the carbohydrates digestion, such as alpha-amylase and alpha-glycosidase. Furthermore, preventing or delaying the absorption of glucose by inhibiting glycoside hydrolases in the digestive organs may represent a promising approach in the treatment of diabetes and its complications. Thus, the aim of this work was search for new natural compounds with pharmacological potential to inhibit this glycoside hydrolases based on the shape and color based model and docking. The shape and color modeling was performed with the aid of vROCS 3.2.0.4, this model contains information about shape and chemical properties extracted from the acarbose molecule. The ligand library used in this research are originated from ZINC database, that have been carefully selected a natural compounds subset, totaling 180.303 compounds. In order to perform the virtual screening, the ligand library was prepared with the OMEGA 2.5.1.4, which was used to generate conformer libraries. Pharmacophore model validation and virtual screening of the conformer libraries were performing using vROCS. The pharmacophore model was previously validated using the ROC (receiver operating characteristic) curve and AUC (area under the curve). In order to generate the ROC curve and the AUC value, biologically active ligands against alpha-amylase (PDB id: 1SMD) and alpha-glycosidase (PDB id: 1OBB) were obtained from ZINC database, and the decoys were generated on the DUD-E online platform. After validation, the conformer library previously generated was submitted to the shape and color model and the top 500 ligands of each, based on the TanimotoCombo score, were selected. The best-scored ligands were used to perform a molecular docking against human alpha-amylase and alpha-glycosidase using the autodock vina 1.1.2, generating three potential inhibitors that are of different class of compounds usual inhibitors.
+
+Funding: FAPEMIG, CNPq, UFU and CAPES
+\end{abstract}
+\end{document}

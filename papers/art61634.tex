@@ -1,0 +1,94 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification of motifs in the promoter region of genes related to the ABA-dependent pathway in sugarcane}} % Article title
+
+\author{Mauro de Medeiros Oliveira$^1$, Alan Durham$^1$, Glaucia Souza Mendes$^1$}
+
+\affil{1 USP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+In general, the promoter region consists of different regulatory elements, such as Transcription
+Factor Binding Sites (TFBS), which are responsible for the activation of gene transcription. TFBSs
+can be characterized using different experimental processes such as Chip-Seq. However, these
+experimental present low reproducibility for non-model organisms. For these organisms the
+dominant form of TFBS discovery is computational estimations using techniques such as
+expectation maximization (EM). The goal of this work is to characterize the PR of ABA signaling
+pathway (ABAsp) genes using an in silico approach. To perform our analyzes, we used expression
+data of the sugarcane variety RB83-5486 to select all ABAsp genes differentially expressed in
+drought-tolerant plants. The 22 selected genes were mapped on the sugarcane genome SP80-3280
+and the regions of 2000 nucleotides usptream from the transcription start site of each gene were
+extracted as putative promoter regions. For these regions we tried 3 different motif-finding
+approaches: Gibbs Sampling (using GLAM2), position-specific score matrices for previously
+characterized motifs in the JASPAR plant databases, and expectation maximization (using MEME).
+Only the last approach resulted in consistent results. GLAM2 showed a bias for AT-rich motifs and
+none of the results had any TOMTOM match against the JASPAR plant databases. Analysis using
+PSSMs did not find any candidates with significant scores. We parametrized MEME to find motifs
+from 5 to 15 nucleotides and maximum of 6 different motifs. We only considered motifs with a
+TOMTOM match to JASPAR plant databases. In general, 50\% of the sequences presented similar
+TFBS architectures, with the bZIP, WRKY and AP2 / ERF classes of TFBSs as the most
+representative. Moreover, we distinguished different architectures for up and for down-regulated
+genes: in up-regulated genes we found motifs associated to ARR and bHLH TFBS classes, and in
+down-regulated genes were found motifs associated tot he HD-Zip, MYB and NAC TFBS classes.
+In this scenario it is possible to infer that the drought tolerance may be due to the crossing of
+different signaling pathways for water stress. Since two groups of TFBS distinct from the ABAsp
+were identified in the promoter region, one associated with up-regulated genes, and one associated
+with down-regulated genes, the architecture of the promoter region may be the factor necessary to
+activate the drought tolerant character observed in the evaluated plants.
+
+Funding: FAPESP and Capes
+\end{abstract}
+\end{document}

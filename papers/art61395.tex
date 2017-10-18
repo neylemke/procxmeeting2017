@@ -1,0 +1,68 @@
+
+\documentclass[twoside]{article}
+\usepackage[affil-it]{authblk}
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+\usepackage{eurosym}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage[utf8]{inputenc}
+\linespread{1.05} % Line spacing-Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+\fancyfoot[RO,LE]{} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+% TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Transcriptome analysis of xylose and glucose co-fermentation by industrial engineered yeast for second generation bioethanol}} % Article title
+
+\author{Sheila Tiemi Nagamatsu$^1$, Luige Armando Llerena Calderon$^2$, Lucas Salera Parreiras$^3$, Bruna Tatsue Grichoswski Nakagawa$^2$, Angelica Martins Gomes$^4$, Gon\c{c}alo Amarante Guimar\~aes Pereira$^5$, Marcelo Falsarella Carazzolle$^6$}
+
+\affil{1 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY), BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS), BIOLOGY INSTITUTE - UNICAMP\\ 2 BIOLOGY INSTITUTE - UNICAMP\\ 3 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY,  BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS, BIOLOGY INSTITUTE - UNICAMP\\ 4 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY,  BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS\\ 5 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS, BIOLOGY INSTITUTE - UNICAMP\\ 6 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING/UNICAMP\\ }
+\vspace{-5mm}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+% ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+Second-generation (2G) ethanol is a promising technology which can increase production and reduce costs related to first-generation (1G) ethanol. Both process differ basically in the raw material for fermentative step, while 1G is based on fermentable sugars (glucose, fructose and sucrose) from sugarcane, 2G is based on deconstruction of biomass releasing fermentable sugars. This process generates non-fermentable sugars (mainly xylose) and inhibitors of yeast growth (acetic acid, furfural and HMF). To overcome these problems and increase yeast productivity in 2G ethanol production is essential select robustness microorganisms and perform genetic modifications to allow xylose consumption through insertion of endogenous xylose pathway genes, as xylose isomerase. Furthermore, approaches as evolutionary engineering can be used to improve some characteristics. Our previous work performed a comparative genomic analysis in genetically modified yeast followed by evolutionary adaptation for xylose consumption showing several point mutations and an increase of xylose isomerase genes during the evolution process. In this work we are showing a transcriptomic analysis from one parental (A) and two evolved strains studied before in xylose and glucose co-fermentation: one haploid strain (C) from intermediate round of evolution and the other, a diploid strain (E), from the final round of evolution. It was sequenced in biological duplicate and three different fermentation points for each strain, the first one with high glucose concentration and inhibition of xylose consumption by catabolic repression (Glu), the second, low glucose concentration and high xylose concentration with consumption of both carbon sources (Glu-Xyl), and the last one, only xylose consumption (Xyl). The analysis of differentially expressed genes (DEG) was performed by comparison Parental versus C and E strains in each fermentation time independently and considering time-series correlation. For the Parental versus C, a total of 1.951, 2118, and 3.945 DEG were identified in Glu, Glu-Xyl and Xyl, respectively. For the Parental versus E, a total of 1.706, 937, and 3.893 DEG were identified in Glu, Glu-Xyl and Xyl, respectively. While, in a time-series analysis was detected 3.844 and 3.876 DEG for Parental versus C and Parental versus E comparisons, respectively. These results and its correlation with previous genome analysis can contribute to a better understanding of metabolic bottleneck of xylose consumption in industrial yeast, as it can show how genome variations are related to the expression profile.
+
+Funding: FAPESP, CAPES
+\end{abstract}
+\end{document}
