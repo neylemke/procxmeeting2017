@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Active Semi-Supervised Learning for Analysis of Biological Data }} % Article title
+  
+  
+  \author{ Guilherme Camargo$^{1}$, Pedro Henrique Bugatti$^{2}$, Priscila T M Saito$^{2}$, }
+  
+  \affil{ 1 Programa de Pós-Graduação em Bioinformática – PPGBIOINFO, Universidade Tecnológica Federal do Paraná, Cornélio Procópio
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Federal University of Technology – Parana
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Active Semi-Supervised Learning for Analysis of Biological Data}} % Article title
-
-\author{Guilherme Camargo$^1$, Pedro Henrique Bugatti$^2$, Priscila T M Saito$^2$}
-
-\affil{1 PROGRAMA DE P\'OS-GRADUA\c{C}\~AO EM BIOINFORM\'ATICA - PPGBIOINFO, UNIVERSIDADE TECNOL\'OGICA FEDERAL DO PARAN\'A, CORN\'ELIO PROC\'OPIO\\ 2 FEDERAL UNIVERSITY OF TECHNOLOGY - PARANA\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-In the last few years, new data capture devices have made it possible a major technological breakthrough. Thus, large complex databases (e.g. images, sounds or texts) are obtained daily. In order to allow the storage and the retrieval of information from these databases, it is necessary specialists to annotate the samples. However, the annotation by specialists can bring inconsistencies to the samples, since different individuals can interpret the samples in divergent ways. Another reason to consider is the cost to perform the task of annotating the samples, which is high and exhaustive to specialists. Therefore, a solution to the problem would be to automate the process of identifying the most informative samples using computational methods. In this way, a label is assigned to each sample, classifying it according to the scope of the problem. One way to develop a suitable solution is applying machine learning techniques in order to build a pattern classifier. To take benefit from the large number of unsupervised samples available in disproportion to the scarcity of supervised ones, semi-supervised learning techniques have been explored using partially supervised and unsupervised training samples, where supervised samples propagate their labels to the unsupervised ones. However, such techniques neglect the existence of redundant samples, as well as the existence of more relevant samples that could boost the classifier learning. In this context, active learning techniques associated with semi-supervised techniques are interesting, since a smaller number of more informative samples automatically selected through the active learning strategy, and then annotated by a specialist can propagate the labels to a set of unsupervised samples (through the semi-supervised learning strategy). Therefore, we developed a new active semi-supervised learning approach for biological data, exploring new strategies for selecting more informative samples for the classifier learning. Preliminary results show that the union of active and semi-supervised learning improves accuracy for some biological datasets, reaching higher values faster, showing that the obtained active semi-supervised classifiers are more efficient than the supervised and the semi-supervised ones.
-
-Funding: CNPq (\#431668/2016-7, \#422811/2016-5), CAPES, Funda\c{c}\~ao Arauc\'aria, SETI, and UTFPR.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  In the last few years, new data capture devices have made it possible a major technological breakthrough. Thus, large complex databases (e.g. images, sounds or texts) are obtained daily. In order to allow the storage and the retrieval of information from these databases, it is necessary specialists to annotate the samples. However, the annotation by specialists can bring inconsistencies to the samples, since different individuals can interpret the samples in divergent ways. Another reason to consider is the cost to perform the task of annotating the samples, which is high and exhaustive to specialists. Therefore, a solution to the problem would be to automate the process of identifying the most informative samples using computational methods. In this way, a label is assigned to each sample, classifying it according to the scope of the problem. One way to develop a suitable solution is applying machine learning techniques in order to build a pattern classifier. To take benefit from the large number of unsupervised samples available in disproportion to the scarcity of supervised ones, semi-supervised learning techniques have been explored using partially supervised and unsupervised training samples, where supervised samples propagate their labels to the unsupervised ones. However, such techniques neglect the existence of redundant samples, as well as the existence of more relevant samples that could boost the classifier learning. In this context, active learning techniques associated with semi-supervised techniques are interesting, since a smaller number of more informative samples automatically selected through the active learning strategy, and then annotated by a specialist can propagate the labels to a set of unsupervised samples (through the semi-supervised learning strategy). Therefore, we developed a new active semi-supervised learning approach for biological data, exploring new strategies for selecting more informative samples for the classifier learning. Preliminary results show that the union of active and semi-supervised learning improves accuracy for some biological datasets, reaching higher values faster, showing that the obtained active semi-supervised classifiers are more efficient than the supervised and the semi-supervised ones.
+  
+  Funding: CNPq (\#431668/2016-7, \#422811/2016-5), CAPES, Funda\c{c}\~ao Arauc\'aria, SETI, and UTFPR. \\ 
+  \end{abstract}
+  \end{document} 

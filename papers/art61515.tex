@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Bioinformatics investigation of non-coding RNAs and transposable elements in plants }} % Article title
+  
+  
+  \author{ Daniel Longhi Fernandes Pedro$^{1}$, Nicolas Gil de Souza Aoki$^{1}$, Alan Péricles Rodrigues Lorenzetti$^{2}$, Douglas Silva Domingues$^{1}$, Alexandre R. Paschoal$^{1}$, }
+  
+  \affil{ 1 UTFPR - PPGBIOINFO
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 University of São Paulo
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Bioinformatics investigation of non-coding RNAs and transposable elements in plants}} % Article title
-
-\author{Daniel Longhi Fernandes Pedro$^1$, Nicolas Gil de Souza Aoki$^1$, Alan P\'ericles Rodrigues Lorenzetti$^2$, Douglas Silva Domingues$^1$, Alexandre R. Paschoal$^1$}
-
-\affil{1 UTFPR - PPGBIOINFO\\ 2 USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Non-coding RNAs (ncRNAs) are transcripts that do not encode proteins. There are several classes of ncRNAs, which the most studied are microRNAs (miRNAs). Transposable Elements (TEs) are the major genomic component in eukaryotic genomes. They can comprise more than 45\% of human and animal genomes, and in plants, they comprise up to 90\% of the genome. Our research group recently developed the PlanTE-MIR DB, the first public database that studies the relationship between miRNA and TEs in plants. In this repository, users can search, extract and analyze these overlapping features in 10 plant species. Now, we intend to evaluate TEs relationship with all ncRNA classes, generating a new version of PlanTE-MIR DB. New bioinformatics analyses will use public genomic data available at Ensembl Plants portal and results will be accessible on a user-friendly website. Three steps cover the workflow of this investigation: a) Curate and intersect ncRNAs and repetitive DNA features from existing Ensembl annotation; b) Perform de novo TE prediction in plant genomes and intersect ncRNA annotation in order to find new potential overlaps; and c) Compare newly discovered TEs against public ncRNA databases. From 44 genomes available at Ensembl Plants, 25 species have ncRNA annotation. In 24 we found overlap with TEs. The species with most overlapped regions was Zea mays with 3,105 hits and the species with less hits was Sorghum bicolor, with one hit. Finally, we intend to develop a new method to identify plant TEs using deep learning techniques. These computational analyses will provide to the scientific community a friendly way to work with this knowledge.
-
-Funding: UTFPR
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Non-coding RNAs (ncRNAs) are transcripts that do not encode proteins. There are several classes of ncRNAs, which the most studied are microRNAs (miRNAs). Transposable Elements (TEs) are the major genomic component in eukaryotic genomes. They can comprise more than 45\% of human and animal genomes, and in plants, they comprise up to 90\% of the genome. Our research group recently developed the PlanTE-MIR DB, the first public database that studies the relationship between miRNA and TEs in plants. In this repository, users can search, extract and analyze these overlapping features in 10 plant species. Now, we intend to evaluate TEs relationship with all ncRNA classes, generating a new version of PlanTE-MIR DB. New bioinformatics analyses will use public genomic data available at Ensembl Plants portal and results will be accessible on a user-friendly website. Three steps cover the workflow of this investigation: a) Curate and intersect ncRNAs and repetitive DNA features from existing Ensembl annotation; b) Perform de novo TE prediction in plant genomes and intersect ncRNA annotation in order to find new potential overlaps; and c) Compare newly discovered TEs against public ncRNA databases. From 44 genomes available at Ensembl Plants, 25 species have ncRNA annotation. In 24 we found overlap with TEs. The species with most overlapped regions was Zea mays with 3,105 hits and the species with less hits was Sorghum bicolor, with one hit. Finally, we intend to develop a new method to identify plant TEs using deep learning techniques. These computational analyses will provide to the scientific community a friendly way to work with this knowledge.
+  
+  Funding: UTFPR \\ 
+  \end{abstract}
+  \end{document} 

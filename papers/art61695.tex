@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ HIGH-THROUGHPUT SEQUENCING AND DE NOVO ASSEMBLY OF TRANSCRIPTOME OF Vigna unguiculata UPON VIRAL INFECTION }} % Article title
+  
+  
+  \author{ Flavia Figueira Aburjaile$^{1}$, João Pacifico Bezerra Neto$^{1}$, Bruna Piereck Moura$^{1}$, José Ribamar Costa Ferreira-Neto$^{1}$, Ana Maria Benko-Iseppon$^{1}$, }
+  
+  \affil{ 1 Federal University of Pernambuco, Center of Biological Sciences, Genetics Dept
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{HIGH-THROUGHPUT SEQUENCING AND DE NOVO ASSEMBLY OF TRANSCRIPTOME OF Vigna unguiculata UPON VIRAL INFECTION}} % Article title
-
-\author{Flavia Figueira Aburjaile$^1$, Jo\~ao Pacifico Bezerra Neto$^1$, Bruna Piereck Moura$^1$, Jos\'e Ribamar Costa Ferreira-neto$^1$, Ana Maria Benko-iseppon$^1$}
-
-\affil{1 UFPE, CENTER OF BIOLOGICAL SCIENCES, GENETICS DEPT\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Plants are often submitted to adverse environmental conditions, such abiotic and biotic stresses. According to the Food and Agriculture Organization of the United Nations, biotic stresses are responsible for diseases leading to 32 - 42\% of productivity decrease. To neutralize infections, plants first recognize the invading pathogens by quickly and efficiently activating molecular mechanisms. During  infectious process, the plant response involves changes at physiological, biochemical and molecular level, through activation of specific gene expression programs. In this context, the study of the transcriptome is an excellent alternative for identification of genes involved in plant-pathogen interaction, mainly for species considered as non-models like cowpea bean (V. unguiculata). Our transcriptome assembly was generated from, 12 libraries obtained for two different cowpea cultivars (IT85F-2687 and BR14-Mulato) submited to Cowpea Severe Mosaic Virus (CpSMV) and Cowpea Aphid-born Mosaic Virus (CABMV), respectively. The libraries were generated with three biological replicates for each treatment and control group, allowing us to decode its molecular behavior towards the pathogen in question. The total RNA from all samples described above was sequenced on Illumina platform. The data were processed according to the following steps: (1) analysis of data quality, (2) assembly "de novo", (3) annotation and (4) statistical analysis of differentially expressed genes, according to the MUGQIC Pipeline protocol. These sequences were divided into structural or functional categories, according to the gene family of interest. After quality analysis, more than 350 milions were assembled, and returned 149.288 transcripts from 72.140 genes, presenting a mean of 1.289 bp of length and a N50 of 1.981. Our annotation aligned with Uniprot and Pfam sequences return 54.8\% and 40.9\% of results, respectively representing 81.822 transcripts. Additionally, we performed gene ontology enrichment returning annotation for 76.089 transcripts (50.97\%). This assembly will be an important resource to improve our understanding of main mechanisms that help cowpea cultivars to tolerate virus infection.
-
-Funding: CAPES, CNPQ, FACEPE.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Plants are often submitted to adverse environmental conditions, such abiotic and biotic stresses. According to the Food and Agriculture Organization of the United Nations, biotic stresses are responsible for diseases leading to 32 – 42\% of productivity decrease. To neutralize infections, plants first recognize the invading pathogens by quickly and efficiently activating molecular mechanisms. During  infectious process, the plant response involves changes at physiological, biochemical and molecular level, through activation of specific gene expression programs. In this context, the study of the transcriptome is an excellent alternative for identification of genes involved in plant-pathogen interaction, mainly for species considered as non-models like cowpea bean (V. unguiculata). Our transcriptome assembly was generated from, 12 libraries obtained for two different cowpea cultivars (IT85F-2687 and BR14-Mulato) submited to Cowpea Severe Mosaic Virus (CpSMV) and Cowpea Aphid-born Mosaic Virus (CABMV), respectively. The libraries were generated with three biological replicates for each treatment and control group, allowing us to decode its molecular behavior towards the pathogen in question. The total RNA from all samples described above was sequenced on Illumina platform. The data were processed according to the following steps: (1) analysis of data quality, (2) assembly "de novo", (3) annotation and (4) statistical analysis of differentially expressed genes, according to the MUGQIC Pipeline protocol. These sequences were divided into structural or functional categories, according to the gene family of interest. After quality analysis, more than 350 milions were assembled, and returned 149.288 transcripts from 72.140 genes, presenting a mean of 1.289 bp of length and a N50 of 1.981. Our annotation aligned with Uniprot and Pfam sequences return 54.8\% and 40.9\% of results, respectively representing 81.822 transcripts. Additionally, we performed gene ontology enrichment returning annotation for 76.089 transcripts (50.97\%). This assembly will be an important resource to improve our understanding of main mechanisms that help cowpea cultivars to tolerate virus infection.
+  
+  Funding: CAPES, CNPQ, FACEPE. \\ 
+  \end{abstract}
+  \end{document} 

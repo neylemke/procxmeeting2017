@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Identification of brain regions associated with neurodevelopment }} % Article title
+  
+  
+  \author{ Grover Enrique Castro Guzman$^{1}$, Maciel Calebe Vidal$^{1}$, João Ricardo Sato$^{2}$, André Fujita$^{3}$, }
+  
+  \affil{ 1 University of São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal do ABC
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Institute of Mathematics and Statistics - USP
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification of brain regions associated with neurodevelopment}} % Article title
-
-\author{Grover Enrique Castro Guzman$^1$, Maciel Calebe Vidal$^1$, Jo\~ao Ricardo Sato$^2$, Andr\'e Fujita$^3$}
-
-\affil{1 USP\\ 2 UFABC\\ 3 INSTITUTE OF MATHEMATICS AND STATISTICS - USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Initial studies using resting-state functional magnetic resonance imaging on the trajectories of the functional brain network from childhood to adulthood found evidence of functional integration and segregation over time. The comprehension of how healthy individuals' functional integration and segregation occur is crucial to enhance our understanding of possible deviations that may lead to brain disorders. Recent approaches have focused on the framework wherein the functional brain network is organized into spatially distributed modules that have been associated with specific cognitive functions. Here, we tested the hypothesis that the clustering structure of brain networks evolves during development. To address this hypothesis, we defined a measure of how well a brain region is clustered (network fitness index - NFI), and developed a method to evaluate its association with age. Then, we applied this method to a functional magnetic resonance imaging data set composed of 397 males under 31 years of age collected as part of the Autism Brain Imaging Data Exchange (ABIDE) Consortium. As results, we identified two brain regions for which the clustering change over time, namely, the left putamen and the right frontal pole. Since the NFI is associated with both integration and segregation, our findings suggest that the two identified brain regions play a role in the development of brain systems.
-
-Funding: FAPESP (2015/01587-0, 2016/13422-9), CNPq (grants 304020/2013-3), CAPES, and NAP-eScience-PRP-USP
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Initial studies using resting-state functional magnetic resonance imaging on the trajectories of the functional brain network from childhood to adulthood found evidence of functional integration and segregation over time. The comprehension of how healthy individuals' functional integration and segregation occur is crucial to enhance our understanding of possible deviations that may lead to brain disorders. Recent approaches have focused on the framework wherein the functional brain network is organized into spatially distributed modules that have been associated with specific cognitive functions. Here, we tested the hypothesis that the clustering structure of brain networks evolves during development. To address this hypothesis, we defined a measure of how well a brain region is clustered (network fitness index - NFI), and developed a method to evaluate its association with age. Then, we applied this method to a functional magnetic resonance imaging data set composed of 397 males under 31 years of age collected as part of the Autism Brain Imaging Data Exchange (ABIDE) Consortium. As results, we identified two brain regions for which the clustering change over time, namely, the left putamen and the right frontal pole. Since the NFI is associated with both integration and segregation, our findings suggest that the two identified brain regions play a role in the development of brain systems.
+  
+  Funding: FAPESP (2015/01587-0, 2016/13422-9), CNPq (grants 304020/2013-3), CAPES, and NAP-eScience-PRP-USP \\ 
+  \end{abstract}
+  \end{document} 

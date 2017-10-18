@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ RTranscriptogram: a tool for biological data integration }} % Article title
+  
+  
+  \author{ Alex Augusto Biazotti$^{1}$, Túlio Moreira Fernandes$^{1}$, André Luiz Molan$^{2}$, Agnes Alessandra Sekijima Takeda$^{1}$, Jose Rybarczyk-Filho$^{2}$, }
+  
+  \affil{ 1 Instituto de Biociências de Botucatu - UNESP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 UNESP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{RTranscriptogram: a tool for biological data integration}} % Article title
-
-\author{Alex Augusto Biazotti$^1$, T\'ulio Moreira Fernandes$^1$, Andr\'e Luiz Molan$^2$, Agnes Alessandra Sekijima Takeda$^1$, Jose Rybarczyk-filho$^2$}
-
-\affil{1 INSTITUTO DE BIOCI\^ENCIAS DE BOTUCATU - UNESP\\ 2 UNESP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Every day, new technologies are emerging that make it possible the large-scale study of RNAs transcribed by an organism under specific conditions, providing a huge amount of information. However, the traditional methodologies are not able to efficiently analyze these data due the use of pre-defined cut-offs, thus eliminating a large number of genes not considered differentially expressed, and consequently reducing precision and accuracy of the study. This work proposes the tool called RTranscriptogram which performs an overall analysis of an organism, integrating protein networks biological,  processes and expression genes.. This tool clusterize the network, extract the group and their respective biological information and project the expression genes on the network.  To test the tool, we used the STRING database version 10 to prospect for a protein network for Homo sapiens, Gene Ontology provided the biological processes (BPs) for this study. Gene expression data were prospected from Gene Expression Omnibus (GEO): GSE19804 - lung samples from Taiwanese female nonsmokers with and without cancer. GSE10072: - lung samples from Italian female and male smokers, former-smokers, non-smokers with or without cancer. These databases were integrated by the transcriptograma technique to obtain expression profiles correlated with protein networks and ontologies. The analyzes presented 2 up-regulated biological processes and 30 down-regulated biological processes that were similar in the comparisons made with people with cancer, in addition the transcriptional activity for Taiwanese and Italians presented a similar profile. Smokers with cancer presented 175 altered BPs when compared with non-smokers. Despite different habits among populations, lung cancer has a high similarity in transcriptional activity.
-
-Funding: CNPq processes 473789/2013-2
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Every day, new technologies are emerging that make it possible the large-scale study of RNAs transcribed by an organism under specific conditions, providing a huge amount of information. However, the traditional methodologies are not able to efficiently analyze these data due the use of pre-defined cut-offs, thus eliminating a large number of genes not considered differentially expressed, and consequently reducing precision and accuracy of the study. This work proposes the tool called RTranscriptogram which performs an overall analysis of an organism, integrating protein networks biological,  processes and expression genes.. This tool clusterize the network, extract the group and their respective biological information and project the expression genes on the network.  To test the tool, we used the STRING database version 10 to prospect for a protein network for Homo sapiens, Gene Ontology provided the biological processes (BPs) for this study. Gene expression data were prospected from Gene Expression Omnibus (GEO): GSE19804 - lung samples from Taiwanese female nonsmokers with and without cancer. GSE10072: - lung samples from Italian female and male smokers, former-smokers, non-smokers with or without cancer. These databases were integrated by the transcriptograma technique to obtain expression profiles correlated with protein networks and ontologies. The analyzes presented 2 up-regulated biological processes and 30 down-regulated biological processes that were similar in the comparisons made with people with cancer, in addition the transcriptional activity for Taiwanese and Italians presented a similar profile. Smokers with cancer presented 175 altered BPs when compared with non-smokers. Despite different habits among populations, lung cancer has a high similarity in transcriptional activity.
+  
+  Funding: CNPq processes 473789/2013-2 \\ 
+  \end{abstract}
+  \end{document} 

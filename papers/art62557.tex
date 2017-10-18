@@ -1,67 +1,70 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ CEMiTool: Coexpression Modules Identification Tool }} % Article title
+  
+  
+  \author{ Pedro de Sá Tavares Russo$^{1}$, Gustavo Rodrigues Ferreira$^{1}$, Lucas Cardozo$^{1}$, Matheus Carvalho Bürger$^{1}$, Raúl Arias-Carrasco$^{2}$, Sandra Regina Maruyama$^{1}$, Thiago Dominguez Crespo Hirata$^{1}$, Diógenes Saulo Lima$^{1}$, Fernando Marcon Passos$^{1}$, Kiyoshi Ferreira Fukutani$^{1}$, Melissa Lever$^{1}$, João Santana Silva$^{1}$, Vinicius Maracaja Coutinho$^{2}$, Helder Takashi Imoto Nakaya$^{3}$, }
+  
+  \affil{ 1 Universidade de São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidad Mayor
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 University of Sao Paulo
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{CEMiTool: Coexpression Modules Identification Tool}} % Article title
-
-\author{Pedro de S\'a Tavares Russo$^1$, Gustavo Rodrigues Ferreira$^1$, Lucas Cardozo$^1$, Matheus Carvalho B\"urger$^1$, Ra\'ul Arias-carrasco$^2$, Sandra Regina Maruyama$^1$, Thiago Dominguez Crespo Hirata$^1$, Di\'ogenes Saulo Lima$^1$, Fernando Marcon Passos$^1$, Kiyoshi Ferreira Fukutani$^1$, Melissa Lever$^1$, Jo\~ao Santana Silva$^1$, Vinicius Maracaja Coutinho$^2$, Helder Takashi Imoto Nakaya$^3$}
-
-\affil{1 USP\\ 2 UNIVERSIDAD MAYOR\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The analysis of co-expression gene modules can help uncover the mechanisms underlying
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The analysis of co-expression gene modules can help uncover the mechanisms underlying
 diseases and infection. We present a fast and easy-to- use Bioconductor package named
 CEMiTool that unifies the discovery and the analysis of co-expression modules. Using the
 same real datasets, we demonstrate that CEMiTool outperforms existing tools, and provides
@@ -70,8 +73,8 @@ tool evaluates whether modules contain genes that are over-represented by specif
 or that are altered in a specific sample group, as well as integrate transcriptomic data with
 interactome information, identifying potential hubs on each network. We successfully
 applied CEMiTool to over 1,000 transcriptome datasets, and to a new RNA-seq dataset of
-patients infected with Leishmania, revealing novel insights of the disease's physiopathology.
-
-Funding: FAPESP
-\end{abstract}
-\end{document}
+patients infected with Leishmania, revealing novel insights of the disease’s physiopathology.
+  
+  Funding: FAPESP \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ The assessment of the impact of small deletions within human protein domains using transcriptome data: a pilot study in lung cancer }} % Article title
+  
+  
+  \author{ Fernanda Cristina Medeiros de Oliveira$^{1}$, Gabriel Wajnberg$^{2}$, Fabio Passetti$^{3}$, }
+  
+  \affil{ 1 FIOCRUZ-IOC
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Fiocruz-IOC
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 FIOCRUZ - IOC
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{The assessment of the impact of small deletions within human protein domains using transcriptome data: a pilot study in lung cancer}} % Article title
-
-\author{Fernanda Cristina Medeiros de Oliveira$^1$, Gabriel Wajnberg$^2$, Fabio Passetti$^3$}
-
-\affil{1 FIOCRUZ-IOC\\ 2 FIOCRUZ - IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Deletions are examples of polymorphisms that can alter the protein sequence encoded by genes. These changes within the amino acid sequence can be connected with numerous human pathologies, such as cancer. Lung cancer has the highest worldwide incidence of all tumors, with an increase of 2\% per year. For this reason, there is an interest to find new methods for diagnosis and treatments. High-throughput sequencing generates a large amount of genome or transcriptome data in a short time when compared to other sequencing methodologies. High-throughput sequencing can be used to identify new polymorphisms, such as deletions in the human genome. In this study, we used RNA-Seq data from six lung adenocarcinoma patients available at the Sequence Read Archive database (study ID SRP012656). We identified 2,388 protein domains affected: 1,137 in control tissue adjacent to the tumor, 729 in tumor samples and 522 in both control and tumor samples. We identified deletions in protein domains with high probability to be associated with cancer biology, such as deletions found in the genes SASH1, GRINA, TP53BP2, RAVER1 and NCOR2, which share the same protein domain termed large tegument protein UL36. Changes in this domain may be decisive to the development of lung cancer, because SASH1 plays an important role as a tumor suppressor in lung cancer. We also identified different altered domains in the TP53BP2 gene, such as ankyrin repeats Ank and Ank 2. The p53BP2 protein binds to the p53 tumor suppressor by these ankyrin repeats to increase its DNA binding activity. We identified, through this work, changes in amino acid sequences caused by small genomic deletions up to 100 nucleotides in length that affect protein domains of proteins previously associated with lung cancer. These new findings may be useful for new studies related to the identification of new biomarkers for diagnosis and new therapeutic targets.
-
-Funding: CAPES, FIOCRUZ, FAPERJ, PIBITI/CNPq
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Deletions are examples of polymorphisms that can alter the protein sequence encoded by genes. These changes within the amino acid sequence can be connected with numerous human pathologies, such as cancer. Lung cancer has the highest worldwide incidence of all tumors, with an increase of 2\% per year. For this reason, there is an interest to find new methods for diagnosis and treatments. High-throughput sequencing generates a large amount of genome or transcriptome data in a short time when compared to other sequencing methodologies. High-throughput sequencing can be used to identify new polymorphisms, such as deletions in the human genome. In this study, we used RNA-Seq data from six lung adenocarcinoma patients available at the Sequence Read Archive database (study ID SRP012656). We identified 2,388 protein domains affected: 1,137 in control tissue adjacent to the tumor, 729 in tumor samples and 522 in both control and tumor samples. We identified deletions in protein domains with high probability to be associated with cancer biology, such as deletions found in the genes SASH1, GRINA, TP53BP2, RAVER1 and NCOR2, which share the same protein domain termed large tegument protein UL36. Changes in this domain may be decisive to the development of lung cancer, because SASH1 plays an important role as a tumor suppressor in lung cancer. We also identified different altered domains in the TP53BP2 gene, such as ankyrin repeats Ank and Ank 2. The p53BP2 protein binds to the p53 tumor suppressor by these ankyrin repeats to increase its DNA binding activity. We identified, through this work, changes in amino acid sequences caused by small genomic deletions up to 100 nucleotides in length that affect protein domains of proteins previously associated with lung cancer. These new findings may be useful for new studies related to the identification of new biomarkers for diagnosis and new therapeutic targets.
+  
+  Funding: CAPES, FIOCRUZ, FAPERJ, PIBITI/CNPq \\ 
+  \end{abstract}
+  \end{document} 

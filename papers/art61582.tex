@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ BioNetStat: A differential network analysis tool to biological data }} % Article title
+  
+  
+  \author{ Vinicius Jardim Carvalho$^{1}$, Suzana de Siqueira Santos$^{2}$, Andre Fujita$^{2}$, Marcos Silveira Buckeridge$^{1}$, }
+  
+  \affil{ 1 University of São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 IME - USP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{BioNetStat: A differential network analysis tool to biological data}} % Article title
-
-\author{Vinicius Jardim Carvalho$^1$, Suzana de Siqueira Santos$^2$, Andre Fujita$^2$, Marcos Silveira Buckeridge$^1$}
-
-\affil{1 USP\\ 2 IME - USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The networks theory is an important way to model and understand the interactions diversity of biological systems, considering from cells organelles to the whole biosphere. The dynamic of systems structure, such as the changes in the interactions among the system elements, is an inherent trait of those systems. To represent each one of the many states assumed by a system we can use networks. In this sense, there is a wide range of tools proposed to compare those networks. However, none of them are able to compare structural characteristics among more than two networks. Considering that systems generally assume more than two states, we developed a statistical tool to compare more than two networks and highlight key players in the process studied. The main proposition of this study was to compare correlation networks using traits that are based on graph spectra (eigenvalues set of adjacency matrix), such as the spectral distribution. This measure is associated with other traits of networks, such as the number of walks, diameter, and cliques, and it is a better characterization of graphs than other classical measures of networks theory. In addition to spectral distribution, we also compare networks by spectral entropy, degree distribution, and nodes centralities. To verify the performance of tool we used a tumoral cells genes expressions data set. In the case studies, we used two data sets, the same gene expression data and a plant metabolites concentrations data. The method proposed, called BioNetStat, was implemented in R package with a user interface for people that do not programming. We verified that the method is efficient to distinguish more than two networks. However, the increase in networks number and the decrease in sample unities reduce the statistical power of methods. The method proposed brings a potential time economy, doing a single analysis to compare more than two networks rather than compare them by pairs. The method highlighted sets of variables with a central role in biological systems that were not highlighted in other studies where only gene expression or metabolic concentration were analyzed. In that way, we proposed another way to find traits (variables) that distinguish cancer types genes expression or organ plants metabolisms. Furthermore, the highlighted variables allow us to create hypotheses about its role in the process studied, bringing new finds about the systems operation mechanisms.
-
-Funding: FAPESP, CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The networks theory is an important way to model and understand the interactions diversity of biological systems, considering from cells organelles to the whole biosphere. The dynamic of systems structure, such as the changes in the interactions among the system elements, is an inherent trait of those systems. To represent each one of the many states assumed by a system we can use networks. In this sense, there is a wide range of tools proposed to compare those networks. However, none of them are able to compare structural characteristics among more than two networks. Considering that systems generally assume more than two states, we developed a statistical tool to compare more than two networks and highlight key players in the process studied. The main proposition of this study was to compare correlation networks using traits that are based on graph spectra (eigenvalues set of adjacency matrix), such as the spectral distribution. This measure is associated with other traits of networks, such as the number of walks, diameter, and cliques, and it is a better characterization of graphs than other classical measures of networks theory. In addition to spectral distribution, we also compare networks by spectral entropy, degree distribution, and nodes centralities. To verify the performance of tool we used a tumoral cells genes expressions data set. In the case studies, we used two data sets, the same gene expression data and a plant metabolites concentrations data. The method proposed, called BioNetStat, was implemented in R package with a user interface for people that do not programming. We verified that the method is efficient to distinguish more than two networks. However, the increase in networks number and the decrease in sample unities reduce the statistical power of methods. The method proposed brings a potential time economy, doing a single analysis to compare more than two networks rather than compare them by pairs. The method highlighted sets of variables with a central role in biological systems that were not highlighted in other studies where only gene expression or metabolic concentration were analyzed. In that way, we proposed another way to find traits (variables) that distinguish cancer types genes expression or organ plants metabolisms. Furthermore, the highlighted variables allow us to create hypotheses about its role in the process studied, bringing new finds about the systems operation mechanisms.
+  
+  Funding: FAPESP, CAPES \\ 
+  \end{abstract}
+  \end{document} 

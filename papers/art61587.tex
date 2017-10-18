@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Gene Assembly, Prediction and Phylogenomic Analysis of Erianthus arundinaceus, a crop for biomass production }} % Article title
+  
+  
+  \author{ Nicholas Vinicius Silva$^{1}$, Luciana Souto Mofatto$^{1}$, Juliana José$^{1}$, Gonçalo Amarante Guimarães Pereira$^{2}$, Marcelo Falsarella Carazzolle$^{3}$, }
+  
+  \affil{ 1 UNICAMP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Brazilian Bioethanol Science and Technology Laboratory, Brazilian Center for Research in Energy and Materials, Biology Institute – UNICAMP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Biology Institute - UNICAMP, National Center for High Performance Computing
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Gene Assembly, Prediction and Phylogenomic Analysis of Erianthus arundinaceus, a crop for biomass production}} % Article title
-
-\author{Nicholas Vinicius Silva$^1$, Luciana Souto Mofatto$^1$, Juliana Jos\'e$^1$, Gon\c{c}alo Amarante Guimar\~aes Pereira$^2$, Marcelo Falsarella Carazzolle$^3$}
-
-\affil{1 UNICAMP\\ 2 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS, BIOLOGY INSTITUTE - UNICAMP\\ 3 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Erianthus arundinaceus is a wild perennial C4 grass, considered closely related to Saccharum. It has a good perennial ratooning ability, excellent vigor, high fiber and low sugar content, waterlogging and diseases resistance. Due to its high biomass production and strong tolerance to environmental stresses, it is regarded as one of the most promising crops for biomass production and source of desirable traits genes for breeding programs in sugarcane. The aim of this research was providing genomic information and phylogenomic analysis of Erianthus arundinaceus, in order to understand the evolutionary relationships among this species and other crops. Genomic sequences were obtained through Illumina MiSeq platform, generating ~ 93 million of paired-end reads. The sequences were assembled using ``The Polyploid Gene Assembler (PGA) Pipeline'' with reference-based genomes of Sorghum bicolor, Zea mays, Setaria italica and Panicum virgatum, resulting in 15.596, 3.610, 2.532, 1.788 assembled sequences respectively. The remaining unmapped reads were De novo assembled using TRINITY, resulting in 389.960 sequences (N50=1923bp, Larger sequence of 15.566b. All sequences were used as reference for RNA-seq reads mapping using STAR, for the gene prediction analysis. Intron-exon junctions, provided by RNA-seq mapping, were used as hints for gene prediction in Genemark, resulting in 13.053 putative genes. These genes were filtered to find the most reliable, according to Blastp similarities with proteins from related genus. The 3.016 final reliable genes were used as training and test groups in AUGUSTUS, and gene predictions were performed with and without hints. The phylogenomic analysis among E. arundinaceus and five publicly available grasses genomes with reliable protein predictions (S. bicolor, S. bicolor ``Rio'', Z. mays, S. italica and B. distachyon) used the concatenated protein alignments of 472 single copy-ortholog genes identified with OrthoFinder. Proteins were globally aligned using T-COFEE, and submitted to Maximum Likelihood (ML) and Bayesian Inference (BI) phylogenetic analysis. We provide the first phylogeny with a genome dataset for E. arundinaceu, with strong branch supports and evidences that this crop is closely related to S. bicolor than previously inferred in literature. The new informations we present are central for further genome investigations and gene prospection from E. arundinaceus, and also for the development of new techniques for the improvement of sugarcane breeding in the production of biofuels and bioproducts.
-
-Funding: CNPq
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Erianthus arundinaceus is a wild perennial C4 grass, considered closely related to Saccharum. It has a good perennial ratooning ability, excellent vigor, high fiber and low sugar content, waterlogging and diseases resistance. Due to its high biomass production and strong tolerance to environmental stresses, it is regarded as one of the most promising crops for biomass production and source of desirable traits genes for breeding programs in sugarcane. The aim of this research was providing genomic information and phylogenomic analysis of Erianthus arundinaceus, in order to understand the evolutionary relationships among this species and other crops. Genomic sequences were obtained through Illumina MiSeq platform, generating ~ 93 million of paired-end reads. The sequences were assembled using “The Polyploid Gene Assembler (PGA) Pipeline” with reference-based genomes of Sorghum bicolor, Zea mays, Setaria italica and Panicum virgatum, resulting in 15.596, 3.610, 2.532, 1.788 assembled sequences respectively. The remaining unmapped reads were De novo assembled using TRINITY, resulting in 389.960 sequences (N50=1923bp, Larger sequence of 15.566b. All sequences were used as reference for RNA-seq reads mapping using STAR, for the gene prediction analysis. Intron-exon junctions, provided by RNA-seq mapping, were used as hints for gene prediction in Genemark, resulting in 13.053 putative genes. These genes were filtered to find the most reliable, according to Blastp similarities with proteins from related genus. The 3.016 final reliable genes were used as training and test groups in AUGUSTUS, and gene predictions were performed with and without hints. The phylogenomic analysis among E. arundinaceus and five publicly available grasses genomes with reliable protein predictions (S. bicolor, S. bicolor “Rio”, Z. mays, S. italica and B. distachyon) used the concatenated protein alignments of 472 single copy-ortholog genes identified with OrthoFinder. Proteins were globally aligned using T-COFEE, and submitted to Maximum Likelihood (ML) and Bayesian Inference (BI) phylogenetic analysis. We provide the first phylogeny with a genome dataset for E. arundinaceu, with strong branch supports and evidences that this crop is closely related to S. bicolor than previously inferred in literature. The new informations we present are central for further genome investigations and gene prospection from E. arundinaceus, and also for the development of new techniques for the improvement of sugarcane breeding in the production of biofuels and bioproducts.
+  
+  Funding: CNPq \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ 11.000 Synonymous! But not so much... }} % Article title
+  
+  
+  \author{ Clovis Ferreira dos Reis$^{1}$, Rodrigo Juliani Siqueira Dalmolin$^{1}$, Andre Fonseca$^{2}$, Sandro Jose de Souza$^{2}$, }
+  
+  \affil{ 1 UFRN
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal do Rio Grande do Norte
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{11.000 Synonymous! But not so much...}} % Article title
-
-\author{Clovis Ferreira Dos Reis$^1$, Rodrigo Juliani Siqueira Dalmolin$^1$, Andre Fonseca$^2$, Sandro Jose de Souza$^2$}
-
-\affil{1 UFRN\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Mutations that alter the amino acid sequence of a protein are known to be under natural selection while synonymous mutations are assumed to be neutral regarding protein function. Indeed, synonymous mutations have been used as a proxy for neutral alterations in genomes and as a reference against which potential selected mutations are being compared. However, it is becoming quite clear that at least a fraction of those synonymous mutations has deleterious effects. This work aims to create a method that correlates the influence of synonymous mutations, based on the genome codon bias over prokaryotes fitness. To perform such analysis was used data of the genome sequence of 12  E.coli populations sequenced 11 times over 50,000 generation (Tenaillon et al. 2016). To evaluate the putative impact of synonymous changes, we used the Relative Adaptiveness of a Codon (w) developed by Sharp (1987), in which every individual codon frequency is compared to an optimal codon frequency. Based on it, we proposed a w variation index (delta w)  defined as w of mutation minus w of reference. A negative delta w would indicate that the new codon, resulting from the mutation, is less frequent in the genome of that species and likely associated to a less abundant tRNA. To evaluate whether synonymous mutations are randomly distributed regarding the delta w score, a  20,000 rounds Monte Carlo simulation was performed, in which the same number of real mutations was randomly created.  As result, the pattern of Mont Carlo and real synonymous mutations set differs significantly and this discrepancy suggests that purifying selection is acting on synonymous mutations likely through tRNA abundance. Thus, the delta w seems to be an adequated index to evaluate the codon bias influence over microbial fitness and the results suggest a selection mechanism operating over synonymous mutations.
-
-Funding: Universidade Federal do Rio Grande do Norte
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Mutations that alter the amino acid sequence of a protein are known to be under natural selection while synonymous mutations are assumed to be neutral regarding protein function. Indeed, synonymous mutations have been used as a proxy for neutral alterations in genomes and as a reference against which potential selected mutations are being compared. However, it is becoming quite clear that at least a fraction of those synonymous mutations has deleterious effects. This work aims to create a method that correlates the influence of synonymous mutations, based on the genome codon bias over prokaryotes fitness. To perform such analysis was used data of the genome sequence of 12  E.coli populations sequenced 11 times over 50,000 generation (Tenaillon et al. 2016). To evaluate the putative impact of synonymous changes, we used the Relative Adaptiveness of a Codon (w) developed by Sharp (1987), in which every individual codon frequency is compared to an optimal codon frequency. Based on it, we proposed a w variation index (delta w)  defined as w of mutation minus w of reference. A negative delta w would indicate that the new codon, resulting from the mutation, is less frequent in the genome of that species and likely associated to a less abundant tRNA. To evaluate whether synonymous mutations are randomly distributed regarding the delta w score, a  20,000 rounds Monte Carlo simulation was performed, in which the same number of real mutations was randomly created.  As result, the pattern of Mont Carlo and real synonymous mutations set differs significantly and this discrepancy suggests that purifying selection is acting on synonymous mutations likely through tRNA abundance. Thus, the delta w seems to be an adequated index to evaluate the codon bias influence over microbial fitness and the results suggest a selection mechanism operating over synonymous mutations.
+  
+  Funding: Universidade Federal do Rio Grande do Norte \\ 
+  \end{abstract}
+  \end{document} 

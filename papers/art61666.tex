@@ -1,72 +1,73 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Respiratory nitrate reductase metabolic pathway in Corynebacterium pseudotuberculosis biovar Equi }} % Article title
+  
+  
+  \author{ Sintia Almeida$^{1}$, Vasco a de C Azevedo$^{2}$, }
+  
+  \affil{ 1 University of São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Federal University of Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Respiratory nitrate reductase metabolic pathway in Corynebacterium pseudotuberculosis biovar Equi}} % Article title
-
-\author{Sintia Almeida$^1$, Vasco A de C Azevedo$^2$}
-
-\affil{1 USP\\ 2 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Corynebacterium pseudotuberculosis can be classified in two biovars, based on their ability to convert nitrate to nitrite. The nitrate-positive biovar is Equi, which causes ulcerative lymphangitis in equines, while the nitrate-negative biovar is known as Ovis, which is the etiologic agent of caseous lymphadenitis in small ruminants. Both diseases are globally distributed and cause large economic losses to goat, sheep, horse and cattle farmers. 
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Corynebacterium pseudotuberculosis can be classified in two biovars, based on their ability to convert nitrate to nitrite. The nitrate-positive biovar is Equi, which causes ulcerative lymphangitis in equines, while the nitrate-negative biovar is known as Ovis, which is the etiologic agent of caseous lymphadenitis in small ruminants. Both diseases are globally distributed and cause large economic losses to goat, sheep, horse and cattle farmers. 
 The nitrate reduction is associated with the bacterium's ability to breathe in the absence of oxygen and having two different metabolic pathways, (1) respiratory nitrate reductase and (2) dissimilatory nitrate reduction. In the first pathway, the denitrification process takes place where the nitrate is sequentially reduced to nitrite, nitric oxide, nitrous oxide, and finally to dinitrogen. In the second pathway nitrate is directed converted into ammonia, which is secreted from the cell, this process can be performed by organisms with the nrf gene. This is a less common method of nitrate reduction than denitrification in most ecosystems. Prokaryotic nitrate reductases include a class of assimilatory enzymes and two classes of respiratory enzymes, all contain a guanylate molybdenum cofactor, but differ in their substructures, cellular location, and requirement for cofactor. Variability among enzyme is also found into the classes. 
 Aiming to discover the molecular mechanisms to related the ability bacteria nitrate reduction, 19 complete genomes of C. pseudotuberculosis were analysed. To identify the nitrate pathways, genes of these pathways were analyzed using databases such as BioCyc , ENZYME , Keeg . For the analysis of metabolic pathways Pathway tools tools were used. Were done in the blast database Uniprot and protein domain analysis through  INTERPROSCAN. 
 Genome analysis revealed that C. pseudotuberculosis biovar Equi possess narKGHJI gene clusters that are similar to the narK gene and narGHJI operon of Escherichia coli. The gene encodes a nitrate/nitrite transporter, whereas the operon encodes a respiratory nitrate reductase (NarGHI) and one specific chaperone (NarJ) required for insertion of Mo-bisMGD cofactor in NarG.
 The enzymes that are involved in electron transport chain are also identified by in silico methods. Findings about pathogen metabolism can contribute to the identification of relationship between nitrate reductase and the C. pseudotuberculosis pathogenicity, virulence factors and discovery of drug targets.
-
-Funding: CNPQ, FAPEMIG
-\end{abstract}
-\end{document}
+  
+  Funding: CNPQ, FAPEMIG \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ A Parallel Bioinspired approach to the Protein Folding Problem using a coarse-grained model }} % Article title
+  
+  
+  \author{ Andrey Cabral Meira$^{1}$, César Manuel Vargas Benítez$^{1}$, }
+  
+  \affil{ 1 UTFPR
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A Parallel Bioinspired approach to the Protein Folding Problem using a coarse-grained model}} % Article title
-
-\author{Andrey Cabral Meira$^1$, C\'esar Manuel Vargas Ben\'{\i}tez$^1$}
-
-\affil{1 UTFPR\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-One of the great challenges of Bioinformatics and Molecular Biology is to predict the structures of proteins from their amino acid chain and their chemical interactions. The Protein Folding Problem (PFP) has been constantly studied aiming to find efficient solutions. The importance of studying the folding of proteins may be justified due to the fact that, according to the contemporary knowledge in Biology, errors at some point of the folding might cause  diseases such as Cancer, Alzheimer's, Cystic Fibrosis, bovine spongiform encephalopathy (mad cow disease) among other diseases. The present project aims an analysis of the PFP based on bioinspired approaches (such as Genetic Algorithms, Artificial Bee Colony, Differential Evolution) and Heuristics with the use of Parallel Computing with GPUs (Graphics Processing Unit), which are used for the processing of the calculations and folding dynamics. The specific goal of the project is to predict the functional structure of a protein from its primary structure and its hydrophobic and hydrophilic interactions. The use of GPUs become interesting due to the fact that with the parallelization of the calculations it is possible to divide the problem in several fractions to improve the processing time. The Coarse-Grained model, which is an alternative to the atomic model, consists on the representation of amino acids as particles with interaction sites and will be used aiming the reduction of the computational effort. It is known that the PFP is defined as an NP-Difficult problem, which also justifies the use of heuristics and Parallel Computing in the methodology. As result of the study, it is expected to produce an approach that can efficiently contribute to PFP studies with satisfactory computation for replication.
-
-Funding: PPGBIOINFO, CNPq
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  One of the great challenges of Bioinformatics and Molecular Biology is to predict the structures of proteins from their amino acid chain and their chemical interactions. The Protein Folding Problem (PFP) has been constantly studied aiming to find efficient solutions. The importance of studying the folding of proteins may be justified due to the fact that, according to the contemporary knowledge in Biology, errors at some point of the folding might cause  diseases such as Cancer, Alzheimer's, Cystic Fibrosis, bovine spongiform encephalopathy (mad cow disease) among other diseases. The present project aims an analysis of the PFP based on bioinspired approaches (such as Genetic Algorithms, Artificial Bee Colony, Differential Evolution) and Heuristics with the use of Parallel Computing with GPUs (Graphics Processing Unit), which are used for the processing of the calculations and folding dynamics. The specific goal of the project is to predict the functional structure of a protein from its primary structure and its hydrophobic and hydrophilic interactions. The use of GPUs become interesting due to the fact that with the parallelization of the calculations it is possible to divide the problem in several fractions to improve the processing time. The Coarse-Grained model, which is an alternative to the atomic model, consists on the representation of amino acids as particles with interaction sites and will be used aiming the reduction of the computational effort. It is known that the PFP is defined as an NP-Difficult problem, which also justifies the use of heuristics and Parallel Computing in the methodology. As result of the study, it is expected to produce an approach that can efficiently contribute to PFP studies with satisfactory computation for replication.
+  
+  Funding: PPGBIOINFO, CNPq \\ 
+  \end{abstract}
+  \end{document} 

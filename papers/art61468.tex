@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Analysis of splice variants in the proteome of Alzheimer's disease: preliminary results }} % Article title
+  
+  
+  \author{ Thais Martins$^{1}$, Esdras Matheus da Silva$^{1}$, Raphael Tavares da Silva$^{2}$, Fabio Passetti$^{3}$, }
+  
+  \affil{ 1 Oswaldo Cruz Institute
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal de Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 FIOCRUZ - IOC
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Analysis of splice variants in the proteome of Alzheimer's disease: preliminary results}} % Article title
-
-\author{Thais Martins$^1$, Esdras Matheus da Silva$^1$, Raphael Tavares da Silva$^2$, Fabio Passetti$^3$}
-
-\affil{1 OSWALDO CRUZ INSTITUTE\\ 2 UFMG\\ 3 FIOCRUZ - IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Alzheimer's disease, Parkinson's disease and prion disease are the most common neurodegenerative diseases, affecting millions of people worldwide. Currently there is no cure or preventive therapy or quick diagnosis for any of these pathological conditions, but in all of them, abnormal accumulations of protein aggregates occur in the brain. These pathologies have been correlated to altered proteins which can be derived from alternative splicing in the pre-mRNA. Therefore, the discovery of novel protein isoforms is an important strategy to identify new biomarkers for diagnosis, potential therapeutic targets or monitoring the development of each illness. Mass spectrometry data of cerebrospinal fluid (CSF) and brain tissue from patients with Alzheimer's disease were obtained from public databases to identify the protein profile and expression of protein variants generated by alternative splicing. In the analysis of CSF data, 9 common splice variants were identified between data from patients with Alzheimer's and control patients. In addition, 4 splice variants were unique to patients with Alzheimer's disease and the canonical proteins of these genes were directly correlated with the disease as described in the literature. In the analysis of brain tissue data, we identified 16 splice variants unique to patients with Alzheimer's, which 9 canonical proteins of these genes were directly correlated this disease according to the literature. From this analysis, most alternative splicing isoforms have been identified based on proteotypic peptides which were located at junctions from non consecutive exons. The study of exclusively expressed isoforms is an important strategy for the identification of new biomarkers for the monitoring of neurodegenerative diseases.
-
-Funding: FAPERJ, CAPES and Fiocruz
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Alzheimer’s disease, Parkinson’s disease and prion disease are the most common neurodegenerative diseases, affecting millions of people worldwide. Currently there is no cure or preventive therapy or quick diagnosis for any of these pathological conditions, but in all of them, abnormal accumulations of protein aggregates occur in the brain. These pathologies have been correlated to altered proteins which can be derived from alternative splicing in the pre-mRNA. Therefore, the discovery of novel protein isoforms is an important strategy to identify new biomarkers for diagnosis, potential therapeutic targets or monitoring the development of each illness. Mass spectrometry data of cerebrospinal fluid (CSF) and brain tissue from patients with Alzheimer's disease were obtained from public databases to identify the protein profile and expression of protein variants generated by alternative splicing. In the analysis of CSF data, 9 common splice variants were identified between data from patients with Alzheimer's and control patients. In addition, 4 splice variants were unique to patients with Alzheimer's disease and the canonical proteins of these genes were directly correlated with the disease as described in the literature. In the analysis of brain tissue data, we identified 16 splice variants unique to patients with Alzheimer's, which 9 canonical proteins of these genes were directly correlated this disease according to the literature. From this analysis, most alternative splicing isoforms have been identified based on proteotypic peptides which were located at junctions from non consecutive exons. The study of exclusively expressed isoforms is an important strategy for the identification of new biomarkers for the monitoring of neurodegenerative diseases.
+  
+  Funding: FAPERJ, CAPES and Fiocruz \\ 
+  \end{abstract}
+  \end{document} 

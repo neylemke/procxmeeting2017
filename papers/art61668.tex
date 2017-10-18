@@ -1,68 +1,79 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ An NGS approach to analysing HMF resistance in Saccharomyces cerevisiae }} % Article title
+  
+  
+  \author{ Lucas Miranda$^{1}$, Sheila Tiemi Nagamatsu$^{2}$, Fellipe Melo$^{3}$, Bruna Tatsue$^{4}$, Gonçalo Amarante Guimarães Pereira$^{5}$, Gleidson Silva Teixeira$^{6}$, Marcelo Falsarella Carazzolle$^{7}$, }
+  
+  \affil{ 1 Universidad de Buenos Aires – Departamento de Química Biológica
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Brazilian Bioethanol Science and Technology Laboratory, Brazilian Center for Research in Energy and Materials CNPEM, Biology Institute – UNICAMP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Biology Institute ; UNICAMP
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 Biology Institute – UNICAMP
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+5 Brazilian Bioethanol Science and Technology Laboratory, Brazilian Center for Research in Energy and Materials, Biology Institute – UNICAMP
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
+6 Biology Institute – UNICAMP, Faculty of Food Engineering – UNICAMP
 
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
+7 Biology Institute - UNICAMP, National Center for High Performance Computing/Unicamp
 
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{An NGS approach to analysing HMF resistance in Saccharomyces cerevisiae}} % Article title
-
-\author{Lucas Miranda$^1$, Sheila Tiemi Nagamatsu$^2$, Fellipe Melo$^3$, Bruna Tatsue$^4$, Gon\c{c}alo Amarante Guimar\~aes Pereira$^5$, Gleidson Silva Teixeira$^6$, Marcelo Falsarella Carazzolle$^7$}
-
-\affil{1 UNIVERSIDAD DE BUENOS AIRES - DEPARTAMENTO DE QU\'IMICA BIOL\'OGICA\\ 2 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS CNPEM, BIOLOGY INSTITUTE - UNICAMP\\ 3 BIOLOGY INSTITUTE ; UNICAMP\\ 4 BIOLOGY INSTITUTE - UNICAMP\\ 5 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS, BIOLOGY INSTITUTE - UNICAMP\\ 6 BIOLOGY INSTITUTE - UNICAMP, FACULTY OF FOOD ENGINEERING - UNICAMP\\ 7 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING/UNICAMP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Bioethanol is the most promising renewable fuel to substitute fossil fuel and it is generated as a product of fermentation of sugars, which can occur throught two processes, first generation (1G) and second generation (2G). They differ basically in the raw material used, where, in brazilian production, 1G require sugarcane juice, while 2G, unused plant parts (bagasse), which are rich in polymers such as lignin, cellulose and hemicellulose. Both methodologies involve subproducts that interfere in the metabolism of microorganisms used to fermentation step, being  Saccharomyces cerevisiae the most commonly used. While first generation ethanol exhibits factors such as temperature, O2 pressure, pH, alcohol concentration and contaminants as inhibitors, second generation, for requesting a thermic preprocessing to expose the fibres, and to convert cellulose and hemicellulose to simple monomers, shows, besides 1G inhibitors, acetic acid, furfural and HMF - hydroxymethylfurfural. In summary it introduces the importance of understanding yeast's resistance to increase productivity. In this work we studied a diploid industrial strain resistant to HMF that was sporulated, beeing selected four resistent spores and three non resistent spores. These eight strains were sequenced using Illumina paired-end technology and the data was analysed. The pipeline includes quality analysis of the reads (FastQC), genome assembly of a non resistant strain (SPAdes), gene prediction (Augustus), variant calling (GATK) and effect prediction (VEP), gene annotation (Blastn), chromosomal mapping (MUMmer package) and gene ontology classification (SGD website). This pipeline allowed us to identify a set of 68 candidate genes that could be related to HMF robustness. Future perspectives include the application of this pipeline to a greater set of sequenced strains, structural analysis of the proteins that are translated from the found genes, and experimental validation in order to determine a mechanism compatible with the resistance under study.
-
-Funding: Asociaci\'on de Universidades Grupo Montevideo (AUGM), FAPESP
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Bioethanol is the most promising renewable fuel to substitute fossil fuel and it is generated as a product of fermentation of sugars, which can occur throught two processes, first generation (1G) and second generation (2G). They differ basically in the raw material used, where, in brazilian production, 1G require sugarcane juice, while 2G, unused plant parts (bagasse), which are rich in polymers such as lignin, cellulose and hemicellulose. Both methodologies involve subproducts that interfere in the metabolism of microorganisms used to fermentation step, being  Saccharomyces cerevisiae the most commonly used. While first generation ethanol exhibits factors such as temperature, O2 pressure, pH, alcohol concentration and contaminants as inhibitors, second generation, for requesting a thermic preprocessing to expose the fibres, and to convert cellulose and hemicellulose to simple monomers, shows, besides 1G inhibitors, acetic acid, furfural and HMF - hydroxymethylfurfural. In summary it introduces the importance of understanding yeast’s resistance to increase productivity. In this work we studied a diploid industrial strain resistant to HMF that was sporulated, beeing selected four resistent spores and three non resistent spores. These eight strains were sequenced using Illumina paired-end technology and the data was analysed. The pipeline includes quality analysis of the reads (FastQC), genome assembly of a non resistant strain (SPAdes), gene prediction (Augustus), variant calling (GATK) and effect prediction (VEP), gene annotation (Blastn), chromosomal mapping (MUMmer package) and gene ontology classification (SGD website). This pipeline allowed us to identify a set of 68 candidate genes that could be related to HMF robustness. Future perspectives include the application of this pipeline to a greater set of sequenced strains, structural analysis of the proteins that are translated from the found genes, and experimental validation in order to determine a mechanism compatible with the resistance under study.
+  
+  Funding: Asociaci\'on de Universidades Grupo Montevideo (AUGM), FAPESP \\ 
+  \end{abstract}
+  \end{document} 

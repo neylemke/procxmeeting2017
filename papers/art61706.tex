@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Updated TAXI, a taxonomic innovations database depicting operons structure and evolution }} % Article title
+  
+  
+  \author{ Lucas Ferreira$^{1}$, José Miguel Ortega$^{2}$, }
+  
+  \affil{ 1 SGC - Structural Genomics Consortium, Unicamp
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal de Minas Gerais. Laboratório de Biodados
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Updated TAXI, a taxonomic innovations database depicting operons structure and evolution}} % Article title
-
-\author{Lucas Ferreira$^1$, Jos\'e Miguel Ortega$^2$}
-
-\affil{1 SGC - STRUCTURAL GENOMICS CONSORTIUM, UNICAMP\\ 2 UFMG. LABORAT\'ORIO DE BIODADOS\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The structure of operons, navigation from one operon to another that shares orthologous genes and the analysis of the clade of origin of the operon and their component genes comprise the information present in TAXI database. TAXI stands for Taxonomic Innovations, being the main goal to understand along evolution how the operons have formed, which one is the most recent and most ancient gene in it, and understanding the funcions that are restricted to anym microbial clade, e.g. a family, a species or even a strain. Update of TAXI database presents a new set of fully indexed tables. The present number of organisms, transcription units, clusters of orthologous genes and genes add up to, respectively: 1753, 3343458, 551692, and 6732117. The most important updates refer to integration of identifiers with external databases UniProt and Kegg. TAXI information can be accessed through an organism of interest, gene symbol, UniProt accession or Kegg Orthologues group (KO). Queries to the database return operons where the most recent or the most ancient gene is in the first position, aiming to facilitate the study of the evolution of regulation in operons. By using the navigation though orthologue groups it is possible to verify the distinct operon compositions of the gene of interest, helping the study of co-functionalities. TAXI database is now available in an instance located at a CPD at bioinfo.icb.ufmg.br/taxi.
-
-Funding: FAPEMIG
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The structure of operons, navigation from one operon to another that shares orthologous genes and the analysis of the clade of origin of the operon and their component genes comprise the information present in TAXI database. TAXI stands for Taxonomic Innovations, being the main goal to understand along evolution how the operons have formed, which one is the most recent and most ancient gene in it, and understanding the funcions that are restricted to anym microbial clade, e.g. a family, a species or even a strain. Update of TAXI database presents a new set of fully indexed tables. The present number of organisms, transcription units, clusters of orthologous genes and genes add up to, respectively: 1753, 3343458, 551692, and 6732117. The most important updates refer to integration of identifiers with external databases UniProt and Kegg. TAXI information can be accessed through an organism of interest, gene symbol, UniProt accession or Kegg Orthologues group (KO). Queries to the database return operons where the most recent or the most ancient gene is in the first position, aiming to facilitate the study of the evolution of regulation in operons. By using the navigation though orthologue groups it is possible to verify the distinct operon compositions of the gene of interest, helping the study of co-functionalities. TAXI database is now available in an instance located at a CPD at bioinfo.icb.ufmg.br/taxi.
+  
+  Funding: FAPEMIG \\ 
+  \end{abstract}
+  \end{document} 

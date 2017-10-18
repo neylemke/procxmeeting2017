@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Integration and Data Mining in Drug Target Detecting for Schistossoma mansoni }} % Article title
+  
+  
+  \author{ Francimary Procopio Garcia$^{1}$, Kele Teixeira Belloze$^{1}$, }
+  
+  \affil{ 1 CEFET/RJ
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Integration and Data Mining in Drug Target Detecting for Schistossoma mansoni}} % Article title
-
-\author{Francimary Procopio Garcia$^1$, Kele Teixeira Belloze$^1$}
-
-\affil{1 CEFET/RJ\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Classified as a neglected disease, in spite of it's acting in underdeveloped countries, schistosomiasis, caused by Schistossoma Mansoni, is considered one of the most important endemic diseases in the world, having an estimated number of around 240 million infected and 700 million people living in an area with a high risk of transmission. There's currently one sole drug recommended by the World Health Organization for schistosomiasis treatment which, although being effective in the elimination of the vermin, it shows collateral effects and can only act upon its mature form. Therefore, researching for new alternative drug targets in combating schistosomiasis is required. This work has as main objective the identification and classification of possible new drug targets for S. mansoni. The proposed methodology for the development of this work is described as follows.  At first the identification of ortholog proteins between S. mansoni and three eukaryotic models organisms will be done: Caenorhabditis elegans (nematode), Saccharomyces cerevisiae (yeast) and Mus musculus (mouse), based on the concept of gene essentiality. Subsequently, the process of identifying homologous proteins between the S. mansoni proteins raised in the previous step and druggable proteins (targets for drugs), available at Drugbank and Therapeutic Target Database (TTD) databases, will be conducted. These two steps will result in an intermediate database composed of essential and druggable candidate proteins of the organism under study, represented by primary sequences integrated with the aggregate annotations during the accomplishment of these two steps of the methodology. From the candidate proteins raised, the research will proceed on identifying information of these protein's secondary structures, in order to enrich the database conceived. For this step a homology based approach will be adopted using the secondary protein structures available at Protein Data Bank (PDB). Data from this integrated database will be categorized using frequent patterns models such as Apriori to identify consistent behaviors among candidate proteins and provide them with an druggability index. A decision tree model will be used to identify the candidates with the highest combination weight and validated through cross validation functions, where the available data will be divided into two mutually exclusive subsets, one for training (parameter estimation) and another for testing (validation). The percentage of candidates prediction with the highest druggability will be calculated and their druggability indexes will be validated and discussed according to data obtained in the literature. As a result of this work, it is expected to obtain a list of S. mansoni proteins which may be indicated as drug targets, and thus contribute to the initial step of the drug development process. This work is in an initial phase of studies in which a literature review is being carried out.
-
-Funding: CEFET/RJ
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Classified as a neglected disease, in spite of it’s acting in underdeveloped countries, schistosomiasis, caused by Schistossoma Mansoni, is considered one of the most important endemic diseases in the world, having an estimated number of around 240 million infected and 700 million people living in an area with a high risk of transmission. There’s currently one sole drug recommended by the World Health Organization for schistosomiasis treatment which, although being effective in the elimination of the vermin, it shows collateral effects and can only act upon its mature form. Therefore, researching for new alternative drug targets in combating schistosomiasis is required. This work has as main objective the identification and classification of possible new drug targets for S. mansoni. The proposed methodology for the development of this work is described as follows.  At first the identification of ortholog proteins between S. mansoni and three eukaryotic models organisms will be done: Caenorhabditis elegans (nematode), Saccharomyces cerevisiae (yeast) and Mus musculus (mouse), based on the concept of gene essentiality. Subsequently, the process of identifying homologous proteins between the S. mansoni proteins raised in the previous step and druggable proteins (targets for drugs), available at Drugbank and Therapeutic Target Database (TTD) databases, will be conducted. These two steps will result in an intermediate database composed of essential and druggable candidate proteins of the organism under study, represented by primary sequences integrated with the aggregate annotations during the accomplishment of these two steps of the methodology. From the candidate proteins raised, the research will proceed on identifying information of these protein's secondary structures, in order to enrich the database conceived. For this step a homology based approach will be adopted using the secondary protein structures available at Protein Data Bank (PDB). Data from this integrated database will be categorized using frequent patterns models such as Apriori to identify consistent behaviors among candidate proteins and provide them with an druggability index. A decision tree model will be used to identify the candidates with the highest combination weight and validated through cross validation functions, where the available data will be divided into two mutually exclusive subsets, one for training (parameter estimation) and another for testing (validation). The percentage of candidates prediction with the highest druggability will be calculated and their druggability indexes will be validated and discussed according to data obtained in the literature. As a result of this work, it is expected to obtain a list of S. mansoni proteins which may be indicated as drug targets, and thus contribute to the initial step of the drug development process. This work is in an initial phase of studies in which a literature review is being carried out.
+  
+  Funding: CEFET/RJ \\ 
+  \end{abstract}
+  \end{document} 

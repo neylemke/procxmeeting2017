@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ BioFeatureFinder (BFF): Flexible, unbiased analysis of biological characteristics }} % Article title
+  
+  
+  \author{ Felipe Ciamponi$^{1}$, Michael Lovci$^{1}$, Katlin Massirer$^{1}$, }
+  
+  \affil{ 1 CBMEG - UNICAMP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{BioFeatureFinder (BFF): Flexible, unbiased analysis of biological characteristics}} % Article title
-
-\author{Felipe Ciamponi$^1$, Michael Lovci$^1$, Katlin Massirer$^1$}
-
-\affil{1 CBMEG - UNICAMP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-BFF interrogates interesting genomic landmarks (ex. alternatively spliced exons, DNA/RNA-binding protein binding sites, and gene/transcript functional elements) to identify distinguishing biological features (nucleotide content, conservation, k-mers, secondary structure, protein binding sites and others). BFF uses a flexible underlying model, combining classical statistical tests with big data machine learning strategies, that takes thousands of biological characteristics (features) and can interpret category labels in genomic ranges or numerical scales from genome graphs. The algorithm is python-based with scalable multi-thread capabilities, designed to be compatible with a wide array of servers ranging from notebooks to HPC clusters. Due to flexible nature of it's design, BFF can also be easily modified to include new functions and sources of data in it's analysis process. As proof-of-concept, we applied BFF to an eCLIP-seq (enhanced crosslinking-immunoprecipitation followed by RNA-seq) dataset for the mRNA targets of RNA-binding proteins (RPBs) RBFOX2. Our algorithm was capable of recovering several major features described previously in the literature, as the GCAUG binding motif for the RBFOX2 protein. To showcase the potential uses of BFF, we analyzed 112 eCLIP-seq datasets from RBPs available at ENCODE, identifying biological features associated with the binding sites for these proteins. From a total of 5498 input features, BFF predicts an average of  624 important features for each RBP. 98 RBP binding maps that were marked by co-location with other RBP binding maps, with  known complexes (ex. IGF2BP1-3, U2AF1-2) being identified by BFF. 40 RBP binding maps were marked by their relative abundance of sequence motifs, with known examples from the literature (ex. TARDBP, SRSF1, PUM2, PTB and QKI) being successfully recovered by BFF. Secondary RNA structure was a distinguishing feature for 64 proteins, some which are known RNA-structure binding proteins (ex. TAF15, KHDRBS1 and ESWR1).  Taken together, our results show that BFF provides a flexible and reliable analysis platform for large-scale datasets, while at the same time providing a way to control observer bias and uncover latent relationships in biological datasets.
-
-Funding: FAPESP, CNPq
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  BFF interrogates interesting genomic landmarks (ex. alternatively spliced exons, DNA/RNA-binding protein binding sites, and gene/transcript functional elements) to identify distinguishing biological features (nucleotide content, conservation, k-mers, secondary structure, protein binding sites and others). BFF uses a flexible underlying model, combining classical statistical tests with big data machine learning strategies, that takes thousands of biological characteristics (features) and can interpret category labels in genomic ranges or numerical scales from genome graphs. The algorithm is python-based with scalable multi-thread capabilities, designed to be compatible with a wide array of servers ranging from notebooks to HPC clusters. Due to flexible nature of it’s design, BFF can also be easily modified to include new functions and sources of data in it’s analysis process. As proof-of-concept, we applied BFF to an eCLIP-seq (enhanced crosslinking-immunoprecipitation followed by RNA-seq) dataset for the mRNA targets of RNA-binding proteins (RPBs) RBFOX2. Our algorithm was capable of recovering several major features described previously in the literature, as the GCAUG binding motif for the RBFOX2 protein. To showcase the potential uses of BFF, we analyzed 112 eCLIP-seq datasets from RBPs available at ENCODE, identifying biological features associated with the binding sites for these proteins. From a total of 5498 input features, BFF predicts an average of  624 important features for each RBP. 98 RBP binding maps that were marked by co-location with other RBP binding maps, with  known complexes (ex. IGF2BP1-3, U2AF1-2) being identified by BFF. 40 RBP binding maps were marked by their relative abundance of sequence motifs, with known examples from the literature (ex. TARDBP, SRSF1, PUM2, PTB and QKI) being successfully recovered by BFF. Secondary RNA structure was a distinguishing feature for 64 proteins, some which are known RNA-structure binding proteins (ex. TAF15, KHDRBS1 and ESWR1).  Taken together, our results show that BFF provides a flexible and reliable analysis platform for large-scale datasets, while at the same time providing a way to control observer bias and uncover latent relationships in biological datasets.
+  
+  Funding: FAPESP, CNPq \\ 
+  \end{abstract}
+  \end{document} 

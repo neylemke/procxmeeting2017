@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ What is the pig’s order? Dealing with the ragged hierarchy of NCBI Taxonomy }} % Article title
+  
+  
+  \author{ Testsu Sakamoto$^{1}$, Lab Biodados$^{2}$, }
+  
+  \affil{ 1 Universidade Federal de Minas Gerais. Laboratório de Biodados.
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal de Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{What is the pig's order? Dealing with the ragged hierarchy of NCBI Taxonomy}} % Article title
-
-\author{Testsu Sakamoto$^1$, Lab Biodados$^2$}
-
-\affil{1 UFMG. LABORAT\'ORIO DE BIODADOS.\\ 2 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Any biological data are tightly linked to taxonomy and several bioinformatics tools use this information to answer biological questions regarding the species classification, diversity and evolution. One important taxonomic source is the NCBI Taxonomy. In this database, all sequence accessions deposited on INSDC are associated with their respective species which they belong; and the catalogued species are organized in a hierarchical structure that attempts to illustrate their evolutionary relationship. The hierarchical structure of NCBI Taxonomy is useful in retrieving the taxonomic lineage and classification since it uses taxonomic nomenclature and rank (class, order, family etc.) to name and classify the nodes comprising it. Though several bioinformatics analyses work with this taxonomic source, many of them face some difficulties because its hierarchy is of ragged type. As result, taxonomic lineages in the hierarchy are comprised of different number of nodes and some taxonomic ranks could be missing in some lineages. For instance, the taxonomic lineage of Sus scrofa (pig; taxid: 9823) does not have a node of subphylum, superclass, subclass or order ranks. Furthermore, the existence of nodes without a rank assigned (referred as ``no rank'') also contributes on generating ragged hierarchy. To address this issue, we developed an algorithm that takes the tree structure from NCBI Taxonomy and generates a balanced taxonomic tree. To create a balanced hierarchy, the algorithm firstly attempts to assign a taxonomic rank to a ``no rank'' nodes. Then, the algorithm creates/deletes nodes throughout the tree making it balanced. The algorithm also creates a name for the new nodes by borrowing the names from its ranked child or, if there is no child, from its ranked parent node. The new hierarchical structure was named Taxallnomy and it contains 29 hierarchical levels correspondent to the 29 taxonomic ranks used in the NCBI Taxonomy database. From Taxallnomy, user can obtain the complete taxonomic lineage with 29 nodes of all taxa available in the NCBI Taxonomy database. Taxallnomy is applicable to several bioinformatics analyses that depend on the data from NCBI Taxonomy. In this work, we demonstrated its applicability by embedding taxonomic information of a specified rank to a phylogenetic tree; and by making metagenomic profile according to a rank. The algorithm was written in PERL and all resource for Taxallnomy database can be accessed at biodados.icb.ufmg.br/taxallnomy.
-
-Funding: FAPEMIG, CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Any biological data are tightly linked to taxonomy and several bioinformatics tools use this information to answer biological questions regarding the species classification, diversity and evolution. One important taxonomic source is the NCBI Taxonomy. In this database, all sequence accessions deposited on INSDC are associated with their respective species which they belong; and the catalogued species are organized in a hierarchical structure that attempts to illustrate their evolutionary relationship. The hierarchical structure of NCBI Taxonomy is useful in retrieving the taxonomic lineage and classification since it uses taxonomic nomenclature and rank (class, order, family etc.) to name and classify the nodes comprising it. Though several bioinformatics analyses work with this taxonomic source, many of them face some difficulties because its hierarchy is of ragged type. As result, taxonomic lineages in the hierarchy are comprised of different number of nodes and some taxonomic ranks could be missing in some lineages. For instance, the taxonomic lineage of Sus scrofa (pig; taxid: 9823) does not have a node of subphylum, superclass, subclass or order ranks. Furthermore, the existence of nodes without a rank assigned (referred as “no rank”) also contributes on generating ragged hierarchy. To address this issue, we developed an algorithm that takes the tree structure from NCBI Taxonomy and generates a balanced taxonomic tree. To create a balanced hierarchy, the algorithm firstly attempts to assign a taxonomic rank to a “no rank” nodes. Then, the algorithm creates/deletes nodes throughout the tree making it balanced. The algorithm also creates a name for the new nodes by borrowing the names from its ranked child or, if there is no child, from its ranked parent node. The new hierarchical structure was named Taxallnomy and it contains 29 hierarchical levels correspondent to the 29 taxonomic ranks used in the NCBI Taxonomy database. From Taxallnomy, user can obtain the complete taxonomic lineage with 29 nodes of all taxa available in the NCBI Taxonomy database. Taxallnomy is applicable to several bioinformatics analyses that depend on the data from NCBI Taxonomy. In this work, we demonstrated its applicability by embedding taxonomic information of a specified rank to a phylogenetic tree; and by making metagenomic profile according to a rank. The algorithm was written in PERL and all resource for Taxallnomy database can be accessed at biodados.icb.ufmg.br/taxallnomy.
+  
+  Funding: FAPEMIG, CAPES \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Structural and comparative analyses of fumarate hydratase from three species of Leishmania genus presented in Brazil and their counterpart in human genome. }} % Article title
+  
+  
+  \author{ Aline Beatriz Mello Rodrigues$^{1}$, Ana Carolina Ramos Guimarães$^{2}$, }
+  
+  \affil{ 1 Instituto Oswaldo Cruz
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 FIOCRUZ-IOC
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Structural and comparative analyses of fumarate hydratase from three species of Leishmania genus presented in Brazil and their counterpart in human genome.}} % Article title
-
-\author{Aline Beatriz Mello Rodrigues$^1$, Ana Carolina Ramos Guimar\~aes$^2$}
-
-\affil{1 INSTITUTO OSWALDO CRUZ\\ 2 FIOCRUZ-IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Leishmaniasis is a public health problem in several parts of the world, due to its wide distribution and high prevalence. Infection caused by parasites of the genus Leishmania produces in humans a set of clinical syndromes that can generate multiple or single skin ulcers, the impairment of the upper airway mucous membranes and in the viscera. In Latin America, the disease has been found in at least 12 countries, 90\% of which occur in Brazil's Northeast, Central West and North regions. The treatment currently employed is extremely toxic and has a high cost to the patient, which limits its use in endemic areas. The identification of new therapeutic targets with critical importance in the survival of the parasite is aimed at the development of new drugs more effective and less aggressive for humans. In this context, the enzyme fumarate hydratase (FH) is a promising molecular target, since the parasite and Homo sapiens enzymes are analogous, i.e., descend from different ancestors and by convergent evolution have the same enzymatic function. Studies in the genus Leishmania genome point to two genes, which encode fumarate hydratase (EC 4.2.1.2). This enzyme catalyzes the reversible hydration of fumarate in S-malate, and recent studies show the importance of this enzyme for the parasite viability, which makes it a potential target for the planning of compounds with leishmanicidal action. In this perspective, this project highlights the use of computational methodologies to propose molecular models for species of Leishmania genus that can be found in Brazil. FH isoforms sequences of 3 species of Leishmania genus (L. braziliensis, L. guyanensis and L. infantum) were retrieved from TriTrypDB and UNIPROT. A FH crystallographic structure of L. major (PDB ID: 5L2R) was used as template. Subsequently, 3D models were generated using comparative modeling methods. The comparison between the sequences of the class I fumarate hydratase among some species of the genus Leishmania indicates that the residues of the catalytic site remain totally conserved, which suggests the possible inhibition of the enzyme for several species of this genus. The analysis of the structures of the parasites and host enzyme shows differences in the catalytic residues involved in the reaction. The results that will be obtained with this project may contribute to the development of new drugs against leishmaniasis.
-
-Funding: Instituto Oswaldo Cruz
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Leishmaniasis is a public health problem in several parts of the world, due to its wide distribution and high prevalence. Infection caused by parasites of the genus Leishmania produces in humans a set of clinical syndromes that can generate multiple or single skin ulcers, the impairment of the upper airway mucous membranes and in the viscera. In Latin America, the disease has been found in at least 12 countries, 90\% of which occur in Brazil’s Northeast, Central West and North regions. The treatment currently employed is extremely toxic and has a high cost to the patient, which limits its use in endemic areas. The identification of new therapeutic targets with critical importance in the survival of the parasite is aimed at the development of new drugs more effective and less aggressive for humans. In this context, the enzyme fumarate hydratase (FH) is a promising molecular target, since the parasite and Homo sapiens enzymes are analogous, i.e., descend from different ancestors and by convergent evolution have the same enzymatic function. Studies in the genus Leishmania genome point to two genes, which encode fumarate hydratase (EC 4.2.1.2). This enzyme catalyzes the reversible hydration of fumarate in S-malate, and recent studies show the importance of this enzyme for the parasite viability, which makes it a potential target for the planning of compounds with leishmanicidal action. In this perspective, this project highlights the use of computational methodologies to propose molecular models for species of Leishmania genus that can be found in Brazil. FH isoforms sequences of 3 species of Leishmania genus (L. braziliensis, L. guyanensis and L. infantum) were retrieved from TriTrypDB and UNIPROT. A FH crystallographic structure of L. major (PDB ID: 5L2R) was used as template. Subsequently, 3D models were generated using comparative modeling methods. The comparison between the sequences of the class I fumarate hydratase among some species of the genus Leishmania indicates that the residues of the catalytic site remain totally conserved, which suggests the possible inhibition of the enzyme for several species of this genus. The analysis of the structures of the parasites and host enzyme shows differences in the catalytic residues involved in the reaction. The results that will be obtained with this project may contribute to the development of new drugs against leishmaniasis.
+  
+  Funding: Instituto Oswaldo Cruz \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Computer-aided protocol to revisit the cDNA library from Lonomia obliqua caterpillar: Identification of structural motifs related to inflammatory processes }} % Article title
+  
+  
+  \author{ Jaqueline Mayara de Araujo$^{1}$, Milton Y. Nishiyama-Jr$^{1}$, Flavio Lichtenstein$^{1}$, Kerly Fernanda Mesquita Pasqualoto$^{1}$, Ana Marisa Chudzinski-Tavassi$^{1}$, }
+  
+  \affil{ 1 Instituto Butantan
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Computer-aided protocol to revisit the cDNA library from Lonomia obliqua caterpillar: Identification of structural motifs related to inflammatory processes}} % Article title
-
-\author{Jaqueline Mayara de Araujo$^1$, Milton Y. Nishiyama-jr$^1$, Flavio Lichtenstein$^1$, Kerly Fernanda Mesquita Pasqualoto$^1$, Ana Marisa Chudzinski-tavassi$^1$}
-
-\affil{1 INSTITUTO BUTANTAN\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The skin contact with the bristles of the Lonomia obliqua  caterpillar leads to poisoning, which is characterized by consumption coagulopathy and secondary fibrinolysis. These events may progress to hemorrhagic syndrome and, consequently, to death. It is well-known that the signaling pathways involved in inflammation and in the coagulation cascade are interrelated. Therefore, we can study such signaling mechanisms in diseases related to inflammatory processes. Osteoarthritis (OA), for instance, is one of these diseases, and is characterized by cartilage degeneration, accompanied by inflammation of the joints, pain and loss of physical functions. The current treatments for OA are limited and involve either pain relief, or total replacement of the joints, in the late stages of the disease. In this regard, the identification of important new molecular targets in the signaling pathways involved in inflammatory processes would be crucial for the development of new and more effective drug candidates to treat OA. The L. obliqua cDNA library analysis, using bioinformatics and computer-aided approaches, has provided the identification of structural motifs related to functions involved in inflammatory processes. The re-visitation protocol has allowed the functional annotation and reclassification of 1,503 transcripts from the cDNA library of L. obliqua. Twenty-nine predicted protein sequences related to inflammatory functions were identified. The findings allow us to propose five novel peptide constructions (new chemical entities, NCE) to be further synthesized and assayed in human chondrocyte models (experimental validation). Also, the novel peptide constructions will be used as molecular tools for the identification of new molecular targets related to inflammatory processes.
-
-Funding: Fapesp
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The skin contact with the bristles of the Lonomia obliqua  caterpillar leads to poisoning, which is characterized by consumption coagulopathy and secondary fibrinolysis. These events may progress to hemorrhagic syndrome and, consequently, to death. It is well-known that the signaling pathways involved in inflammation and in the coagulation cascade are interrelated. Therefore, we can study such signaling mechanisms in diseases related to inflammatory processes. Osteoarthritis (OA), for instance, is one of these diseases, and is characterized by cartilage degeneration, accompanied by inflammation of the joints, pain and loss of physical functions. The current treatments for OA are limited and involve either pain relief, or total replacement of the joints, in the late stages of the disease. In this regard, the identification of important new molecular targets in the signaling pathways involved in inflammatory processes would be crucial for the development of new and more effective drug candidates to treat OA. The L. obliqua cDNA library analysis, using bioinformatics and computer-aided approaches, has provided the identification of structural motifs related to functions involved in inflammatory processes. The re-visitation protocol has allowed the functional annotation and reclassification of 1,503 transcripts from the cDNA library of L. obliqua. Twenty-nine predicted protein sequences related to inflammatory functions were identified. The findings allow us to propose five novel peptide constructions (new chemical entities, NCE) to be further synthesized and assayed in human chondrocyte models (experimental validation). Also, the novel peptide constructions will be used as molecular tools for the identification of new molecular targets related to inflammatory processes.
+  
+  Funding: Fapesp \\ 
+  \end{abstract}
+  \end{document} 

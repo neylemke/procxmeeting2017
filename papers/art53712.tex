@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ PRELIMINARY ANALYSIS OF miRNAs IN THE GENOME OF Citrus sinensis }} % Article title
+  
+  
+  \author{ Douglas Santana$^{1}$, Tamires Caixeta Alves$^{1}$, Laurence Rodrigues do Amaral$^{1}$, Matheus de Souza Gomes$^{1}$, }
+  
+  \affil{ 1 UFU
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{PRELIMINARY ANALYSIS OF miRNAs IN THE GENOME OF Citrus sinensis}} % Article title
-
-\author{Douglas Santana$^1$}
-
-\affil{1 UFU\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The production of citrus is a highlight in the Brazilian agroindustry, since Brazil is responsible for 60\% of the world production of orange juice and its main exporter world-wide. Among the main citrus fruits stands out the orange, from Citrus sinensis species. Citrus fruits generally have both nutritional and medicinal properties. Several sorts of diseases affect the citrus crop causing serious damage to the economy. Nowadays, these issues are being addressed with highly polluting pesticides, and the damage generated due to its usage for both the consumer and the environment is severely alarming. Although there is plenty information in scientific literature, such as information about the biology of the Citrus spp. species, little has been done about the molecules involved in the regulation of gene expression in these organisms. A better understanding of these silencing pathways and their effector-molecules could help elucidate mechanisms that are not harmful to health and the environment for the control of pathogenic microorganisms and diseases caused by them. MicroRNAs (miRNAs) have been prominent among small non-coding RNAs because of their role in the regulation of gene expression. Thus, the objective of this work was to identify and characterize using in silico approaches miRNAs and their precursors in the genome of C. sinensis. We used an optimized algorithm with several filters based on structural and thermodynamic characteristics of conserved miRNAs. The RNAfold program was used to predict the secondary structure of the miRNA precursors and the RNALalifold and ClustalX 2.1 programs were used to generate multiple alignments to verify similarity with their ortholog precursors from other plant species. We identified 126 precursors of miRNAs, 177 mature miRNAs and 42 families in C. sinensis. Among the families, we emphasized the following miRNAs: miR156 / 157, miR390, miR2111a, miR3951 and miR3954. The miRNAs showed conservation at both the primary and secondary levels of structure. The phylogenetic distribution of C. sinensis miRNAs corroborated with the Tree of Life due to their results in phylogenetic analysis through the software Mega version 5.2. The results obtained increased the knowledge of regulation of gene expression in C. sinensis providing new challenges for the search of technologies for the control of pathogenic insects and microorganisms and diseases they can cause in Citrus spp. species.
-
-Funding: CNPq, FAPEMIG, INCTV
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The production of citrus is a highlight in the Brazilian agroindustry, since Brazil is responsible for 60\% of the world production of orange juice and its main exporter world-wide. Among the main citrus fruits stands out the orange, from Citrus sinensis species. Citrus fruits generally have both nutritional and medicinal properties. Several sorts of diseases affect the citrus crop causing serious damage to the economy. Nowadays, these issues are being addressed with highly polluting pesticides, and the damage generated due to its usage for both the consumer and the environment is severely alarming. Although there is plenty information in scientific literature, such as information about the biology of the Citrus spp. species, little has been done about the molecules involved in the regulation of gene expression in these organisms. A better understanding of these silencing pathways and their effector-molecules could help elucidate mechanisms that are not harmful to health and the environment for the control of pathogenic microorganisms and diseases caused by them. MicroRNAs (miRNAs) have been prominent among small non-coding RNAs because of their role in the regulation of gene expression. Thus, the objective of this work was to identify and characterize using in silico approaches miRNAs and their precursors in the genome of C. sinensis. We used an optimized algorithm with several filters based on structural and thermodynamic characteristics of conserved miRNAs. The RNAfold program was used to predict the secondary structure of the miRNA precursors and the RNALalifold and ClustalX 2.1 programs were used to generate multiple alignments to verify similarity with their ortholog precursors from other plant species. We identified 126 precursors of miRNAs, 177 mature miRNAs and 42 families in C. sinensis. Among the families, we emphasized the following miRNAs: miR156 / 157, miR390, miR2111a, miR3951 and miR3954. The miRNAs showed conservation at both the primary and secondary levels of structure. The phylogenetic distribution of C. sinensis miRNAs corroborated with the Tree of Life due to their results in phylogenetic analysis through the software Mega version 5.2. The results obtained increased the knowledge of regulation of gene expression in C. sinensis providing new challenges for the search of technologies for the control of pathogenic insects and microorganisms and diseases they can cause in Citrus spp. species.
+  
+  Funding: CNPq, FAPEMIG, INCTV \\ 
+  \end{abstract}
+  \end{document} 

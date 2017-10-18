@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ 16S rRNA GENE-BASED PROFILING OF HOWLER MONKEY FECAL MICROBIOTA }} % Article title
+  
+  
+  \author{ Raquel Riyuzo de Almeida Franco$^{1}$, Júlio César O. Franco$^{2}$, João Carlos Setubal$^{1}$, Aline Maria da Silva$^{1}$, }
+  
+  \affil{ 1 USP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Unifesp
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{16S rRNA GENE-BASED PROFILING OF HOWLER MONKEY FECAL MICROBIOTA}} % Article title
-
-\author{Raquel Riyuzo de Almeida Franco$^1$, J\'ulio C\'esar O. Franco$^2$, Jo\~ao Carlos Setubal$^1$, Aline Maria da Silva$^1$}
-
-\affil{1 USP\\ 2 UNIFESP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Howler monkeys (Alouatta spp.) are endemic animals from the Atlantic Forest biome that can be found in primary and secondary forests and even in small forest fragments. Their diet is based on tree leaves and fruits, depending on the season. This study aims to investigate the diversity of gastrointestinal bacterial community from captive and non-captive howler monkeys that inhabit S\~ao Paulo Zoo Park to correlate possible differences between their respective microbiotas and diets. We have collected a total of 25 fecal samples from captive and non-captive individuals at different seasons in 2013-2015. Total DNA extracted from the samples were then analyzed by 16S rRNA gene V3-V4 amplicon sequencing using the MiSeq-Illumina platform. In addition, a 16S amplicon sequence dataset of fecal samples from Mexican black howler monkeys was incorporated in the analyses. The sequences were used for alpha- and beta-diversity estimates, as well as for phylogenetic profiling using mostly the QIIME package. Our initial results point to differences both in the microbial community profile and diversity between captive and non-captive groups. When the microbial composition present in fecal samples of Brazilian monkeys were compared with Mexican monkeys, we observed that the microbial community of Brazilian captive individuals are very different from the other groups. Among the identified genera, we observed higher abundance of Bacteroides and Prevotella in the microbiota of captive animals. In humans, these two genera have been related to diets high in fat/protein and carbohydrates/fiber, respectively.
-
-Funding: FAPESP, CNPQ, CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Howler monkeys (Alouatta spp.) are endemic animals from the Atlantic Forest biome that can be found in primary and secondary forests and even in small forest fragments. Their diet is based on tree leaves and fruits, depending on the season. This study aims to investigate the diversity of gastrointestinal bacterial community from captive and non-captive howler monkeys that inhabit S\~ao Paulo Zoo Park to correlate possible differences between their respective microbiotas and diets. We have collected a total of 25 fecal samples from captive and non-captive individuals at different seasons in 2013-2015. Total DNA extracted from the samples were then analyzed by 16S rRNA gene V3-V4 amplicon sequencing using the MiSeq-Illumina platform. In addition, a 16S amplicon sequence dataset of fecal samples from Mexican black howler monkeys was incorporated in the analyses. The sequences were used for alpha- and beta-diversity estimates, as well as for phylogenetic profiling using mostly the QIIME package. Our initial results point to differences both in the microbial community profile and diversity between captive and non-captive groups. When the microbial composition present in fecal samples of Brazilian monkeys were compared with Mexican monkeys, we observed that the microbial community of Brazilian captive individuals are very different from the other groups. Among the identified genera, we observed higher abundance of Bacteroides and Prevotella in the microbiota of captive animals. In humans, these two genera have been related to diets high in fat/protein and carbohydrates/fiber, respectively.
+  
+  Funding: FAPESP, CNPQ, CAPES \\ 
+  \end{abstract}
+  \end{document} 

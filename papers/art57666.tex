@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Integrated model of the mRNA translation and the amino acid chain folding within the ribosome tunnel }} % Article title
+  
+  
+  \author{ Bárbara Zanandreiz de Siqueira Mattos$^{1}$, A.P.F. Atman$^{2}$, Anton Semenchenko$^{1}$, }
+  
+  \affil{ 1 Centro Universitário Newton Paiva
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 CEFETMG
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Integrated model of the mRNA translation and the amino acid chain folding within the ribosome tunnel}} % Article title
-
-\author{B\'arbara Zanandreiz de Siqueira Mattos$^1$, A.p.f. Atman$^2$, Anton Semenchenko$^1$}
-
-\affil{1 CENTRO UNIVERSIT\'ARIO NEWTON PAIVA\\ 2 CEFETMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The ribosome is the main facilitator of the protein synthesis process. It influences the formation of the secondary structure of the nascent polypeptide chain within its exit tunnel. The ribosome exit tunnel is an active factor in the formation of the amino acid chain secondary structures due to the various mechanisms of interaction between the nascent chain and the elements that form the walls of the tunnel. In addition to the ribosome influence onto the nascent chain, there is a negative feedback from the co-translational folding process within the tunnel and the mRNA translation by the ribosome. The presented project intends to construct the mathematical representation of the interaction between the amino acids and the ribosome exit tunnel and integrate the co-translational folding model with the real-time mRNA translation by the ribosome. The project evaluates the hypothesis that the spatial limitation of the tunnel geometry and, specifically, the constriction location within the tunnel, interfere on the nascent chain secondary structure. As the result, we demonstrate the improved the ability to predict the distribution of the amino acid structures within the ribosome exit tunnel using only computational tools calibrated by the cell-free protein synthesis process. This result is achieved by the integration of the real-time mRNA translation and the simulation of the polypeptide chain folding within the ribosome exit tunnel. Specifically, we visualize the secondary structures of the nascent amino acid chain in the process of formation within the ribosome exit tunnel. The main technique to perform this work is the agent-based modeling with the support of the NetLogo\textsuperscript{\textcopyright} 3D computational tool. The proposed model represents the process of amino acid chain folding by the attachment of one amino acid at a time and the propagation of the nascent chain inside the exit tunnel of the ribosome. The timing of the amino acid insertion into ribosome exit tunnel is determined by the real-time mRNA translation by the ribosome and validated by the experimental data. The three-dimensional positioning of the nascent chain within the tunnel is represented as a stochastic process of the orientation changes of the individual elements, according to the degree of freedom allowed by the chemical bonds within the amino acids. The simulated results are compared and validated by the existing crystallography experiments.
-
-Funding: None
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The ribosome is the main facilitator of the protein synthesis process. It influences the formation of the secondary structure of the nascent polypeptide chain within its exit tunnel. The ribosome exit tunnel is an active factor in the formation of the amino acid chain secondary structures due to the various mechanisms of interaction between the nascent chain and the elements that form the walls of the tunnel. In addition to the ribosome influence onto the nascent chain, there is a negative feedback from the co-translational folding process within the tunnel and the mRNA translation by the ribosome. The presented project intends to construct the mathematical representation of the interaction between the amino acids and the ribosome exit tunnel and integrate the co-translational folding model with the real-time mRNA translation by the ribosome. The project evaluates the hypothesis that the spatial limitation of the tunnel geometry and, specifically, the constriction location within the tunnel, interfere on the nascent chain secondary structure. As the result, we demonstrate the improved the ability to predict the distribution of the amino acid structures within the ribosome exit tunnel using only computational tools calibrated by the cell-free protein synthesis process. This result is achieved by the integration of the real-time mRNA translation and the simulation of the polypeptide chain folding within the ribosome exit tunnel. Specifically, we visualize the secondary structures of the nascent amino acid chain in the process of formation within the ribosome exit tunnel. The main technique to perform this work is the agent-based modeling with the support of the NetLogo\textsuperscript{\textcopyright} 3D computational tool. The proposed model represents the process of amino acid chain folding by the attachment of one amino acid at a time and the propagation of the nascent chain inside the exit tunnel of the ribosome. The timing of the amino acid insertion into ribosome exit tunnel is determined by the real-time mRNA translation by the ribosome and validated by the experimental data. The three-dimensional positioning of the nascent chain within the tunnel is represented as a stochastic process of the orientation changes of the individual elements, according to the degree of freedom allowed by the chemical bonds within the amino acids. The simulated results are compared and validated by the existing crystallography experiments.
+  
+  Funding: None \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,78 +1,79 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Unraveling the lincRNA transcriptome of the mice olfactory system }} % Article title
+  
+  
+  \author{ Antônio Pedro de Castello Branco da Rocha Camargo$^{1}$, Marcelo Falsarella Carazzolle$^{2}$, Fabio Papes$^{1}$, }
+  
+  \affil{ 1 UNICAMP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Biology Institute - UNICAMP, National Center for High Performance Computing
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The olfactory system is a sensory system capable of detecting environmental chemical cues, leading to the sensation of an odor and/or behavioral and endocrine changes. In order to perform these functions, this system comprises two organs, the main olfactory epithelium (MOE) and the vomeronasal organ (VNO), found in the nasal cavity of mammals. The MOE detects odors and initiates their corresponding neural pathways, whereas the VNO detects intra and inter-species stimuli and starts inate behaviour, such as sexual, agressive and social.
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Unraveling the lincRNA transcriptome of the mice olfactory system}} % Article title
-
-\author{Ant\^onio Pedro de Castello Branco da Rocha Camargo$^1$, Marcelo Falsarella Carazzolle$^2$, Fabio Papes$^1$}
-
-\affil{1 UNICAMP\\ 2 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The olfactory system is a sensory system capable of detecting environmental chemical cues, leading to the sensation of an odor and/or behavioral and endocrine changes. In order to perform these functions, this system comprises two organs, the main olfactory epithelium (MOE) and the vomeronasal organ (VNO), found in the nasal cavity of mammals. The MOE detects odors and initiates their corresponding neural pathways, whereas the VNO detects intra and inter-species stimuli and starts inate behaviour, such as sexual, agressive and social.
-
-Recently, a huge variety of long non-coding RNA (lncRNAs) has been discovered in several tissues, regulating gene expression and development. Given the unique properties of the process by which genes coding for MOE and VNO receptors are regulated, we hypothesize that lncRNAs might be involved in such regulation. In order to unveil intergenic lncRNAs (lincRNAs) that could be participating in the differentiation of the olfactory neurons, we've developed a pipeline to identify and functionally annotate lincRNAs preferentially expressed in these organs.
+Recently, a huge variety of long non-coding RNA (lncRNAs) has been discovered in several tissues, regulating gene expression and development. Given the unique properties of the process by which genes coding for MOE and VNO receptors are regulated, we hypothesize that lncRNAs might be involved in such regulation. In order to unveil intergenic lncRNAs (lincRNAs) that could be participating in the differentiation of the olfactory neurons, we’ve developed a pipeline to identify and functionally annotate lincRNAs preferentially expressed in these organs.
 
 In order to identify new non-coding transcripts, a new lncRNA predictor was developed using cutting edge machine learning algorithms and techniques. This predictor classifies transcripts into coding or non-coding using several numerical descriptors described in the literature and others developed in this work that achieves a better classification quality than any published tool in the literature.
 
-Using public RNA-Seq libraries from eight tissues, including the VNO and MOE, we've constructed a new mice transcriptome, which was used by the new lncRNA predictor to detect non-coding RNAs. The expression of the transcripts was quantified in all the libraries and the lincRNAs with olfactory-specific expression patterns were selected using a method based on cosine similarity.
+Using public RNA-Seq libraries from eight tissues, including the VNO and MOE, we’ve constructed a new mice transcriptome, which was used by the new lncRNA predictor to detect non-coding RNAs. The expression of the transcripts was quantified in all the libraries and the lincRNAs with olfactory-specific expression patterns were selected using a method based on cosine similarity.
 
-In order to find olfactory-specific lincRNAs with interesting expression patterns, that could indicate some kind of biological function, statistical tests were performed to find transcripts that are differentially expressed between different conditions in the olfactory organs. We've found 173 lincRNAs that are differentially expressed between adult and newborn mice in the olfactory organs. Moreover, a total of 93 public MOE single-cell RNA-Seq libraries were quantified and ordered in a developmental trajectory so that we could find 131 lincRNAs whose expression changes as a function of cell differentiation.
+In order to find olfactory-specific lincRNAs with interesting expression patterns, that could indicate some kind of biological function, statistical tests were performed to find transcripts that are differentially expressed between different conditions in the olfactory organs. We’ve found 173 lincRNAs that are differentially expressed between adult and newborn mice in the olfactory organs. Moreover, a total of 93 public MOE single-cell RNA-Seq libraries were quantified and ordered in a developmental trajectory so that we could find 131 lincRNAs whose expression changes as a function of cell differentiation.
 
 Finally, in order to infer possible biological functions of the lincRNAs, a weighted correlation network analysis was done using the MOE single-cell expression data and the clusters containing lincRNAs were submitted for GO enrichment analysis.
-
-Funding: FAPESP
-\end{abstract}
-\end{document}
+  
+  Funding: FAPESP \\ 
+  \end{abstract}
+  \end{document} 

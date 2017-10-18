@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Integrative networks analysis based on RNAseq data to elucidate a presence of B chromosome }} % Article title
+  
+  
+  \author{ Rafael Takahiro Nakajima$^{1}$, Ivan Rodrigo Wolf$^{2}$, Guilherme Targino Valente$^{3}$, Rodrigo de Oliveira Almeida$^{2}$, Rafael P. Simões$^{3}$, Cesar Martins$^{1}$, }
+  
+  \affil{ 1 IBB-UNESP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 FCA-UNESP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 UNESP - State University of Sao Paulo
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Integrative networks analysis based on RNAseq data to elucidate a presence of B chromosome}} % Article title
-
-\author{Rafael Takahiro Nakajima$^1$, Ivan Rodrigo Wolf$^2$, Guilherme Targino Valente$^3$, Rodrigo de Oliveira Almeida$^2$, Rafael P. Sim\~oes$^3$, Cesar Martins$^1$}
-
-\affil{1 IBB-UNESP\\ 2 FCA-UNESP\\ 3 UNESP - STATE USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-B chromosomes occur in about 2000 species, including animals, insects and plants. Several works have been conducted with the aim of understanding their distribution, frequency, transmission mechanisms, structure and origin. Cichlid fish receive great scientific interest, since many species are under rapid and extensive adaptive radiation. Astatotilapia latifasciata is one of the species of African cichlids that presents B chromosomes. In this species, Bs, although heterochromatic, present genes with high integrity and interfere in the transcriptional profile of the cells. Thus, the present work aims to characterize possible candidate genes of A. latifasciata specific tissues to elucidate the influence of the presence of B chromosomes in specific metabolic pathways from data obtained from RNASeq. For this purpose, networks were constructed by concatenating co-expression and protein-protein interaction networks, which obey the expected degree-distribution for biological networks. Ontologically enriched domains were extracted from the network for important biological processes to be compared with differential expression data of mRNAs in gonads. Results of the intersection between networks and differential expression, presented an important role in the regulation of cellular activity, mainly to an anti-inflammatory response, the presence of cellular membrane processes and components that may be related to the defense mechanism.
-
-Funding: FAPESP
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  B chromosomes occur in about 2000 species, including animals, insects and plants. Several works have been conducted with the aim of understanding their distribution, frequency, transmission mechanisms, structure and origin. Cichlid fish receive great scientific interest, since many species are under rapid and extensive adaptive radiation. Astatotilapia latifasciata is one of the species of African cichlids that presents B chromosomes. In this species, Bs, although heterochromatic, present genes with high integrity and interfere in the transcriptional profile of the cells. Thus, the present work aims to characterize possible candidate genes of A. latifasciata specific tissues to elucidate the influence of the presence of B chromosomes in specific metabolic pathways from data obtained from RNASeq. For this purpose, networks were constructed by concatenating co-expression and protein-protein interaction networks, which obey the expected degree-distribution for biological networks. Ontologically enriched domains were extracted from the network for important biological processes to be compared with differential expression data of mRNAs in gonads. Results of the intersection between networks and differential expression, presented an important role in the regulation of cellular activity, mainly to an anti-inflammatory response, the presence of cellular membrane processes and components that may be related to the defense mechanism.
+  
+  Funding: FAPESP \\ 
+  \end{abstract}
+  \end{document} 

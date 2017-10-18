@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ EntropyClusterGenes: a R package for clustering genes according ontologies and pathways }} % Article title
+  
+  
+  \author{ André Luiz Molan$^{1}$, Carlos Biagi Jr$^{2}$, Giordano Bruno$^{1}$, Jose Rybarczyk-Filho$^{1}$, }
+  
+  \affil{ 1 UNESP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 UNESP - Botucatu/SP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{EntropyClusterGenes: a R package for clustering genes according ontologies and pathways}} % Article title
-
-\author{Andr\'e Luiz Molan$^1$, Carlos Biagi Jr$^2$, Giordano Bruno$^1$, Jose Rybarczyk-filho$^1$}
-
-\affil{1 UNESP\\ 2 UNESP - BOTUCATU/SP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-NGS technologies have transformed the way we study living organisms. By the application of different techniques, such as RNA-seq, numerous species can be studied at a relatively low cost. The amount of data generated, however, is huge. It's not so easy to analyze it, demanding computational tools increasingly efficient and with different approaches, highlighting those with a focus on functional analysis. In this way, we developed EntropyClusterGenes, a R package capable of clustering genes according to their respective Gene Ontology (biological processes - BP, molecular functions - MF, cellular components - CC and KEGG pathways) and determining the significance of such sets based on the expression values ??of their genes. We start with a text file containing a gene list and their expression values in two comparative samples (e.g., experiment and control). Through the clusterProfiler and topGO R packages, linking them to online databases of different species, we group the genes according to their respective functions. The behavior of the genes within each group is shown by the relative calculation of two variables: gene activity and gene diversity. The first one characterizes the set just according to the expressed value of the genes contained therein, while the second one measures the gene diversity within the set by the use of a normalized Shannon's entropy function. Each set is assigned with a p-value, obtained through the bootstrapping statistical method and multiple comparisons between the activity and gene diversity variables. To determine which sets are significant, we apply the FDR (False Discovery Rate) statistical method, considering, by default, values ??lower than 0.05. To demonstrate the use of the EntropyClusterGenes, we applied the tool in two data sets of microarray (Homo sapiens and Rattus norvegicus) and a RNA-seq data set of Aedes aegypti. The number of significant groups found varied according to the species, sample and function studied. We considered a FDR of 0.05 for all species. Despite the number of bootstrapping steps, we used 10,000 for microarray and 500,000 for RNA-seq. In the case of H. sapiens, from a group of 20502 genes, obtained by comparing different doses of etoposide in the liver, for BP, CC, MF and KEGG, were identified, respectively,  5825, 696, 10082 e 305 groups, with an significance average percentage per Gene Ontoloy of 8.52\%.
-
-Funding: CNPq processes 473789/2013-2 and 134469/2016-0.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  NGS technologies have transformed the way we study living organisms. By the application of different techniques, such as RNA-seq, numerous species can be studied at a relatively low cost. The amount of data generated, however, is huge. It’s not so easy to analyze it, demanding computational tools increasingly efficient and with different approaches, highlighting those with a focus on functional analysis. In this way, we developed EntropyClusterGenes, a R package capable of clustering genes according to their respective Gene Ontology (biological processes - BP, molecular functions - MF, cellular components - CC and KEGG pathways) and determining the significance of such sets based on the expression values ??of their genes. We start with a text file containing a gene list and their expression values in two comparative samples (e.g., experiment and control). Through the clusterProfiler and topGO R packages, linking them to online databases of different species, we group the genes according to their respective functions. The behavior of the genes within each group is shown by the relative calculation of two variables: gene activity and gene diversity. The first one characterizes the set just according to the expressed value of the genes contained therein, while the second one measures the gene diversity within the set by the use of a normalized Shannon’s entropy function. Each set is assigned with a p-value, obtained through the bootstrapping statistical method and multiple comparisons between the activity and gene diversity variables. To determine which sets are significant, we apply the FDR (False Discovery Rate) statistical method, considering, by default, values ??lower than 0.05. To demonstrate the use of the EntropyClusterGenes, we applied the tool in two data sets of microarray (Homo sapiens and Rattus norvegicus) and a RNA-seq data set of Aedes aegypti. The number of significant groups found varied according to the species, sample and function studied. We considered a FDR of 0.05 for all species. Despite the number of bootstrapping steps, we used 10,000 for microarray and 500,000 for RNA-seq. In the case of H. sapiens, from a group of 20502 genes, obtained by comparing different doses of etoposide in the liver, for BP, CC, MF and KEGG, were identified, respectively,  5825, 696, 10082 e 305 groups, with an significance average percentage per Gene Ontoloy of 8.52\%.
+  
+  Funding: CNPq processes 473789/2013-2 and 134469/2016-0. \\ 
+  \end{abstract}
+  \end{document} 

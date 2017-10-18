@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Evaluation of WGCNA and NERI methods for prioritization of pathways associated to schizophrenia spectrum disorders }} % Article title
+  
+  
+  \author{ Arthur Sant'Anna Feltrin$^{1}$, Ana Carolina Tahira$^{2}$, Sérgio Nery Simões$^{3}$, Helena Brentani$^{2}$, David Correa Martins Jr$^{1}$, }
+  
+  \affil{ 1 Universidade Federal do ABC
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade de São Paulo
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Instituto Federal do Espírito Santo
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Evaluation of WGCNA and NERI methods for prioritization of pathways associated to schizophrenia spectrum disorders}} % Article title
-
-\author{Arthur Sant'anna Feltrin$^1$, Ana Carolina Tahira$^2$, S\'ergio Nery Sim\~oes$^3$, Helena Brentani$^2$, David Correa Martins Jr$^1$}
-
-\affil{1 UFABC\\ 2 USP\\ 3 INSTITUTO FEDERAL DO ESP\'IRITO SANTO\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Using two gene expression data related to schizophrenia, we proposed a new approach consisting of combining the results of two network analysis algorithms: Weighted Gene Correlation Network Analysis (WGCNA) and Network-Medicine Relative Importance (NERI). Considering the differences between the two methods, our hypothesis is that both are capable of producing compelling results related to different aspects of schizophrenia's biological pathways; therefore, are complementary to each other. For that, we used replication and enrichment analysis using public databases. WGCNA uses gene expression from two groups to build co-expression pairwise correlation matrices, using connectivity parameters for evaluation of the network. NERI also uses expression data, but its network construction is based on the integration of PPI databases, gene expression, and a previously chosen seed genes list; the network analysis are based on shortest ranking path and relative importance calculation. We conducted an enrichment analysis using DAVID for the identification of partial biological function of each result, as well a replication and MSET analysis (for GWAS, transcriptome, methylation and de novo mutation databases related to schizophrenia) to appraise the replication and accuracy of our new approach when compared with each method in separate. The WGCNA module represents a final network of 435 and 300 genes on BAHN and KATO expression data. The enrichment analysis of this group using ppi modules leads to 88 genes across 10 hyper-represented human modules (adj.p<0.05), mostly involving immunological process. By using NERI, the final gene list was 150 genes for both BAHN and KATO with the enrichment analysis leading to modules related to glutamate receptor signaling, apoptotic process, neurotrophin and MAPK pathways. Both methods achieved statistical relevant replication results (p<0.05), but with one gene shared between both methods results. In the MSET analysis, NERI was capable for achieve meaningful results for the methylation and de novo mutation databases; whether our proposal of combining both results achieved better results for these two databases and for transcriptome, also increasing the number of candidate genes of each list. Our study suggests that using both methods in combination could be a promising approach for establishing a group of modules and pathways related to schizophrenia (or any complex disease).
-
-Funding: FAPESP Ref.: 2014/10488-3; Universidade Federal do ABC
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Using two gene expression data related to schizophrenia, we proposed a new approach consisting of combining the results of two network analysis algorithms: Weighted Gene Correlation Network Analysis (WGCNA) and Network-Medicine Relative Importance (NERI). Considering the differences between the two methods, our hypothesis is that both are capable of producing compelling results related to different aspects of schizophrenia's biological pathways; therefore, are complementary to each other. For that, we used replication and enrichment analysis using public databases. WGCNA uses gene expression from two groups to build co-expression pairwise correlation matrices, using connectivity parameters for evaluation of the network. NERI also uses expression data, but its network construction is based on the integration of PPI databases, gene expression, and a previously chosen seed genes list; the network analysis are based on shortest ranking path and relative importance calculation. We conducted an enrichment analysis using DAVID for the identification of partial biological function of each result, as well a replication and MSET analysis (for GWAS, transcriptome, methylation and de novo mutation databases related to schizophrenia) to appraise the replication and accuracy of our new approach when compared with each method in separate. The WGCNA module represents a final network of 435 and 300 genes on BAHN and KATO expression data. The enrichment analysis of this group using ppi modules leads to 88 genes across 10 hyper-represented human modules (adj.p<0.05), mostly involving immunological process. By using NERI, the final gene list was 150 genes for both BAHN and KATO with the enrichment analysis leading to modules related to glutamate receptor signaling, apoptotic process, neurotrophin and MAPK pathways. Both methods achieved statistical relevant replication results (p<0.05), but with one gene shared between both methods results. In the MSET analysis, NERI was capable for achieve meaningful results for the methylation and de novo mutation databases; whether our proposal of combining both results achieved better results for these two databases and for transcriptome, also increasing the number of candidate genes of each list. Our study suggests that using both methods in combination could be a promising approach for establishing a group of modules and pathways related to schizophrenia (or any complex disease).
+  
+  Funding: FAPESP Ref.: 2014/10488-3; Universidade Federal do ABC \\ 
+  \end{abstract}
+  \end{document} 

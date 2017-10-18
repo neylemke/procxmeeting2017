@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Rational design of profile HMMs for viral detection, classification and discovery }} % Article title
+  
+  
+  \author{ Liliane Santana Oliveira Kashiwabara$^{1}$, Dolores U. Mehnert$^{1}$, Paolo M. A. Zanotto$^{1}$, Alan Durham$^{1}$, Alejandro Reyes$^{1}$, Arthur Gruber$^{1}$, }
+  
+  \affil{ 1 USP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Rational design of profile HMMs for viral detection, classification and discovery}} % Article title
-
-\author{Liliane Santana Oliveira Kashiwabara$^1$, Dolores U. Mehnert$^1$, Paolo M. A. Zanotto$^1$, Alan Durham$^1$, Alejandro Reyes$^1$, Arthur Gruber$^1$}
-
-\affil{1 USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Some of the most devastating pandemic diseases have arisen through the transmission of emerging viruses that have not been detected before the tragic consequences of their dissemination. The detection of novel viruses is a challenging task due to the their high evolutionary rates. Profile HMMs are a powerful way of modeling sequence diversity and constitute a very sensitive approach to detect emerging viruses. In this work, we report the development and implementation of TABAJARA, a tool for rational design of profile HMMs. Starting from a multiple sequence alignment (MSA), TABAJARA is able to find blocks that are either (1) conserved across all sequences or (2) discriminative for two specific groups of sequences. For the identification of regions conserved across all protein sequences of an MSA, we implemented a previously described algorithm based on Jensen-Shannon divergence. In the case of nucleotide sequences, TABAJARA can use Shannon entropy or, alternatively, different substitution matrices to define position-specific scores. To find group-discriminative blocks, the program uses Mutual Information or Sequence Harmony for both, DNA or protein sequences. Once position-specific scores have been determined, TABAJARA uses a sliding-window to screen the whole alignment and delimit top-scoring regions. The program automatically extracts the selected alignment blocks, discards identical sequences, and builds the corresponding profile HMMs, which can then be used for many potential applications. To validate such models for viral detection, classification and discovery, we used two different viral taxonomic groups: phages of the Microviridae family and viruses of the Flavivirus genus. Using different metagenomic datasets, we observed that profile HMMs generated by TABAJARA can successfully be used as seeds to reconstruct genome sequences with GenSeed-HMM program. In both viral groups, we were able to obtain wide-range seeds (generic for all members of Microviridae or Flavivirus); and narrow-range seeds, exclusive to specific Microviridae subfamilies (Alpavirinae and Gokushovirinae) or to particular flaviviruses (e.g. DENV, ZIKV or YFV). The approach proposed here, using short and specific sequences to build profile HMMs, represents a radical change, compared to viral models from public databases such as vFam and pVOGs, built from MSAs derived from full-length protein sequences. Narrow-range seeds can be used to detect and classify already known viruses, whereas more generic seeds are useful for detecting wider viral groups, as well as distantly related viruses that could represent potentially emerging pathogens.
-
-Funding: PhD fellowship from CAPES (LSO)
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Some of the most devastating pandemic diseases have arisen through the transmission of emerging viruses that have not been detected before the tragic consequences of their dissemination. The detection of novel viruses is a challenging task due to the their high evolutionary rates. Profile HMMs are a powerful way of modeling sequence diversity and constitute a very sensitive approach to detect emerging viruses. In this work, we report the development and implementation of TABAJARA, a tool for rational design of profile HMMs. Starting from a multiple sequence alignment (MSA), TABAJARA is able to find blocks that are either (1) conserved across all sequences or (2) discriminative for two specific groups of sequences. For the identification of regions conserved across all protein sequences of an MSA, we implemented a previously described algorithm based on Jensen–Shannon divergence. In the case of nucleotide sequences, TABAJARA can use Shannon entropy or, alternatively, different substitution matrices to define position-specific scores. To find group-discriminative blocks, the program uses Mutual Information or Sequence Harmony for both, DNA or protein sequences. Once position-specific scores have been determined, TABAJARA uses a sliding-window to screen the whole alignment and delimit top-scoring regions. The program automatically extracts the selected alignment blocks, discards identical sequences, and builds the corresponding profile HMMs, which can then be used for many potential applications. To validate such models for viral detection, classification and discovery, we used two different viral taxonomic groups: phages of the Microviridae family and viruses of the Flavivirus genus. Using different metagenomic datasets, we observed that profile HMMs generated by TABAJARA can successfully be used as seeds to reconstruct genome sequences with GenSeed-HMM program. In both viral groups, we were able to obtain wide-range seeds (generic for all members of Microviridae or Flavivirus); and narrow-range seeds, exclusive to specific Microviridae subfamilies (Alpavirinae and Gokushovirinae) or to particular flaviviruses (e.g. DENV, ZIKV or YFV). The approach proposed here, using short and specific sequences to build profile HMMs, represents a radical change, compared to viral models from public databases such as vFam and pVOGs, built from MSAs derived from full-length protein sequences. Narrow-range seeds can be used to detect and classify already known viruses, whereas more generic seeds are useful for detecting wider viral groups, as well as distantly related viruses that could represent potentially emerging pathogens.
+  
+  Funding: PhD fellowship from CAPES (LSO) \\ 
+  \end{abstract}
+  \end{document} 

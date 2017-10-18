@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Ab initio prediction of pri-miRNAs based on structural and sequence motifs }} % Article title
+  
+  
+  \author{ Renato Cordeiro Ferreira$^{1}$, Alan Durham$^{1}$, }
+  
+  \affil{ 1 IME
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Ab initio prediction of pri-miRNAs based on structural and sequence motifs}} % Article title
-
-\author{Renato Cordeiro Ferreira$^1$, Alan Durham$^1$}
-
-\affil{1 IME\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-MicroRNAs (miRNAs) are a category of small non-coding RNAs that help to regulate the translation process within the cell. They are originated from a long type of transcript called primary miRNAs (pri-miRNAs), which present a distinctive hairpin loop secondary structure and have a set of conserved motifs. Different proteins use these characteristics to distinguish pri-miRNAs from other similar molecules, so that they can generate the mature miRNAs from them. The aim of this project is to explore these patterns to create an ab initio pri-miRNA predictor. The first step to achieve this goal was to create a simple proof-of-concept classifier that used regular expressions and sequence alignment to select candidate pri-miRNAs. The program was tested on 467,100 segments of size 200 nucleotides (obtained with a sliding window of 100 nucleotides) from the human chromosome 21. It filtered a total of 29 sequences that matched the profile, 6 of which presented high similarity (alignment with e-value less than 10$e^{-5}$ against the miRBase database) with sequences annotated in other human chromosomes. This result shows the potential of using these signals to identify likely candidates. The next step will be to implement a full probabilistic model, such as a Context-Sensitive Hidden Markov Model (csHMM), to identify pri-miRNAs. A csHMM will be able to describe the long-range dependencies between positions in the hairpin loop, besides encoding the distribution of nucleotides obtained from real training examples. This way, we expect to create an automatic way to find candidate miRNAs that have not been experimentally observed yet.
-
-Funding: CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  MicroRNAs (miRNAs) are a category of small non-coding RNAs that help to regulate the translation process within the cell. They are originated from a long type of transcript called primary miRNAs (pri-miRNAs), which present a distinctive hairpin loop secondary structure and have a set of conserved motifs. Different proteins use these characteristics to distinguish pri-miRNAs from other similar molecules, so that they can generate the mature miRNAs from them. The aim of this project is to explore these patterns to create an ab initio pri-miRNA predictor. The first step to achieve this goal was to create a simple proof-of-concept classifier that used regular expressions and sequence alignment to select candidate pri-miRNAs. The program was tested on 467,100 segments of size 200 nucleotides (obtained with a sliding window of 100 nucleotides) from the human chromosome 21. It filtered a total of 29 sequences that matched the profile, 6 of which presented high similarity (alignment with e-value less than 10$e^{-5}$ against the miRBase database) with sequences annotated in other human chromosomes. This result shows the potential of using these signals to identify likely candidates. The next step will be to implement a full probabilistic model, such as a Context-Sensitive Hidden Markov Model (csHMM), to identify pri-miRNAs. A csHMM will be able to describe the long-range dependencies between positions in the hairpin loop, besides encoding the distribution of nucleotides obtained from real training examples. This way, we expect to create an automatic way to find candidate miRNAs that have not been experimentally observed yet.
+  
+  Funding: CAPES \\ 
+  \end{abstract}
+  \end{document} 

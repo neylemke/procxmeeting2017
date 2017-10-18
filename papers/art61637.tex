@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Deep Learning Strategies for Autism Severity Classification in Children }} % Article title
+  
+  
+  \author{ Hudson Pereira$^{1}$, Priscila T M Saito$^{1}$, Pedro Henrique Bugatti$^{1}$, }
+  
+  \affil{ 1 Federal University of Technology
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Deep Learning Strategies for Autism Severity Classification in Children}} % Article title
-
-\author{Hudson Pereira$^1$, Priscila T M Saito$^1$, Pedro Henrique Bugatti$^1$}
-
-\affil{1 FEDERAL UNIVERSITY OF TECHNOLOGY\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Autism Spectrum Disorder (ASD) is a syndrome characterized by difficulties in social interaction, qualitative deviations in communication and repetitive behaviors. This syndrome is also defined as loss of contact to reality, caused by impossibility or great difficulty in interpersonal communication. ASD is classified into three degrees of severity: mild, moderate and severe. The early diagnosis of the child with autism is essential for an effective treatment. In children under three years, it is possible to achieve an improvement of 80\%. In children up to five years, an improvement of 70\% can be obtained, and above that age, any treatment is compromised. Literature studies generally consider several techniques for diagnosis. However, they do not take into account the identification of the severity degrees, as well as the differences between boys and girls with ASD. Therefore, this work aims to develop a computational method to diagnose and classify the autism severity degrees. Moreover, it is intended to propose strategies in order to identify possible differences in facial micro-expression between boys and girls, since the diagnosis in girls is more difficult. The methodology to be developed consists of: (I) obtaining images with frontal pose of children between 3 and 5 years; (ii) extracting micro expressions through the Histogram of Oriented Optical Flow (HOOF) algorithm; (iii) extracting facial expressions using Convolutional Neural Networks (CNNs); (iv) identifying autism severity degrees and differentiating boys and girls with autism using different classifiers, such as Support Vector Machines (SVM).
-
-Funding: CNPq,  (\#431668/2016-7, \#422811/2016-5), CAPES, Funda\c{c}\~ao Arauc\'aria, SETI, UTFPR, and PPGBIOINFO
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Autism Spectrum Disorder (ASD) is a syndrome characterized by difficulties in social interaction, qualitative deviations in communication and repetitive behaviors. This syndrome is also defined as loss of contact to reality, caused by impossibility or great difficulty in interpersonal communication. ASD is classified into three degrees of severity: mild, moderate and severe. The early diagnosis of the child with autism is essential for an effective treatment. In children under three years, it is possible to achieve an improvement of 80\%. In children up to five years, an improvement of 70\% can be obtained, and above that age, any treatment is compromised. Literature studies generally consider several techniques for diagnosis. However, they do not take into account the identification of the severity degrees, as well as the differences between boys and girls with ASD. Therefore, this work aims to develop a computational method to diagnose and classify the autism severity degrees. Moreover, it is intended to propose strategies in order to identify possible differences in facial micro-expression between boys and girls, since the diagnosis in girls is more difficult. The methodology to be developed consists of: (I) obtaining images with frontal pose of children between 3 and 5 years; (ii) extracting micro expressions through the Histogram of Oriented Optical Flow (HOOF) algorithm; (iii) extracting facial expressions using Convolutional Neural Networks (CNNs); (iv) identifying autism severity degrees and differentiating boys and girls with autism using different classifiers, such as Support Vector Machines (SVM).
+  
+  Funding: CNPq,  (\#431668/2016-7, \#422811/2016-5), CAPES, Funda\c{c}\~ao Arauc\'aria, SETI, UTFPR, and PPGBIOINFO \\ 
+  \end{abstract}
+  \end{document} 

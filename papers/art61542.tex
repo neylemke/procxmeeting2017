@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Identifying specificity determinant residues through decomposition of protein families affiliation network }} % Article title
+  
+  
+  \author{ Néli José da Fonseca Júnior$^{1}$, Lucas Carrijo de Oliveira$^{1}$, Marcelo Querino Lima Afonso$^{2}$, Lucas Bleicher$^{1}$, }
+  
+  \affil{ 1 Federal University of Minas Gerais
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 UFMG
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identifying specificity determinant residues through decomposition of protein families affiliation network}} % Article title
-
-\author{N\'eli Jos\'e da Fonseca J\'unior$^1$, Lucas Carrijo de Oliveira$^1$, Marcelo Querino Lima Afonso$^2$, Lucas Bleicher$^1$}
-
-\affil{1 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Affiliation networks are widely used in the context of social and ecological systems. In the present work, we embrace the state of art in this field in order to apply it in the mapping of amino acid coevolution patterns. The goal of this project consists in, given a multiple sequence alignment, predict patterns of local residue conservation that may be related to some specificity (functional, structural or taxonomic). A bipartite network is modeled from a multiple sequence alignment, in a way that each protein is connected with their respective residues. This network is then projected to a residue monopartite representation and its backbone is extracted in order to remove statistically insignificant edges. Finally, the resulting network is decomposed into communities of residues that are more likely to co-occur. We evaluated seven methods for network sparsification with simulated data. These virtual alignments were randomly generated with functional and secondary evolutionary constraints. Experiments with real data were also performed using the  HIUase/Transthyretin family and the G protein-coupled receptor, rhodopsin-like family. The results showed that most of the sparsification methods evaluated could in fact rise coevolution patterns in this type of networks. We detected specificity determinant residues for both subclass of the HIUase/Transthyretin family using either filters or weighting to treat the alignment bias. Several functional subclasses were also identified in the GPCR analysis. The methodology presented here is fast and useful to analyze specificity determinant sites, functional subclasses and local conservation residues. This pipeline can be used with large multiple sequence alignments as the obtained from Pfam. Depending on the method used to extract the backbone, anti-correlations could also be observed. Stereochemical correlations can also be identified by generating multiple networks with different amino acid alphabets.
-
-Funding: Capes
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Affiliation networks are widely used in the context of social and ecological systems. In the present work, we embrace the state of art in this field in order to apply it in the mapping of amino acid coevolution patterns. The goal of this project consists in, given a multiple sequence alignment, predict patterns of local residue conservation that may be related to some specificity (functional, structural or taxonomic). A bipartite network is modeled from a multiple sequence alignment, in a way that each protein is connected with their respective residues. This network is then projected to a residue monopartite representation and its backbone is extracted in order to remove statistically insignificant edges. Finally, the resulting network is decomposed into communities of residues that are more likely to co-occur. We evaluated seven methods for network sparsification with simulated data. These virtual alignments were randomly generated with functional and secondary evolutionary constraints. Experiments with real data were also performed using the  HIUase/Transthyretin family and the G protein-coupled receptor, rhodopsin-like family. The results showed that most of the sparsification methods evaluated could in fact rise coevolution patterns in this type of networks. We detected specificity determinant residues for both subclass of the HIUase/Transthyretin family using either filters or weighting to treat the alignment bias. Several functional subclasses were also identified in the GPCR analysis. The methodology presented here is fast and useful to analyze specificity determinant sites, functional subclasses and local conservation residues. This pipeline can be used with large multiple sequence alignments as the obtained from Pfam. Depending on the method used to extract the backbone, anti-correlations could also be observed. Stereochemical correlations can also be identified by generating multiple networks with different amino acid alphabets.
+  
+  Funding: Capes \\ 
+  \end{abstract}
+  \end{document} 

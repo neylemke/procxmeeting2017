@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Comparative analysis of transcriptomes reveals the existence of genes with distinct profiles: overactive genes and gaussian genes }} % Article title
+  
+  
+  \author{ Lissur Azevedo Orsine$^{1}$, Glaura da Conceição Franco$^{2}$, José Miguel Ortega$^{3}$, }
+  
+  \affil{ 1 UFMG
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Departamento de Estatística, Universidade Federal de Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Universidade Federal de Minas Gerais. Laboratório de Biodados
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comparative analysis of transcriptomes reveals the existence of genes with distinct profiles: overactive genes and gaussian genes}} % Article title
-
-\author{Lissur Azevedo Orsine$^1$, Glaura da Concei\c{c}\~ao Franco$^2$, Jos\'e Miguel Ortega$^3$}
-
-\affil{1 UFMG\\ 2 DEPARTAMENTO DE ESTAT\'ISTICA, UFMG\\ 3 UFMG. LABORAT\'ORIO DE BIODADOS\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Presently several experiments of characterization of transcription in different tissues have been conducted. Here we analyzed the expression profiles of five experiments: ENCODE, FANTOM5, GTEx, Illumina and Uhlen, comprising respectively, 13, 56, 53, 16 and 32 tissues. They express over 1e-6 TPM (transcripts per million), respectively, 42, 21, 57, 47 and 44 thousands of transcripts. We have noticed that some genes vary the expression level around a mean value. Applying a statistic test, we determined that 13\%, 10\%, 3\%, 18\% and 12\% of genes pass a test for normal distribution, thus we refer to these as primarily Gaussian  (pG) genes. We also observed that often a gene has a high expression in a couple of tissues, but the remaining ones show a normal distribution. Removing the outliers (obtained from the boxplot procedure), we depicted cases where in some tissues the gene is overactive (in relation to the term ``overexpressed'') and in the complementary tissues the gene behave as Gaussian. Therefore, in some tissues the gene was considered complementary Gaussian (cG) while in other tissues the gene was overactive. The percentage of total Gaussian genes, adding up pG and cG increased to 68\%, 21\%, 11\%, 60\% and 61\%. Thus, a regulatory mechanism that produces an average expression is very common. Moreover, overactive genes may play an important role in the tissues where they are overactive. A third category of genes was depicted by analyzing those that did not surpass a threshold of expression in the third quartile, a metrics derived from the boxplot procedure. These genes were named Tissue Specific (TS), because the expression is low in at least 3/4 of the set and where they are expressed, they present sharp peaks. Respectively, the percentage was 35\%, 22\%, 48\%, 27\% and 36\%. We noticed that after removing outliers, actually the complementary tissues in some cases may present a very low but Gaussian expression. The percentage of genes that are TS in some tissues and the complementary set of tissues show Gaussian expression, represent, respectively, 35\%, 0\%, 1\%, 27\% and 36\% of the total genes. The broad variation of these proportions is probably due to the accuracy of determining expression near the background by the distinct methodologies. However, the expression around an average is a remarkably frequent feature rather than an exception. Further analysis of the composition of the reported categories will be presented.
-
-Funding: CAPES, CNPq and FAPEMIG
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Presently several experiments of characterization of transcription in different tissues have been conducted. Here we analyzed the expression profiles of five experiments: ENCODE, FANTOM5, GTEx, Illumina and Uhlen, comprising respectively, 13, 56, 53, 16 and 32 tissues. They express over 1e-6 TPM (transcripts per million), respectively, 42, 21, 57, 47 and 44 thousands of transcripts. We have noticed that some genes vary the expression level around a mean value. Applying a statistic test, we determined that 13\%, 10\%, 3\%, 18\% and 12\% of genes pass a test for normal distribution, thus we refer to these as primarily Gaussian  (pG) genes. We also observed that often a gene has a high expression in a couple of tissues, but the remaining ones show a normal distribution. Removing the outliers (obtained from the boxplot procedure), we depicted cases where in some tissues the gene is overactive (in relation to the term “overexpressed”) and in the complementary tissues the gene behave as Gaussian. Therefore, in some tissues the gene was considered complementary Gaussian (cG) while in other tissues the gene was overactive. The percentage of total Gaussian genes, adding up pG and cG increased to 68\%, 21\%, 11\%, 60\% and 61\%. Thus, a regulatory mechanism that produces an average expression is very common. Moreover, overactive genes may play an important role in the tissues where they are overactive. A third category of genes was depicted by analyzing those that did not surpass a threshold of expression in the third quartile, a metrics derived from the boxplot procedure. These genes were named Tissue Specific (TS), because the expression is low in at least 3/4 of the set and where they are expressed, they present sharp peaks. Respectively, the percentage was 35\%, 22\%, 48\%, 27\% and 36\%. We noticed that after removing outliers, actually the complementary tissues in some cases may present a very low but Gaussian expression. The percentage of genes that are TS in some tissues and the complementary set of tissues show Gaussian expression, represent, respectively, 35\%, 0\%, 1\%, 27\% and 36\% of the total genes. The broad variation of these proportions is probably due to the accuracy of determining expression near the background by the distinct methodologies. However, the expression around an average is a remarkably frequent feature rather than an exception. Further analysis of the composition of the reported categories will be presented.
+  
+  Funding: CAPES, CNPq and FAPEMIG \\ 
+  \end{abstract}
+  \end{document} 

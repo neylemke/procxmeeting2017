@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Comparative analysis of the alternative splicing diversity in the human and mouse brain proteomes: preliminary results }} % Article title
+  
+  
+  \author{ Esdras Matheus da Silva$^{1}$, Thais Martins$^{1}$, Raphael Tavares da Silva$^{2}$, Fabio Passetti$^{3}$, }
+  
+  \affil{ 1 Oswaldo Cruz Institute
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal de Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 FIOCRUZ - IOC
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comparative analysis of the alternative splicing diversity in the human and mouse brain proteomes: preliminary results}} % Article title
-
-\author{Esdras Matheus da Silva$^1$, Thais Martins$^1$, Raphael Tavares da Silva$^2$, Fabio Passetti$^3$}
-
-\affil{1 OSWALDO CRUZ INSTITUTE\\ 2 UFMG\\ 3 FIOCRUZ - IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The alternative splicing of  pre-mRNAs in eukaryotes can generate an extensive complexity of alternative protein variants from a given gene. Some mutations in the genome can cause malfunction of  pre-mRNA splicing mechanism and, hence, generate protein variants with the potential to lead to neurodegenerative diseases. Model organisms, particularly, the mouse, are often used for the study of many pathologies because of ethical and methodological convenience. The mouse brain proteome has been investigated to improve the knowledge of the molecular aspects of neurodegenerative diseases. Currently, mass spectrometry (MS) is the most used technology for protein complex sample analysis. This methodology is based on the digestion of a given protein sample followed by their mass detection, as well as their identification by computational analysis with a traditional protein sequence repositories. However, some peptides are not identified by these traditional repositories because they comprise protein variants derived from alternative splicing events. As a solution, proteogenomic approaches have been used to identify these peptides that cannot be found in convencional repositories. In short, this strategy consists in using genome or transcriptome data to build customized protein repositories. Here, we investigated the diversity of protein variants formed by alternative splicing in the human and mouse brain, by using MS public data and two customized protein sequence repositories, one for each species, created by our group. First, we detected alternative splicing variants in complete reference mRNA (RefSeq) data along with ESTs through a methodology developed by our group called ternary matrices. Second, after an in silico translation, the predicted proteins were in silico digested and the resulting peptides were selected if they were not comprise in any sequence from Uniprot/SwissProt database. Third, customized repositories were created based on the union of selected peptides and Uniprot/SwissProt protein sequences. Forth, we made proteomic analysis using these repositories and comparative analysis of results from both species in order to identify the expression of orthologous genes at the protein level. The customized repository for humans had 20,150 canonical sequences and 204,294 nonredundant peptides from protein variants formed by alternative splicing. The mouse repository had 16,888 canonical sequences and 156,889 nonredundant peptides from protein variants formed by alternative splicing. In the MS experiments of the brain's corpus callosum for both species we identified 1,040 orthologous genes expressing canonical proteins and 5 orthologous genes expressing protein variants formed by alternative splicing. We believe that this study can contribute to the better understanding of the alternative splicing profile that can be found in both human and mouse's brains. Financial support: CAPES, FAPERJ and Fiocruz.
-
-Funding: CAPES, FAPERJ and Fiocruz
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The alternative splicing of  pre-mRNAs in eukaryotes can generate an extensive complexity of alternative protein variants from a given gene. Some mutations in the genome can cause malfunction of  pre-mRNA splicing mechanism and, hence, generate protein variants with the potential to lead to neurodegenerative diseases. Model organisms, particularly, the mouse, are often used for the study of many pathologies because of ethical and methodological convenience. The mouse brain proteome has been investigated to improve the knowledge of the molecular aspects of neurodegenerative diseases. Currently, mass spectrometry (MS) is the most used technology for protein complex sample analysis. This methodology is based on the digestion of a given protein sample followed by their mass detection, as well as their identification by computational analysis with a traditional protein sequence repositories. However, some peptides are not identified by these traditional repositories because they comprise protein variants derived from alternative splicing events. As a solution, proteogenomic approaches have been used to identify these peptides that cannot be found in convencional repositories. In short, this strategy consists in using genome or transcriptome data to build customized protein repositories. Here, we investigated the diversity of protein variants formed by alternative splicing in the human and mouse brain, by using MS public data and two customized protein sequence repositories, one for each species, created by our group. First, we detected alternative splicing variants in complete reference mRNA (RefSeq) data along with ESTs through a methodology developed by our group called ternary matrices. Second, after an in silico translation, the predicted proteins were in silico digested and the resulting peptides were selected if they were not comprise in any sequence from Uniprot/SwissProt database. Third, customized repositories were created based on the union of selected peptides and Uniprot/SwissProt protein sequences. Forth, we made proteomic analysis using these repositories and comparative analysis of results from both species in order to identify the expression of orthologous genes at the protein level. The customized repository for humans had 20,150 canonical sequences and 204,294 nonredundant peptides from protein variants formed by alternative splicing. The mouse repository had 16,888 canonical sequences and 156,889 nonredundant peptides from protein variants formed by alternative splicing. In the MS experiments of the brain’s corpus callosum for both species we identified 1,040 orthologous genes expressing canonical proteins and 5 orthologous genes expressing protein variants formed by alternative splicing. We believe that this study can contribute to the better understanding of the alternative splicing profile that can be found in both human and mouse’s brains. Financial support: CAPES, FAPERJ and Fiocruz.
+  
+  Funding: CAPES, FAPERJ and Fiocruz \\ 
+  \end{abstract}
+  \end{document} 

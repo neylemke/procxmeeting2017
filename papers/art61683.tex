@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ An analytical pipeline for detection of differential DNA methylation from restriction reduced genomic representation: a pilot study in Eucalyptus. }} % Article title
+  
+  
+  \author{ Wendell Jacinto Pereira$^{1}$, Marilia de Castro Rodrigues Pappas$^{2}$, Dario Grattapaglia$^{3}$, Georgios Joannis Pappas Junior$^{1}$, }
+  
+  \affil{ 1 Departamento de Biologia Celular, Instituto de Ciências Biológicas, Universidade de Brasília
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 EMBRAPA Recursos Genéticos e Biotecnologia
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 EMBRAPA Recursos Genéticos e Biotecnologia, Universidade Católica de Brasília.
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{An analytical pipeline for detection of differential DNA methylation from restriction reduced genomic representation: a pilot study in Eucalyptus.}} % Article title
-
-\author{Wendell Jacinto Pereira$^1$, Marilia de Castro Rodrigues Pappas$^2$, Dario Grattapaglia$^3$, Georgios Joannis Pappas Junior$^1$}
-
-\affil{1 DEPARTAMENTO DE BIOLOGIA CELULAR, INSTITUTO DE CI\^ENCIAS BIOL\'OGICAS, UNB\\ 2 EMBRAPA RECURSOS GEN\'ETICOS E BIOTECNOLOGIA\\ 3 EMBRAPA RECURSOS GEN\'ETICOS E BIOTECNOLOGIA, UNIVERSIDADE CAT\'OLICA DE BRAS\'ILIA.\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Phenotypic plasticity, the ability to display a range of phenotypes as a function of variable environments, is a key feature in land plants. Nevertheless, knowledge of the extent and underlying mechanisms of phenotypic plasticity in response to abiotic stresses is still fragmentary. Besides genetic diversity, epigenetic variation is believed to contribute to tree phenotypic plasticity and adaptive potential. We set out a new approach to perform genome-wide differential methylation analysis by means of parallel construction of double digestion restriction libraries, namely PstI-MspI (methylation insensitive) and PstI-HpaII (methylation sensitive), followed by short-read NGS sequencing. For technical validation we evaluated the differences in methylation patterns in three tissues (xylem, juvenile and adult leaves) from clone BRASUZ1, the tree sequenced in the Eucalyptus grandis genome project. A new computational pipeline was created, using open source tools, to process this type of NGS data in a fully reproducible way. The final goal is to identify and annotate differentially methylated regions across samples with the assumption that the data follows a negative binomial distribution. The pipeline results for this experiment provided reproducible, genome-scale methylation measurements at ~22,000 genomic sites consistent in all tissues and biological replicates. From this, 4,000 methylated sites were observed and the majority (64\%) conserved among the analyzed tissues. On the other hand, approximately 6\% of the sites were specific for each of the three tissues. Considering the genomic context, 58\% (2,335) of the verified methylated sites fall within genes, whereas 570 (14\%) are in transposons. Contrarily to the expected, the methylation profile in the genic space is favored and this experimental bias offers a cost effective alternative to contrast epigenetic states of a sizeable fraction of genes in plant genomes. At the end of the study, we expect to provide a flexible tool for easy execution of this approach to other species.
-
-Funding: CNPq, EMBRAPA Recursos Gen\'eticos e Biotecnologia, Programa de P\'os-Gradua\c{c}\~ao em Biologia Molecular - UnB.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Phenotypic plasticity, the ability to display a range of phenotypes as a function of variable environments, is a key feature in land plants. Nevertheless, knowledge of the extent and underlying mechanisms of phenotypic plasticity in response to abiotic stresses is still fragmentary. Besides genetic diversity, epigenetic variation is believed to contribute to tree phenotypic plasticity and adaptive potential. We set out a new approach to perform genome-wide differential methylation analysis by means of parallel construction of double digestion restriction libraries, namely PstI-MspI (methylation insensitive) and PstI-HpaII (methylation sensitive), followed by short-read NGS sequencing. For technical validation we evaluated the differences in methylation patterns in three tissues (xylem, juvenile and adult leaves) from clone BRASUZ1, the tree sequenced in the Eucalyptus grandis genome project. A new computational pipeline was created, using open source tools, to process this type of NGS data in a fully reproducible way. The final goal is to identify and annotate differentially methylated regions across samples with the assumption that the data follows a negative binomial distribution. The pipeline results for this experiment provided reproducible, genome-scale methylation measurements at ~22,000 genomic sites consistent in all tissues and biological replicates. From this, 4,000 methylated sites were observed and the majority (64\%) conserved among the analyzed tissues. On the other hand, approximately 6\% of the sites were specific for each of the three tissues. Considering the genomic context, 58\% (2,335) of the verified methylated sites fall within genes, whereas 570 (14\%) are in transposons. Contrarily to the expected, the methylation profile in the genic space is favored and this experimental bias offers a cost effective alternative to contrast epigenetic states of a sizeable fraction of genes in plant genomes. At the end of the study, we expect to provide a flexible tool for easy execution of this approach to other species.
+  
+  Funding: CNPq, EMBRAPA Recursos Gen\'eticos e Biotecnologia, Programa de P\'os-Gradua\c{c}\~ao em Biologia Molecular - UnB. \\ 
+  \end{abstract}
+  \end{document} 

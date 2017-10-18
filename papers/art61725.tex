@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Structural features of HIV-1 Integrase mutations in patients and in vitro samples treated with strand transfer Inhibitors }} % Article title
+  
+  
+  \author{ Lucas de Almeida Machado$^{1}$, Ana Carolina Ramos Guimarães$^{1}$, }
+  
+  \affil{ 1 FIOCRUZ
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Structural features of HIV-1 Integrase mutations in patients and in vitro samples treated with strand transfer Inhibitors}} % Article title
-
-\author{Lucas de Almeida Machado$^1$, Ana Carolina Ramos Guimar\~aes$^1$}
-
-\affil{1 FIOCRUZ\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Acquired immunodeficiency syndrome (AIDS) is one of the greatest health challenges in modern medicine. According to the UNAIDS, in 2014  nearly 35 million people were living infected with the HIV (Human immunodeficiency virus) worldwide, of which 734 thousand live in Brazil - where HIV-1 is the predominant type . In spite of the reduction of AIDS mortality due to the relative success of HAART (highly active antiretroviral therapy), many patients do not respond to the treatment with protease and reverse transcriptase inhibitors, and the HIV-1 integrase inhibitors are part of the last resources in therapy. HIV-1 integrase is a 288 residue enzyme responsible for the integration of the viral DNA into the host genome. In the last years the integrase inhibitors Raltegravir and Elvitegravir were widely used in therapy, however, due to the high rates of resistance mutations  against these inhibitors, the second generation inhibitor Dolutegravir was implemented. In spite of the fact that Dolutegravir has higher genetic barriers to resistance, many Dolutegravir resistance mutations have been described recently. In the present work, we attempted to investigate  structural features of the mutations present in treated individuals and check whether or not such mutations were already described in the literature and also analyze structural features of the positions mutated. Our databank of HIV-1 integrase sequences was built of patient samples from the HIV drug resistance database and in vitro samples. The databank was separated into groups based on the inhibitors each patient or sample received. For each group, the frequency of missense mutations at each position was calculated. To evaluate  the structural features of each highly mutated residue, a comparative model was built with Modeller 9.17, using as templates a structure of the integrase tetramer in complex with DNA (5u1c) and a two-domain structure of the integrase (1e4x), the model with the lowest dope score was refined and validated. Many of the highly mutated sites were not cited in the literature as involved in resistance or accessory mutations, and many of the positions described as involved in resistance do not feature the top mutated sites. At least 16 mutations not described in the literature appear close to protein-DNA interface, to the active site or to residues that play key roles in DNA anchoring. Our data suggest that residues not described before may play a role in resistance, however further studies are needed to determine if such positions are important for viral fitness.
-
-Funding: CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Acquired immunodeficiency syndrome (AIDS) is one of the greatest health challenges in modern medicine. According to the UNAIDS, in 2014  nearly 35 million people were living infected with the HIV (Human immunodeficiency virus) worldwide, of which 734 thousand live in Brazil - where HIV-1 is the predominant type . In spite of the reduction of AIDS mortality due to the relative success of HAART (highly active antiretroviral therapy), many patients do not respond to the treatment with protease and reverse transcriptase inhibitors, and the HIV-1 integrase inhibitors are part of the last resources in therapy. HIV-1 integrase is a 288 residue enzyme responsible for the integration of the viral DNA into the host genome. In the last years the integrase inhibitors Raltegravir and Elvitegravir were widely used in therapy, however, due to the high rates of resistance mutations  against these inhibitors, the second generation inhibitor Dolutegravir was implemented. In spite of the fact that Dolutegravir has higher genetic barriers to resistance, many Dolutegravir resistance mutations have been described recently. In the present work, we attempted to investigate  structural features of the mutations present in treated individuals and check whether or not such mutations were already described in the literature and also analyze structural features of the positions mutated. Our databank of HIV-1 integrase sequences was built of patient samples from the HIV drug resistance database and in vitro samples. The databank was separated into groups based on the inhibitors each patient or sample received. For each group, the frequency of missense mutations at each position was calculated. To evaluate  the structural features of each highly mutated residue, a comparative model was built with Modeller 9.17, using as templates a structure of the integrase tetramer in complex with DNA (5u1c) and a two-domain structure of the integrase (1e4x), the model with the lowest dope score was refined and validated. Many of the highly mutated sites were not cited in the literature as involved in resistance or accessory mutations, and many of the positions described as involved in resistance do not feature the top mutated sites. At least 16 mutations not described in the literature appear close to protein-DNA interface, to the active site or to residues that play key roles in DNA anchoring. Our data suggest that residues not described before may play a role in resistance, however further studies are needed to determine if such positions are important for viral fitness.
+  
+  Funding: CAPES \\ 
+  \end{abstract}
+  \end{document} 

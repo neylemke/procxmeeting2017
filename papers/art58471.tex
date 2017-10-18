@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ In-silico Structural Characterization of Variants Found in PCSK9 gene Identified in Familial Hypercholesterolemic Patients }} % Article title
+  
+  
+  \author{ Bruna Los$^{1}$, Jéssica Bassani Borges$^{2}$, Gisele Medeiros Bastos$^{3}$, André Arpad Faludi$^{3}$, Rosário Dominguez Crespo Hirata$^{1}$, Mario Hiroyuki Hirata$^{2}$, }
+  
+  \affil{ 1 Faculty of Pharmaceutical Sciences - University of São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Faculty of Pharmaceutical Sciences - University of São Paulo and Dante Pazzanese Institute of Cardiology
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Dante Pazzanese Institute of Cardiology
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{In-silico Structural Characterization of Variants Found in PCSK9 gene Identified in Familial Hypercholesterolemic Patients}} % Article title
-
-\author{Bruna Los$^1$, J\'essica Bassani Borges$^2$, Gisele Medeiros Bastos$^3$, Andr\'e Arpad Faludi$^3$, Ros\'ario Dominguez Crespo Hirata$^1$, Mario Hiroyuki Hirata$^2$}
-
-\affil{1 FACULTY OF PHARMACEUTICAL SCIENCES - USP\\ 2 FACULTY OF PHARMACEUTICAL SCIENCES - USP AND DANTE PAZZANESE INSTITUTE OF CARDIOLOGY\\ 3 DANTE PAZZANESE INSTITUTE OF CARDIOLOGY\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Familial Hypercholesterolemia (FH) is a genetic disorder of lipoprotein metabolism, mainly caused by mutations in three genes, LDLR, APOB, and PCSK9. PCSK9 acts regulating low density lipoprotein (LDL) levels by binding to LDL receptor (LDLR) and escorting it towards intracellular degradation compartments. Gain-of-function mutations in PCSK9 increase its proteolytic activity, reducing LDLR concentration, therefore resulting in high levels of LDL cholesterol in the plasma. Loss-of-function mutations lead to a higher concentration of the LDLR, resulting in lower LDL cholesterol levels. The aim of the present project is an in silico and in vitro characterization of the effect of variants in PCSK9 gene identified in FH patients. Forty-eight FH patients were sequenced using Next Generation Sequencing. The data were aligned to the reference genome using Burrows-Wheeler Aligner (BWA) and variant calling was performed using Genome Analysis Toolkit (GATK). After this, nine missense variants were identified in PCSK9 gene. Between them, four were chosen to further analysis because were visible in the crystal structure and presented MAF below 5\% in three databases. Crystal structures of wild type PCSK9 and LDLR were retrieved from Protein Data Bank (PDB code: 2P4E and 1N7D, respectively) and site-directed mutagenesis was performed using PyMOL v. 1.8.6.2. to generate the following PCSK9 variants: R237W, A443T, R469W and Q619P. Structural analysis of molecular interactions of PCSK9 and its variants with LDLR was performed by protein-protein docking via ClusPro. The PCSK9-LDLR complexes were visualized using PyMOL v. 1.8.6.2.  For R237W and R469W it was observed a possible conformational change that could increase the affinity of PCSK9 for LDLR, when compared with the wild type. In both cases, the arginine to tryptophan change allowed an interaction with a LDLR region featured by a hydrophobic pocket. For A443T and Q619P no conformational changes were observed, and both variants showed only interactions with PCSK9 amino acids itself, suggesting theses variants are probably neutral. R237W was already defined as a loss-of-function mutation by in vitro studies; however, no functional assays were performed on R469W. As previous genetic association studies indicate that R469W is a gain-of-function mutation, and led by our in silico result, an in vitro characterization will be conducted to further understand the possible pathogenicity of the R469W.
-
-Funding: CNPq
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Familial Hypercholesterolemia (FH) is a genetic disorder of lipoprotein metabolism, mainly caused by mutations in three genes, LDLR, APOB, and PCSK9. PCSK9 acts regulating low density lipoprotein (LDL) levels by binding to LDL receptor (LDLR) and escorting it towards intracellular degradation compartments. Gain-of-function mutations in PCSK9 increase its proteolytic activity, reducing LDLR concentration, therefore resulting in high levels of LDL cholesterol in the plasma. Loss-of-function mutations lead to a higher concentration of the LDLR, resulting in lower LDL cholesterol levels. The aim of the present project is an in silico and in vitro characterization of the effect of variants in PCSK9 gene identified in FH patients. Forty-eight FH patients were sequenced using Next Generation Sequencing. The data were aligned to the reference genome using Burrows-Wheeler Aligner (BWA) and variant calling was performed using Genome Analysis Toolkit (GATK). After this, nine missense variants were identified in PCSK9 gene. Between them, four were chosen to further analysis because were visible in the crystal structure and presented MAF below 5\% in three databases. Crystal structures of wild type PCSK9 and LDLR were retrieved from Protein Data Bank (PDB code: 2P4E and 1N7D, respectively) and site-directed mutagenesis was performed using PyMOL v. 1.8.6.2. to generate the following PCSK9 variants: R237W, A443T, R469W and Q619P. Structural analysis of molecular interactions of PCSK9 and its variants with LDLR was performed by protein-protein docking via ClusPro. The PCSK9-LDLR complexes were visualized using PyMOL v. 1.8.6.2.  For R237W and R469W it was observed a possible conformational change that could increase the affinity of PCSK9 for LDLR, when compared with the wild type. In both cases, the arginine to tryptophan change allowed an interaction with a LDLR region featured by a hydrophobic pocket. For A443T and Q619P no conformational changes were observed, and both variants showed only interactions with PCSK9 amino acids itself, suggesting theses variants are probably neutral. R237W was already defined as a loss-of-function mutation by in vitro studies; however, no functional assays were performed on R469W. As previous genetic association studies indicate that R469W is a gain-of-function mutation, and led by our in silico result, an in vitro characterization will be conducted to further understand the possible pathogenicity of the R469W.
+  
+  Funding: CNPq \\ 
+  \end{abstract}
+  \end{document} 

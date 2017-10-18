@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Biological data exporting tool }} % Article title
+  
+  
+  \author{ Yoshin Efrain Contreras Oscco$^{1}$, Giovana Secretti Vendruscolo$^{1}$, Marcelo Cezar Pinto$^{1}$, }
+  
+  \affil{ 1 UNILA
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Biological data exporting tool}} % Article title
-
-\author{Yoshin Efrain Contreras Oscco$^1$, Giovana Secretti Vendruscolo$^1$, Marcelo Cezar Pinto$^1$}
-
-\affil{1 UNILA\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The development of biological databases has become indispensable for scientists in the field of bioinformatics. Biological data encompass a wide variety of complex information as well as large datasets. Scientists have used many tools to deal with those data (e.g. spreadsheets). However, these tools are not suited to integrate data from different sources and do not make data easily readable. Therefore, the development of biological databases is essential to achieve readability and integration of different analysis tools. Thus, this work in progress aims to develop a complete website for biological collections (databases) that allows the management of curators, researchers, assistants and guests with various projects running in parallel, integrated with a Geographic Information System. At this moment, the Fish Collection of UNILA and the management of research staff and projects are almost finished. For this website application, the backend side is coded using a Python-based framework called Django (available at <https://www.python.org/> and <https://www.djangoproject.com/>) integrated with PostgreSQL database. The frontend side is made with Bootstrap toolkit as well as AJAX with JavaScript Object Notation (JSON) to retrieve data dynamically. Because the data access is based on the role of the user (curator, researcher, assistant or guest), the query process was made by presenting the data filtered in HTML tables using the DataTables plug-in (available at <https://datatables.net/>). An important functionality of the website is the process of data importation and exportation. This tool is composed of modules, where each one will deal with some external pattern, like SpecieLink (available at <http://splink.cria.org.br/>). For example, the exporting tool will have a module to import data from a Microsoft Access database called ``Cole\c{c}\~ao de Peixes da UNILA'' and another one to export to FishBase website (available at <http://www.fishbase.org/>). At this moment, all the tables regarding the UNILA Fish Collection have been modeled with the curatorship of an expert.
-
-Funding: This project is registered as PID202-2015, PID495-2016, PID575-2016, and PID1038-2017 and is partially funded by PIBITI-UNILA.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The development of biological databases has become indispensable for scientists in the field of bioinformatics. Biological data encompass a wide variety of complex information as well as large datasets. Scientists have used many tools to deal with those data (e.g. spreadsheets). However, these tools are not suited to integrate data from different sources and do not make data easily readable. Therefore, the development of biological databases is essential to achieve readability and integration of different analysis tools. Thus, this work in progress aims to develop a complete website for biological collections (databases) that allows the management of curators, researchers, assistants and guests with various projects running in parallel, integrated with a Geographic Information System. At this moment, the Fish Collection of UNILA and the management of research staff and projects are almost finished. For this website application, the backend side is coded using a Python-based framework called Django (available at <https://www.python.org/> and <https://www.djangoproject.com/>) integrated with PostgreSQL database. The frontend side is made with Bootstrap toolkit as well as AJAX with JavaScript Object Notation (JSON) to retrieve data dynamically. Because the data access is based on the role of the user (curator, researcher, assistant or guest), the query process was made by presenting the data filtered in HTML tables using the DataTables plug-in (available at <https://datatables.net/>). An important functionality of the website is the process of data importation and exportation. This tool is composed of modules, where each one will deal with some external pattern, like SpecieLink (available at <http://splink.cria.org.br/>). For example, the exporting tool will have a module to import data from a Microsoft Access database called “Cole\c{c}\~ao de Peixes da UNILA” and another one to export to FishBase website (available at <http://www.fishbase.org/>). At this moment, all the tables regarding the UNILA Fish Collection have been modeled with the curatorship of an expert.
+  
+  Funding: This project is registered as PID202-2015, PID495-2016, PID575-2016, and PID1038-2017 and is partially funded by PIBITI-UNILA. \\ 
+  \end{abstract}
+  \end{document} 

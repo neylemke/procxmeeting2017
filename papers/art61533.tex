@@ -1,67 +1,72 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ A global feature selection algorithm for the model selection step in the identification of cell signaling networks }} % Article title
+  
+  
+  \author{ Gustavo Estrela de Matos$^{1}$, Lulu Wu$^{2}$, Vincent Noel$^{3}$, Marco Dimas Gubitoso$^{4}$, Carlos Eduardo Ferreira$^{4}$, Junior Barrera$^{4}$, Hugo A. Armelin$^{3}$, Marcelo S. Reis$^{3}$, }
+  
+  \affil{ 1 Center of Toxins, Immune-response and Cell Signaling, Instituto Butantan, Instituto de Matemática e Estatística
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Center of Toxins, Immune-response and Cell Signaling, Instituto Butantan
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Instituto Butantan
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 Instituto de Matemática e Estatística, Universidade de São Paulo
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A global feature selection algorithm for the model selection step in the identification of cell signaling networks}} % Article title
-
-\author{Gustavo Estrela de Matos$^1$, Lulu Wu$^2$, Vincent Noel$^3$, Marco Dimas Gubitoso$^4$, Carlos Eduardo Ferreira$^4$, Junior Barrera$^4$, Hugo A. Armelin$^3$, Marcelo S. Reis$^3$}
-
-\affil{1 CENTER OF TOXINS, IMMUNE-RESPONSE AND CELL SIGNALING, INSTITUTO BUTANTAN, INSTITUTO DE MATEM\'ATICA E ESTAT\'ISTICA\\ 2 CENTER OF TOXINS, IMMUNE-RESPONSE AND CELL SIGNALING, INSTITUTO BUTANTAN\\ 3 INSTITUTO BUTANTAN\\ 4 INSTITUTO DE MATEM\'ATICA E ESTAT\'ISTICA, USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-In the context of cell signaling network identification, model selection is the choice of a dynamic
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  In the context of cell signaling network identification, model selection is the choice of a dynamic
 model from a set of possibilities; the chosen model should be the most suitable one according to a
 given cost function (e.g., curve-fitting optimization). If these possibilities are defined by differences
 in the chemical species and/or reactions that compose each of them, then a feature selection
@@ -86,7 +91,7 @@ extracted from the Kyoto Encyclopedia of Genes and Genomes (KEGG) interactome da
 expect that this new feature selection method will become a critical asset to identify fully predictive
 dynamic models, which in turn will help researchers to unveil intricate molecular mechanisms
 underlying cell phenotype changes due extracellular stimuli.
-
-Funding: CAPES, CNPq and grants \#2013/07467-1 and \#2016/25959-7, S\~ao Paulo Research Foundation (FAPESP)
-\end{abstract}
-\end{document}
+  
+  Funding: CAPES, CNPq and grants \#2013/07467-1 and \#2016/25959-7, S\~ao Paulo Research Foundation (FAPESP) \\ 
+  \end{abstract}
+  \end{document} 

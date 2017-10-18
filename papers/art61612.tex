@@ -1,68 +1,81 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Functional analysis of hypothetical proteins unveils putative metabolic pathways, essential genes and Therapeutic drug and vaccine target in Trypanosma cruzi: A Bioinformatics Based Approach }} % Article title
+  
+  
+  \author{ Rodrigo Profeta Silveira Santos$^{1}$, Priya Trivedi$^{2}$, Neha Jain$^{2}$, Sandeep Tiwari$^{3}$, Syed Babar Jamal Bacha$^{4}$, Arun Kumar Jaiswal$^{5}$, Thiago Luiz de Paula Castro$^{6}$, Núbia Seiffert$^{6}$, Siomar de Castro Soares$^{7}$, Artur Silva$^{8}$, Vasco a de C Azevedo$^{1}$, }
+  
+  \affil{ 1 Federal University of Minas Gerais
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Devi Ahilya University
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Institute of Biological Science, Federal University of Minas Gerais
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 1.	Institute of Biological Science, Federal University of Minas Gerais
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+5 Institute of Biological Science, Federal University of Minas Gerais; Department of Immunology, Microbiology and Parasitology, Institute of Biological Sciences and Natural Sciences, Federal University of Triângulo Mineiro
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
+6 Federal University of Bahia
 
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
+7 Department of Immunology, Microbiology and Parasitology, Institute of Biological Sciences and Natural Sciences, Federal University of Triângulo Mineiro
 
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Functional analysis of hypothetical proteins unveils putative metabolic pathways, essential genes and Therapeutic drug and vaccine target in Trypanosma cruzi: A Bioinformatics Based Approach}} % Article title
+8 Federal University of Pará
 
-\author{Rodrigo Profeta Silveira Santos$^1$, Priya Trivedi$^2$, Neha Jain$^2$, Sandeep Tiwari$^3$, Syed Babar Jamal Bacha$^4$, Arun Kumar Jaiswal$^5$, Thiago Luiz de Paula Castro$^6$, N\'ubia Seiffert$^6$, Siomar de Castro Soares$^7$, Artur Silva$^8$, Vasco A de C Azevedo$^1$}
-
-\affil{1 UFMG\\ 2 DEVI AHILYA UNIVERSITY\\ 3 INSTITUTE OF BIOLOGICAL SCIENCE, UFMG\\ 4 1.	INSTITUTE OF BIOLOGICAL SCIENCE, UFMG\\ 5 INSTITUTE OF BIOLOGICAL SCIENCE, UFMG; DEPARTMENT OF IMMUNOLOGY, MICROBIOLOGY AND PARASITOLOGY, INSTITUTE OF BIOLOGICAL SCIENCES AND NATURAL SCIENCES, UFTM\\ 6 UFBA\\ 7 DEPARTMENT OF IMMUNOLOGY, MICROBIOLOGY AND PARASITOLOGY, INSTITUTE OF BIOLOGICAL SCIENCES AND NATURAL SCIENCES, UFTM\\ 8 UFPA\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The protozoan Trypanosoma cruzi is the etiological agent of Chagas disease, a major chronic, systemic, parasitic infection. The disease affects about 8 million people in Latin America, of whom 30-40\% either has or will develop cardiomyopathy, digestive mega syndromes, or both. Currently, there are neither effective drugs nor vaccines for the treatment or prevention of the disease. The current synthetic drugs such as nifurtimox (a nitrofuran derivative) and benznidazole (a nitroimidazole derivative), are associated to severe side effects, including cardiac and/or renal toxicity and as well not effective, which accounts for the need to search new effective chemotherapeutic and chemo prophylactic agents against T. cruzi . Therefore, due to their low efficacies and the resistance developed by the bug to these medications, there is an urgent need to consider newer species-specific targets. Approximately 50\% of the predicted protein-coding genes of the Trypanosoma cruzi CL Brener strain are annotated as hypothetical or conserved hypothetical proteins.Here in this work, we have attempted to assign probable functions to these hypothetical sequences present in this parasite, to explore their plausible roles as druggable receptors. Thus, putative functions have been defined to 491 hypothetical proteins, which exhibited a GO term correlation and PFAM domain coverage of more than 50\% over the query sequence length. We tried to find out if our 491 sequences were showing any similarity with the already known essential genes by using DEG BLAST, and we were able to predict 114 sequences as essential genes for the protozoan. Pathway analysis was also performed to check if our hypothetical proteins can participate in any metabolic pathway, in which we have got 31 sequences were associated with various metabolic pathways for essential genes while 40 sequences were associated with metabolic pathways for non-essential genes. Furthermore, the localization was predicted to find drug targets and vaccine targets. And Protein-protein Interaction was analyzed using STRING database. We have also tried to find out the orthologus proteins by using Cluster of Orthologus genes (COG's) STRING database. Druggability was also checked by searching against the drug target dataset of DRUGBANK target dataset of DRUGBANK. We got 3 experimentally know drug targets and 07 novel drug targets from this uncharacterized (hypothetical) dataset for Trypanosoma cruzi. Data generated by this study might facilitate swift identification of potential therapeutic targets and thereby enabling the search for new inhibitors or vaccines.
-
-Funding: TWAS-CNPq, CNPq, and CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The protozoan Trypanosoma cruzi is the etiological agent of Chagas disease, a major chronic, systemic, parasitic infection. The disease affects about 8 million people in Latin America, of whom 30–40\% either has or will develop cardiomyopathy, digestive mega syndromes, or both. Currently, there are neither effective drugs nor vaccines for the treatment or prevention of the disease. The current synthetic drugs such as nifurtimox (a nitrofuran derivative) and benznidazole (a nitroimidazole derivative), are associated to severe side effects, including cardiac and/or renal toxicity and as well not effective, which accounts for the need to search new effective chemotherapeutic and chemo prophylactic agents against T. cruzi . Therefore, due to their low efficacies and the resistance developed by the bug to these medications, there is an urgent need to consider newer species-specific targets. Approximately 50\% of the predicted protein-coding genes of the Trypanosoma cruzi CL Brener strain are annotated as hypothetical or conserved hypothetical proteins.Here in this work, we have attempted to assign probable functions to these hypothetical sequences present in this parasite, to explore their plausible roles as druggable receptors. Thus, putative functions have been defined to 491 hypothetical proteins, which exhibited a GO term correlation and PFAM domain coverage of more than 50\% over the query sequence length. We tried to find out if our 491 sequences were showing any similarity with the already known essential genes by using DEG BLAST, and we were able to predict 114 sequences as essential genes for the protozoan. Pathway analysis was also performed to check if our hypothetical proteins can participate in any metabolic pathway, in which we have got 31 sequences were associated with various metabolic pathways for essential genes while 40 sequences were associated with metabolic pathways for non-essential genes. Furthermore, the localization was predicted to find drug targets and vaccine targets. And Protein-protein Interaction was analyzed using STRING database. We have also tried to find out the orthologus proteins by using Cluster of Orthologus genes (COG’s) STRING database. Druggability was also checked by searching against the drug target dataset of DRUGBANK target dataset of DRUGBANK. We got 3 experimentally know drug targets and 07 novel drug targets from this uncharacterized (hypothetical) dataset for Trypanosoma cruzi. Data generated by this study might facilitate swift identification of potential therapeutic targets and thereby enabling the search for new inhibitors or vaccines.
+  
+  Funding: TWAS-CNPq, CNPq, and CAPES \\ 
+  \end{abstract}
+  \end{document} 

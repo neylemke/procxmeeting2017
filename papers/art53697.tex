@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Bioinformatic Analysis of Ubiquitin-Specific Protease Genes in Genome of Phaseoulus vulgaris L. }} % Article title
+  
+  
+  \author{ Monize Angela de Andrade$^{1}$, Daniel Alexandre Azevedo$^{1}$, Laurence Rodrigues do Amaral$^{1}$, Felipe Teles Barbosa$^{1}$, Enyara Rezende Morais$^{1}$, Matheus de Souza Gomes$^{1}$, }
+  
+  \affil{ 1 UFMG
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Bioinformatic Analysis of Ubiquitin-Specific Protease Genes in Genome of Phaseoulus vulgaris L.}} % Article title
-
-\author{Monize Angela de Andrade$^1$, Daniel Alexandre Azevedo$^1$, Laurence Rodrigues do Amaral$^1$, Felipe Teles Barbosa$^1$, Enyara Rezende Morais$^1$, Matheus de Souza Gomes$^1$}
-
-\affil{1 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The Bean is a leguminous plant with high protein value, nutritional and heme iron donor widely consumed. The ubiquitin-proteasome is a pathway responsible controls many cellular processes able controlled such as degraded of proteins flawed, with error of synthesis, and that are no longer necessary. Once they were marked with ubiquitin protein, they are degraded by the protein complex proteasome 26S. The complex ubiquitin-proteasome regulation is one mechanism of control post- translational regulatory of many proteins important, but also able to be controlled by other proteins, which are called Deubiquitinating enzymes DUB and their function control the ubiquitin binding, off and clear the programmed degradation. The DUBs are composed by five super families of proteins such as JAMMs (metaloproteases), Ubiquitin C-terminal Hydrolases - UCHs, Machado-Joseph Domain MJD, Ovarian Tumor Proteases - OTU and Ubiquitin-Specific Proteases-USPs (UBPs in plants). The UBPs are specific proteins which degraded ubiquitin and therefore the study of these proteins is very important for understanding the regulation of many cellular functions and physiological in plants. Thus, the aim of this study, was to identify, annotate, characterize and classify putative UBP proteins in the genome of Phaseolus Vulgaris L.. Genome sequence of Phaseolus Vulgaris L. deposited in the public database Phytozome was used as queries in BLAST tool (Basic Local Search Alignment Tool). Conserved domains, amino acid residues from active sites were retrieved through the predicted proteins using PFAM database (http://pfam.sanger.ac.uk/) and CDD. Phylogenetic analysis was conducted in Mega5.2 program. We found 15 putative proteins UBPs in P. vulgaris among 12 subfamilies: UBP2-like; UBP4-like; UBP6-like; UBP8, UBP9-like; UBP13-like; UBP15, UBP17 and UBP18-like; UBP20-like; UBP22-like; UBP23-like; UBP25-like; UBP26-like. The putative UBP proteins showed conserved domains UCH containing significant and conserved residues at critical positions on the protein (putative active sites). The putative conserved catalytic site comprised (C/D/H) which divided into cys box and his box. The putative proteins UBP clustered on the phylogenetic tree in distinct clades agreeing with the predicted paralogous sub-families. Therefore, this study expanded the knowledge of the Ubiquitin-specific protease in P. vulgaris and it is the starting point for new challenges that pathway can help for produces, in future, cultivars genetically modified, with best growing, adaptation and production.
-
-Funding: FAPEMIG, CNPq, UFU and CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The Bean is a leguminous plant with high protein value, nutritional and heme iron donor widely consumed. The ubiquitin-proteasome is a pathway responsible controls many cellular processes able controlled such as degraded of proteins flawed, with error of synthesis, and that are no longer necessary. Once they were marked with ubiquitin protein, they are degraded by the protein complex proteasome 26S. The complex ubiquitin-proteasome regulation is one mechanism of control post- translational regulatory of many proteins important, but also able to be controlled by other proteins, which are called Deubiquitinating enzymes DUB and their function control the ubiquitin binding, off and clear the programmed degradation. The DUBs are composed by five super families of proteins such as JAMMs (metaloproteases), Ubiquitin C-terminal Hydrolases - UCHs, Machado-Joseph Domain MJD, Ovarian Tumor Proteases - OTU and Ubiquitin-Specific Proteases-USPs (UBPs in plants). The UBPs are specific proteins which degraded ubiquitin and therefore the study of these proteins is very important for understanding the regulation of many cellular functions and physiological in plants. Thus, the aim of this study, was to identify, annotate, characterize and classify putative UBP proteins in the genome of Phaseolus Vulgaris L.. Genome sequence of Phaseolus Vulgaris L. deposited in the public database Phytozome was used as queries in BLAST tool (Basic Local Search Alignment Tool). Conserved domains, amino acid residues from active sites were retrieved through the predicted proteins using PFAM database (http://pfam.sanger.ac.uk/) and CDD. Phylogenetic analysis was conducted in Mega5.2 program. We found 15 putative proteins UBPs in P. vulgaris among 12 subfamilies: UBP2-like; UBP4-like; UBP6-like; UBP8, UBP9-like; UBP13-like; UBP15, UBP17 and UBP18-like; UBP20-like; UBP22-like; UBP23-like; UBP25-like; UBP26-like. The putative UBP proteins showed conserved domains UCH containing significant and conserved residues at critical positions on the protein (putative active sites). The putative conserved catalytic site comprised (C/D/H) which divided into cys box and his box. The putative proteins UBP clustered on the phylogenetic tree in distinct clades agreeing with the predicted paralogous sub-families. Therefore, this study expanded the knowledge of the Ubiquitin-specific protease in P. vulgaris and it is the starting point for new challenges that pathway can help for produces, in future, cultivars genetically modified, with best growing, adaptation and production.
+  
+  Funding: FAPEMIG, CNPq, UFU and CAPES \\ 
+  \end{abstract}
+  \end{document} 

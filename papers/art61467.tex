@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Systemic study of the evolution of flowers }} % Article title
+  
+  
+  \author{ Beatriz Moura Kfoury de Castro$^{1}$, Tetsu Sakamoto$^{2}$, Carlos Alberto Xavier Gonçalves$^{1}$, José Miguel Ortega$^{2}$, }
+  
+  \affil{ 1 UFMG
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Federal de Minas Gerais, Laboratório de Biodados
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Systemic study of the evolution of flowers}} % Article title
-
-\author{Beatriz Moura Kfoury de Castro$^1$, Tetsu Sakamoto$^2$, Carlos Alberto Xavier Gon\c{c}alves$^1$, Jos\'e Miguel Ortega$^2$}
-
-\affil{1 UFMG\\ 2 UFMG, LABORAT\'ORIO DE BIODADOS\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Flowers are recent innovations in the evolutionary history of plants on the geological timescale of plant diversification. They are the reproductive structures of angiosperms (flowering plants), which constitute the most diverse and cosmopolite group of plants. In order for flower to be formed, a complex gene regulatory networks control the floral development, involving several genes. The main purpose of this work was to collect the current knowledge about the molecular basis of floral development and assemble it in the format of a metabolic pathway. Since flowers are recent innovation among angiosperms, we also investigated the evolutionary origin of flowering genes, verifying if they have originated recently along with the appearance of flowering plants. To retrieve genes associated to flowering process, we collected 1000 scientific articles depicting the molecular biology of flowering. The list with articles of PubMed IDs (PMIDs) resulting from search were submitted to text-mining tools, to assist us on determining genes and biointeractions described on them. After this selection, construction of the metabolic pathway was done with manual curation. To analyze the evolutionary origin of those genes retrieved from the text-mining, their sequences were retrieved from Uniprot database, their orthologs from other species were retrieved using SeedServer and the Lowest Common Ancestor (LCA) was determined and used to infer the gene origin. Phylogenetic inference was also applied to analyze in more depth the evolution of some genes in the pathway. As result, we found 80 genes to be linked to flowering process. Among them, 20 belong to MADS-box family, demonstrating its relevance on shaping the flower. Gene origin inference indicated that genes comprising the floral development pathway appeared on different clades during the evolutionary history of the plants. However, some proteins of MADS-box family seem to have originated during the conquest of the terrestrial environment by the plants, well before the appearance of the flower structure. However, some genes were found exclusively on the clade of the angiosperms (Magnoliophyta) and non-basal angiosperms (Mesangiospermae). A more in-depth investigation of the evolution of MADS-box genes participating in flower development showed that recent and multiple duplications have taken place on this family among the flowering plants. Since the period of the expansion of this family coincides with the origin of angiosperm, it suggests that these events have contributed greatly to the appearance of the floral structure.
-
-Funding: UFMG
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Flowers are recent innovations in the evolutionary history of plants on the geological timescale of plant diversification. They are the reproductive structures of angiosperms (flowering plants), which constitute the most diverse and cosmopolite group of plants. In order for flower to be formed, a complex gene regulatory networks control the floral development, involving several genes. The main purpose of this work was to collect the current knowledge about the molecular basis of floral development and assemble it in the format of a metabolic pathway. Since flowers are recent innovation among angiosperms, we also investigated the evolutionary origin of flowering genes, verifying if they have originated recently along with the appearance of flowering plants. To retrieve genes associated to flowering process, we collected 1000 scientific articles depicting the molecular biology of flowering. The list with articles of PubMed IDs (PMIDs) resulting from search were submitted to text-mining tools, to assist us on determining genes and biointeractions described on them. After this selection, construction of the metabolic pathway was done with manual curation. To analyze the evolutionary origin of those genes retrieved from the text-mining, their sequences were retrieved from Uniprot database, their orthologs from other species were retrieved using SeedServer and the Lowest Common Ancestor (LCA) was determined and used to infer the gene origin. Phylogenetic inference was also applied to analyze in more depth the evolution of some genes in the pathway. As result, we found 80 genes to be linked to flowering process. Among them, 20 belong to MADS-box family, demonstrating its relevance on shaping the flower. Gene origin inference indicated that genes comprising the floral development pathway appeared on different clades during the evolutionary history of the plants. However, some proteins of MADS-box family seem to have originated during the conquest of the terrestrial environment by the plants, well before the appearance of the flower structure. However, some genes were found exclusively on the clade of the angiosperms (Magnoliophyta) and non-basal angiosperms (Mesangiospermae). A more in-depth investigation of the evolution of MADS-box genes participating in flower development showed that recent and multiple duplications have taken place on this family among the flowering plants. Since the period of the expansion of this family coincides with the origin of angiosperm, it suggests that these events have contributed greatly to the appearance of the floral structure.
+  
+  Funding: UFMG \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,73 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ A potential link between tuberculosis and lung cancer through non-coding RNAs }} % Article title
+  
+  
+  \author{ Sandeep Tiwari$^{1}$, Debmalya Barh$^{2}$, Ranjith N. Kumavath$^{3}$, Vasco a de C Azevedo$^{4}$, }
+  
+  \affil{ 1 1.	Institute of Biological Science, Federal University of Minas Gerais
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Laboratório de Genética Celular e Molecular, Departamento de Biologia Geral, Instituto de Ciências Biológicas, Universidade Federal de Minas Gerais, Pampulha
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Department of Genomic Sciences, School of Biological Sciences, Central University of Kerala, Kasaragod, India
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 Federal University of Minas Gerais
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{A potential link between tuberculosis and lung cancer through non-coding RNAs}} % Article title
-
-\author{Sandeep Tiwari$^1$, Debmalya Barh$^2$, Ranjith N. Kumavath$^3$, Vasco A de C Azevedo$^4$}
-
-\affil{1 1.	INSTITUTE OF BIOLOGICAL SCIENCE, UFMG\\ 2 LABORAT\'ORIO DE GEN\'ETICA CELULAR E MOLECULAR, DEPARTAMENTO DE BIOLOGIA GERAL, INSTITUTO DE CI\^ENCIAS BIOL\'OGICAS, UFMG, PAMPULHA\\ 3 DEPARTMENT OF GENOMIC SCIENCES, SCHOOL OF BIOLOGICAL SCIENCES, CENTRAL UNIVERSITY OF KERALA, KASARAGOD, INDIA\\ 4 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Pulmonary tuberculosis caused by Mycobacterium and lung cancer are two major causes of deaths worldwide and the former increases the risk of developing lung cancer. However, the precise molecular mechanism of Mycobacterium associated increased risk of lung cancer is not entirely understood. Here, using in silico approaches, we show that hsa-mir-21 and M. tuberculosis sRNA\_1096 and sRNA\_1414 could play important roles in the pathogenesis of both these diseases. Further, we postulated a ``Genetic remittance'' hypothesis where these sRNAs may play important roles. The sRNA\_1096 could be involved in tuberculosis through multiple infectious processes, and if transferred to the host, it may activate the TLR8 mediated pro-metastatic inflammatory pathway by acting as a ligand to TLR8 similar to the mir-21 leading to lung tumorigenesis and chemo-resistance. Analogous to SH3GL1, it may also regulate cell cycle. On the other hand, sRNA\_1414 is probably involved in survivability and drug response of the pathogen. However, it may be a metastatic factor for lung cancer providing EPS8L1 and SORBS1 like functions upon remittance. Further, all these three non-coding RNAs are predicted to act in rifampicin resistance in Mycobacterium. Currently, we are applying robust bioinformatics strategies and conducting experimental validations to confirm our in-silico findings and hypothesis.
-
-Funding: TWAS-CNPq , CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Pulmonary tuberculosis caused by Mycobacterium and lung cancer are two major causes of deaths worldwide and the former increases the risk of developing lung cancer. However, the precise molecular mechanism of Mycobacterium associated increased risk of lung cancer is not entirely understood. Here, using in silico approaches, we show that hsa-mir-21 and M. tuberculosis sRNA\_1096 and sRNA\_1414 could play important roles in the pathogenesis of both these diseases. Further, we postulated a “Genetic remittance” hypothesis where these sRNAs may play important roles. The sRNA\_1096 could be involved in tuberculosis through multiple infectious processes, and if transferred to the host, it may activate the TLR8 mediated pro-metastatic inflammatory pathway by acting as a ligand to TLR8 similar to the mir-21 leading to lung tumorigenesis and chemo-resistance. Analogous to SH3GL1, it may also regulate cell cycle. On the other hand, sRNA\_1414 is probably involved in survivability and drug response of the pathogen. However, it may be a metastatic factor for lung cancer providing EPS8L1 and SORBS1 like functions upon remittance. Further, all these three non-coding RNAs are predicted to act in rifampicin resistance in Mycobacterium. Currently, we are applying robust bioinformatics strategies and conducting experimental validations to confirm our in-silico findings and hypothesis.
+  
+  Funding: TWAS-CNPq , CAPES \\ 
+  \end{abstract}
+  \end{document} 

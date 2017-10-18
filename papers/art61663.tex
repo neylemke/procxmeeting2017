@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Identification and computational evaluation of possible allosteric and competitive inhibitors of human PEPCK-M: an alternative therapy for lung carcinoma }} % Article title
+  
+  
+  \author{ Luiz Phillippe Ribeiro Baptisa$^{1}$, Vanessa de Vasconcelos Sinatti Castilho$^{1}$, Ana Carolina Ramos Guimarães$^{1}$, }
+  
+  \affil{ 1 FIOCRUZ-IOC
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Identification and computational evaluation of possible allosteric and competitive inhibitors of human PEPCK-M: an alternative therapy for lung carcinoma}} % Article title
-
-\author{Luiz Phillippe Ribeiro Baptisa$^1$, Vanessa de Vasconcelos Sinatti Castilho$^1$, Ana Carolina Ramos Guimar\~aes$^1$}
-
-\affil{1 FIOCRUZ-IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Cancer is the second largest cause of death in the world, posing a huge problem for modern medicine. The increase in the number of cells, the result of uncontrolled cell division, leads to an increasing requirement of glucose consumption. Tumor growth under conditions of metabolic limitation, especially with decreased glucose availability, is common, suggesting that tumor cells exhibit high metabolic plasticity. Central to this adaptation, there is the enzyme phosphoenolpyruvate carboxykinase (PEPCK) that participates in the initial phase of gluconeogenesis. This enzyme acts on the reversible formation of phosphoenolpyruvate (PEP) from oxaloacetate (OAA). Due to its gluconeogenic function, the differential expression of cytoplasmic (PEPCK-C) and mitochondrial isoforms (PEPCK-M) is independently associated with different types of cancer. Recent studies have shown that this change is critical in lung cancer, in which tumor cells submitted to low glucose levels increase the expression of PEPCK-M. Also, inhibition or the knockdown of the PEPCK-M enzyme in lung tumor cell cultures led to increased cell death and apoptosis. These studies show the importance of this enzyme to the prevalence of cancer. In this work, we intend to explore the enzyme PEPCK-M as a target for a computer-aided drug design that can be used in the therapy of lung cancer. Although very important, there are no 3D structures deposited in the PDB for PEPCK-M (unlike its isoform, PEPCK-C). For this reason, we performed a comparative modeling using the program MODELLER. Comparative analyses between the two isoforms have shown that they are very similar - presenting high conservation between active and allosteric site residues. The electrostatic potential analysis, performed with APBS, also indicated strong similarities - both enzymes have an overall electropositive active-site cleft. We also conducted redocking experiments with Glide XP and Autodock Vina to test which program is the most suitable for future experiments. The observation of mutations commonly found in lung cancers was another important analysis. This experiment used the mutation database COSMIC. The most frequent mutations were mapped on the PEPCK-M structure. These results suggest that the PEPCK-M enzyme has structural characteristics like those shown in PEPCK-C - validating the use of inhibitors described for the cytoplasmic enzyme. Also, the localization of common mutations in lung cancer, both in the catalytic cleft and allosteric site, favor the search for specific inhibitors for the mutated PEPCK-M.
-
-Funding: CNPq, Fiocruz
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Cancer is the second largest cause of death in the world, posing a huge problem for modern medicine. The increase in the number of cells, the result of uncontrolled cell division, leads to an increasing requirement of glucose consumption. Tumor growth under conditions of metabolic limitation, especially with decreased glucose availability, is common, suggesting that tumor cells exhibit high metabolic plasticity. Central to this adaptation, there is the enzyme phosphoenolpyruvate carboxykinase (PEPCK) that participates in the initial phase of gluconeogenesis. This enzyme acts on the reversible formation of phosphoenolpyruvate (PEP) from oxaloacetate (OAA). Due to its gluconeogenic function, the differential expression of cytoplasmic (PEPCK-C) and mitochondrial isoforms (PEPCK-M) is independently associated with different types of cancer. Recent studies have shown that this change is critical in lung cancer, in which tumor cells submitted to low glucose levels increase the expression of PEPCK-M. Also, inhibition or the knockdown of the PEPCK-M enzyme in lung tumor cell cultures led to increased cell death and apoptosis. These studies show the importance of this enzyme to the prevalence of cancer. In this work, we intend to explore the enzyme PEPCK-M as a target for a computer-aided drug design that can be used in the therapy of lung cancer. Although very important, there are no 3D structures deposited in the PDB for PEPCK-M (unlike its isoform, PEPCK-C). For this reason, we performed a comparative modeling using the program MODELLER. Comparative analyses between the two isoforms have shown that they are very similar – presenting high conservation between active and allosteric site residues. The electrostatic potential analysis, performed with APBS, also indicated strong similarities – both enzymes have an overall electropositive active-site cleft. We also conducted redocking experiments with Glide XP and Autodock Vina to test which program is the most suitable for future experiments. The observation of mutations commonly found in lung cancers was another important analysis. This experiment used the mutation database COSMIC. The most frequent mutations were mapped on the PEPCK-M structure. These results suggest that the PEPCK-M enzyme has structural characteristics like those shown in PEPCK-C – validating the use of inhibitors described for the cytoplasmic enzyme. Also, the localization of common mutations in lung cancer, both in the catalytic cleft and allosteric site, favor the search for specific inhibitors for the mutated PEPCK-M.
+  
+  Funding: CNPq, Fiocruz \\ 
+  \end{abstract}
+  \end{document} 

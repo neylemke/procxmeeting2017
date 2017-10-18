@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Copy number variations of genomic and transcriptomic motifs of Mucin and MASP superfamilies in different Trypanosoma cruzi strains }} % Article title
+  
+  
+  \author{ Anderson Coqueiro dos Santos$^{1}$, Gabriela Flavia Rodrigues Luiz$^{1}$, Najib M. El-Sayed$^{2}$, Santuza Maria Ribeiro Teixeira$^{1}$, João Luís Reis Cunha$^{1}$, Daniella Bartholomeu$^{1}$, }
+  
+  \affil{ 1 Institute of Biological Sciences, UFMG
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Department of Parasite Genomics, Institute for Genomic Research
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Copy number variations of genomic and transcriptomic motifs of Mucin and MASP superfamilies in different Trypanosoma cruzi strains}} % Article title
-
-\author{Anderson Coqueiro Dos Santos$^1$, Gabriela Flavia Rodrigues Luiz$^1$, Najib M. El-sayed$^2$, Santuza Maria Ribeiro Teixeira$^1$, Jo\~ao Lu\'{\i}s Reis Cunha$^1$, Daniella Bartholomeu$^1$}
-
-\affil{1 INSTITUTE OF BIOLOGICAL SCIENCES, UFMG\\ 2 DEPARTMENT OF PARASITE GENOMICS, INSTITUTE FOR GENOMIC RESEARCH\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Trypanosoma cruzi is the causative agent of Chagas disease, an illness that afflicts about 7 million people worldwide. Due to its extensive genetic variability, T. cruzi taxa is divided into six discrete typing units (DTUs), named TcI to TcVI. The first T. cruzi genome was sequenced in 2005, allowing the identification of hundreds of genes encoding polymorphic surface proteins from trans-sialidase (TcS), MASP and mucin (TcMUC) superfamilies. These genes are enrolled in cellular adhesion and invasion, and immune evasion processes, highlighting their important role in host parasite interactions.  The high number of copies and variability of these gene families hinders the assignment of reads to specific genes. Members of these families share short motifs whose occurrence and abundance can be used to estimate the variability of these gene families among T. cruzi strains. In the present work, we aim to compare the motif amplifications in the multigene families MASP, TcMUC and TcS, derived from representatives of T.cruzi TcI, TcII and TcVI DTUs, and compare their copy number with gene expression levels. We used genomic reads from two clones derived from TcVI CL strain (CL Brener, CL-14), Y strain (TcII) and 3 representatives from DTU TcI; as well as transcriptomic reads from the same clones/strains in the amastigote, epimastigote and trypomastigote stages. These genomic and transcriptome reads were mapped in CL Brener genome, and only reads that mapped in the TcS, TcMUC and MASP genes were recovered. Kmers of 30 nucleotides were generated from these reads and their coverage was estimated. To remove redundancy, similar kmers were clustered and the number of motifs, for each library, was normalized to allow comparisons among them. For TcMUC superfamily, the analysis showed a greater number of motifs in the virulent CL Brener clone, compared to a reduced number of motifs in the non-virulent CL-14 clone. We did not detect large differences within the three clones derived from Y strain and little variance in TcI genomic motifs. When we compared the different developmental stages, a greater concordance was found between the amastigote 60 and 96 hrs from CL-14, whereas in CL Brener the pattern observed in amastigote 96 hrs and trypomastigote stage was quite similar. Similar results were observed for MASPs. We are currently performing this analysis with TcS family and comparing the motifs with higher counts in genomic and transcriptomic analysis to try to correlate copy number of the identified motifs and their expression levels.
-
-Funding: CAPES, CNPq and FAPEMIG
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Trypanosoma cruzi is the causative agent of Chagas disease, an illness that afflicts about 7 million people worldwide. Due to its extensive genetic variability, T. cruzi taxa is divided into six discrete typing units (DTUs), named TcI to TcVI. The first T. cruzi genome was sequenced in 2005, allowing the identification of hundreds of genes encoding polymorphic surface proteins from trans-sialidase (TcS), MASP and mucin (TcMUC) superfamilies. These genes are enrolled in cellular adhesion and invasion, and immune evasion processes, highlighting their important role in host parasite interactions.  The high number of copies and variability of these gene families hinders the assignment of reads to specific genes. Members of these families share short motifs whose occurrence and abundance can be used to estimate the variability of these gene families among T. cruzi strains. In the present work, we aim to compare the motif amplifications in the multigene families MASP, TcMUC and TcS, derived from representatives of T.cruzi TcI, TcII and TcVI DTUs, and compare their copy number with gene expression levels. We used genomic reads from two clones derived from TcVI CL strain (CL Brener, CL-14), Y strain (TcII) and 3 representatives from DTU TcI; as well as transcriptomic reads from the same clones/strains in the amastigote, epimastigote and trypomastigote stages. These genomic and transcriptome reads were mapped in CL Brener genome, and only reads that mapped in the TcS, TcMUC and MASP genes were recovered. Kmers of 30 nucleotides were generated from these reads and their coverage was estimated. To remove redundancy, similar kmers were clustered and the number of motifs, for each library, was normalized to allow comparisons among them. For TcMUC superfamily, the analysis showed a greater number of motifs in the virulent CL Brener clone, compared to a reduced number of motifs in the non-virulent CL-14 clone. We did not detect large differences within the three clones derived from Y strain and little variance in TcI genomic motifs. When we compared the different developmental stages, a greater concordance was found between the amastigote 60 and 96 hrs from CL-14, whereas in CL Brener the pattern observed in amastigote 96 hrs and trypomastigote stage was quite similar. Similar results were observed for MASPs. We are currently performing this analysis with TcS family and comparing the motifs with higher counts in genomic and transcriptomic analysis to try to correlate copy number of the identified motifs and their expression levels.
+  
+  Funding: CAPES, CNPq and FAPEMIG \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,72 +1,73 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Investigation of the replication-transcription conflicts in Trypanosoma brucei  through computational dynamical models }} % Article title
+  
+  
+  \author{ Gustavo Cayres$^{1}$, Marcelo S. da Silva$^{1}$, Marcelo S. Reis$^{1}$, Maria C. Elias$^{2}$, }
+  
+  \affil{ 1 Instituto Butantan
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 LECC-CeTICS, Butantan Institute
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Investigation of the replication-transcription conflicts in Trypanosoma brucei  through computational dynamical models}} % Article title
-
-\author{Gustavo Cayres$^1$, Marcelo S. da Silva$^1$, Marcelo S. Reis$^1$, Maria C. Elias$^2$}
-
-\affil{1 INSTITUTO BUTANTAN\\ 2 LECC-CETICS, BUTANTAN INSTITUTE\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-In the context of Molecular Cell Biology, DNA replication consists on the process of duplicating the genetic material of a cell. This process can start multiple times during the S-phase of cell cycle, at specific genomic regions named ``replication origins''. However, the triggering frequency of each origin and the dynamics of its respective replisomes are subject to variations along S-phase. Moreover, the influence of the collisions between these replisomes and the DNA polymerase (DNAP) on the overall duration of the S-phase is unknown.
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  In the context of Molecular Cell Biology, DNA replication consists on the process of duplicating the genetic material of a cell. This process can start multiple times during the S-phase of cell cycle, at specific genomic regions named “replication origins”. However, the triggering frequency of each origin and the dynamics of its respective replisomes are subject to variations along S-phase. Moreover, the influence of the collisions between these replisomes and the DNA polymerase (DNAP) on the overall duration of the S-phase is unknown.
 Therefore, our objective in this work is the development of computational dynamic models to test whether replisome/DNAP collisions have relevant impact on the S-phase dynamics in various protozoa species in the kinetoplastida group. We started this investigation with Trypanosoma brucei, the pathogen behind the sleeping sickness.
 The proposed model consists in a Markov chain whose transition function can be estimated using heterogeneous data (e.g., the distribution of replication origins and the transcription sites of each chromosome) obtained from the literature and also from wet-lab experiments carried out at our lab. This information was organized into a relational database and a model simulator was implemented in Python. Unknown parameters such as the transcription initiation frequency and number of
 available replication origin sites were evaluated through a comprehensive Monte Carlo sampling on a search space constrained by the biological feasibility of the values obtained in a given simulation.
 Initial results with T. brucei strain 927 showed that a causal response to replisome/DNAP collisions (e.g., through the ATM/ATR signaling pathways) is not necessary to accomplish DNA replication within the S-phase required time that is reported in the literature. Currently, we are applying this methodology into other protozoa such as T. cruzi, the parasite that causes Chagas disease. Therefore, we expect to elucidate how differences on the replication dynamics of these organisms accounts for differences in the genomic architecture that are observed in kinetoplastids.
-
-Funding: CNPq and grants \#2013/07467-1, \#2016/17775-3, and \#2016/50050-2, S\~ao Paulo Research Foundation (FAPESP).
-\end{abstract}
-\end{document}
+  
+  Funding: CNPq and grants \#2013/07467-1, \#2016/17775-3, and \#2016/50050-2, S\~ao Paulo Research Foundation (FAPESP). \\ 
+  \end{abstract}
+  \end{document} 

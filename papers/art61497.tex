@@ -1,68 +1,77 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ An overview of etanol tolerance in Saccharomyces cerevisiae through systems biology and differential expression analysis }} % Article title
+  
+  
+  \author{ Ivan Rodrigo Wolf$^{1}$, Department of Bioprocess and Biotechnology. São Paulo State University$^{2}$, Leonardo Nazário de Moraes$^{3}$, Rafael P. Simões$^{4}$, Lucilene Delazari dos Santos$^{5}$, Rejane M. T.Grotto$^{6}$, Guilherme Targino Valente$^{4}$, }
+  
+  \affil{ 1 FCA-UNESP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 UNESP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Department of Bioprocess and Biotechnology. São Paulo State University
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 UNESP - State University of Sao Paulo
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+5 Center for the Study of Venoms and Poisonous Animals , São Paulo State University
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
+6 Department of Bioprocess and Biotechnology, São Paulo State University, Botucatu
 
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{An overview of etanol tolerance in Saccharomyces cerevisiae through systems biology and differential expression analysis}} % Article title
-
-\author{Ivan Rodrigo Wolf$^1$, Lauana Foga\c{c}a(department Of Bioprocess And Biotechnology. S\~ao Paulo State University$^2$, Leonardo Naz\'ario de Moraes$^3$, Rafael P. Sim\~oes$^4$, Lucilene Delazari Dos Santos$^5$, Rejane M. T.grotto$^6$, Guilherme Targino Valente$^4$}
-
-\affil{1 FCA-UNESP\\ 2 UNESP\\ 3 DEPARTMENT OF BIOPROCESS AND BIOTECHNOLOGY. S\~AO PAULO STATE UNIVERSITY\\ 4 UNESP - STATE USP\\ 5 CENTER FOR THE STUDY OF VENOMS AND POISONOUS ANIMALS , S\~AO PAULO STATE UNIVERSITY\\ 6 DEPARTMENT OF BIOPROCESS AND BIOTECHNOLOGY, S\~AO PAULO STATE UNIVERSITY, BOTUCATU\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The bioethanol production contributes to the sustainable development and the life's quality improvement. The main bioethanol production process is through the first generation technology, which Saccharomyces cerevisiae is the most widely used organism. Unfortunately, ethanol is toxic to S. cerevisiae in higher concentrations, limiting the bioethanol production. Tolerance to ethanol is a complex feature, and it is poorly understood, then the conventional methods have been unsuccessful in attempting to understand their mechanisms. Here we experimentally determined ethanol tolerance for five yeast strains (S288c, BY4741, BY4742, SEY6210, X2180-1A and BMA64-1A) and the unsupervised learning was used to classify the strains as high (HT) or low (LT) tolerant. RNA and proteins were further extracted for treatment (maximum ethanol exposure) and control (without ethanol exposure) conditions and submitted for sequencing and/or mass-charge quantification. The gene transcripts showing significant differences (FDR<0.05) between treatment and control were considered as differentially expressed (DE); a common set of 270 genes was found up regulated in treatment while 80 were down regulated. The extracted protein was submitted to mass spectrometry and a total of 18 protein-coding genes with fold-change>1, where considered up regulated (7 for HT, 7 for LT and 4 common to both HT and LT). Interestingly, 2 chaperones where coincidently found up regulated in transcript and protein data. The functions of differentially expressed genes have already been observed in previous studies. However, this is the first time it was observed synergistically in one experiment. A co-expression (CoEx-net) network was created based on transcripts abundance data for each strain. Differences between CoEx-net and our previous protein-protein interaction (PPI-net) are evident considering topological characteristics as the degree, density, diameter, and assortativity; it reflects different meanings between systems biology layers analyzed. The clustering analysis over all node degrees for each CoEx-net also showed it could be related to HT and LT strains, which clusters obey the range of ethanol tolerance. The degree differences reflect network rewiring through different strains, which can be further explored to better understanding the complex phenotype of ethanol tolerance.
-
-Funding: FAPESP 2015/12093-9, Edital 12/2015-PROPe UNESP.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The bioethanol production contributes to the sustainable development and the life's quality improvement. The main bioethanol production process is through the first generation technology, which Saccharomyces cerevisiae is the most widely used organism. Unfortunately, ethanol is toxic to S. cerevisiae in higher concentrations, limiting the bioethanol production. Tolerance to ethanol is a complex feature, and it is poorly understood, then the conventional methods have been unsuccessful in attempting to understand their mechanisms. Here we experimentally determined ethanol tolerance for five yeast strains (S288c, BY4741, BY4742, SEY6210, X2180-1A and BMA64-1A) and the unsupervised learning was used to classify the strains as high (HT) or low (LT) tolerant. RNA and proteins were further extracted for treatment (maximum ethanol exposure) and control (without ethanol exposure) conditions and submitted for sequencing and/or mass-charge quantification. The gene transcripts showing significant differences (FDR<0.05) between treatment and control were considered as differentially expressed (DE); a common set of 270 genes was found up regulated in treatment while 80 were down regulated. The extracted protein was submitted to mass spectrometry and a total of 18 protein-coding genes with fold-change>1, where considered up regulated (7 for HT, 7 for LT and 4 common to both HT and LT). Interestingly, 2 chaperones where coincidently found up regulated in transcript and protein data. The functions of differentially expressed genes have already been observed in previous studies. However, this is the first time it was observed synergistically in one experiment. A co-expression (CoEx-net) network was created based on transcripts abundance data for each strain. Differences between CoEx-net and our previous protein-protein interaction (PPI-net) are evident considering topological characteristics as the degree, density, diameter, and assortativity; it reflects different meanings between systems biology layers analyzed. The clustering analysis over all node degrees for each CoEx-net also showed it could be related to HT and LT strains, which clusters obey the range of ethanol tolerance. The degree differences reflect network rewiring through different strains, which can be further explored to better understanding the complex phenotype of ethanol tolerance.
+  
+  Funding: FAPESP 2015/12093-9, Edital 12/2015-PROPe UNESP. \\ 
+  \end{abstract}
+  \end{document} 

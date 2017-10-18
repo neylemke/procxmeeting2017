@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Output Organizer – a software to facilitate POTION results interpretation }} % Article title
+  
+  
+  \author{ Mariana Teixeira Dornelles Parise$^{1}$, Doglas Parise$^{1}$, Marcus Vinicius Canário Viana$^{2}$, Anne Cybelle Pinto Gomide$^{2}$, Vasco Ariston de Carvalho Azevedo$^{1}$, }
+  
+  \affil{ 1 Universidade Federal de Minas Gerais
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Federal University of Minas Gerais
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Output Organizer - a software to facilitate POTION results interpretation}} % Article title
-
-\author{Mariana Teixeira Dornelles Parise$^1$, Doglas Parise$^1$, Marcus Vinicius Can\'ario Viana$^2$, Anne Cybelle Pinto Gomide$^2$, Vasco Ariston de Carvalho Azevedo$^1$}
-
-\affil{1 UFMG\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Positive selection studies have been used to identify genes involved in the emergence of new phenotypic traits, speciation and host-pathogen interaction. The automatic detection of positive selection can be performed using POTION software, which is an end-to-end pipeline to genome-scale analysis. This software allows users to configure and run the analysis easily and quickly, but gives the results in many files. Although the pipeline gives the most important information in some files, examining the other result files for more details required to write a manuscript is time-consuming and may be error prone due to human errors. In order to facilitate researcher's information retrieval, a software to organize and summarize the most relevant information in the POTION results was created.  This solution was developed using Java in the NetBeans IDE. It receives the POTION log and positive.out files, the directory containing the intermediate files of the analysis, a file containing gene homology relations in the OrthoMCl 1.4 format, the folder which contains the nucleotide fasta files and the number of the organism genetic code. Using the given files, the software gives to the user an overview showing eight key features of the analysis and a table showing how many genes were pre-filtered and the reasons why. In addition, the program creates a file for each positive selected group showing the significant statistic model, the Bayes Empirical Bayes results table and a detailed table for each codon position under selection. The presented software facilitates the interpretation of the POTION results, giving to the final user an easy, organized and brief overview of the analysis.
-
-Funding: CAPES, CNPq, FAPEMIG
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Positive selection studies have been used to identify genes involved in the emergence of new phenotypic traits, speciation and host-pathogen interaction. The automatic detection of positive selection can be performed using POTION software, which is an end-to-end pipeline to genome-scale analysis. This software allows users to configure and run the analysis easily and quickly, but gives the results in many files. Although the pipeline gives the most important information in some files, examining the other result files for more details required to write a manuscript is time-consuming and may be error prone due to human errors. In order to facilitate researcher’s information retrieval, a software to organize and summarize the most relevant information in the POTION results was created.  This solution was developed using Java in the NetBeans IDE. It receives the POTION log and positive.out files, the directory containing the intermediate files of the analysis, a file containing gene homology relations in the OrthoMCl 1.4 format, the folder which contains the nucleotide fasta files and the number of the organism genetic code. Using the given files, the software gives to the user an overview showing eight key features of the analysis and a table showing how many genes were pre-filtered and the reasons why. In addition, the program creates a file for each positive selected group showing the significant statistic model, the Bayes Empirical Bayes results table and a detailed table for each codon position under selection. The presented software facilitates the interpretation of the POTION results, giving to the final user an easy, organized and brief overview of the analysis.
+  
+  Funding: CAPES, CNPq, FAPEMIG \\ 
+  \end{abstract}
+  \end{document} 

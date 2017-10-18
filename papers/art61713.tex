@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Association of Hfq/LSm protein with insertion sequence-derived RNAs is a prevalent phenomenon in prokaryotes }} % Article title
+  
+  
+  \author{ Alan Péricles Rodrigues Lorenzetti$^{1}$, Lívia S. Zaramela$^{2}$, Joao Paulo Pereira de Almeida$^{1}$, José Vicente Gomes-Filho$^{1}$, Ricardo Zorzetto Nicoliello Vêncio$^{1}$, Tie Koide$^{1}$, }
+  
+  \affil{ 1 University of São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 University of California San Diego
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Association of Hfq/LSm protein with insertion sequence-derived RNAs is a prevalent phenomenon in prokaryotes}} % Article title
-
-\author{Alan P\'ericles Rodrigues Lorenzetti$^1$, L\'{\i}via S. Zaramela$^2$, Joao Paulo Pereira de Almeida$^1$, Jos\'e Vicente Gomes-filho$^1$, Ricardo Zorzetto Nicoliello V\^encio$^1$, Tie Koide$^1$}
-
-\affil{1 USP\\ 2 UNIVERSITY OF CALIFORNIA SAN DIEGO\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Insertion sequences (IS) are mobile genetic elements present in most of prokaryotes. Their mobilization is known to contribute to the genetic variability of host genomes, usually promoting structural variation, disruption of genes and alteration of the transcription profile. These modifications can increase an organism's fitness in some circumstances, but neutral and deleterious effects are still more frequent. To avoid damaging events, transposition rates are kept low by different mechanisms, including the translational repression of transposase mRNA by its association with RNA binding proteins (RBPs) and/or antisense RNAs (asRNAs). In Bacteria (Salmonella enterica), the asRNA art200 binds to the transposase mRNA of an element from the IS200/IS605 family and can form a ternary complex with Hfq protein to prevent translation. In Archaea (Haloferax volcanii), LSm protein, the Hfq homologue, also have been found attached to sRNAs complementarily to a transposase mRNA in a RIP-Chip experiment, pointing out for a translational repression-based transposition regulation mechanism similar to the aforementioned. We analyzed RIP-Seq data for Halobacterium salinarum NRC-1 and found out that several IS-derived RNAs also bind to LSm in this organism. In addition, we point out that this protein is mainly associated with AU-rich RNAs in vivo, in accordance with results previously reported for H. volcanii in vitro assays. Furthermore, we have analyzed public data for several bacteria to find out that the association of LSm/Hfq with IS-derived RNAs is a prevalent phenomenon in prokaryotes. Now we are investigating whether the absence of LSm protein impact the rate of transposition in our model organism, and the results should guide our next steps to elucidate this mechanism in Archaea.
-
-Funding: FAPESP and CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Insertion sequences (IS) are mobile genetic elements present in most of prokaryotes. Their mobilization is known to contribute to the genetic variability of host genomes, usually promoting structural variation, disruption of genes and alteration of the transcription profile. These modifications can increase an organism’s fitness in some circumstances, but neutral and deleterious effects are still more frequent. To avoid damaging events, transposition rates are kept low by different mechanisms, including the translational repression of transposase mRNA by its association with RNA binding proteins (RBPs) and/or antisense RNAs (asRNAs). In Bacteria (Salmonella enterica), the asRNA art200 binds to the transposase mRNA of an element from the IS200/IS605 family and can form a ternary complex with Hfq protein to prevent translation. In Archaea (Haloferax volcanii), LSm protein, the Hfq homologue, also have been found attached to sRNAs complementarily to a transposase mRNA in a RIP-Chip experiment, pointing out for a translational repression-based transposition regulation mechanism similar to the aforementioned. We analyzed RIP-Seq data for Halobacterium salinarum NRC-1 and found out that several IS-derived RNAs also bind to LSm in this organism. In addition, we point out that this protein is mainly associated with AU-rich RNAs in vivo, in accordance with results previously reported for H. volcanii in vitro assays. Furthermore, we have analyzed public data for several bacteria to find out that the association of LSm/Hfq with IS-derived RNAs is a prevalent phenomenon in prokaryotes. Now we are investigating whether the absence of LSm protein impact the rate of transposition in our model organism, and the results should guide our next steps to elucidate this mechanism in Archaea.
+  
+  Funding: FAPESP and CAPES \\ 
+  \end{abstract}
+  \end{document} 

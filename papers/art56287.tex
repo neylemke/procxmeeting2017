@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Gene expression biclustering with FIrefly Algorithm }} % Article title
+  
+  
+  \author{ Denilson Oliveira Melo$^{1}$, Paulo Eduardo Ambrósio$^{1}$, }
+  
+  \affil{ 1 Universidade Estadual de Santa Cruz
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Gene expression biclustering with FIrefly Algorithm}} % Article title
-
-\author{Denilson Oliveira Melo$^1$, Paulo Eduardo Ambr\'osio$^1$}
-
-\affil{1 UESC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Gene expression profiling is the measurement and study of expression levels of various genes at once, with the intent to discover and understand gene function. Gene expression data is usually presented in an expression matrix, which can be  analyzed with computational and statistical methods. One way to analyze this expression data is through clustering techniques, which aim to group genes of similar expression tendencies together, suggesting that these genes are subject to a common pattern of regulation. Clustering techniques however are limited, they are only able to create groups considering the entire set of conditions, but genes are not necessarily related to every condition, and they also doesn't allow coupling, thus ignoring the possibility that an individual gene may be related to multiple groups in different subsets of conditions. This limitation can be surpassed with biclustering techniques, which aim to group both genes and conditions together. With biclustering groups are formed considering each subset of condition, thus allowing more grouping possibilities that better represent the relationships between genes. Biclustering however is a NP-hard problem. Problems of this class have no exact solution and are usually solved using heuristics. Several metaheuristics are already being used to find biclusters and in this preliminary study we propose to explore and utilize one of nature-inspired metaheuristic proposed by Xin-She Yang - the Firefly Algorithm (FA) - a swarm based approach inspired from the behaviour of fireflies revolving around their blinking patterns. This metaheuristic considers the attraction between fireflies, where given two individuals, the less bright one will be attracted to the brightest. With little effort one could see that with these parameters groups of fireflies would be formed naturally, and that's the basic idea. In this preliminary study we aim to employ the grouping characteristics of the algorithm to find biclusters of gene expression data.
-
-Funding: Funda\c{c}\~ao de Amparo \`a Pesquisa do Estado da Bahia - FAPESB
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Gene expression profiling is the measurement and study of expression levels of various genes at once, with the intent to discover and understand gene function. Gene expression data is usually presented in an expression matrix, which can be  analyzed with computational and statistical methods. One way to analyze this expression data is through clustering techniques, which aim to group genes of similar expression tendencies together, suggesting that these genes are subject to a common pattern of regulation. Clustering techniques however are limited, they are only able to create groups considering the entire set of conditions, but genes are not necessarily related to every condition, and they also doesn't allow coupling, thus ignoring the possibility that an individual gene may be related to multiple groups in different subsets of conditions. This limitation can be surpassed with biclustering techniques, which aim to group both genes and conditions together. With biclustering groups are formed considering each subset of condition, thus allowing more grouping possibilities that better represent the relationships between genes. Biclustering however is a NP-hard problem. Problems of this class have no exact solution and are usually solved using heuristics. Several metaheuristics are already being used to find biclusters and in this preliminary study we propose to explore and utilize one of nature-inspired metaheuristic proposed by Xin-She Yang - the Firefly Algorithm (FA) - a swarm based approach inspired from the behaviour of fireflies revolving around their blinking patterns. This metaheuristic considers the attraction between fireflies, where given two individuals, the less bright one will be attracted to the brightest. With little effort one could see that with these parameters groups of fireflies would be formed naturally, and that's the basic idea. In this preliminary study we aim to employ the grouping characteristics of the algorithm to find biclusters of gene expression data.
+  
+  Funding: Funda\c{c}\~ao de Amparo \`a Pesquisa do Estado da Bahia - FAPESB \\ 
+  \end{abstract}
+  \end{document} 

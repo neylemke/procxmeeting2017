@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Oncogenic Fusion Gene CD74-NRG1 Confers Cancer Stem Cell-like Properties in Lung Cancer through a IGF2 Autocrine/Paracrine Circuit. }} % Article title
+  
+  
+  \author{ Takahiko Murayama$^{1}$, Tatsunori Nishimura$^{2}$, Kana Tominaga$^{1}$, Asuka Nakata$^{2}$, Noriko Gotoh$^{2}$, }
+  
+  \affil{ 1 The University of Tokyo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Kanazawa University
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Oncogenic Fusion Gene CD74-NRG1 Confers Cancer Stem Cell-like Properties in Lung Cancer through a IGF2 Autocrine/Paracrine Circuit.}} % Article title
-
-\author{Takahiko Murayama$^1$, Tatsunori Nishimura$^2$, Kana Tominaga$^1$, Asuka Nakata$^2$, Noriko Gotoh$^2$}
-
-\affil{1 THE UNIVERSITY OF TOKYO\\ 2 KANAZAWA UNIVERSITY\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The CD74-Neuregulin1 (NRG1) fusion gene was recently identified in invasive mucinous adenocarcinoma of the lung, a malignant type of the lung adenocarcinomas, and is considered to be a new driver gene aberration. However, pathogenic functions of the CD74-NRG1 fusion gene have not yet been understood, and it is unknown whether the driver gene contributes to cancer stem cells (CSCs). Here, we show that expression of the CD74-NRG1 fusion gene induces CSC properties. Expression of CD74-NRG1 facilitated sphere formation of not only cancer cells but also non-cancerous lung epithelial cells. By using a limiting dilution assay in xenograft model, we showed that expression of CD74-NRG1 fusion gene enhances tumor initiating ability. We found that expression of CD74-NRG1 stimulates phosphorylation of ErbB2/3 and activates phosphatidyl inositol 3-kinase (PI3K)/Akt/NF-?B signaling pathway. Furthermore, we found that secreted insulin-like growth factor 2 (IGF2) levels were increased and phosphorylation levels of IGF1 receptor (IGF1R), the receptor for IGF2, were enhanced in a NF-?B activity dependent manner in cells expressing CD74-NRG1. These findings suggest that the CD74-NRG1-stimulated NF-?B activity induces IGF2 autocrine/paracrine loop. In addition, CD74-NRG1 fusion gene-induced tumor sphere formation was suppressed by treatment with inhibitors of ErbB2, PI3K or NF-?B or anti-IGF2 antibody. We thus provide evidence that the CD74-NRG1 fusion protein may not only act as a driver for tumor development but also initiate and maintain CSCs. Inhibition of ErbB/PI3K/Akt/NF-?B signaling pathway or secreted IGF2 are promising therapeutic strategies for CD74-NRG1 fusion positive cancers.
-
-Funding: no
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The CD74-Neuregulin1 (NRG1) fusion gene was recently identified in invasive mucinous adenocarcinoma of the lung, a malignant type of the lung adenocarcinomas, and is considered to be a new driver gene aberration. However, pathogenic functions of the CD74-NRG1 fusion gene have not yet been understood, and it is unknown whether the driver gene contributes to cancer stem cells (CSCs). Here, we show that expression of the CD74-NRG1 fusion gene induces CSC properties. Expression of CD74-NRG1 facilitated sphere formation of not only cancer cells but also non-cancerous lung epithelial cells. By using a limiting dilution assay in xenograft model, we showed that expression of CD74-NRG1 fusion gene enhances tumor initiating ability. We found that expression of CD74-NRG1 stimulates phosphorylation of ErbB2/3 and activates phosphatidyl inositol 3-kinase (PI3K)/Akt/NF-?B signaling pathway. Furthermore, we found that secreted insulin-like growth factor 2 (IGF2) levels were increased and phosphorylation levels of IGF1 receptor (IGF1R), the receptor for IGF2, were enhanced in a NF-?B activity dependent manner in cells expressing CD74-NRG1. These findings suggest that the CD74-NRG1-stimulated NF-?B activity induces IGF2 autocrine/paracrine loop. In addition, CD74-NRG1 fusion gene-induced tumor sphere formation was suppressed by treatment with inhibitors of ErbB2, PI3K or NF-?B or anti-IGF2 antibody. We thus provide evidence that the CD74-NRG1 fusion protein may not only act as a driver for tumor development but also initiate and maintain CSCs. Inhibition of ErbB/PI3K/Akt/NF-?B signaling pathway or secreted IGF2 are promising therapeutic strategies for CD74-NRG1 fusion positive cancers.
+  
+  Funding: no \\ 
+  \end{abstract}
+  \end{document} 

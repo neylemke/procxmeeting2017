@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ In silico screening of volatile compounds which can complex with the AeagOBP1 odor-binding protein of Aedes aegypti L. }} % Article title
+  
+  
+  \author{ Tarcisio Silva Melo$^{1}$, Liliane Pereira de Araújo$^{1}$, Rosangela Santos Pereira$^{1}$, Thaís Almeida de Menezes$^{2}$, Wagner Rodrigues de Assis Soares$^{1}$, Bruno Silva Andrade$^{1}$, }
+  
+  \affil{ 1 Universidade Estadual do Sudoeste da Bahia
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade Estadual de Feira de Santana
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{In silico screening of volatile compounds which can complex with the AeagOBP1 odor-binding protein of Aedes aegypti L.}} % Article title
-
-\author{Tarcisio Silva Melo$^1$, Liliane Pereira de Ara\'ujo$^1$, Rosangela Santos Pereira$^1$, Tha\'{\i}s Almeida de Menezes$^2$, Wagner Rodrigues de Assis Soares$^1$, Bruno Silva Andrade$^1$}
-
-\affil{1 UNIVERSIDADE ESTADUAL DO SUDOESTE DA BAHIA\\ 2 UNIVERSIDADE ESTADUAL DE FEIRA DE SANTANA\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Several species of medicinal plants generally contain in their composition volatile compounds. In general, these organic molecules act as repellents or attractive of pollinating insects. The aim of this work was to prospect new attractive compounds for Aedes aegypti L. through the Odorant Binding Protein (AeagOBP1). The AeagOBP1 structure was downloaded from PDB Database, with access code 3K1E considering the organism, resolution (1.85 $\AA$) and R-value (0.212). Structures of isolated compounds from semi arid plants were drawn using Marvin Sketch (Chemaxon). After, we verified valences, structural erros, and then we saved all ligands in MOL2 format. For docking studies, all ligands were prepared using AutoDock tools and saved in PDBQT format. Furthermore, we defined the active stite region (gridbox) for AeagOBP1 and saved the coordinates. Molecular docking calculations were performed using AutoDock Vina. After evaluated each docking positions, and cosidering best affinity energy and ligand positing inside AeagOBP1 active pocket, we used PyMOL 1.7 in order to save complexes in PDB format. 2D interaction maps for each complex were generated using Discovery Studio 4.0. In this work we tested 9 molecules deposited in the Semi Arid Molecules Database (SAM Database), hosted on the servers of the Bioinformatics and Computational Chemistry Lab (LBQC-UESB). SAM3814 ligand had best interaction with AeagOBP1 (-8.3 Kcal/mol). Standard ligands were tested for validation purposes: Carbon dioxide (-1.6 Kcal/mol), lactic acid (-3.2 Kcal/mol), octenol (-4.6 Kcal/mol) and 2-oxopentanoic acid (-4.2 Kcal/mol), however presented worst interaction energies when compared to SAM3814.  This work demonstrated that natural volatile compounds isolated from Brazilian semi arid plants could act as new ligand prototypes in order to develop new attractive and/or repellent compounds for Aedes aegypti mosquito. On the other hand, this could be used as an new strategy for the controlling incidence of dengue, chikungunya and zika viruses.
-
-Funding: Sem financiamento
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Several species of medicinal plants generally contain in their composition volatile compounds. In general, these organic molecules act as repellents or attractive of pollinating insects. The aim of this work was to prospect new attractive compounds for Aedes aegypti L. through the Odorant Binding Protein (AeagOBP1). The AeagOBP1 structure was downloaded from PDB Database, with access code 3K1E considering the organism, resolution (1.85 $\AA$) and R-value (0.212). Structures of isolated compounds from semi arid plants were drawn using Marvin Sketch (Chemaxon). After, we verified valences, structural erros, and then we saved all ligands in MOL2 format. For docking studies, all ligands were prepared using AutoDock tools and saved in PDBQT format. Furthermore, we defined the active stite region (gridbox) for AeagOBP1 and saved the coordinates. Molecular docking calculations were performed using AutoDock Vina. After evaluated each docking positions, and cosidering best affinity energy and ligand positing inside AeagOBP1 active pocket, we used PyMOL 1.7 in order to save complexes in PDB format. 2D interaction maps for each complex were generated using Discovery Studio 4.0. In this work we tested 9 molecules deposited in the Semi Arid Molecules Database (SAM Database), hosted on the servers of the Bioinformatics and Computational Chemistry Lab (LBQC-UESB). SAM3814 ligand had best interaction with AeagOBP1 (-8.3 Kcal/mol). Standard ligands were tested for validation purposes: Carbon dioxide (-1.6 Kcal/mol), lactic acid (-3.2 Kcal/mol), octenol (-4.6 Kcal/mol) and 2-oxopentanoic acid (-4.2 Kcal/mol), however presented worst interaction energies when compared to SAM3814.  This work demonstrated that natural volatile compounds isolated from Brazilian semi arid plants could act as new ligand prototypes in order to develop new attractive and/or repellent compounds for Aedes aegypti mosquito. On the other hand, this could be used as an new strategy for the controlling incidence of dengue, chikungunya and zika viruses.
+  
+  Funding: Sem financiamento \\ 
+  \end{abstract}
+  \end{document} 

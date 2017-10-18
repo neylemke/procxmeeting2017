@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ SigNetSim : A web platform for building and analyzing mathematical models of molecular signaling networks }} % Article title
+  
+  
+  \author{ Vincent Noel$^{1}$, Marcelo S. Reis$^{1}$, Matheus H.S. Dias$^{1}$, Lulu Wu$^{2}$, Amanda S. Guimares$^{3}$, Daniel F. Reverbel$^{3}$, Junior Barrera$^{3}$, Hugo A. Armelin$^{1}$, }
+  
+  \affil{ 1 Instituto Butantan
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Center of Toxins, Immune-response and Cell Signaling, Instituto Butantan
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Instituto de Matemática e Estatística, Universidade de São Paulo
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{SigNetSim : A web platform for building and analyzing mathematical models of molecular signaling networks}} % Article title
-
-\author{Vincent Noel$^1$, Marcelo S. Reis$^1$, Matheus H.s. Dias$^1$, Lulu Wu$^2$, Amanda S. Guimares$^3$, Daniel F. Reverbel$^3$, Junior Barrera$^3$, Hugo A. Armelin$^1$}
-
-\affil{1 INSTITUTO BUTANTAN\\ 2 CENTER OF TOXINS, IMMUNE-RESPONSE AND CELL SIGNALING, INSTITUTO BUTANTAN\\ 3 INSTITUTO DE MATEM\'ATICA E ESTAT\'ISTICA, USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Molecular biology is experiencing a revolution, in one part thanks to new technologies to measure and perturb biological systems in vitro, and also due to the growing importance of mathematical modeling which enables us to understand biological mechanisms in a more profound way. However, a crucial point in this transforming field is the need to provide completely new tools, which should be computationally efficient, versatile, and compatible. To this end, we developed SigNetSim, a web platform to create, simulate, adjust and analyze biochemical reaction models. As a web platform, it does not require powerful devices and is usable on multiple systems. It is designed to be installed on computation servers, with most of the work executed server-side. Users can create and edit biological models by describing the species and the reactions in the model. Reactions can be defined by their kinetic law and associated parameters, or by their mathematical formula. To assist the creation of large models, users can also include submodels as part of they models. This also encourage and simplify the reuse of existing models. Models can also be annotated, using the MIRIAM guidelines. SigNetSim can perform model simulation for time-series and steady states. Users can also look for dynamical properties such as bifurcations in the steady states of the systems, using continuation techniques. The platform includes a simple database to store experimental data, which can be used to simulate models according to a set of initial conditions and compare the results with experimental observations, or to fit models to reproduce observations, using a parallelized simulated annealing algorithm. This algorithm allows users to estimate missing parameters, even in large systems. SigNetSim is using community standards to store most the work done by the users. Models are stored in SBML models, and can be imported/exported to Biomodels database from the interface. Simulations are stored using SEDML, and can be easily exported to online repositories such as JWS Online. Data from the database can be exported using NUML format. Whole project can be saved in one file using the COMBINE archive standard. The compatibility with these standards ensure the reproducibility of the research work, and help collaborating even using different tools. Finally, SigNetSim is distributed under AGPL3 license, and its core library under GPL3 license. It is available at signetsim.org and on GitHub.
-
-Funding: This work was supported by grants \#12/20186-9, \#13/07467-1, and \#13/24212-7 of the S\~ao Paulo Research Foundation (FAPESP) and fellowships from CNPq.
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Molecular biology is experiencing a revolution, in one part thanks to new technologies to measure and perturb biological systems in vitro, and also due to the growing importance of mathematical modeling which enables us to understand biological mechanisms in a more profound way. However, a crucial point in this transforming field is the need to provide completely new tools, which should be computationally efficient, versatile, and compatible. To this end, we developed SigNetSim, a web platform to create, simulate, adjust and analyze biochemical reaction models. As a web platform, it does not require powerful devices and is usable on multiple systems. It is designed to be installed on computation servers, with most of the work executed server-side. Users can create and edit biological models by describing the species and the reactions in the model. Reactions can be defined by their kinetic law and associated parameters, or by their mathematical formula. To assist the creation of large models, users can also include submodels as part of they models. This also encourage and simplify the reuse of existing models. Models can also be annotated, using the MIRIAM guidelines. SigNetSim can perform model simulation for time-series and steady states. Users can also look for dynamical properties such as bifurcations in the steady states of the systems, using continuation techniques. The platform includes a simple database to store experimental data, which can be used to simulate models according to a set of initial conditions and compare the results with experimental observations, or to fit models to reproduce observations, using a parallelized simulated annealing algorithm. This algorithm allows users to estimate missing parameters, even in large systems. SigNetSim is using community standards to store most the work done by the users. Models are stored in SBML models, and can be imported/exported to Biomodels database from the interface. Simulations are stored using SEDML, and can be easily exported to online repositories such as JWS Online. Data from the database can be exported using NUML format. Whole project can be saved in one file using the COMBINE archive standard. The compatibility with these standards ensure the reproducibility of the research work, and help collaborating even using different tools. Finally, SigNetSim is distributed under AGPL3 license, and its core library under GPL3 license. It is available at signetsim.org and on GitHub.
+  
+  Funding: This work was supported by grants \#12/20186-9, \#13/07467-1, and \#13/24212-7 of the S\~ao Paulo Research Foundation (FAPESP) and fellowships from CNPq. \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Extraction of features using topological measures of complex networks }} % Article title
+  
+  
+  \author{ Isaque Katahira$^{1}$, Eric Augusto Ito$^{1}$, Fábio Fernandes da  Rocha Vicente$^{1}$, Fabricio Martins Lopes$^{1}$, }
+  
+  \affil{ 1 Federal Technological University of Paraná
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Extraction of features using topological measures of complex networks}} % Article title
-
-\author{Isaque Katahira$^1$, Eric Augusto Ito$^1$, F\'abio Fernandes da Rocha Vicente$^1$, Fabricio Martins Lopes$^1$}
-
-\affil{1 FEDERAL TECHNOLOGICAL UNIVERSITY OF PARAN\'A\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-The feature extraction methods are important for the study of the large amount of data produced by the high-performance sequencing techniques. The dimensionality reduction methods have been used to summarize the most significant characteristics of a data source. The goal is to represent a great volume of data from its characteristics, minimizing the information loss. Thus, the current research proposes a model of feature extraction based on the theory of complex networks for the representation of biological sequences. The proposed model consists on sequence mapping in graphs, in which the vertices are the segments of a sequence and the edges are defined by their structural organization (neighborhood). These edges are weighted by the pair occurrence frequency of adjacent segments in the input sequence. Then, topological measures of graphs are extracted: motifs, degree, minimum degree, maximum degree, standard deviation, cluster coefficient, average path length, proximity and intermediation. These measures compose a feature vector that represent a sequence, which is used to classify the input sequences. Coding and non-coding transcripts of nine species were used in order to verify the suitability of the proposed method, using the algorithms Random Forest, Naive Bayes, LibSVM and J48. A 10 fold cross-validation was performed to evaluate the predictors. The maximum accuracy for the coding transcripts identification was reached by the LibSVM with 100\%; followed by J48 with 99.43\%; Random Forest with 99.38\%; and Naive Bayes with 93.64\%. The best index related to the accuracy for the identification of non-coding transcripts was reached by Naive Bayes with 93.12\%; followed by Random Forest with 81.43\%; J48 with 79.41\% and LibSVM with only 6\%. The predictor that obtained the best accuracy average between the classification of coding and non-coding was the Naive Bayes with 93.38\%. The results indicate the validity of the proposal, considering that the extraction of topological characteristics of complex networks got significant values ??of accuracy, which can be extended to the classification of other biological sequences like DNA and amino acids.
-
-Funding: CAPES, Funda\c{c}\~ao Arauc\'aria
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  The feature extraction methods are important for the study of the large amount of data produced by the high-performance sequencing techniques. The dimensionality reduction methods have been used to summarize the most significant characteristics of a data source. The goal is to represent a great volume of data from its characteristics, minimizing the information loss. Thus, the current research proposes a model of feature extraction based on the theory of complex networks for the representation of biological sequences. The proposed model consists on sequence mapping in graphs, in which the vertices are the segments of a sequence and the edges are defined by their structural organization (neighborhood). These edges are weighted by the pair occurrence frequency of adjacent segments in the input sequence. Then, topological measures of graphs are extracted: motifs, degree, minimum degree, maximum degree, standard deviation, cluster coefficient, average path length, proximity and intermediation. These measures compose a feature vector that represent a sequence, which is used to classify the input sequences. Coding and non-coding transcripts of nine species were used in order to verify the suitability of the proposed method, using the algorithms Random Forest, Naive Bayes, LibSVM and J48. A 10 fold cross-validation was performed to evaluate the predictors. The maximum accuracy for the coding transcripts identification was reached by the LibSVM with 100\%; followed by J48 with 99.43\%; Random Forest with 99.38\%; and Naive Bayes with 93.64\%. The best index related to the accuracy for the identification of non-coding transcripts was reached by Naive Bayes with 93.12\%; followed by Random Forest with 81.43\%; J48 with 79.41\% and LibSVM with only 6\%. The predictor that obtained the best accuracy average between the classification of coding and non-coding was the Naive Bayes with 93.38\%. The results indicate the validity of the proposal, considering that the extraction of topological characteristics of complex networks got significant values ??of accuracy, which can be extended to the classification of other biological sequences like DNA and amino acids.
+  
+  Funding: CAPES, Funda\c{c}\~ao Arauc\'aria \\ 
+  \end{abstract}
+  \end{document} 

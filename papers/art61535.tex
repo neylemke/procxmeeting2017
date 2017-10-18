@@ -1,69 +1,80 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Combining metagenomics and metatranscriptomics approaches for prospection of CAZymes of the lower termite Coptotermes gestroi }} % Article title
+  
+  
+  \author{ Luciana Souto Mofatto$^{1}$, João Paulo Lourenço Franco Cairo$^{2}$, Melline Fontes Noronha$^{3}$, Ana Maria Costa Leonardo$^{4}$, Fabio Marcio Squina$^{5}$, Gonçalo Amarante Guimarães Pereira$^{6}$, Marcelo Falsarella Carazzolle$^{7}$, }
+  
+  \affil{ 1 UNICAMP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Laboratório Nacional de Ciência e Tecnologia do Bioetanol, Centro Nacional de Pesquisa em Energia e Materiais, Campinas – SP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Centro Pluridisciplinar de Pesquisas Químicas Biológicas e Agrícolas, Universidade Estadual de Campinas
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+4 Departamento de Ciências Biológicas, Instituto de Biociências, Universidade Estadual Paulista
 
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+5 Universidade de Sorocaba, Programa de Processos Tecnológicos e Ambientais
 
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
+6 Brazilian Bioethanol Science and Technology Laboratory, Brazilian Center for Research in Energy and Materials, Biology Institute – UNICAMP
 
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
+7 Biology Institute - UNICAMP, National Center for High Performance Computing/UNICAMP
 
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Combining metagenomics and metatranscriptomics approaches for prospection of CAZymes of the lower termite Coptotermes gestroi}} % Article title
-
-\author{Luciana Souto Mofatto$^1$, Jo\~ao Paulo Louren\c{c}o Franco Cairo$^2$, Melline Fontes Noronha$^3$, Ana Maria Costa Leonardo$^4$, Fabio Marcio Squina$^5$, Gon\c{c}alo Amarante Guimar\~aes Pereira$^6$, Marcelo Falsarella Carazzolle$^7$}
-
-\affil{1 UNICAMP\\ 2 LABORAT\'ORIO NACIONAL DE CI\^ENCIA E TECNOLOGIA DO BIOETANOL, CENTRO NACIONAL DE PESQUISA EM ENERGIA E MATERIAIS, CAMPINAS - SP\\ 3 CENTRO PLURIDISCIPLINAR DE PESQUISAS QU\'IMICAS BIOL\'OGICAS E AGR\'ICOLAS, UNICAMP\\ 4 DEPARTAMENTO DE CI\^ENCIAS BIOL\'OGICAS, INSTITUTO DE BIOCI\^ENCIAS, UNESP\\ 5 UNIVERSIDADE DE SOROCABA, PROGRAMA DE PROCESSOS TECNOL\'OGICOS E AMBIENTAIS\\ 6 BRAZILIAN BIOETHANOL SCIENCE AND TECHNOLOGY LABORATORY, BRAZILIAN CENTER FOR RESEARCH IN ENERGY AND MATERIALS, BIOLOGY INSTITUTE - UNICAMP\\ 7 BIOLOGY INSTITUTE - UNICAMP, NATIONAL CENTER FOR HIGH PERFORMANCE COMPUTING/UNICAMP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Termites are interesting insects to mining new efficient enzymes for biomass degradation (CAZymes - Carbohydrate activity enzymes). Because they live in symbiosis with bacteria, protozoa and fungus inside their guts, termites have the ability to degrade approximately 90\% of plant-dry matter in tropical forest, converting lignocellulosic materials into fermentable sugars. In a previous study of our group, we performed bioinformatics analysis of Coptotermes gestroi genomic and transcriptomic data for prospecting CAZymes in this termite, including symbiont genes. The results identified few CAZymes from symbiont species, probably due to the low representation of these genomes in comparison with the genome of C. gestroi. 
-In order to prospect more specific CAZymes from symbionts, a new approach was performed using the combination of metagenomic and metatranscriptomic analysis from C. gestroi gut. The main aim of this study is to compare metatranscriptomic data from insects submitted to different diets using metagenomic assembly as reference, mainly composed by symbiont sequences. For this purpose, we obtained RNA-seq data from five conditions: (1) sugarcane bagasse in natura; (2) sugarcane bagasse treated with phosphoric acid; (3) filter paper (cellulose); (4) filter paper (cellulose) and iron; (5) sugarcane bagasse treated with sodium chlorite and hydrochloric acid. As results, Coptotermes gestroi metagenome was assembled using MetaSpades, followed by binning pipeline using CONCOCT and MetaGeneMark software for gene prediction in bacterial genomes. For the gene prediction in non-bacterial genomes (fungi and protozoa), the RNA-seq reads were aligned against the assembled metagenome for transcriptomic reconstruction and quantification using STAR, followed by StringTie and Kallisto. The R/Bioconductor package DESeq2 was used to determine the differentially expressed genes between the conditions. As conclusion, we found a strong relationship between termite's diet and gene expression of the symbiont organisms (bacteria, fungus and protozoa) involved on lignocellulose digestion process.
-
-Funding: CNPq 153406/2016-0; CAPES; FAPESP (Process 08/58037-9 and 2011/20977-3); FAPESP/Cepid (2013/08293-7).
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Termites are interesting insects to mining new efficient enzymes for biomass degradation (CAZymes – Carbohydrate activity enzymes). Because they live in symbiosis with bacteria, protozoa and fungus inside their guts, termites have the ability to degrade approximately 90\% of plant-dry matter in tropical forest, converting lignocellulosic materials into fermentable sugars. In a previous study of our group, we performed bioinformatics analysis of Coptotermes gestroi genomic and transcriptomic data for prospecting CAZymes in this termite, including symbiont genes. The results identified few CAZymes from symbiont species, probably due to the low representation of these genomes in comparison with the genome of C. gestroi. 
+In order to prospect more specific CAZymes from symbionts, a new approach was performed using the combination of metagenomic and metatranscriptomic analysis from C. gestroi gut. The main aim of this study is to compare metatranscriptomic data from insects submitted to different diets using metagenomic assembly as reference, mainly composed by symbiont sequences. For this purpose, we obtained RNA-seq data from five conditions: (1) sugarcane bagasse in natura; (2) sugarcane bagasse treated with phosphoric acid; (3) filter paper (cellulose); (4) filter paper (cellulose) and iron; (5) sugarcane bagasse treated with sodium chlorite and hydrochloric acid. As results, Coptotermes gestroi metagenome was assembled using MetaSpades, followed by binning pipeline using CONCOCT and MetaGeneMark software for gene prediction in bacterial genomes. For the gene prediction in non-bacterial genomes (fungi and protozoa), the RNA-seq reads were aligned against the assembled metagenome for transcriptomic reconstruction and quantification using STAR, followed by StringTie and Kallisto. The R/Bioconductor package DESeq2 was used to determine the differentially expressed genes between the conditions. As conclusion, we found a strong relationship between termite’s diet and gene expression of the symbiont organisms (bacteria, fungus and protozoa) involved on lignocellulose digestion process.
+  
+  Funding: CNPq 153406/2016-0; CAPES; FAPESP (Process 08/58037-9 and 2011/20977-3); FAPESP/Cepid (2013/08293-7). \\ 
+  \end{abstract}
+  \end{document} 

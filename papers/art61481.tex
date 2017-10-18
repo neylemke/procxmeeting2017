@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ miRNA, piRNA and snoRNA expression profile analysis in thyroid cancer subtypes }} % Article title
+  
+  
+  \author{ Mayla Abrahim Costa$^{1}$, Natasha Jorge$^{2}$, Fabio Passetti$^{2}$, }
+  
+  \affil{ 1 IOC/FIOCRUZ - RJ
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 FIOCRUZ - IOC
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{MiRNA, piRNA and snoRNA expression profile analysis in thyroid cancer subtypes}} % Article title
-
-\author{Mayla Abrahim Costa$^1$, Natasha Jorge$^2$, Fabio Passetti$^2$}
-
-\affil{1 IOC/FIOCRUZ - RJ\\ 2 FIOCRUZ - IOC\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Thyroid cancer is a public health problem and is considered the most common malignant tumor of the endocrine system. Different treatment strategies have been developed to improve patient's condition, including the identification of molecular markers. Over the years, non-coding RNAs (ncRNAs) have been identified as potential molecular markers capable of predicting therapeutic outcome. Studies show that small ncRNAs (sncRNAs), such as microRNAs (miRNAs), Piwi-interacting RNA (piRNA) and small nucleolar RNAs (snoRNAs) play important roles in cancer and response to treatment. In order to identify the miRNA, piRNA and snoRNAs constitutively and differentially expressed in samples of the different thyroid cancer subtypes, we analyzed small RNA high throughput sequencing data of thyroid carcinoma samples. We obtained normal and tumor samples of carcinoma papillary (PTC) (49 patients), carcinoma papillary, follicular variant, (PCF) (7 patients), and carcinoma papillary, columnar cell variant, (PCC) (3 patients), accounting for 118 paired samples available at the Genome Atlas Database. Forty six differentially expressed sncRNAs were obtained, of which 40 were miRNAs. Among them, 21 were detected as up regulated in tumor samples and 19 were down regulated. A total of 6 snoRNAs have been detected differentially expressed in all comparisons, 2 more expressed in tumor samples and 4 snoRNAs more expressed in control samples from the tissue adjacent to the tumor. We identified 34 constitutively expressed sncRNAs, including the piRNA hsa-piR-009294, in the 3 tumor subtypes. The integration of the differential expression and dispersion analysis revealed 3 miRNAs presenting similar expression pattern in tumor subtypes PCC and PTC when compared to the constitutive expression pattern in control and tumor samples of the PCF subtype. These results show that it was possible to detect sncRNAs differentially and constitutively expressed in samples of the different thyroid cancer subtypes. Our results corroborate those obtained by others and present novel findings, evidencing a viable alternative to search for novel potential molecular markers.
-
-Funding: CAPES, FAPERJ and FIOCRUZ
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Thyroid cancer is a public health problem and is considered the most common malignant tumor of the endocrine system. Different treatment strategies have been developed to improve patient’s condition, including the identification of molecular markers. Over the years, non-coding RNAs (ncRNAs) have been identified as potential molecular markers capable of predicting therapeutic outcome. Studies show that small ncRNAs (sncRNAs), such as microRNAs (miRNAs), Piwi-interacting RNA (piRNA) and small nucleolar RNAs (snoRNAs) play important roles in cancer and response to treatment. In order to identify the miRNA, piRNA and snoRNAs constitutively and differentially expressed in samples of the different thyroid cancer subtypes, we analyzed small RNA high throughput sequencing data of thyroid carcinoma samples. We obtained normal and tumor samples of carcinoma papillary (PTC) (49 patients), carcinoma papillary, follicular variant, (PCF) (7 patients), and carcinoma papillary, columnar cell variant, (PCC) (3 patients), accounting for 118 paired samples available at the Genome Atlas Database. Forty six differentially expressed sncRNAs were obtained, of which 40 were miRNAs. Among them, 21 were detected as up regulated in tumor samples and 19 were down regulated. A total of 6 snoRNAs have been detected differentially expressed in all comparisons, 2 more expressed in tumor samples and 4 snoRNAs more expressed in control samples from the tissue adjacent to the tumor. We identified 34 constitutively expressed sncRNAs, including the piRNA hsa-piR-009294, in the 3 tumor subtypes. The integration of the differential expression and dispersion analysis revealed 3 miRNAs presenting similar expression pattern in tumor subtypes PCC and PTC when compared to the constitutive expression pattern in control and tumor samples of the PCF subtype. These results show that it was possible to detect sncRNAs differentially and constitutively expressed in samples of the different thyroid cancer subtypes. Our results corroborate those obtained by others and present novel findings, evidencing a viable alternative to search for novel potential molecular markers.
+  
+  Funding: CAPES, FAPERJ and FIOCRUZ \\ 
+  \end{abstract}
+  \end{document} 

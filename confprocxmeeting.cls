@@ -818,7 +818,7 @@
     \setcounter{conf@lastpage}{\thenpagespreamble+\thepage}
   \else
     \setcounter{conf@firstpage}{\thenpagespreamble+\thepage}
- %   \conf@index{}%
+    \conf@index{}%
     \ifconfproc@showpapernumber
       \cfoot{\color{\confproc@colorheaders}\vskip \procfootvskip %
         \vskip \procoptfootvskip \proccfoot\\

@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Detection and recontruction of viral haplotypes from APMV-1 samples }} % Article title
+  
+  
+  \author{ Giovanni Marques de Castro$^{1}$, Francisco Pereira Lobo$^{1}$, Helena Lage Ferreira$^{2}$, }
+  
+  \affil{ 1 Universidade Federal de Minas Gerais
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Universidade de São Paulo
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Detection and recontruction of viral haplotypes from APMV-1 samples}} % Article title
-
-\author{Giovanni Marques de Castro$^1$, Francisco Pereira Lobo$^1$, Helena Lage Ferreira$^2$}
-
-\affil{1 UFMG\\ 2 USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Two samples of APMV-1 were sequenced using MiSeq and analyzed to verify which genotype the samples belong. As viruses have very high error rates when replicating it is expected to find variants given a high depth of sequencing as provided by NGS. The data generated for both samples were enough to analyze the underlying viral population, the quasispecies of APMV-1 for both samples. For this, the reads for each library were mapped to a few reference genomes and selected that which had the most mapped reads, the KJ123642. Using the aligned reads as the input for the software QuasiRecomb and restricting the region of to the F protein, the haplotypes for both samples were reconstructed. The most frequent haplotype from each sample and other 88 APMV-1 genomes from NCBI were used to reconstruct the phylogeny, the analysis of the phylogeny allow to visualize in which genotype they belong. The F protein is know to have a cleavage site in which the amino acid present can be used to predict if the virus is lentogenic or velogenic. The analysis of the cleavage site revealed that the most frequent haplotypes from both samples are velogenic. More than 65\% of the reads were aligned to the reference genome (KJ123642) for each sample. The phylogenetic analysis showed that they group with the Vb genotype. Using more of the reconstructed haplotypes to reconstruct the phylogeny showed an extremely close result to using only the most abundant haplotype, clustering together, most likely due to the founder effect of a small related viral population.
-
-Funding: Capes
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Two samples of APMV-1 were sequenced using MiSeq and analyzed to verify which genotype the samples belong. As viruses have very high error rates when replicating it is expected to find variants given a high depth of sequencing as provided by NGS. The data generated for both samples were enough to analyze the underlying viral population, the quasispecies of APMV-1 for both samples. For this, the reads for each library were mapped to a few reference genomes and selected that which had the most mapped reads, the KJ123642. Using the aligned reads as the input for the software QuasiRecomb and restricting the region of to the F protein, the haplotypes for both samples were reconstructed. The most frequent haplotype from each sample and other 88 APMV-1 genomes from NCBI were used to reconstruct the phylogeny, the analysis of the phylogeny allow to visualize in which genotype they belong. The F protein is know to have a cleavage site in which the amino acid present can be used to predict if the virus is lentogenic or velogenic. The analysis of the cleavage site revealed that the most frequent haplotypes from both samples are velogenic. More than 65\% of the reads were aligned to the reference genome (KJ123642) for each sample. The phylogenetic analysis showed that they group with the Vb genotype. Using more of the reconstructed haplotypes to reconstruct the phylogeny showed an extremely close result to using only the most abundant haplotype, clustering together, most likely due to the founder effect of a small related viral population.
+  
+  Funding: Capes \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,72 +1,73 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Annotation of transfer RNAs and microRNAs from Coffea canephora genome }} % Article title
+  
+  
+  \author{ Samara Mireza Correia de Lemos$^{1}$, Alexandre R. Paschoal$^{2}$, Douglas Silva Domingues$^{2}$, }
+  
+  \affil{ 1 Universidade Tecnológica Federal do Paraná
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 UTFPR - PPGBIOINFO
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Annotation of transfer RNAs and microRNAs from Coffea canephora genome}} % Article title
-
-\author{Samara Mireza Correia de Lemos$^1$, Alexandre R. Paschoal$^2$, Douglas Silva Domingues$^2$}
-
-\affil{1 UNIVERSIDADE TECNOL\'OGICA FEDERAL DO PARAN\'A\\ 2 UTFPR - PPGBIOINFO\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Annotating plant genomes for non coding RNAs (ncRNAs) is helpful in the development of biotechnological products and plant breeding. Coffee is one of the most important commodities in agriculture and Brazil is the leading producer and second largest consumer market of coffee; however, research has mostly focused on identifying protein coding genes with few approaches addressing the non coding RNA component of coffee genome.
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Annotating plant genomes for non coding RNAs (ncRNAs) is helpful in the development of biotechnological products and plant breeding. Coffee is one of the most important commodities in agriculture and Brazil is the leading producer and second largest consumer market of coffee; however, research has mostly focused on identifying protein coding genes with few approaches addressing the non coding RNA component of coffee genome.
 We here used bioinformatic approaches to update the annotation of microRNAs and annotate transfer RNAs in the Robusta coffee (C. canephora) genome. 
 Combining sequence similarity (BLASTN against ENSEMBL Plants database) and structural searches (Infernal/Rfam and tRNAscan - SE for transfer RNAs), we identified a set of 208 microRNA precursors and 663 transfer RNAs with their respective amino acids.
 A total of 144 microRNA precursors were identified for the first time in the present analysis: 122 using sequence similarity search and 22 using structural search. Sixty-four precursors were previously identified in a recent annotation; the majority, 63 were obtained in structural search. The proportion of transfer RNAs (tRNAs) was relatively similar to Populus trichocarpa and Vitis vinifera. The most common anti-codon is tRNA for methionine with 65 genes and the rarest is tRNA for tyrosine with only 14 copies.
     Our results represent an important improvement of the coffee ncRNA annotation, paving the way to further research on the contribution of post-transcriptional regulation to plant development and physiology. Future steps in this study include the annotation of other ncRNA classes and transcriptional support from small RNA sequencing data.
-
-Funding: CAPES
-\end{abstract}
-\end{document}
+  
+  Funding: CAPES \\ 
+  \end{abstract}
+  \end{document} 

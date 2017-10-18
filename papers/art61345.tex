@@ -1,68 +1,69 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Comparative genomics of bacterial toxins associated with the type IV secretion system }} % Article title
+  
+  
+  \author{ Gianlucca Gonçalves Nicastro$^{1}$, Robson Francisco de Souza$^{2}$, }
+  
+  \affil{ 1 Instituto de Ciências Biomédicas
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 USP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comparative genomics of bacterial toxins associated with the type IV secretion system}} % Article title
-
-\author{Gianlucca Gon\c{c}alves Nicastro$^1$, Robson Francisco de Souza$^2$}
-
-\affil{1 INSTITUTO DE CI\^ENCIAS BIOM\'EDICAS), DEPARTAMENTO DE MICROBIOLOGIA, USP\\ 2 USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Bacteria are continuously exposed to biological conflicts, such as parasitism and competition. To succeed in such interactions, bacteria often deploy proteinaceous toxins that will kill other species through various mechanisms. Different secretory systems may be used to export toxins to the environment or directly into the target cells. Notably, the type IV secretion system (T4SS), previously known for its role in the translocation of virulence factors into eukaryotic cells and transport of genetic material, was recently recognized to participate in bacterial competition. However, in-silico prediction of proteins secreted by the T4SS is a difficult task, and currently available methods often fail to detect the new, experimentally verified, T4SS-associated toxins. In this work, we apply deep sequence similarity searches and genomic context methods to search for novel toxins that act as Tfes (``Type four secretion system associated effectors''). We found a novel T4SS-targeting signature that is conserved in the C-terminal part of proteins harboring N-terminal domains involved in DNA transport and a range of toxic enzymatic activities. Based on these features, we named this predicted domain as ``T4SS C-terminal Tag 1'' (T4CT1). T4CT1 is mainly found in Proteobacteria, but a few representative proteins are also present in other Gram-negative lineages, such as cyanobacteria. Importantly, genes that code for proteins with this signature are primarily located adjacent to T4SS loci. Our results show that comparative methods can be used to identify novel sequence signatures and, by iterating our approach, we intend to find new putative toxins secreted by this system. We expect that the detailed analysis and classification of the T4SS toxins will help us uncover the nature of the evolutionary processes influencing competition among different species of bacteria.
-
-Funding: FAPESP, CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Bacteria are continuously exposed to biological conflicts, such as parasitism and competition. To succeed in such interactions, bacteria often deploy proteinaceous toxins that will kill other species through various mechanisms. Different secretory systems may be used to export toxins to the environment or directly into the target cells. Notably, the type IV secretion system (T4SS), previously known for its role in the translocation of virulence factors into eukaryotic cells and transport of genetic material, was recently recognized to participate in bacterial competition. However, in-silico prediction of proteins secreted by the T4SS is a difficult task, and currently available methods often fail to detect the new, experimentally verified, T4SS-associated toxins. In this work, we apply deep sequence similarity searches and genomic context methods to search for novel toxins that act as Tfes (“Type four secretion system associated effectors”). We found a novel T4SS-targeting signature that is conserved in the C-terminal part of proteins harboring N-terminal domains involved in DNA transport and a range of toxic enzymatic activities. Based on these features, we named this predicted domain as “T4SS C-terminal Tag 1” (T4CT1). T4CT1 is mainly found in Proteobacteria, but a few representative proteins are also present in other Gram-negative lineages, such as cyanobacteria. Importantly, genes that code for proteins with this signature are primarily located adjacent to T4SS loci. Our results show that comparative methods can be used to identify novel sequence signatures and, by iterating our approach, we intend to find new putative toxins secreted by this system. We expect that the detailed analysis and classification of the T4SS toxins will help us uncover the nature of the evolutionary processes influencing competition among different species of bacteria.
+  
+  Funding: FAPESP, CAPES \\ 
+  \end{abstract}
+  \end{document} 

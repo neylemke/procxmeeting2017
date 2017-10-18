@@ -1,68 +1,67 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Comparison of bioinformatics approaches to evaluate altered GO processes in in vivo and in vitro studies of antineoplastics of OPEN TG-GATEs online database }} % Article title
+  
+  
+  \author{ Giordano Bruno$^{1}$, André Luiz Molan$^{1}$, Jose Rybarczyk-Filho$^{1}$, }
+  
+  \affil{ 1 UNESP
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Comparison of bioinformatics approaches to evaluate altered GO processes in in vivo and in vitro studies of antineoplastics of OPEN TG-GATEs online database}} % Article title
-
-\author{Giordano Bruno$^1$, Andr\'e Luiz Molan$^1$, Jose Rybarczyk-filho$^1$}
-
-\affil{1 UNESP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Toxicogenomics is a promising field that has been continuously developed in the last decades. It's main goal is to study the toxic phenotypes of various chemicals in biologic systems with the aid of technologies used by omics sciences. The in sillico component of a toxicogenomics study, still presents many challenges in regards to what methods should be used, for example, to determine what biological functions are significantly alterated using gene expression data as a starting point. In this work we propose the comparison of two bioinformatics methodologies for the determination of biological processes (BP), molecular functions (MF) and celular components (CC). Gene expression data of three antineoplastics, Cyclophosphamide, Etoposide and Lomustine  from the OPEN TG-GATEs online database will be used. The studies that will be used for comparison are the High dose and 24 hours cases of Homo sapiens in vitro, Rattus norvegicus in vitro and Rattus norvegicus in vivo. The first methodology will be functional enrichment of differentially expressed genes (DEGs) and the second method is an application of Shannon's normalized function of entropy to determine the relative ativity and diversity of groups of functionally associated genes (GFAGs), this method is aplied by the EntropyClusterGenes R package. The gene expression data used as input for both methodologies will be normalized using the same protocol, the RMA (Robust-Multiarray Average) which is a widely used normalization procedure for affymetryx Genechip microarrays data. In the first method genes that present p-value<0.05 and LogFC > 1 or LogFC <  -1 will considered as DEGs, Bioconductor's R package 'topGO' will then use these DEGs as input to determine p-values for Gene Ontology (GO) processes (BP, MF and CC). The second method will group genes acording to their GO and then use the groups total expression levels along with a bootstraping statistic and FDR of 0,05 to determine adjusted p-values for said groups. In both methods, GO processes that presented p-values< 0,001 were considered as significantly altered. In general, the  GFAG method detected more process than DEGs method, but there certain cases where the  DEGs method detected more processes. However both methodologies showed similar behavior in regards to the number of detected processes across the drugs. The methodologies also were concordant in some of the results. In the etoposide case, for example, processes related to DNA replication and cell division were found to be significantly down regulated in both methodologies.
-
-Funding: CNPq processo134467 / 2016-7
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Toxicogenomics is a promising field that has been continuously developed in the last decades. It's main goal is to study the toxic phenotypes of various chemicals in biologic systems with the aid of technologies used by omics sciences. The in sillico component of a toxicogenomics study, still presents many challenges in regards to what methods should be used, for example, to determine what biological functions are significantly alterated using gene expression data as a starting point. In this work we propose the comparison of two bioinformatics methodologies for the determination of biological processes (BP), molecular functions (MF) and celular components (CC). Gene expression data of three antineoplastics, Cyclophosphamide, Etoposide and Lomustine  from the OPEN TG-GATEs online database will be used. The studies that will be used for comparison are the High dose and 24 hours cases of Homo sapiens in vitro, Rattus norvegicus in vitro and Rattus norvegicus in vivo. The first methodology will be functional enrichment of differentially expressed genes (DEGs) and the second method is an application of Shannon's normalized function of entropy to determine the relative ativity and diversity of groups of functionally associated genes (GFAGs), this method is aplied by the EntropyClusterGenes R package. The gene expression data used as input for both methodologies will be normalized using the same protocol, the RMA (Robust-Multiarray Average) which is a widely used normalization procedure for affymetryx Genechip microarrays data. In the first method genes that present p-value<0.05 and LogFC > 1 or LogFC <  -1 will considered as DEGs, Bioconductor's R package 'topGO' will then use these DEGs as input to determine p-values for Gene Ontology (GO) processes (BP, MF and CC). The second method will group genes acording to their GO and then use the groups total expression levels along with a bootstraping statistic and FDR of 0,05 to determine adjusted p-values for said groups. In both methods, GO processes that presented p-values< 0,001 were considered as significantly altered. In general, the  GFAG method detected more process than DEGs method, but there certain cases where the  DEGs method detected more processes. However both methodologies showed similar behavior in regards to the number of detected processes across the drugs. The methodologies also were concordant in some of the results. In the etoposide case, for example, processes related to DNA replication and cell division were found to be significantly down regulated in both methodologies.
+  
+  Funding: CNPq processo134467 / 2016-7 \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,69 +1,70 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Heart Rate and its Variability as Predictors of Activities and Controls for Simple HMI }} % Article title
+  
+  
+  \author{ Juliana Cavalcanti$^{1}$, Andre Fujita$^{2}$, }
+  
+  \affil{ 1 Universidade de São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 IME - USP
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
-
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Heart Rate and its Variability as Predictors of Activities and Controls for Simple HMI}} % Article title
-
-\author{Juliana Cavalcanti$^1$, Andre Fujita$^2$}
-
-\affil{1 USP\\ 2 IME - USP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Several human-machine interfaces have been devised making use of the EEG signal. However, because of its distance to the brain, which is surrounded by the skull, this signal is susceptible to a high ratio of noise, and also has the disadvantage of requiring uncomfortable electrodes to be attached to the subject.  Electrical signals from the heart are less noisy, obtainable by more comfortable chest straps and easily processed in order to extract the interval between peaks. Such intervals offer not only information on instant heart rate, but also its variability, which can then be used to detect subtle variations caused by the autonomous nervous system, responsible for modulating the heart rate and other involuntary body conditions. Our aim is to investigate the feasibility of using data from heart rate variability in predicting the activities executed by an individual and, eventually, controlling a simple Human-Machine Interface, or as a context provider for more complex EEG-driven Brain-Machine Interfaces.
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Several human-machine interfaces have been devised making use of the EEG signal. However, because of its distance to the brain, which is surrounded by the skull, this signal is susceptible to a high ratio of noise, and also has the disadvantage of requiring uncomfortable electrodes to be attached to the subject.  Electrical signals from the heart are less noisy, obtainable by more comfortable chest straps and easily processed in order to extract the interval between peaks. Such intervals offer not only information on instant heart rate, but also its variability, which can then be used to detect subtle variations caused by the autonomous nervous system, responsible for modulating the heart rate and other involuntary body conditions. Our aim is to investigate the feasibility of using data from heart rate variability in predicting the activities executed by an individual and, eventually, controlling a simple Human-Machine Interface, or as a context provider for more complex EEG-driven Brain-Machine Interfaces.
 In order to achieve that, we will develop a database including heart rate and annotations with a broad description of subject's daily activities, and then analyze the data contained in this pilot database to search for information that helps us predict activities using only the heart rate signal. Furthermore, we will implement a simple game, which will use the heart rate variability as input, serving as a proof of concept to evaluate whether heart rate is fit for the goals described. For this game, subjects will train the ability to voluntarily control  their heart rate, and we will analyse the signal provided in this training in search of some mechanism involved that can help us detect the intent to alter heart rate within a reasonable time frame,  allowing the responsive control of an interface.
-
-Funding: -
-\end{abstract}
-\end{document}
+  
+  Funding: - \\ 
+  \end{abstract}
+  \end{document} 

@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ Preliminary association of putative GBS-based SNPs with brown rust resistance phenotypes in a sugarcane map population using GWAS and machine learning methods }} % Article title
+  
+  
+  \author{ Alexandre Hild Aono$^{1}$, James Shiniti Nagai$^{1}$, Estela Araujo Costa$^{1}$, Hugo Rody Vianna Silva$^{1}$, Fernanda Raquel Camilo dos Santos$^{2}$, Luciana Rossini Pinto$^{2}$, Anete Pereira de Souza$^{3}$, Reginaldo Massanobu Kuroshu$^{1}$, }
+  
+  \affil{ 1 Universidade Federal de São Paulo
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Instituto Agronômico de Campinas
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3 Universidade Estadual de Campinas
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Preliminary association of putative GBS-based SNPs with brown rust resistance phenotypes in a sugarcane map population using GWAS and machine learning methods}} % Article title
-
-\author{Alexandre Hild Aono$^1$, James Shiniti Nagai$^1$, Estela Araujo Costa$^1$, Hugo Rody Vianna Silva$^1$, Fernanda Raquel Camilo Dos Santos$^2$, Luciana Rossini Pinto$^2$, Anete Pereira de Souza$^3$, Reginaldo Massanobu Kuroshu$^1$}
-
-\affil{1 UNIFESP\\ 2 INSTITUTO AGRON\^OMICO DE CAMPINAS\\ 3 UNICAMP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Brazil is the world's largest sugarcane producer and its production is an important source of income, arising mostly from sugar and ethanol. Currently, an approach for generating population data for this complex polyploidy species is genotyping-by-sequencing (GBS), which allows the detection of genomic variants without a reference genome. Several diseases limit sugarcane yield and the brown rust is considered one of the most important fungal diseases of sugarcane. Herein, putative GBS-based SNPs in a sugarcane map population were associated with brown-rust phenotype differences, being genetically linked to its causative factor. A set of 182 full-sibs derived from a sugarcane commercial cross between IACSP96-3018 and IACSP-3046 were generated and genotyped by GBS. Performing a comparative alignment (BWA version 0.7.15) of ~831 million reads against methyl-filtered (MF) genome, we selected the correspondences with MF Coding-DNA sequences (CDSs). The data was pre-processed using Genome Analysis Toolkit (GATK) pipeline and the variants were called using HaplotypeCaller, implemented in GATK v3.7, and SAMtools v 1.4. After a series of stringent filters, we obtained a total of 8,345 SNPs and 290 indels, identified by both callers. In order to detect putative markers associated with brown rust resistance, a Genome Wide Association Study (GWAS) and machine learning approaches for feature selection were performed in the identified variants. Using an evaluation of the severity of brown rust, we classified the cultivars in two categories: most resistant and most susceptible. As a first step in the GWAS, the principal component analysis (PCA) was performed followed by the calculation of squared Euclidean distances between isolates and hierarchical clustering with complete linkage. The correction of population structure was based on the Discriminant Analysis of Principal Component (DAPC) implemented in the R adegenet package 2.0.0. The method used for association was the multivariate DAPC-based approach. In addition, three machine learning methods of feature selection were applied to the same data, improving the results by focusing on predictivity. The mutual information (MI) was obtained to measure the dependency between the loci and the phenotype. A model of Logistic Regression (LR) was built to select the loci related to the coefficients with high levels of influence under the model and Support Vector Machine (SVM) was used as a nonlinear classifier, where the attributes with most importance under the model were retained. Using the results of the four different approaches, a total of 241 potential variants were identified in 195 different MF scaffolds. All the consensus loci of these scaffolds were compared to the Sorghum bicolor, Oryza sativa and Zea mays CDSs genomes and a Gene Ontology enrichment analysis was performed. The results show some enriched categories involved in functions of known genes associated with rust resistance (e.g. 'protein phosphorylation', 'protein kinase activity' and 'ATP binding'). With these preliminary analyses we identified a set of putative SNPs that can be used as candidates for the development of functional specific markers in brown rust resistance.
-
-Funding: CAPES
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Brazil is the world's largest sugarcane producer and its production is an important source of income, arising mostly from sugar and ethanol. Currently, an approach for generating population data for this complex polyploidy species is genotyping-by-sequencing (GBS), which allows the detection of genomic variants without a reference genome. Several diseases limit sugarcane yield and the brown rust is considered one of the most important fungal diseases of sugarcane. Herein, putative GBS-based SNPs in a sugarcane map population were associated with brown-rust phenotype differences, being genetically linked to its causative factor. A set of 182 full-sibs derived from a sugarcane commercial cross between IACSP96-3018 and IACSP-3046 were generated and genotyped by GBS. Performing a comparative alignment (BWA version 0.7.15) of ~831 million reads against methyl-filtered (MF) genome, we selected the correspondences with MF Coding-DNA sequences (CDSs). The data was pre-processed using Genome Analysis Toolkit (GATK) pipeline and the variants were called using HaplotypeCaller, implemented in GATK v3.7, and SAMtools v 1.4. After a series of stringent filters, we obtained a total of 8,345 SNPs and 290 indels, identified by both callers. In order to detect putative markers associated with brown rust resistance, a Genome Wide Association Study (GWAS) and machine learning approaches for feature selection were performed in the identified variants. Using an evaluation of the severity of brown rust, we classified the cultivars in two categories: most resistant and most susceptible. As a first step in the GWAS, the principal component analysis (PCA) was performed followed by the calculation of squared Euclidean distances between isolates and hierarchical clustering with complete linkage. The correction of population structure was based on the Discriminant Analysis of Principal Component (DAPC) implemented in the R adegenet package 2.0.0. The method used for association was the multivariate DAPC-based approach. In addition, three machine learning methods of feature selection were applied to the same data, improving the results by focusing on predictivity. The mutual information (MI) was obtained to measure the dependency between the loci and the phenotype. A model of Logistic Regression (LR) was built to select the loci related to the coefficients with high levels of influence under the model and Support Vector Machine (SVM) was used as a nonlinear classifier, where the attributes with most importance under the model were retained. Using the results of the four different approaches, a total of 241 potential variants were identified in 195 different MF scaffolds. All the consensus loci of these scaffolds were compared to the Sorghum bicolor, Oryza sativa and Zea mays CDSs genomes and a Gene Ontology enrichment analysis was performed. The results show some enriched categories involved in functions of known genes associated with rust resistance (e.g. ‘protein phosphorylation’, ‘protein kinase activity’ and ‘ATP binding’). With these preliminary analyses we identified a set of putative SNPs that can be used as candidates for the development of functional specific markers in brown rust resistance.
+  
+  Funding: CAPES \\ 
+  \end{abstract}
+  \end{document} 

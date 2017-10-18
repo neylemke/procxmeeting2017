@@ -1,68 +1,71 @@
 
-\documentclass[twoside]{article}
-\usepackage[affil-it]{authblk}
-\usepackage{lipsum} % Package to generate dummy text throughout this template
-\usepackage{eurosym}
-\usepackage[sc]{mathpazo} % Use the Palatino font
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-\usepackage[utf8]{inputenc}
-\linespread{1.05} % Line spacing-Palatino needs more space between lines
-\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+  \documentclass[twoside]{article}
+  \usepackage[affil-it]{authblk}
+  \usepackage{lipsum} % Package to generate dummy text throughout this template
+  \usepackage{eurosym}
+  \usepackage[sc]{mathpazo} % Use the Palatino font
+  \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+  \usepackage[utf8]{inputenc}
+  \linespread{1.05} % Line spacing-Palatino needs more space between lines
+  \usepackage{microtype} % Slightly tweak font spacing for aesthetics\[IndentingNewLine]
+  \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+  \usepackage{multicol} % Used for the two-column layout of the document
+  \usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
+  \usepackage{booktabs} % Horizontal rules in tables
+  \usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
+  \usepackage{hyperref} % For hyperlinks in the PDF
+  \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+  \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+  \usepackage{abstract} % Allows abstract customization
+  \renewcommand{\abstractnamefont}{\normalfont\bfseries} 
+  %\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text\[IndentingNewLine]
+  \usepackage{titlesec} % Allows customization of titles
+  \renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+  \renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+  \titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+  \titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+  \usepackage{fancyhdr} % Headers and footers
+  \pagestyle{fancy} % All pages have headers and footers
+  \fancyhead{} % Blank out the default header
+  \fancyfoot{} % Blank out the default footer
+  \fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
+  \fancyfoot[RO,LE]{} % Custom footer text
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %---------------------------------------------------------------------------------------- 
+ 
+ \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{ CAATINGA SOIL MICROBIOME: an ecological and biotechnological overview revealed by omics approaches }} % Article title
+  
+  
+  \author{ Melline Fontes Noronha$^{1}$, Gileno Vieira Lacerda Junior$^{2}$, Renan Abib Pastore$^{3}$, Valéria Maia de Oliveira$^{2}$, }
+  
+  \affil{ 1 Centro Pluridisciplinar de Pesquisas Químicas Biológicas e Agrícolas , Universidade Estadual de Campinas 
 
-\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
-\usepackage{multicol} % Used for the two-column layout of the document
-\usepackage[hang,small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under//above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment-they need to be placed in specific locations with the[H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+2 Microbial Resources Division, Research Center for Chemistry, Biology and Agriculture, University of Campinas
 
-\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
-\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+3  Microbial Resources Division, Research Center for Chemistry, Biology and Agriculture, University of Campinas
 
-\usepackage{abstract} % Allows abstract customization
-\renewcommand{\abstractnamefont}{\normalfont\bfseries} 
-%\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
-
-\usepackage{titlesec} % Allows customization of titles
-\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
-\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
-\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
-\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
-
-\usepackage{fancyhdr} % Headers and footers
-\pagestyle{fancy} % All pages have headers and footers
-\fancyhead{} % Blank out the default header
-\fancyfoot{} % Blank out the default footer
-\fancyhead[C]{X-meeting $\bullet$ November 2017 $\bullet$ S\~ao Pedro} % Custom header text
-\fancyfoot[RO,LE]{} % Custom footer text
-
-%----------------------------------------------------------------------------------------
-% TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{CAATINGA SOIL MICROBIOME: an ecological and biotechnological overview revealed by omics approaches}} % Article title
-
-\author{Melline Fontes Noronha$^1$, Gileno Vieira Lacerda Junior$^2$, Renan Abib Pastore$^2$, Val\'eria Maia de Oliveira$^2$}
-
-\affil{1 CENTRO PLURIDISCIPLINAR DE PESQUISAS QU\'IMICAS BIOL\'OGICAS E AGR\'ICOLAS , UNICAMP\\ 2 MICROBIAL RESOURCES DIVISION, RESEARCH CENTER FOR CHEMISTRY, BIOLOGY AND AGRICULTURE, UNICAMP\\ }
-\vspace{-5mm}
-\date{}
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle % Insert title
-
-\thispagestyle{fancy} % All pages have headers and footers
-
-%----------------------------------------------------------------------------------------
-% ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\begin{abstract}
-Caatinga is a biome unique to Brazil characterized by two well-defined seasons, rainy and dry, mainly driven by the sparse rainfalls. Anthropogenic processes and climate change have caused worrying environmental damage, such as accelerated desertification and impacts on biogeochemical processes in this biome. Although some studies have shown that Caatinga soil microbiome is shaped by seasonal variation, it is still not clear what metabolic features allow microbes to adapt to environmental changes, in addition to the underlying effects over biogeochemical cycles. Recently, Caatinga has been the focus of intense research due the large input of vegetal organic matter from the falling leaves, which could recruit multiple microbial species producing a variety of plant biomass-degrading enzymes and providing a unique genetic resource for mining enzymes used in biofuel production. In this study, we aimed to explore the Caatinga soil microbiome under both ecological and biotechnological perspectives. The use of metagenomics to unravel the ecological landscape of the semiarid Caatinga soils showed that the microbial structure of pristine soil was shaped primarily by seasonality, with a strong increase of Actinobacteria and Proteobacteria members in the dry and rainy seasons, respectively. In contrast, Proteobacteria and Acidobacteria were notably altered by soil chemical parameters that played a critical role in shaping the microbial community from irrigation and fertilization-affected soils. Functional annotation identified a broad range of cellular processes related to osmotic and oxidative stress responses in microbial communities of pristine soils under seasonal variation. Metatranscriptomics analysis of irrigation-affected soils revealed a high contribution of Actinobacteria and Bacilli in the microbial community structure during the rainy and dry season, respectively. A higher abundance of transcripts for central carbohydrates metabolism, CO2 fixation and monosaccharide subsystems were found in the dry season (irrigation-affected). On the other hand, oxidative stress and protein degradation subsystems were overrepresented in the rainy season soils. Under the biotechnological perspective, results from data mining of Caatinga soil metagenomic libraries have shown a wide repertoire of lignocellulose degrading genes from a wide range of bacteria that could be explored for biofuels application.  Although poorly studied, Caatinga soils is considered a promising source for the understanding of the microbial mechanisms for survival in harsh environments as well as for biotechnological applications.
-
-Funding: FAPESP
-\end{abstract}
-\end{document}
+ }
+  \vspace{-5mm}
+  \date{}
+  
+  %---------------------------------------------------------------------------------------- 
+  
+  \begin{document}
+  
+  
+  \maketitle % Insert title
+  
+  
+  \thispagestyle{fancy} % All pages have headers and footers
+  %----------------------------------------------------------------------------------------  
+  % ABSTRACT
+  
+  %----------------------------------------------------------------------------------------  
+  
+  \begin{abstract}
+  Caatinga is a biome unique to Brazil characterized by two well-defined seasons, rainy and dry, mainly driven by the sparse rainfalls. Anthropogenic processes and climate change have caused worrying environmental damage, such as accelerated desertification and impacts on biogeochemical processes in this biome. Although some studies have shown that Caatinga soil microbiome is shaped by seasonal variation, it is still not clear what metabolic features allow microbes to adapt to environmental changes, in addition to the underlying effects over biogeochemical cycles. Recently, Caatinga has been the focus of intense research due the large input of vegetal organic matter from the falling leaves, which could recruit multiple microbial species producing a variety of plant biomass-degrading enzymes and providing a unique genetic resource for mining enzymes used in biofuel production. In this study, we aimed to explore the Caatinga soil microbiome under both ecological and biotechnological perspectives. The use of metagenomics to unravel the ecological landscape of the semiarid Caatinga soils showed that the microbial structure of pristine soil was shaped primarily by seasonality, with a strong increase of Actinobacteria and Proteobacteria members in the dry and rainy seasons, respectively. In contrast, Proteobacteria and Acidobacteria were notably altered by soil chemical parameters that played a critical role in shaping the microbial community from irrigation and fertilization-affected soils. Functional annotation identified a broad range of cellular processes related to osmotic and oxidative stress responses in microbial communities of pristine soils under seasonal variation. Metatranscriptomics analysis of irrigation-affected soils revealed a high contribution of Actinobacteria and Bacilli in the microbial community structure during the rainy and dry season, respectively. A higher abundance of transcripts for central carbohydrates metabolism, CO2 fixation and monosaccharide subsystems were found in the dry season (irrigation-affected). On the other hand, oxidative stress and protein degradation subsystems were overrepresented in the rainy season soils. Under the biotechnological perspective, results from data mining of Caatinga soil metagenomic libraries have shown a wide repertoire of lignocellulose degrading genes from a wide range of bacteria that could be explored for biofuels application.  Although poorly studied, Caatinga soils is considered a promising source for the understanding of the microbial mechanisms for survival in harsh environments as well as for biotechnological applications.
+  
+  Funding: FAPESP \\ 
+  \end{abstract}
+  \end{document} 
