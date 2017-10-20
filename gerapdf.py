@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
-import re,os
+import re,os,glob
 from titlecase import titlecase
 # Constants
 strlatex = """
@@ -220,34 +220,14 @@ def gerastringindex(record):
     indexstr=",".join(["\\index{"+brnames(aut)+"}" for aut in record["Authors"]])
     return strlatex2.format(title,author,indexstr,file)
 
-    # ## Entrada dos Dados
-
-
-
-artsds=pd.read_excel(prefix+'trabalhos2017v5.xlsx',index_col=0)
-
-
+def readpapers(file):
+    artsds=pd.read_excel(prefix+'trabalhos2017v5.xlsx',index_col=0)
 # Insere duas colunas no lugar da Coluna de Autores
+    artsds["Afil"]=[geraAfil(record) for record in artsds["Autores"]]
+    artsds["Authors"]=[geraAuthors(record) for record in artsds["Autores"]]
+    return artsds
 
-# In[13]:
-
-artsds["Afil"]=[geraAfil(record) for record in artsds["Autores"]]
-artsds["Authors"]=[geraAuthors(record) for record in artsds["Autores"]]
-
-# ## Separação em Grupos
-
-
-artsdsgrouped=artsds.groupby(["Modalidade"],axis=0)
-artsdsposter=artsdsgrouped.get_group('Poster')
-artsdsHT=artsdsgrouped.get_group('HighLight Tracks')
-
-
-
-
-# ## Gera os arquivos com os abstracts
-
-print("gerando os arquivos com os Abstratcs")
-for index, record in artsds.iterrows():
+def gerastringabstract(record,strlatex):
     author=geraStringAuthors(record)
     title=fixbin(record["Título"],replacements)
     afiliation=geraStringAfil(record["Afil"])
@@ -257,44 +237,59 @@ for index, record in artsds.iterrows():
     else:
         abstract=""
     funding=fixbin(record["Funding"],replacements)
-    stringfileresumo=strlatex.format(title,author,afiliation,abstract,funding)
-    f = open('papers/art'+str(index)+".tex", 'w')
-    f.write(stringfileresumo)
-    f.close()
+    return strlatex.format(title,author,afiliation,abstract,funding)
+
+
+if __name__ == "__main__":
+# Entrada dos Dados
+    artsds=readpapers(prefix+'trabalhos2017v5.xlsx')
+# ## Separação em Grupos
+    artsdsgrouped=artsds.groupby(["Modalidade"],axis=0)
+    artsdsposter=artsdsgrouped.get_group('Poster')
+    artsdsHT=artsdsgrouped.get_group('HighLight Tracks')
+
+# ## Gera os arquivos com os abstracts
+
+    print("gerando os arquivos com os Abstratcs")
+    for index, record in artsds.iterrows():
+        stringfileresumo=gerastringabstract(record,strlatex)
+        f = open('papers/art'+str(index)+".tex", 'w')
+        f.write(stringfileresumo)
+        f.close()
 
 
 # ## Gera os arquivos com os índices 
+    print("gerando os arquivos com os índices")
+    areas = sorted(list(set(artsdsposter["Área Temática"])))
+    groupareas=artsdsposter.groupby(["Área Temática"],axis=0)
+    compstr = "";
+    for area in areas:
+        print(area)
+        ds=groupareas.get_group(area)
+        ds=ds.sort_values("Poster Code")
+        sessionstr = "\\chapter{" + area + "}\n";
+        for index, record in ds.iterrows():
+            sessionstr=sessionstr+gerastringindex(record)
+        compstr = compstr + sessionstr
+        f = open('posters.tex', 'w')
+        f.write(compstr)
+        f.close()
 
-print("gerando os arquivos com os índices")
-areas = sorted(list(set(artsdsposter["Área Temática"])))
-groupareas=artsdsposter.groupby(["Área Temática"],axis=0)
-compstr = "";
-for area in areas:
-    print(area)
-    ds=groupareas.get_group(area)
+    print("gerando os arquivos com os índices dos HT")
+    compstr = "";
+    ds=artsdsHT
+    sessionstr=""
     ds=ds.sort_values("Poster Code")
-    sessionstr = "\\chapter{" + area + "}\n";
     for index, record in ds.iterrows():
         sessionstr=sessionstr+gerastringindex(record)
     compstr = compstr + sessionstr
-f = open('posters.tex', 'w')
-f.write(compstr)
-f.close()
+    f = open('papers.tex', 'w')
+    f.write(compstr)
+    f.close()
 
-
-
-print("gerando os arquivos com os índices dos HT")
-compstr = "";
-ds=artsdsHT
-sessionstr=""
-ds=ds.sort_values("Poster Code")
-for index, record in ds.iterrows():
-    sessionstr=sessionstr+gerastringindex(record)
-compstr = compstr + sessionstr
-f = open('papers.tex', 'w')
-f.write(compstr)
-f.close()
-
-print("Compilando")
-os.system("cd papers; for file in art*.tex; do pdflatex $file; done")
-os.system("pdflatex procxmeeting2017; makeindex procxmeeting2017;pdflatex procxmeeting2017")
+    print("Compilando")
+    os.chdir("papers")
+    for file in glob.glob("*.tex"):
+        os.system("pdflatex "+file)
+    os.chdir("..")
+    os.system("pdflatex procxmeeting2017; makeindex procxmeeting2017;pdflatex procxmeeting2017")

@@ -1,8 +1,12 @@
-# assets
-## Dependências:
-- titlecase
-- pandas 
+# X-meeting Proceeedings
 
-Para rodar basta executar 
-chmod u+x gerapdf.py 
+This is a very simple system to generate proceeedings for the X-meeting
+conference. 
+
+To compile:
+
+```shell
 ./gerapdf.py
+```
+
+
